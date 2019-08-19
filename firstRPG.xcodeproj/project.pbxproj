@@ -12,6 +12,7 @@
 		BA3849A02305548C006E7BA0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA38499E2305548C006E7BA0 /* Main.storyboard */; };
 		BA3849A22305548D006E7BA0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA3849A12305548D006E7BA0 /* Assets.xcassets */; };
 		BA3849A52305548D006E7BA0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA3849A32305548D006E7BA0 /* LaunchScreen.storyboard */; };
+		BA3849FB2309219A006E7BA0 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3849FA2309219A006E7BA0 /* GameScene.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		BA3849A12305548D006E7BA0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BA3849A42305548D006E7BA0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BA3849A62305548D006E7BA0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BA3849FA2309219A006E7BA0 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,11 +57,12 @@
 			isa = PBXGroup;
 			children = (
 				BA38499A2305548C006E7BA0 /* AppDelegate.swift */,
-				BA38499C2305548C006E7BA0 /* ViewController.swift */,
 				BA38499E2305548C006E7BA0 /* Main.storyboard */,
 				BA3849A12305548D006E7BA0 /* Assets.xcassets */,
 				BA3849A32305548D006E7BA0 /* LaunchScreen.storyboard */,
 				BA3849A62305548D006E7BA0 /* Info.plist */,
+				BA38499C2305548C006E7BA0 /* ViewController.swift */,
+				BA3849FA2309219A006E7BA0 /* GameScene.swift */,
 			);
 			path = firstRPG;
 			sourceTree = "<group>";
@@ -135,6 +138,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA3849FB2309219A006E7BA0 /* GameScene.swift in Sources */,
 				BA38499D2305548C006E7BA0 /* ViewController.swift in Sources */,
 				BA38499B2305548C006E7BA0 /* AppDelegate.swift in Sources */,
 			);
@@ -291,7 +295,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = project.firstRPG;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -308,7 +312,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = project.firstRPG;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
