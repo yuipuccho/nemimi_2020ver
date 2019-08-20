@@ -19,6 +19,8 @@ class cave1ViewController: UIViewController {
 
     var count = 0    // 歩数のカウント
 
+    var monster:[Int] = []
+
     // 配列をくんでやるぜ！！！ (12 * 21 = 252 0スタートだから251まで)
     let line = [
         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 0, 0, 0,
@@ -166,6 +168,23 @@ class cave1ViewController: UIViewController {
     // 【敵とエンカウントする処理】を書きたい！
     func encount() {
         // 1. エンカウントが発生した時にどのモンスターを何匹出現させるか決定
+        // 何匹か(2匹か4匹)
+        let howMany = Int.random(in: 0...1)    // 0なら2匹、1なら4匹出現
+        switch howMany {
+        case 0:    // 2匹の場合
+            let monster1 = Int.random(in: 0...1)    // このマップでは0,1のモンスターが出現。
+            let monster2 = Int.random(in: 0...1)
+            monster = [monster1, monster2]    // バトルシーン遷移時にこの値を渡してモンスターを出現させる。
+        case 1:    // 4匹の場合
+            let monster3 = Int.random(in: 0...1)
+            let monster4 = Int.random(in: 0...1)
+            let monster5 = Int.random(in: 0...1)
+            let monster6 = Int.random(in: 0...1)
+            monster = [monster3, monster4, monster5, monster6]
+        default:
+            return
+        }
+
 
         // 2. どんな条件でエンカウントが発生するのか
         // まず0-9の乱数を発生させる
@@ -200,22 +219,11 @@ class cave1ViewController: UIViewController {
     // segue遷移前動作
     // セグエ実行前処理 / セグエの identifier 確認 / 遷移先ViewController の取得
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard segue.identifier == "toBattle", let vc = segue.destination as? battleSceneViewController else {
+        guard segue.identifier == "toBattle", let vc = segue.destination as? battleMessageViewController else {
             return
         }
-        //vc.select = selectNum    // 遷移先の select に selectNum を代入
+        vc.monster = monster    // エンカウントしたモンスター情報を渡す
     }
-
-
-
-
-
-
-
-
-
-
-
 
 
 

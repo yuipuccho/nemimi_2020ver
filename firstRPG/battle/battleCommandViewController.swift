@@ -1,5 +1,5 @@
 //
-//  battleSceneViewController.swift
+//  battleCommandViewController.swift
 //  firstRPG
 //
 //  Created by 吉澤優衣 on 2019/08/20.
@@ -8,10 +8,9 @@
 
 import UIKit
 
-// 雑魚敵とのバトル
-class battleSceneViewController: UIViewController {
+class battleCommandViewController: UIViewController {
 
-    // 敵の数は最大5
+
 
 
 
