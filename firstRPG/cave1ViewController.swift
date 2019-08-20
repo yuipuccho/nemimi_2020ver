@@ -9,13 +9,15 @@
 import UIKit
 // import SpriteKit    // SpriteKit を使うためインポート
 
-class ViewController: UIViewController {
+class cave1ViewController: UIViewController {
 
 
     @IBOutlet weak var gameView: UIView!
     @IBOutlet weak var playerImage: UIImageView!    // プレイヤー
 
     var currentNum = 241    // プレイヤーの位置が配列の何番めか
+
+    var count = 0    // 歩数のカウント
 
     // 配列をくんでやるぜ！！！ (12 * 21 = 252 0スタートだから251まで)
     let line = [
@@ -71,9 +73,15 @@ class ViewController: UIViewController {
 
             if self.line[currentNum] == 1 {    // 1なら移動可能
                 // 【普通に移動できるとき】
+                // 1. プレイヤーを移動させる
                 UIView.animate(withDuration: 1, animations: {
                     self.playerImage.center.y -= self.gameView.frame.size.height / 12
                 })
+                // 2. 歩数をカウントする
+                count += 1
+
+                // 3. エンカウント処理
+                encount()
 
 
             } else if self.line[currentNum] == 0 {
@@ -93,6 +101,12 @@ class ViewController: UIViewController {
                     self.playerImage.center.x -= self.gameView.frame.size.width / 21
                 })
 
+                // 2. 歩数をカウントする
+                count += 1
+
+                // 3. エンカウント処理
+                encount()
+
             } else if self.line[currentNum] == 0 {
                 // 【障害物にあたったとき】
                 self.currentNum += 1    // 移動しないんだから配列番号も戻す
@@ -100,6 +114,7 @@ class ViewController: UIViewController {
         }
     }
 
+    // 右ボタン
     @IBAction func rightButton(_ sender: UIButton) {
         if currentNum + 1 <= 251 {  // 移動先の配列番号が存在するか確認
             self.currentNum += 1    // 配列番号を移動先の番号に変える。(self つけないとボタンが反応してくれなくなる)
@@ -109,6 +124,12 @@ class ViewController: UIViewController {
                     self.playerImage.center.x += self.gameView.frame.size.width / 21
                 })
 
+                // 2. 歩数をカウントする
+                count += 1
+
+                // 3. エンカウント処理
+                encount()
+
             } else if self.line[currentNum] == 0 {
                 // 【障害物にあたったとき】
                 self.currentNum -= 1    // 移動しないんだから配列番号も戻す
@@ -116,7 +137,7 @@ class ViewController: UIViewController {
         }
     }
 
-    
+    // 下ボタン
     @IBAction func downButton(_ sender: UIButton) {
         if currentNum + 21 <= 251 {  // 移動先の配列番号が存在するか確認
             self.currentNum += 21    // 配列番号を移動先の番号に変える。(self つけないとボタンが反応してくれなくなる)
@@ -127,6 +148,12 @@ class ViewController: UIViewController {
                     self.playerImage.center.y += self.gameView.frame.size.height / 12
                 })
 
+                // 2. 歩数をカウントする
+                count += 1
+
+                // 3. エンカウント処理
+                encount()
+
 
             } else if self.line[currentNum] == 0 {
                 // 【障害物にあたったとき】
@@ -134,4 +161,66 @@ class ViewController: UIViewController {
             }
         }
     }
+
+
+    // 【敵とエンカウントする処理】を書きたい！
+    func encount() {
+        // 1. エンカウントが発生した時にどのモンスターを何匹出現させるか決定
+
+        // 2. どんな条件でエンカウントが発生するのか
+        // まず0-9の乱数を発生させる
+        let int = Int.random(in: 0..<10)
+        switch count {
+        case 2:    // 歩数が2歩の時
+            if int < 1 {    // 乱数が0だったら遷移して戦闘
+                performSegue(withIdentifier: "toBattle", sender: nil)
+            }
+        case 5:    // 歩数が5歩の時
+            if int < 6 {     // 乱数が0~5だったら遷移して戦闘
+                performSegue(withIdentifier: "toBattle", sender: nil)
+            }
+        case 8:    // 歩数が8歩の時
+            if int < 9 {    // 乱数が0~8だったら遷移して戦闘
+                performSegue(withIdentifier: "toBattle", sender: nil)
+            }
+        case 10:    // 歩数が10歩の時
+            performSegue(withIdentifier: "toBattle", sender: nil)    // 強制で戦闘
+
+        default:
+            return
+        }
+    }
+
+
+    // 3. 画面遷移で渡す値
+    // 1. モンスター情報
+    // 2. プレイヤー情報
+    // それ以外なんかあるっけ
+
+    // segue遷移前動作
+    // セグエ実行前処理 / セグエの identifier 確認 / 遷移先ViewController の取得
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard segue.identifier == "toBattle", let vc = segue.destination as? battleSceneViewController else {
+            return
+        }
+        //vc.select = selectNum    // 遷移先の select に selectNum を代入
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
