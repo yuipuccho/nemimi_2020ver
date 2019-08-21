@@ -27,6 +27,12 @@ class battleMessageViewController: UIViewController {
 
     /// どのモンスターとエンカウントしたかの情報を受け取る
     var monster:[Int] = []
+/*
+    /// 今どのモンスターが生きてるか
+    //var currentMonster:[Int] = []
+
+    /// メインボタンを押した時に画面遷移するかどうか判断
+    //var toSelect: Bool = false
 
 
 
@@ -50,7 +56,7 @@ class battleMessageViewController: UIViewController {
     // 16 しょうげきは
     // 20 ライトビーム
     // 23 メガヒール
-    // 28 ダークブレイド
+    // 28 スターダスト
 
 
 
@@ -101,18 +107,28 @@ class battleMessageViewController: UIViewController {
         "ティグレ"
     ]
 
-
+*/
 
 
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // 画面にモンスター画像を表示
-        appearMonster()
-        print(monster)
+        //appearMonster()
+        //print(monster)
+        // 画面遷移OK
+       // toSelect = true
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        //appearMonster()
+
 
     }
-    
+
+
+
+    /*
 
     // 【画面上にモンスターを出現させる処理】
     func appearMonster() {
@@ -147,13 +163,33 @@ class battleMessageViewController: UIViewController {
         }
     }
 
+ */
+    // 【攻撃の処理】
+    
+
 
     @IBAction func mainButton(_ sender: Any) {    // メインボタン
+        //if toSelect == true {
+            performSegue(withIdentifier: "toBattleSelect", sender: nil)    // 画面遷移
+        //}
     }
     
 
 
+    // segue遷移前動作
+    // セグエ実行前処理 / セグエの identifier 確認 / 遷移先ViewController の取得
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard segue.identifier == "toBattleSelect", let vc = segue.destination as? battleCommandViewController else {
+            return
+        }
+        // 向こうで必要な情報は
+        // 1. プレイヤーの名前、HP、MP,Lv
+        // 2. 生き残ってるモンスターの画像
 
+
+
+        //vc.select = selectNum
+    }
 
 
 
