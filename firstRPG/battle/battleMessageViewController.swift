@@ -27,7 +27,7 @@ class battleMessageViewController: UIViewController {
 
     /// どのモンスターとエンカウントしたかの情報を受け取る
     var monster:[Int] = []
-/*
+
     /// 今どのモンスターが生きてるか
     //var currentMonster:[Int] = []
 
@@ -107,14 +107,14 @@ class battleMessageViewController: UIViewController {
         "ティグレ"
     ]
 
-*/
+
 
 
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // 画面にモンスター画像を表示
-        //appearMonster()
+        appearMonster()
         //print(monster)
         // 画面遷移OK
        // toSelect = true
@@ -128,7 +128,7 @@ class battleMessageViewController: UIViewController {
 
 
 
-    /*
+
 
     // 【画面上にモンスターを出現させる処理】
     func appearMonster() {
@@ -163,23 +163,26 @@ class battleMessageViewController: UIViewController {
         }
     }
 
- */
+
     // 【攻撃の処理】
     
 
 
-    @IBAction func mainButton(_ sender: Any) {    // メインボタン
+    @IBAction func mainButton(_ sender: UIButton) {    // メインボタン
         //if toSelect == true {
-            performSegue(withIdentifier: "toBattleSelect", sender: nil)    // 画面遷移
+            self.performSegue(withIdentifier: "toBattleCommand", sender: nil)    // 画面遷移
         //}
     }
     
+    @IBAction func test(_ sender: UIButton) {
+        performSegue(withIdentifier: "test", sender: nil)
+    }
 
 
     // segue遷移前動作
     // セグエ実行前処理 / セグエの identifier 確認 / 遷移先ViewController の取得
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard segue.identifier == "toBattleSelect", let vc = segue.destination as? battleCommandViewController else {
+        guard segue.identifier == "toBattleCommand", let vc = segue.destination as? battleCommandViewController else {
             return
         }
         // 向こうで必要な情報は
@@ -190,12 +193,6 @@ class battleMessageViewController: UIViewController {
 
         //vc.select = selectNum
     }
-
-
-
-
-
-
 
 
 

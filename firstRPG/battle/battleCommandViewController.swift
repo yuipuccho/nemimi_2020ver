@@ -51,7 +51,7 @@ class battleCommandViewController: UIViewController {
     @IBOutlet weak var selectMonsterImage3Label: UILabel!    // モンスター画像3 を選択したときの▶︎
     @IBOutlet weak var selectMonsterImage4Label: UILabel!    // モンスター画像4 を選択したときの▶︎
 
-
+     */
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -60,7 +60,7 @@ class battleCommandViewController: UIViewController {
         
     //}
 
-
+    /*
     // レベルによって表示する呪文を変える処理
 
 
