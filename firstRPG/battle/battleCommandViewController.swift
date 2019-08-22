@@ -22,8 +22,17 @@ class battleCommandViewController: UIViewController {
     var monsterName4 = ""
 
 
-    // メインボタンを何回押したかカウント
+    /// メインボタンを何回押したかカウント
     var count = 0
+
+    /// たたかうかじゅもんかを選択中だよ
+    var selectingAtkType = false
+
+    /// じゅもん選択中だよ
+    var selectingMagic = false
+
+    /// 攻撃するモンスターを選択中だよ
+    var selectingMonster = false
 
 
     @IBOutlet weak var nameLabel: UILabel!    // プレイヤーの名前
@@ -133,6 +142,8 @@ class battleCommandViewController: UIViewController {
         } else {
             monsterImage4.image = UIImage(named: "\(monsterName4)")
         }
+
+        selectingAtkType = true    // たたかうかじゅもんか選ぶよ〜
     }
 
 
@@ -140,13 +151,13 @@ class battleCommandViewController: UIViewController {
 
     // 【メインボタン】
     @IBAction func mainButton(_ sender: Any) {
-        count += 1    // フェーズを1つ先に進める
 
         // 「たたかう」が選択されている時
         if selectAtkLabel.text == "▶︎" {
             selectAtkLabel.text = ""    // 1. たたかう の ▶︎ を消す
-            count += 1    // 2. どのモンスターを攻撃するか選択するフェーズへ
-            selectMonsterImage()    // 3. モンスター選択の▼を表示する処理
+            selectMonsterImage()    // 2. モンスター選択の▼を表示する処理
+            selectingMonster = true    // 3. どのモンスターを攻撃するか選択するフェーズへ
+            selectingAtkType = false
 
         // 「じゅもん」が選択されている時
         } else if selectMatkLabel.text == "▶︎" {
@@ -154,7 +165,29 @@ class battleCommandViewController: UIViewController {
             magicSelectView.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.6510595034)    // じゅもん選択画面の背景を表示する
             selectMagic1Label.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)    // じゅもん1 の ▶︎を表示
             availableMagic()    // 使用可能なじゅもんを表示
-            
+            selectingMagic = true    // じゅもん選択のフェーズだよ
+            selectingAtkType = false
+
+        // ヒールなど、じゅもん一覧のどれかが選択されている時
+        } else if selectMagic1Label.textColor == #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0) {    // ヒールが選択されてる
+            // ヒールを選択したよって処理を入れる
+            selectMagic1Label.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0)    // ▶︎を消す
+            selectMonsterImage()    // モンスター選択の▼を表示する処理
+            selectingMonster = true    // こうげきするモンスター選択のフェーズだよ
+            selectingMagic = false
+
+
+        } else if selectMagic2Label.textColor == #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0) {
+
+        } else if selectMagic3Label.textColor == #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0) {
+
+        } else if selectMagic4Label.textColor == #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0) {
+
+        } else if selectMagic5Label.textColor == #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0) {
+
+        } else if selectMagic6Label.textColor == #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0) {
+
+        } else if selectMagic7Label.textColor == #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0) {
 
         }
 
