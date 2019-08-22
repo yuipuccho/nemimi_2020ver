@@ -84,7 +84,7 @@ class battleMessageViewController: UIViewController {
     ]
 
     // 【モンスター情報】
-    var monsterStatus: [[String: Any]] = [
+    var monsterStatus: [[String: Int]] = [
         ["hp": 1, "atk": 1, "def": 1, "agi": 1, "exp": 1, "gold": 1],    // 0. スライム
         ["hp": 1, "atk": 1, "def": 1, "agi": 1, "exp": 1, "gold": 1],    // 1. バット
         ["hp": 1, "atk": 1, "def": 1, "agi": 1, "exp": 1, "gold": 1],    // 2. マタンゴ
@@ -133,6 +133,16 @@ class battleMessageViewController: UIViewController {
         // 画面にモンスター画像を表示
         appearMonster()
 
+        // プレイヤー情報を表示する（画面左上のとこ）
+        let hp: Int =  player["nowHP"] as! Int
+        let mp: Int =  player["nowMP"] as! Int
+        let lv: Int =  player["Lv"] as! Int
+
+        nameLabel.text = player["name"] as? String
+        hpLabel.text = "HP: \(hp)"
+        mpLabel.text = "MP: \(mp)"
+        lvLabel.text = "Lv: \(lv)"
+
         // 画面遷移OK
         toSelect = true
     }
@@ -153,11 +163,11 @@ class battleMessageViewController: UIViewController {
             // 1匹目
             monsterName2 = monsterName[monster[0]]    // 1匹目の名前を取得
             monsterImage2.image = UIImage(named: "\(monsterName2)")    // 1匹目の画像を表示
-            monster2 = monsterStatus[monster[0]] as! [String : Int]    // モンスターのステータスを入れる
+            monster2 = monsterStatus[monster[0]]    // モンスターのステータスを入れる
             // 2匹目
             monsterName3 = monsterName[monster[1]]    // 2匹目の名前を取得
             monsterImage3.image = UIImage(named: "\(monsterName3)")    // 2匹目の画像を表示
-            monster3 = monsterStatus[monster[1]] as! [String : Int]    // モンスターのステータスを入れる
+            monster3 = monsterStatus[monster[1]]    // モンスターのステータスを入れる
 
             monster1 = ["hp": 0]    // 2匹の出現なので消す
             monster4 = ["hp": 0]    // 2匹の出現なので消す
@@ -167,19 +177,19 @@ class battleMessageViewController: UIViewController {
             // 1匹目
             monsterName1 = monsterName[monster[0]]    // 1匹目の名前を取得
             monsterImage1.image = UIImage(named: "\(monsterName1)")    // 1匹目の画像を表示
-            monster1 = monsterStatus[monster[0]] as! [String : Int]    // モンスターのステータスを入れる
+            monster1 = monsterStatus[monster[0]]    // モンスターのステータスを入れる
             // 2匹目
             monsterName2 = monsterName[monster[1]]    // 2匹目の名前を取得
             monsterImage2.image = UIImage(named: "\(monsterName2)")    // 2匹目の画像を表示
-            monster2 = monsterStatus[monster[1]] as! [String : Int]    // モンスターのステータスを入れる
+            monster2 = monsterStatus[monster[1]]    // モンスターのステータスを入れる
             // 3匹目
             monsterName3 = monsterName[monster[2]]    // 3匹目の名前を取得
             monsterImage3.image = UIImage(named: "\(monsterName3)")    // 3匹目の画像を表示
-            monster3 = monsterStatus[monster[2]] as! [String : Int]    // モンスターのステータスを入れる
+            monster3 = monsterStatus[monster[2]]    // モンスターのステータスを入れる
             // 4匹目
             monsterName4 = monsterName[monster[3]]    // 4匹目の名前を取得
             monsterImage4.image = UIImage(named: "\(monsterName4)")    // 4匹目の画像を表示
-            monster4 = monsterStatus[monster[3]] as! [String : Int]    // モンスターのステータスを入れる
+            monster4 = monsterStatus[monster[3]]    // モンスターのステータスを入れる
 
         default:
             return
