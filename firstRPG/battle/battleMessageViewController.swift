@@ -64,9 +64,9 @@ class battleMessageViewController: UIViewController {
         "gold": 0    // 所持金
     ]
 
-    // 3 ヒール
-    // 7 ひのたま
-    // 12 つららおとし
+    // 1 ヒール
+    // 5 ひのたま
+    // 10 つららおとし
     // 16 しょうげきは
     // 20 ライトビーム
     // 23 メガヒール

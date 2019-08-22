@@ -13,7 +13,7 @@ class battleCommandViewController: UIViewController {
     var name = ""
     var hp = 0
     var mp = 0
-    var lv = 0
+    var lv = 30
 
     /// モンスター名前
     var monsterName1 = ""
@@ -36,6 +36,7 @@ class battleCommandViewController: UIViewController {
 
     @IBOutlet weak var magicSelectView: UIView!    // 呪文一覧のView
 
+    
     @IBOutlet weak var selectMagic1Label: UILabel!    // じゅもん1 を選択したときの▶︎
     @IBOutlet weak var selectMagic2Label: UILabel!    // じゅもん2 を選択したときの▶︎
     @IBOutlet weak var selectMagic3Label: UILabel!    // じゅもん3 を選択したときの▶︎
@@ -76,22 +77,22 @@ class battleCommandViewController: UIViewController {
         // 最初の画面なのでじゅもん一覧とかいらんやつを消す
         // じゅもん系
         magicSelectView.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0)    // 背景を透明に
-        selectMagic1Label.text = ""
-        selectMagic2Label.text = ""
-        selectMagic3Label.text = ""
-        selectMagic4Label.text = ""
-        selectMagic5Label.text = ""
-        selectMagic6Label.text = ""
-        selectMagic7Label.text = ""
-        selectMagic8Label.text = ""
-        magic1Label.text = ""
-        magic2Label.text = ""
-        magic3Label.text = ""
-        magic4Label.text = ""
-        magic5Label.text = ""
-        magic6Label.text = ""
-        magic7Label.text = ""
-        magic8Label.text = ""
+        selectMagic1Label.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0)
+        selectMagic2Label.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0)
+        selectMagic3Label.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0)
+        selectMagic4Label.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0)
+        selectMagic5Label.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0)
+        selectMagic6Label.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0)
+        selectMagic7Label.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0)
+        selectMagic8Label.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0)
+        magic1Label.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0)
+        magic2Label.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0)
+        magic3Label.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0)
+        magic4Label.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0)
+        magic5Label.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0)
+        magic6Label.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0)
+        magic7Label.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0)
+        magic8Label.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0)
 
         selectMatkLabel.text = ""
 
@@ -135,16 +136,29 @@ class battleCommandViewController: UIViewController {
     }
 
 
-    @IBAction func mainButton(_ sender: Any) {
-        count += 1
 
-        switch selectAtkLabel.text {
-        case "▶︎":
-            count += 1    // どのモンスターを攻撃するか選択するフェーズへ
-            selectMonsterImage1Label.text = "▼"
-        default:
-            return
+
+    // 【メインボタン】
+    @IBAction func mainButton(_ sender: Any) {
+        count += 1    // フェーズを1つ先に進める
+
+        // 「たたかう」が選択されている時
+        if selectAtkLabel.text == "▶︎" {
+            selectAtkLabel.text = ""    // 1. たたかう の ▶︎ を消す
+            count += 1    // 2. どのモンスターを攻撃するか選択するフェーズへ
+            selectMonsterImage()    // 3. モンスター選択の▼を表示する処理
+
+        // 「じゅもん」が選択されている時
+        } else if selectMatkLabel.text == "▶︎" {
+            selectMatkLabel.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0)    // じゅもんの ▶︎ を消す
+            magicSelectView.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.6510595034)    // じゅもん選択画面の背景を表示する
+            selectMagic1Label.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)    // じゅもん1 の ▶︎を表示
+            availableMagic()    // 使用可能なじゅもんを表示
+            
+
         }
+
+
     }
 
 
@@ -177,6 +191,77 @@ class battleCommandViewController: UIViewController {
             return
         }
     }
+
+
+    // 3. モンスター選択の▼を表示する処理
+    func selectMonsterImage() {
+        if monsterName1 != "" {    // モンスター1がいるなら
+            selectMonsterImage1Label.text = "▼"    // モンスター1選択の▼を出す
+        } else if monsterName1 == "" && monsterName2 != "" {    // モンスター1がいなくてモンスター2がいるなら
+            selectMonsterImage2Label.text = "▼"    // モンスター2選択の▼を出す
+        } else if monsterName1 == "" && monsterName2 == "" && monsterName3 != "" {    // モンスター1,2がいなくてモンスター3がいるなら
+            selectMonsterImage3Label.text = "▼"    // モンスター3選択の▼を出す
+        } else if monsterName1 == "" && monsterName2 == "" && monsterName3 == "" && monsterName4 != "" {
+            selectMonsterImage4Label.text = "▼"    // モンスター3選択の▼を出す
+        } else {
+            return
+        }
+    }
+
+    // 1 ヒール
+    // 5 ひのたま
+    // 10 つららおとし
+    // 16 しょうげきは
+    // 20 ライトビーム
+    // 23 メガヒール
+    // 28 スターダスト
+
+    // じゅもん表示処理 残りMPによって色を変える処理も追加したい
+    func availableMagic() {
+        lv = 30
+        switch lv {
+        case 1..<5:
+            magic1Label.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        case 5..<10:
+            magic1Label.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+            magic2Label.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        case 10..<16:
+            magic1Label.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+            magic2Label.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+            magic3Label.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        case 16..<20:
+            magic1Label.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+            magic2Label.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+            magic3Label.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+            magic4Label.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        case 20..<23:
+            magic1Label.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+            magic2Label.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+            magic3Label.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+            magic4Label.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+            magic5Label.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        case 23..<28:
+            magic1Label.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+            magic2Label.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+            magic3Label.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+            magic4Label.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+            magic5Label.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+            magic6Label.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        case 28..<100:
+            magic1Label.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+            magic2Label.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+            magic3Label.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+            magic4Label.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+            magic5Label.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+            magic6Label.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+            magic7Label.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        default:
+            return
+        }
+    }
+
+
+
 
 
 
