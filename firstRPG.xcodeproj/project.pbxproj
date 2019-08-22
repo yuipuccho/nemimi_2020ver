@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		BA2A9CAF230E65FE00E13DC8 /* caveLastViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2A9CAE230E65FE00E13DC8 /* caveLastViewController.swift */; };
+		BA2A9CB1230E6E3B00E13DC8 /* cave2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2A9CB0230E6E3B00E13DC8 /* cave2ViewController.swift */; };
 		BA38499B2305548C006E7BA0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA38499A2305548C006E7BA0 /* AppDelegate.swift */; };
 		BA38499D2305548C006E7BA0 /* cave1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA38499C2305548C006E7BA0 /* cave1ViewController.swift */; };
 		BA3849A02305548C006E7BA0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA38499E2305548C006E7BA0 /* Main.storyboard */; };
@@ -20,6 +21,7 @@
 
 /* Begin PBXFileReference section */
 		BA2A9CAE230E65FE00E13DC8 /* caveLastViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = caveLastViewController.swift; sourceTree = "<group>"; };
+		BA2A9CB0230E6E3B00E13DC8 /* cave2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cave2ViewController.swift; sourceTree = "<group>"; };
 		BA3849972305548C006E7BA0 /* firstRPG.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = firstRPG.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA38499A2305548C006E7BA0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BA38499C2305548C006E7BA0 /* cave1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cave1ViewController.swift; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				BA38499C2305548C006E7BA0 /* cave1ViewController.swift */,
+				BA2A9CB0230E6E3B00E13DC8 /* cave2ViewController.swift */,
 				BA2A9CAE230E65FE00E13DC8 /* caveLastViewController.swift */,
 			);
 			path = caveDungeon;
@@ -165,6 +168,7 @@
 			files = (
 				BA3849FB2309219A006E7BA0 /* GameScene.swift in Sources */,
 				BA384A01230C1E5D006E7BA0 /* battleCommandViewController.swift in Sources */,
+				BA2A9CB1230E6E3B00E13DC8 /* cave2ViewController.swift in Sources */,
 				BA38499D2305548C006E7BA0 /* cave1ViewController.swift in Sources */,
 				BA2A9CAF230E65FE00E13DC8 /* caveLastViewController.swift in Sources */,
 				BA38499B2305548C006E7BA0 /* AppDelegate.swift in Sources */,
