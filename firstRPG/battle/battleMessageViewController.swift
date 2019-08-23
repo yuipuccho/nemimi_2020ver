@@ -22,11 +22,19 @@ class battleMessageViewController: UIViewController {
     @IBOutlet weak var monsterImage4: UIImageView!
     
     @IBOutlet weak var messageTextView: UITextView!    // バトルメッセージ
-    
+
+    var name = ""
+    var hp = 0
+    var mp = 0
+    var lv = 0
+
+    var receiveHp = 0
+    var receiveMp = 0
+    var receiveLv = 0
 
 
     /// どのモンスターとエンカウントしたかの情報を受け取る
-    var monster:[Int] = []
+    var monster:[Int] = []    // [0, 0] ならスライム2匹とエンカウント
 
     /// モンスター名前
     var monsterName1 = ""
@@ -133,23 +141,41 @@ class battleMessageViewController: UIViewController {
         // 画面にモンスター画像を表示
         appearMonster()
 
+/*
         // プレイヤー情報を表示する（画面左上のとこ）
-        let hp: Int =  player["nowHP"] as! Int
-        let mp: Int =  player["nowMP"] as! Int
-        let lv: Int =  player["Lv"] as! Int
+        hp =  player["nowHP"] as! Int
+        mp =  player["nowMP"] as! Int
+        lv =  player["Lv"] as! Int
 
         nameLabel.text = player["name"] as? String
         hpLabel.text = "HP: \(hp)"
         mpLabel.text = "MP: \(mp)"
         lvLabel.text = "Lv: \(lv)"
+ */
 
         // 画面遷移OK
         toSelect = true
+
+        print("a")
     }
+        
 
     override func viewWillAppear(_ animated: Bool) {
-        //appearMonster()
+        // プレイヤー情報
+        /*
+        player["nowHP"] = receiveHp
+        player["nowMP"] = receiveMp
+        player["Lv"] = receiveLv
+ */
 
+        hp = player["nowHP"] as! Int
+        mp = player["nowMP"] as! Int
+        lv = player["Lv"] as! Int
+
+        nameLabel.text = player["name"] as? String
+        hpLabel.text = "HP: \(hp)"
+        mpLabel.text = "MP: \(mp)"
+        lvLabel.text = "Lv: \(lv)"
 
     }
 
@@ -204,6 +230,7 @@ class battleMessageViewController: UIViewController {
 
     @IBAction func mainButton(_ sender: UIButton) {    // メインボタン
         if toSelect == true {
+player["nowHP"] = 30
             self.performSegue(withIdentifier: "toBattleCommand", sender: nil)    // 画面遷移
 
         }
@@ -223,7 +250,9 @@ class battleMessageViewController: UIViewController {
         // 向こうで必要な情報は
         // 1. プレイヤーの名前、HP、MP,Lv
         vc.name = player["name"] as! String
-        vc.hp = player["nowHP"] as! Int
+        vc.player["nowHP"] = player["nowHP"]
+
+        //vc.hp = player["nowHP"] as! Int
         vc.mp = player["nowMP"] as! Int
         vc.lv = player["Lv"] as! Int
 
@@ -231,15 +260,19 @@ class battleMessageViewController: UIViewController {
         // 2. 生き残ってるモンスター
         if monster1["hp"]! > 0 {
             vc.monsterName1 = monsterName1
+            vc.monster1 = monster1
         }
         if monster2["hp"]! > 0 {
             vc.monsterName2 = monsterName2
+            vc.monster2 = monster2
         }
         if monster3["hp"]! > 0 {
             vc.monsterName3 = monsterName3
+            vc.monster3 = monster3
         }
         if monster4["hp"]! > 0 {
             vc.monsterName4 = monsterName4
+            vc.monster4 = monster4
         }
 
 

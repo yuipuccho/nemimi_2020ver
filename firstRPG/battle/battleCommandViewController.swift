@@ -21,6 +21,12 @@ class battleCommandViewController: UIViewController {
     var monsterName3 = ""
     var monsterName4 = ""
 
+    /// モンスターステータスとりま預かる
+    var monster1: [String: Int] = [:]
+    var monster2: [String: Int] = [:]
+    var monster3: [String: Int] = [:]
+    var monster4: [String: Int] = [:]
+
 
     /// メインボタンを何回押したかカウント
     var count = 0
@@ -45,6 +51,23 @@ class battleCommandViewController: UIViewController {
 
     /// モンスター配列番号
     var selectableMonsterNum = 0
+
+    /// 【プレイヤーのパラメータ】
+    var player: [String: Any] = [
+        "name": "ほげほげ",
+        "Lv": 1,    // レベル
+        "maxHP": 50,    // 最大HP
+        "maxMP": 10,    // 最大MP
+        "nowHP": 50,
+        "nowMP": 10,
+        "atk": 20,    // 攻撃力
+        "def": 10,    // 守備力
+        "agi": 8,    // すばやさ
+        "itemAtk": 0,    // 装備の攻撃力
+        "itemDef": 0,    // 装備の守備力
+        "exp": 0,    // 経験値
+        "gold": 0    // 所持金
+    ]
 
 
     @IBOutlet weak var nameLabel: UILabel!    // プレイヤーの名前
@@ -95,6 +118,17 @@ class battleCommandViewController: UIViewController {
     }
 
     override func viewWillAppear(_ animated: Bool) {
+
+        // プレイヤーステータス表示
+        hp = player["nowHP"] as! Int
+        mp = player["nowMP"] as! Int
+        lv = player["Lv"] as! Int
+
+        nameLabel.text = player["name"] as? String
+        hpLabel.text = "HP: \(hp)"
+        mpLabel.text = "MP: \(mp)"
+        lvLabel.text = "Lv: \(lv)"
+
         // 最初の画面なのでじゅもん一覧とかいらんやつを消す
         // じゅもん系
         magicSelectView.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0)    // 背景を透明に
@@ -189,6 +223,7 @@ class battleCommandViewController: UIViewController {
         } else if selectingMagic {
             // ここにmagicNum を取得する処理を追加する
             // ヒール、メガヒールを選択していたら遷移
+            // performSegue(withIdentifier: "toBattleMessage", sender: nil)    // 画面遷移
 
             // じゅもん一覧についている ▶︎ を消す
             selectMagic1Label.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0)
@@ -205,8 +240,12 @@ class battleCommandViewController: UIViewController {
 
             selectingMonster = true    // どのモンスターを攻撃するか選択するフェーズへ
             selectingMagic = false
-        }
 
+        // 攻撃するモンスターが選択されている時
+        } else if selectingMonster {
+            performSegue(withIdentifier: "toBattleMessage", sender: nil)    // 画面遷移
+
+        }
     }
 
 
@@ -351,7 +390,7 @@ class battleCommandViewController: UIViewController {
 
     // じゅもん表示処理 残りMPによって色を変える処理も追加したい
     func availableMagic() {
-        lv = 30
+        lv = 20
         switch lv {
         case 1..<5:
             magic1Label.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
@@ -483,7 +522,32 @@ class battleCommandViewController: UIViewController {
         }
 
         // 向こうに返す情報は
-        // どの攻撃タイプを選択したか
+        // プレイヤー情報
+        vc.name = name
+        vc.player["nowHP"] = player["nowHP"]
+        //vc.receiveHp = hp
+        vc.receiveMp = mp
+        vc.receiveLv = lv
+
+
+        // モンスター情報
+        if monsterName1 != "" {
+            vc.monsterName1 = monsterName1
+            vc.monster1 = monster1
+
+        } else if monsterName2 != "" {
+            vc.monsterName2 = monsterName2
+            vc.monster2 = monster2
+
+        } else if monsterName3 != "" {
+            vc.monsterName3 = monsterName3
+            vc.monster3 = monster3
+
+        } else if monsterName4 != "" {
+            vc.monsterName4 = monsterName4
+            vc.monster4 = monster4
+        }
+        // どのモンスターに対して攻撃タイプを選択したか
 
     }
 }

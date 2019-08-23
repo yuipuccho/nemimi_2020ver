@@ -2627,7 +2627,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gp5-z5-C40" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1384" y="-2211"/>
+            <point key="canvasLocation" x="-1302" y="-784"/>
         </scene>
         <!--Cave2 View Controller-->
         <scene sceneID="TNM-eR-St6">
