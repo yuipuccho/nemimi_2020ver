@@ -37,26 +37,66 @@ class cave1ViewController: UIViewController {
         0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0
     ]
 
+    /// モンスター名前
+    var monsterName1 = ""
+    var monsterName2 = ""
+    var monsterName3 = ""
+    var monsterName4 = ""
+
+
+    /// モンスターステータス
+    var monster1: [String: Int] = [:]
+    var monster2: [String: Int] = [:]
+    var monster3: [String: Int] = [:]
+    var monster4: [String: Int] = [:]
+
+    // 【モンスター情報】
+    var monsterStatus: [[String: Int]] = [
+        ["hp": 1, "atk": 1, "def": 1, "agi": 1, "exp": 1, "gold": 1],    // 0. スライム
+        ["hp": 1, "atk": 1, "def": 1, "agi": 1, "exp": 1, "gold": 1],    // 1. バット
+        ["hp": 1, "atk": 1, "def": 1, "agi": 1, "exp": 1, "gold": 1],    // 2. マタンゴ
+        ["hp": 1, "atk": 1, "def": 1, "agi": 1, "exp": 1, "gold": 1],    // 3. ピヨネズミ
+        ["hp": 1, "atk": 1, "def": 1, "agi": 1, "exp": 1, "gold": 1],    // 4. レイン
+        ["hp": 1, "atk": 1, "def": 1, "agi": 1, "exp": 1, "gold": 1],    // 5. プランタ
+        ["hp": 1, "atk": 1, "def": 1, "agi": 1, "exp": 1, "gold": 1],    // 6. ボーン
+        ["hp": 1, "atk": 1, "def": 1, "agi": 1, "exp": 1, "gold": 1],    // 7. ラコステ
+        ["hp": 1, "atk": 1, "def": 1, "agi": 1, "exp": 1, "gold": 1],    // 8. ナルシカラス
+        ["hp": 1, "atk": 1, "def": 1, "agi": 1, "exp": 1, "gold": 1],    // 9. ゴーレム
+        ["hp": 1, "atk": 1, "def": 1, "agi": 1, "exp": 1, "gold": 1],    // 10. トロール
+        ["hp": 1, "atk": 1, "def": 1, "agi": 1, "exp": 1, "gold": 1],    // 11. ハーミット
+        ["hp": 1, "atk": 1, "def": 1, "agi": 1, "exp": 1, "gold": 1],    // 12. ティグレ
+        ["hp": 0, "atk": 0, "def": 0, "agi": 0, "exp": 0, "gold": 0]    // 13. なし
+    ]
+
+    //let a = monsterStatus[0]["hp"]
+    //print(a!)
+
+
+
+
+    // モンスターの名前
+    let monsterName: [String] = [
+        "スライム",
+        "バット",
+        "マタンゴ",
+        "ピヨネズミ",
+        "レイン",
+        "プランタ",
+        "ボーン",
+        "ラコステ",
+        "ナルシカラス",
+        "ゴーレム",
+        "トロール",
+        "ハーミット",
+        "ティグレ",
+        ""
+    ]
+
+
 
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-/*        // SKViewに型を変換する
-        let skView = self.view as! SKView
-
-        // FPSを表示する。アプリの動きをわかりやすくするため。
-        skView.showsFPS = true
-
-        // ノードの数を表示する。アプリの動きをわかりやすくするため。
-        skView.showsNodeCount = true
-
-        // SKSceneはサイズを指定して作成。Viewと同じサイズでシーンを作成する。
-        let scene = GameScene(size:skView.frame.size)
-
-        // ビューにシーンを表示する。ここで SKScene を設定。
-        skView.presentScene(scene)
- */
     }
 
     // ステータスバー邪魔だから消す
@@ -167,24 +207,58 @@ class cave1ViewController: UIViewController {
 
     // 【敵とエンカウントする処理】を書きたい！
     func encount() {
+        print("えんかうんと")
         // 1. エンカウントが発生した時にどのモンスターを何匹出現させるか決定
         // 何匹か(2匹か4匹)
         let howMany = Int.random(in: 0...1)    // 0なら2匹、1なら4匹出現
         switch howMany {
         case 0:    // 2匹の場合
             let noMonster = 13
-            let monster1 = Int.random(in: 0...1)    // このマップでは0,1のモンスターが出現。
-            let monster2 = Int.random(in: 0...1)
-            monster = [noMonster, monster1, monster2, noMonster]    // バトルシーン遷移時にこの値を渡してモンスターを出現させる。
+            let monsterA = Int.random(in: 0...1)    // このマップでは0,1のモンスターが出現。
+            let monsterB = Int.random(in: 0...1)
+            monster = [noMonster, monsterA, monsterB, noMonster]    // バトルシーン遷移時にこの値を渡してモンスターを出現させる。
+
+
+            monster1 = monsterStatus[monster[0]]    // モンスターのステータスを入れる
+            monsterName1 = monsterName[monster[0]]    // 1匹目の名前を取得
+
+            monster2 = monsterStatus[monster[1]]    // モンスターのステータスを入れる
+            monsterName2 = monsterName[monster[1]]    // 1匹目の名前を取得
+
+            monster3 = monsterStatus[monster[2]]    // モンスターのステータスを入れる
+            monsterName3 = monsterName[monster[2]]    // 1匹目の名前を取得
+
+            monster4 = monsterStatus[monster[3]]    // モンスターのステータスを入れる
+            monsterName4 = monsterName[monster[3]]    // 1匹目の名前を取得
+
+
+
         case 1:    // 4匹の場合
-            let monster3 = Int.random(in: 0...1)
-            let monster4 = Int.random(in: 0...1)
-            let monster5 = Int.random(in: 0...1)
-            let monster6 = Int.random(in: 0...1)
-            monster = [monster3, monster4, monster5, monster6]
+            let monsterC = Int.random(in: 0...1)
+            let monsterD = Int.random(in: 0...1)
+            let monsterE = Int.random(in: 0...1)
+            let monsterF = Int.random(in: 0...1)
+            monster = [monsterC, monsterD, monsterE, monsterF]
+
+
+            monster1 = monsterStatus[monster[0]]    // モンスターのステータスを入れる
+            monsterName1 = monsterName[monster[0]]    // 1匹目の名前を取得
+
+            monster2 = monsterStatus[monster[1]]    // モンスターのステータスを入れる
+            monsterName2 = monsterName[monster[1]]    // 1匹目の名前を取得
+
+            monster3 = monsterStatus[monster[2]]    // モンスターのステータスを入れる
+            monsterName3 = monsterName[monster[2]]    // 1匹目の名前を取得
+
+            monster4 = monsterStatus[monster[3]]    // モンスターのステータスを入れる
+            monsterName4 = monsterName[monster[3]]    // 1匹目の名前を取得
+
         default:
             return
         }
+
+
+
 
 
         // 2. どんな条件でエンカウントが発生するのか
@@ -194,17 +268,21 @@ class cave1ViewController: UIViewController {
         case 2:    // 歩数が2歩の時
             if int < 1 {    // 乱数が0だったら遷移して戦闘
                 performSegue(withIdentifier: "toBattle", sender: nil)
+                print("せんい")
             }
         case 5:    // 歩数が5歩の時
             if int < 6 {     // 乱数が0~5だったら遷移して戦闘
                 performSegue(withIdentifier: "toBattle", sender: nil)
+                print("せんい")
             }
         case 8:    // 歩数が8歩の時
             if int < 9 {    // 乱数が0~8だったら遷移して戦闘
                 performSegue(withIdentifier: "toBattle", sender: nil)
+                print("せんい")
             }
         case 10:    // 歩数が10歩の時
             performSegue(withIdentifier: "toBattle", sender: nil)    // 強制で戦闘
+            print("せんい")
 
         default:
             return
@@ -223,8 +301,25 @@ class cave1ViewController: UIViewController {
         guard segue.identifier == "toBattle", let vc = segue.destination as? battleMessageViewController else {
             return
         }
-        vc.monster = monster    // エンカウントしたモンスター情報を渡す
-    }
+
+        //vc.monster = monster    // エンカウントしたモンスター情報を渡す
+        vc.monsterName1 = monsterName1
+        vc.monster1 = monster1
+        //}
+        //if monster2["hp"]! > 0 {
+        vc.monsterName2 = monsterName2
+        vc.monster2 = monster2
+        //}
+        //if monster3["hp"]! > 0 {
+        vc.monsterName3 = monsterName3
+        vc.monster3 = monster3
+        //}
+        //if monster4["hp"]! > 0 {
+        vc.monsterName4 = monsterName4
+        vc.monster4 = monster4
+
+ }
+
 
 
 

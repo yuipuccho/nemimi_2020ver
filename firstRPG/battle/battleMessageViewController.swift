@@ -53,7 +53,7 @@ class battleMessageViewController: UIViewController {
 
     /// 【プレイヤーのパラメータ】
     var player: [String: Any] = [
-        "name": "ほげほげ",
+        "name": "ほげぇ",
         "Lv": 1,    // レベル
         "maxHP": 50,    // 最大HP
         "maxMP": 10,    // 最大MP
@@ -122,11 +122,10 @@ class battleMessageViewController: UIViewController {
         "ボーン",
         "ラコステ",
         "ナルシカラス",
-        "ナルシカラス",
         "ゴーレム",
         "トロール",
         "ハーミット",
-        "ティグレ"
+        "ティグレ",
     ]
 
 
@@ -136,14 +135,13 @@ class battleMessageViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // 画面にモンスター画像を表示
-        appearMonster()
+        //appearMonster()
 
         // 画面遷移OK
         toSelect = true
 
-        print("a")
     }
-        
+
 
     override func viewWillAppear(_ animated: Bool) {
         // プレイヤー情報表示
@@ -155,6 +153,9 @@ class battleMessageViewController: UIViewController {
         hpLabel.text = "HP: \(hp)"
         mpLabel.text = "MP: \(mp)"
         lvLabel.text = "Lv: \(lv)"
+
+        // 画面にモンスター画像を表示
+        appearMonster()
 
         print(monsterName1)
         print(monster1)
@@ -170,65 +171,21 @@ class battleMessageViewController: UIViewController {
 
     // 【モンスターを出現させる処理】
     func appearMonster() {
-        // モンスター何匹出現させる？
-        switch monster.count {
-        case 2:    // 2匹なら
-            // どのモンスター？
-            // 1匹目
-            monsterName2 = monsterName[monster[0]]    // 1匹目の名前を取得
+        monsterImage1.image = UIImage(named: "\(monsterName1)")    // 1匹目の画像を表示
             monsterImage2.image = UIImage(named: "\(monsterName2)")    // 1匹目の画像を表示
-            monster2 = monsterStatus[monster[0]]    // モンスターのステータスを入れる
-            // 2匹目
-            monsterName3 = monsterName[monster[1]]    // 2匹目の名前を取得
-            monsterImage3.image = UIImage(named: "\(monsterName3)")    // 2匹目の画像を表示
-            monster3 = monsterStatus[monster[1]]    // モンスターのステータスを入れる
 
-            monster1 = ["hp": 0]    // 2匹の出現なので消す
-            monster4 = ["hp": 0]    // 2匹の出現なので消す
+            monsterImage3.image = UIImage(named: "\(monsterName3)")    // 1匹目の画像を表示
 
-        case 4:    // 4匹なら
-            // どのモンスター？
-            // 1匹目
+            monsterImage4.image = UIImage(named: "\(monsterName4)")    // 1匹目の画像を表示
 
-            monster1 = monsterStatus[monster[0]]    // モンスターのステータスを入れる
-            if monster1["hp"] != 0 {
-                monsterName1 = monsterName[monster[0]]    // 1匹目の名前を取得
-                monsterImage1.image = UIImage(named: "\(monsterName1)")    // 1匹目の画像を表示
-            }
-            // 2匹目
-            //monsterName2 = monsterName[monster[1]]    // 2匹目の名前を取得
-            //monsterImage2.image = UIImage(named: "\(monsterName2)")    // 2匹目の画像を表示
-            monster2 = monsterStatus[monster[1]]    // モンスターのステータスを入れる
-            if monster2["hp"] != 0 {
-                monsterName2 = monsterName[monster[1]]    // 1匹目の名前を取得
-                monsterImage2.image = UIImage(named: "\(monsterName2)")    // 1匹目の画像を表示
-            }
-            // 3匹目
-            //monsterName3 = monsterName[monster[2]]    // 3匹目の名前を取得
-            //monsterImage3.image = UIImage(named: "\(monsterName3)")    // 3匹目の画像を表示
-            monster3 = monsterStatus[monster[2]]    // モンスターのステータスを入れる
-            if monster3["hp"] != 0 {
-                monsterName3 = monsterName[monster[2]]    // 1匹目の名前を取得
-                monsterImage3.image = UIImage(named: "\(monsterName3)")    // 1匹目の画像を表示
-            }
-            // 4匹目
-            //monsterName4 = monsterName[monster[3]]    // 4匹目の名前を取得
-            //monsterImage4.image = UIImage(named: "\(monsterName4)")    // 4匹目の画像を表示
-            monster4 = monsterStatus[monster[3]]    // モンスターのステータスを入れる
-            if monster4["hp"] != 0 {
-                monsterName4 = monsterName[monster[3]]    // 1匹目の名前を取得
-                monsterImage4.image = UIImage(named: "\(monsterName4)")    // 1匹目の画像を表示
-            }
 
-        default:
-            return
-        }
     }
+
 
 
     // 【攻撃の処理】
 
-    
+
 
 
     @IBAction func mainButton(_ sender: UIButton) {    // メインボタン
@@ -239,7 +196,7 @@ class battleMessageViewController: UIViewController {
     }
 
 
-    
+
 
 
 
@@ -260,20 +217,20 @@ class battleMessageViewController: UIViewController {
 
         // 2. 生き残ってるモンスター
         //if monster1["hp"]! > 0 {
-            vc.monsterName1 = monsterName1
-            vc.monster1 = monster1
+        vc.monsterName1 = monsterName1
+        vc.monster1 = monster1
         //}
         //if monster2["hp"]! > 0 {
-            vc.monsterName2 = monsterName2
-            vc.monster2 = monster2
+        vc.monsterName2 = monsterName2
+        vc.monster2 = monster2
         //}
         //if monster3["hp"]! > 0 {
-            vc.monsterName3 = monsterName3
-            vc.monster3 = monster3
+        vc.monsterName3 = monsterName3
+        vc.monster3 = monster3
         //}
         //if monster4["hp"]! > 0 {
-            vc.monsterName4 = monsterName4
-            vc.monster4 = monster4
+        vc.monsterName4 = monsterName4
+        vc.monster4 = monster4
         //}
 
 

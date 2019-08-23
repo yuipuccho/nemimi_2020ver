@@ -54,7 +54,7 @@ class battleCommandViewController: UIViewController {
 
     /// 【プレイヤーのパラメータ】
     var player: [String: Any] = [
-        "name": "ほげほげ",
+        "name": "ほげぇ",
         "Lv": 1,    // レベル
         "maxHP": 50,    // 最大HP
         "maxMP": 10,    // 最大MP
@@ -315,6 +315,7 @@ class battleCommandViewController: UIViewController {
             } else {
                 selectableMonsterNum += 1
                 selectMonsterImage()    // 選択モンスターに応じて▼を動かす
+                print(selectableMonster)
             }
         }
     }
@@ -342,15 +343,20 @@ class battleCommandViewController: UIViewController {
     // 生存モンスターを配列にぶちこむ処理
     func selectMonster() {
         if monsterName1 != "" {
+
+        //if monster1["hp"]! > 0 {
             selectableMonster.append(1)
         }
         if monsterName2 != "" {
+        //if monster2["hp"]! > 0 {
             selectableMonster.append(2)
         }
         if monsterName3 != "" {
+        //if monster3["hp"]! > 0 {
             selectableMonster.append(3)
         }
         if monsterName4 != "" {
+        //if monster4["hp"]! > 0 {
             selectableMonster.append(4)
         }
     }
@@ -398,7 +404,6 @@ class battleCommandViewController: UIViewController {
 
     // じゅもん表示処理 残りMPによって色を変える処理も追加したい
     func availableMagic() {
-        lv = 20
         switch lv {
         case 1..<5:
             magic1Label.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
@@ -529,9 +534,10 @@ class battleCommandViewController: UIViewController {
             return
         }
 
+
         // 向こうに返す情報は
         // プレイヤー情報
-        vc.name = name
+        vc.name = player["name"] as! String
         vc.player["nowHP"] = player["nowHP"]
         vc.player["nowMP"] = player["nowMP"]
         vc.player["Lv"] = player["Lv"]
