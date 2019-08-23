@@ -118,6 +118,14 @@ class battleCommandViewController: UIViewController {
     }
 
     override func viewWillAppear(_ animated: Bool) {
+        print(monsterName1)
+        print(monster1)
+        print(monsterName2)
+        print(monster2)
+        print(monsterName3)
+        print(monster3)
+        print(monsterName4)
+        print(monster4)
 
         // プレイヤーステータス表示
         hp = player["nowHP"] as! Int
@@ -525,28 +533,35 @@ class battleCommandViewController: UIViewController {
         // プレイヤー情報
         vc.name = name
         vc.player["nowHP"] = player["nowHP"]
-        //vc.receiveHp = hp
-        vc.receiveMp = mp
-        vc.receiveLv = lv
+        vc.player["nowMP"] = player["nowMP"]
+        vc.player["Lv"] = player["Lv"]
 
 
         // モンスター情報
-        if monsterName1 != "" {
+        //if monsterName1 != "" {
             vc.monsterName1 = monsterName1
             vc.monster1 = monster1
+            print(monsterName1)
+            print(monster1)
 
-        } else if monsterName2 != "" {
+        //} else if monsterName2 != "" {
+            print(monsterName2)
             vc.monsterName2 = monsterName2
             vc.monster2 = monster2
+            print(monster2)
 
-        } else if monsterName3 != "" {
+        //} else if monsterName3 != "" {
             vc.monsterName3 = monsterName3
             vc.monster3 = monster3
+            print(monsterName3)
+            print(monster3)
 
-        } else if monsterName4 != "" {
+        //} else if monsterName4 != "" {
             vc.monsterName4 = monsterName4
             vc.monster4 = monster4
-        }
+            print(monsterName4)
+            print(monster4)
+        //}
         // どのモンスターに対して攻撃タイプを選択したか
 
     }

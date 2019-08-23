@@ -172,9 +172,10 @@ class cave1ViewController: UIViewController {
         let howMany = Int.random(in: 0...1)    // 0なら2匹、1なら4匹出現
         switch howMany {
         case 0:    // 2匹の場合
+            let noMonster = 13
             let monster1 = Int.random(in: 0...1)    // このマップでは0,1のモンスターが出現。
             let monster2 = Int.random(in: 0...1)
-            monster = [monster1, monster2]    // バトルシーン遷移時にこの値を渡してモンスターを出現させる。
+            monster = [noMonster, monster1, monster2, noMonster]    // バトルシーン遷移時にこの値を渡してモンスターを出現させる。
         case 1:    // 4匹の場合
             let monster3 = Int.random(in: 0...1)
             let monster4 = Int.random(in: 0...1)

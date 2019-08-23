@@ -28,10 +28,6 @@ class battleMessageViewController: UIViewController {
     var mp = 0
     var lv = 0
 
-    var receiveHp = 0
-    var receiveMp = 0
-    var receiveLv = 0
-
 
     /// どのモンスターとエンカウントしたかの情報を受け取る
     var monster:[Int] = []    // [0, 0] ならスライム2匹とエンカウント
@@ -104,8 +100,9 @@ class battleMessageViewController: UIViewController {
         ["hp": 1, "atk": 1, "def": 1, "agi": 1, "exp": 1, "gold": 1],    // 8. ナルシカラス
         ["hp": 1, "atk": 1, "def": 1, "agi": 1, "exp": 1, "gold": 1],    // 9. ゴーレム
         ["hp": 1, "atk": 1, "def": 1, "agi": 1, "exp": 1, "gold": 1],    // 10. トロール
-        ["hp": 1, "atk": 1, "def": 1, "agi": 1, "exp": 1, "gold": 1],    // ハーミット
-        ["hp": 1, "atk": 1, "def": 1, "agi": 1, "exp": 1, "gold": 1]    // ティグレ
+        ["hp": 1, "atk": 1, "def": 1, "agi": 1, "exp": 1, "gold": 1],    // 11. ハーミット
+        ["hp": 1, "atk": 1, "def": 1, "agi": 1, "exp": 1, "gold": 1],    // 12. ティグレ
+        ["hp": 0, "atk": 0, "def": 0, "agi": 0, "exp": 0, "gold": 0]    // 13. なし
     ]
 
     //let a = monsterStatus[0]["hp"]
@@ -141,18 +138,6 @@ class battleMessageViewController: UIViewController {
         // 画面にモンスター画像を表示
         appearMonster()
 
-/*
-        // プレイヤー情報を表示する（画面左上のとこ）
-        hp =  player["nowHP"] as! Int
-        mp =  player["nowMP"] as! Int
-        lv =  player["Lv"] as! Int
-
-        nameLabel.text = player["name"] as? String
-        hpLabel.text = "HP: \(hp)"
-        mpLabel.text = "MP: \(mp)"
-        lvLabel.text = "Lv: \(lv)"
- */
-
         // 画面遷移OK
         toSelect = true
 
@@ -161,13 +146,7 @@ class battleMessageViewController: UIViewController {
         
 
     override func viewWillAppear(_ animated: Bool) {
-        // プレイヤー情報
-        /*
-        player["nowHP"] = receiveHp
-        player["nowMP"] = receiveMp
-        player["Lv"] = receiveLv
- */
-
+        // プレイヤー情報表示
         hp = player["nowHP"] as! Int
         mp = player["nowMP"] as! Int
         lv = player["Lv"] as! Int
@@ -176,6 +155,15 @@ class battleMessageViewController: UIViewController {
         hpLabel.text = "HP: \(hp)"
         mpLabel.text = "MP: \(mp)"
         lvLabel.text = "Lv: \(lv)"
+
+        print(monsterName1)
+        print(monster1)
+        print(monsterName2)
+        print(monster2)
+        print(monsterName3)
+        print(monster3)
+        print(monsterName4)
+        print(monster4)
 
     }
 
@@ -201,21 +189,36 @@ class battleMessageViewController: UIViewController {
         case 4:    // 4匹なら
             // どのモンスター？
             // 1匹目
-            monsterName1 = monsterName[monster[0]]    // 1匹目の名前を取得
-            monsterImage1.image = UIImage(named: "\(monsterName1)")    // 1匹目の画像を表示
+
             monster1 = monsterStatus[monster[0]]    // モンスターのステータスを入れる
+            if monster1["hp"] != 0 {
+                monsterName1 = monsterName[monster[0]]    // 1匹目の名前を取得
+                monsterImage1.image = UIImage(named: "\(monsterName1)")    // 1匹目の画像を表示
+            }
             // 2匹目
-            monsterName2 = monsterName[monster[1]]    // 2匹目の名前を取得
-            monsterImage2.image = UIImage(named: "\(monsterName2)")    // 2匹目の画像を表示
+            //monsterName2 = monsterName[monster[1]]    // 2匹目の名前を取得
+            //monsterImage2.image = UIImage(named: "\(monsterName2)")    // 2匹目の画像を表示
             monster2 = monsterStatus[monster[1]]    // モンスターのステータスを入れる
+            if monster2["hp"] != 0 {
+                monsterName2 = monsterName[monster[1]]    // 1匹目の名前を取得
+                monsterImage2.image = UIImage(named: "\(monsterName2)")    // 1匹目の画像を表示
+            }
             // 3匹目
-            monsterName3 = monsterName[monster[2]]    // 3匹目の名前を取得
-            monsterImage3.image = UIImage(named: "\(monsterName3)")    // 3匹目の画像を表示
+            //monsterName3 = monsterName[monster[2]]    // 3匹目の名前を取得
+            //monsterImage3.image = UIImage(named: "\(monsterName3)")    // 3匹目の画像を表示
             monster3 = monsterStatus[monster[2]]    // モンスターのステータスを入れる
+            if monster3["hp"] != 0 {
+                monsterName3 = monsterName[monster[2]]    // 1匹目の名前を取得
+                monsterImage3.image = UIImage(named: "\(monsterName3)")    // 1匹目の画像を表示
+            }
             // 4匹目
-            monsterName4 = monsterName[monster[3]]    // 4匹目の名前を取得
-            monsterImage4.image = UIImage(named: "\(monsterName4)")    // 4匹目の画像を表示
+            //monsterName4 = monsterName[monster[3]]    // 4匹目の名前を取得
+            //monsterImage4.image = UIImage(named: "\(monsterName4)")    // 4匹目の画像を表示
             monster4 = monsterStatus[monster[3]]    // モンスターのステータスを入れる
+            if monster4["hp"] != 0 {
+                monsterName4 = monsterName[monster[3]]    // 1匹目の名前を取得
+                monsterImage4.image = UIImage(named: "\(monsterName4)")    // 1匹目の画像を表示
+            }
 
         default:
             return
@@ -230,7 +233,6 @@ class battleMessageViewController: UIViewController {
 
     @IBAction func mainButton(_ sender: UIButton) {    // メインボタン
         if toSelect == true {
-player["nowHP"] = 30
             self.performSegue(withIdentifier: "toBattleCommand", sender: nil)    // 画面遷移
 
         }
@@ -251,30 +253,28 @@ player["nowHP"] = 30
         // 1. プレイヤーの名前、HP、MP,Lv
         vc.name = player["name"] as! String
         vc.player["nowHP"] = player["nowHP"]
+        vc.player["nowMP"] = player["nowMP"]
+        vc.player["Lv"] = player["Lv"]
 
-        //vc.hp = player["nowHP"] as! Int
-        vc.mp = player["nowMP"] as! Int
-        vc.lv = player["Lv"] as! Int
 
 
         // 2. 生き残ってるモンスター
-        if monster1["hp"]! > 0 {
+        //if monster1["hp"]! > 0 {
             vc.monsterName1 = monsterName1
             vc.monster1 = monster1
-        }
-        if monster2["hp"]! > 0 {
+        //}
+        //if monster2["hp"]! > 0 {
             vc.monsterName2 = monsterName2
             vc.monster2 = monster2
-        }
-        if monster3["hp"]! > 0 {
+        //}
+        //if monster3["hp"]! > 0 {
             vc.monsterName3 = monsterName3
             vc.monster3 = monster3
-        }
-        if monster4["hp"]! > 0 {
+        //}
+        //if monster4["hp"]! > 0 {
             vc.monsterName4 = monsterName4
             vc.monster4 = monster4
-        }
-
+        //}
 
 
         //vc.select = selectNum
