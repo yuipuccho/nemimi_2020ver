@@ -45,6 +45,9 @@ class battleMessageViewController: UIViewController {
     var monster3: [String: Int] = [:]
     var monster4: [String: Int] = [:]
 
+    /// どんな攻撃をするか管理
+    var magicNum = 0
+
 
     /// メインボタンを押した時に画面遷移するかどうか判断
     var toSelect: Bool = false
@@ -217,6 +220,7 @@ class battleMessageViewController: UIViewController {
 
         // 2. 生き残ってるモンスター
         //if monster1["hp"]! > 0 {
+        //monster2["hp"] = 10
         vc.monsterName1 = monsterName1
         vc.monster1 = monster1
         //}

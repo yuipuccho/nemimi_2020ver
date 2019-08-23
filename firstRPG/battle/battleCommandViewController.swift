@@ -37,7 +37,7 @@ class battleCommandViewController: UIViewController {
     /// じゅもん選択中だよ
     var selectingMagic = false
 
-    /// じゅもんの番号
+    /// じゅもんの番号(0: 通常攻撃, 1: ヒール, 2: ひのたま, 3: つららおとし, 4: しょうげきは, 5: ライトビーム, 6: メガヒール, 7: スターダスト)
     var magicNum = 0
 
     /// じゅもん使える数
@@ -51,6 +51,9 @@ class battleCommandViewController: UIViewController {
 
     /// モンスター配列番号
     var selectableMonsterNum = 0
+
+
+
 
     /// 【プレイヤーのパラメータ】
     var player: [String: Any] = [
@@ -215,6 +218,7 @@ class battleCommandViewController: UIViewController {
             selectMonster()
             selectMonsterImage()    // 2. モンスター選択の▼を表示する処理
 
+            magicNum = 0    // 通常攻撃するよー
             selectingMonster = true    // 3. どのモンスターを攻撃するか選択するフェーズへ
             selectingAtkType = false
 
@@ -569,6 +573,8 @@ class battleCommandViewController: UIViewController {
             print(monster4)
         //}
         // どのモンスターに対して攻撃タイプを選択したか
+        vc.magicNum = magicNum
+        print(magicNum)
 
     }
 }
