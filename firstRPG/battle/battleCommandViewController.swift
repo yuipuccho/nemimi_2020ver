@@ -31,8 +31,20 @@ class battleCommandViewController: UIViewController {
     /// じゅもん選択中だよ
     var selectingMagic = false
 
+    /// じゅもんの番号
+    var magicNum = 0
+
+    /// じゅもん使える数
+    var magicMaxNum = 0
+
     /// 攻撃するモンスターを選択中だよ
     var selectingMonster = false
+
+    /// 選択可能なモンスター番号
+    var selectableMonster:[Int] = []
+
+    /// モンスター配列番号
+    var selectableMonsterNum = 0
 
 
     @IBOutlet weak var nameLabel: UILabel!    // プレイヤーの名前
@@ -144,6 +156,8 @@ class battleCommandViewController: UIViewController {
         }
 
         selectingAtkType = true    // たたかうかじゅもんか選ぶよ〜
+
+        magicNum = 1    // じゅもん番号を1に
     }
 
 
@@ -155,13 +169,16 @@ class battleCommandViewController: UIViewController {
         // 「たたかう」が選択されている時
         if selectAtkLabel.text == "▶︎" {
             selectAtkLabel.text = ""    // 1. たたかう の ▶︎ を消す
+
+            selectMonster()
             selectMonsterImage()    // 2. モンスター選択の▼を表示する処理
+
             selectingMonster = true    // 3. どのモンスターを攻撃するか選択するフェーズへ
             selectingAtkType = false
 
         // 「じゅもん」が選択されている時
         } else if selectMatkLabel.text == "▶︎" {
-            selectMatkLabel.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0)    // じゅもんの ▶︎ を消す
+            selectMatkLabel.text = ""    // じゅもんの ▶︎ を消す
             magicSelectView.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.6510595034)    // じゅもん選択画面の背景を表示する
             selectMagic1Label.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)    // じゅもん1 の ▶︎を表示
             availableMagic()    // 使用可能なじゅもんを表示
@@ -169,77 +186,160 @@ class battleCommandViewController: UIViewController {
             selectingAtkType = false
 
         // ヒールなど、じゅもん一覧のどれかが選択されている時
-        } else if selectMagic1Label.textColor == #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0) {    // ヒールが選択されてる
-            // ヒールを選択したよって処理を入れる
-            selectMagic1Label.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0)    // ▶︎を消す
+        } else if selectingMagic {
+            // ここにmagicNum を取得する処理を追加する
+            // ヒール、メガヒールを選択していたら遷移
+
+            // じゅもん一覧についている ▶︎ を消す
+            selectMagic1Label.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0)
+            selectMagic2Label.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0)
+            selectMagic3Label.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0)
+            selectMagic4Label.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0)
+            selectMagic5Label.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0)
+            selectMagic6Label.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0)
+            selectMagic7Label.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0)
+            selectMagic8Label.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0)
+
+            selectMonster()    // 生存モンスターを配列にぶちこむ
             selectMonsterImage()    // モンスター選択の▼を表示する処理
-            selectingMonster = true    // こうげきするモンスター選択のフェーズだよ
+
+            selectingMonster = true    // どのモンスターを攻撃するか選択するフェーズへ
             selectingMagic = false
-
-
-        } else if selectMagic2Label.textColor == #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0) {
-
-        } else if selectMagic3Label.textColor == #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0) {
-
-        } else if selectMagic4Label.textColor == #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0) {
-
-        } else if selectMagic5Label.textColor == #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0) {
-
-        } else if selectMagic6Label.textColor == #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0) {
-
-        } else if selectMagic7Label.textColor == #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0) {
-
         }
-
 
     }
 
 
+    // 上ボタン
     @IBAction func upButton(_ sender: Any) {
-        switch count {
-        case 0:    // 「たたかう」か「じゅもん」を選択するフェーズ
+        // 【「たたかう」か「じゅもん」を選択するフェーズ】
+        if selectingAtkType {
             selectAtkLabel.text = "▶︎"
             selectMatkLabel.text = ""
-        default:
-            return
+
+        // 【じゅもんを選択するフェーズ】
+        } else if selectingMagic {
+            // じゅもん選択の▶︎を動かすよ〜
+            if magicNum - 1 < 1 || magicNum - 1 == 4 {    // これ以上上にいけないとき
+                // 何もしない
+            } else {    // 上にいけるとき
+                magicNum -= 1    // じゅもん番号を -1
+                moveSelectMagicIcon()    // じゅもん番号に応じて▶︎を動かす
+            }
         }
     }
 
-
+    // 左ボタン
     @IBAction func leftButton(_ sender: Any) {
-        
+        // 【じゅもんを選択するフェーズ】
+        if selectingMagic {
+            if magicNum - 4 < 1 {    // これ以上左にいけないとき
+                // 何もしない
+            } else {    // 左にいけるとき
+                magicNum -= 4    // じゅもん番号を -4
+                moveSelectMagicIcon()    // じゅもん番号に応じて▶︎を動かす
+            }
+        // 【モンスター選択するフェーズ】
+        } else if selectingMonster {
+            if selectableMonsterNum - 1 < 0 {    // これ以上左にモンスターいないとき
+                // 何もしない
+            } else {
+                selectableMonsterNum -= 1
+                selectMonsterImage()    // 選択モンスターに応じて▼を動かす
+            }
+        }        
     }
 
-
+    // 右ボタン
     @IBAction func rightButton(_ sender: Any) {
+        // 【じゅもんを選択するフェーズ】
+        if selectingMagic {
+            if magicNum + 4 > magicMaxNum {    // これ以上右にいけないとき
+                // 何もしない
+            } else {    // 右にいけるとき
+                magicNum += 4    // じゅもん番号を +4
+                moveSelectMagicIcon()    // じゅもん番号に応じて▶︎を動かす
+            }
+
+        // 【モンスター選択するフェーズ】
+        } else if selectingMonster {
+            if selectableMonsterNum + 1 >= selectableMonster.count {    // これ以上右にモンスターいないとき
+                // 何もしない
+            } else {
+                selectableMonsterNum += 1
+                selectMonsterImage()    // 選択モンスターに応じて▼を動かす
+            }
+        }
     }
 
-
+    // 下ボタン
     @IBAction func downButton(_ sender: Any) {
-        switch count {
-        case 0:    // 「たたかう」か「じゅもん」を選択するフェーズ
+        // 【「たたかう」か「じゅもん」を選択するフェーズ】
+        if selectingAtkType {
             selectAtkLabel.text = ""
             selectMatkLabel.text = "▶︎"
+
+        // 【じゅもんを選択するフェーズ】
+        } else if selectingMagic {
+            if magicNum + 1 > magicMaxNum || magicNum + 1 == 5 {    // これ以上下にいけないとき
+                // 何もしない
+            } else {
+                magicNum += 1
+                moveSelectMagicIcon()    // じゅもん番号に応じて▶︎を動かす
+            }
+        }
+    }
+
+
+
+    // 生存モンスターを配列にぶちこむ処理
+    func selectMonster() {
+        if monsterName1 != "" {
+            selectableMonster.append(1)
+        }
+        if monsterName2 != "" {
+            selectableMonster.append(2)
+        }
+        if monsterName3 != "" {
+            selectableMonster.append(3)
+        }
+        if monsterName4 != "" {
+            selectableMonster.append(4)
+        }
+    }
+
+    func selectMonsterImage() {
+        switch selectableMonster[selectableMonsterNum] {
+        case 1:
+            selectMonsterImage1Label.text = "▼"    // モンスター1選択の▼を出す
+            selectMonsterImage2Label.text = ""    // モンスター2選択の▼を消す
+            selectMonsterImage3Label.text = ""    // モンスター3選択の▼を消す
+            selectMonsterImage4Label.text = ""    // モンスター4選択の▼を消す
+        case 2:
+            selectMonsterImage2Label.text = "▼"    // モンスター2選択の▼を出す
+            selectMonsterImage1Label.text = ""    // モンスター1選択の▼を消す
+            selectMonsterImage3Label.text = ""    // モンスター3選択の▼を消す
+            selectMonsterImage4Label.text = ""    // モンスター4選択の▼を消す
+
+        case 3:
+            selectMonsterImage3Label.text = "▼"    // モンスター3選択の▼を出す
+            selectMonsterImage1Label.text = ""    // モンスター1選択の▼を消す
+            selectMonsterImage2Label.text = ""    // モンスター2選択の▼を消す
+            selectMonsterImage4Label.text = ""    // モンスター4選択の▼を消す
+        case 4:
+            selectMonsterImage4Label.text = "▼"    // モンスター4選択の▼を出す
+            selectMonsterImage1Label.text = ""    // モンスター1選択の▼を消す
+            selectMonsterImage2Label.text = ""    // モンスター2選択の▼を消す
+            selectMonsterImage3Label.text = ""    // モンスター3選択の▼を消す
+
         default:
             return
         }
     }
 
 
-    // 3. モンスター選択の▼を表示する処理
-    func selectMonsterImage() {
-        if monsterName1 != "" {    // モンスター1がいるなら
-            selectMonsterImage1Label.text = "▼"    // モンスター1選択の▼を出す
-        } else if monsterName1 == "" && monsterName2 != "" {    // モンスター1がいなくてモンスター2がいるなら
-            selectMonsterImage2Label.text = "▼"    // モンスター2選択の▼を出す
-        } else if monsterName1 == "" && monsterName2 == "" && monsterName3 != "" {    // モンスター1,2がいなくてモンスター3がいるなら
-            selectMonsterImage3Label.text = "▼"    // モンスター3選択の▼を出す
-        } else if monsterName1 == "" && monsterName2 == "" && monsterName3 == "" && monsterName4 != "" {
-            selectMonsterImage4Label.text = "▼"    // モンスター3選択の▼を出す
-        } else {
-            return
-        }
-    }
+
+
 
     // 1 ヒール
     // 5 ひのたま
@@ -255,24 +355,29 @@ class battleCommandViewController: UIViewController {
         switch lv {
         case 1..<5:
             magic1Label.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+            magicMaxNum = 1
         case 5..<10:
             magic1Label.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
             magic2Label.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+            magicMaxNum = 2
         case 10..<16:
             magic1Label.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
             magic2Label.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
             magic3Label.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+            magicMaxNum = 3
         case 16..<20:
             magic1Label.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
             magic2Label.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
             magic3Label.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
             magic4Label.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+            magicMaxNum = 4
         case 20..<23:
             magic1Label.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
             magic2Label.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
             magic3Label.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
             magic4Label.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
             magic5Label.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+            magicMaxNum = 5
         case 23..<28:
             magic1Label.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
             magic2Label.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
@@ -280,6 +385,7 @@ class battleCommandViewController: UIViewController {
             magic4Label.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
             magic5Label.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
             magic6Label.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+            magicMaxNum = 6
         case 28..<100:
             magic1Label.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
             magic2Label.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
@@ -288,8 +394,79 @@ class battleCommandViewController: UIViewController {
             magic5Label.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
             magic6Label.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
             magic7Label.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+            magicMaxNum = 7
         default:
             return
+        }
+    }
+
+    // じゅもん選択処理
+    func moveSelectMagicIcon() {
+        switch magicNum {
+        case 1:
+            selectMagic1Label.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+            selectMagic2Label.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0)
+            selectMagic3Label.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0)
+            selectMagic4Label.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0)
+            selectMagic5Label.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0)
+            selectMagic6Label.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0)
+            selectMagic7Label.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0)
+
+        case 2:
+            selectMagic1Label.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0)
+            selectMagic2Label.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+            selectMagic3Label.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0)
+            selectMagic4Label.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0)
+            selectMagic5Label.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0)
+            selectMagic6Label.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0)
+            selectMagic7Label.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0)
+
+        case 3:
+            selectMagic1Label.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0)
+            selectMagic2Label.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0)
+            selectMagic3Label.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+            selectMagic4Label.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0)
+            selectMagic5Label.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0)
+            selectMagic6Label.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0)
+            selectMagic7Label.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0)
+
+        case 4:
+            selectMagic1Label.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0)
+            selectMagic2Label.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0)
+            selectMagic3Label.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0)
+            selectMagic4Label.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+            selectMagic5Label.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0)
+            selectMagic6Label.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0)
+            selectMagic7Label.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0)
+
+        case 5:
+            selectMagic1Label.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0)
+            selectMagic2Label.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0)
+            selectMagic3Label.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0)
+            selectMagic4Label.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0)
+            selectMagic5Label.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+            selectMagic6Label.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0)
+            selectMagic7Label.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0)
+
+        case 6:
+            selectMagic1Label.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0)
+            selectMagic2Label.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0)
+            selectMagic3Label.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0)
+            selectMagic4Label.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0)
+            selectMagic5Label.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0)
+            selectMagic6Label.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+            selectMagic7Label.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0)
+
+        case 7:
+            selectMagic1Label.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0)
+            selectMagic2Label.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0)
+            selectMagic3Label.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0)
+            selectMagic4Label.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0)
+            selectMagic5Label.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0)
+            selectMagic6Label.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0)
+            selectMagic7Label.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+
+        default: return
         }
     }
 
