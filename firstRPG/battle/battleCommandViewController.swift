@@ -582,7 +582,7 @@ class battleCommandViewController: UIViewController {
 
         // どのモンスターに対して攻撃タイプを選択したか
         vc.magicNum = magicNum    // 攻撃タイプ
-        vc.selectMonsterNum = select    // どのモンスターか
+        vc.selectMonsterNum = selectableMonster[selectMonsterNum]   // どのモンスターか
 
         // プレイヤー攻撃の処理を呼ぶ
         vc.toPlayerAtk = true

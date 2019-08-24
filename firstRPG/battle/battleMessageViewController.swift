@@ -162,11 +162,14 @@ class battleMessageViewController: UIViewController {
             toBattleCommand = true
 
         } else if toPlayerAtk == true {
+            print("kokomadehaok")
             print(selectMonsterNum)
             atkType()    // 攻撃タイプごとの処理
             print("atkType")
             targetMonsterHP()    // 攻撃したモンスターのHP判定処理
             print("targetMonsterHP")
+            monsterAtk()
+            
             toPlayerAtk = false
         }
 
@@ -595,10 +598,6 @@ class battleMessageViewController: UIViewController {
 
         // モンスターからの攻撃メッセージを表示
         } else if toMonsterAtk1 == true {
-            print("monsterAtk開始")
-            monsterAtk()
-            print("monsterAtk終了")
-            print(monsterAtkMessage)
 
             if count == 0 {    // メインボタンカウントが0のとき
                 messageTextView.text = monsterAtkMessage[0]    // メッセージ表示
