@@ -234,7 +234,7 @@ class battleMessageViewController: UIViewController {
                 giveDamage = playerAtkStatus * playerAtkStatus / monster2["def"]!    // 与ダメージの計算
                 monster2["hp"] = monster2["hp"]! - giveDamage    // 与ダメージ反映
                 // バトルメッセージ表示
-                messageTextView.text = "\(String(describing: player["name"]))のこうげき！\n\(monsterName1)に \(giveDamage)のダメージ！"
+                messageTextView.text = "\(String(describing: player["name"]))のこうげき！\n\(monsterName2)に \(giveDamage)のダメージ！"
 
             case 3:
                 giveDamage = playerAtkStatus * playerAtkStatus / monster3["def"]!    // 与ダメージの計算
@@ -685,9 +685,5 @@ class battleMessageViewController: UIViewController {
         // 経験値
         vc.allExp = allExp
 
-
     }
-
-
-
 }
