@@ -17,6 +17,7 @@
 		BA3849FB2309219A006E7BA0 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3849FA2309219A006E7BA0 /* GameScene.swift */; };
 		BA3849FD230BC306006E7BA0 /* battleMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3849FC230BC306006E7BA0 /* battleMessageViewController.swift */; };
 		BA384A01230C1E5D006E7BA0 /* battleCommandViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA384A00230C1E5D006E7BA0 /* battleCommandViewController.swift */; };
+		BA4447F323103B37006E4E16 /* cave3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4447F223103B37006E4E16 /* cave3ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		BA3849FA2309219A006E7BA0 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		BA3849FC230BC306006E7BA0 /* battleMessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = battleMessageViewController.swift; sourceTree = "<group>"; };
 		BA384A00230C1E5D006E7BA0 /* battleCommandViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = battleCommandViewController.swift; sourceTree = "<group>"; };
+		BA4447F223103B37006E4E16 /* cave3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cave3ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +93,7 @@
 				BA38499C2305548C006E7BA0 /* cave1ViewController.swift */,
 				BA2A9CB0230E6E3B00E13DC8 /* cave2ViewController.swift */,
 				BA2A9CAE230E65FE00E13DC8 /* caveLastViewController.swift */,
+				BA4447F223103B37006E4E16 /* cave3ViewController.swift */,
 			);
 			path = caveDungeon;
 			sourceTree = "<group>";
@@ -171,6 +174,7 @@
 				BA2A9CB1230E6E3B00E13DC8 /* cave2ViewController.swift in Sources */,
 				BA38499D2305548C006E7BA0 /* cave1ViewController.swift in Sources */,
 				BA2A9CAF230E65FE00E13DC8 /* caveLastViewController.swift in Sources */,
+				BA4447F323103B37006E4E16 /* cave3ViewController.swift in Sources */,
 				BA38499B2305548C006E7BA0 /* AppDelegate.swift in Sources */,
 				BA3849FD230BC306006E7BA0 /* battleMessageViewController.swift in Sources */,
 			);

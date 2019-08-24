@@ -13,7 +13,7 @@ class battleCommandViewController: UIViewController {
     var name = ""
     var hp = 0
     var mp = 0
-    var lv = 30
+    var lv = 0
 
     /// モンスター名前
     var monsterName1 = ""
@@ -49,8 +49,8 @@ class battleCommandViewController: UIViewController {
     /// 選択可能なモンスター番号
     var selectableMonster:[Int] = []
 
-    /// モンスター配列番号
-    var selectableMonsterNum = 0
+    /// モンスター番号
+    var selectMonsterNum = 0
 
 
 
@@ -170,30 +170,30 @@ class battleCommandViewController: UIViewController {
 
 
         // モンスター画像表示
-        if monsterName1 == "" {    // モンスター1がいなかったら
+        if monster1["hp"] == 0 {    // モンスター1がいなかったら
             // 画像を消す
-            monsterImage1.image = UIImage(named: "透明")
-            monsterImage1.alpha = 0
+            monsterImage1.image = UIImage(named: "透明")    // 適当に画像いれてるだけ
+            monsterImage1.alpha = 0    // ここで透明にしてる
         } else {    // モンスター1がいたら
             // 画像を表示
             monsterImage1.image = UIImage(named: "\(monsterName1)")
         }
 
-        if monsterName2 == "" {
+        if monster2["hp"] == 0 {
             monsterImage2.image = UIImage(named: "透明")
             monsterImage2.alpha = 0
         } else {
             monsterImage2.image = UIImage(named: "\(monsterName2)")
         }
 
-        if monsterName3 == "" {
+        if monster3["hp"] == 0 {
             monsterImage3.image = UIImage(named: "透明")
             monsterImage3.alpha = 0
         } else {
             monsterImage3.image = UIImage(named: "\(monsterName3)")
         }
 
-        if monsterName4 == "" {
+        if monster4["hp"] == 0 {
             monsterImage4.image = UIImage(named: "透明")
             monsterImage4.alpha = 0
         } else {
@@ -235,7 +235,9 @@ class battleCommandViewController: UIViewController {
         } else if selectingMagic {
             // ここにmagicNum を取得する処理を追加する
             // ヒール、メガヒールを選択していたら遷移
-            // performSegue(withIdentifier: "toBattleMessage", sender: nil)    // 画面遷移
+            if magicNum == 1 || magicNum == 6 {
+                performSegue(withIdentifier: "toBattleMessage", sender: nil)    // 画面遷移
+            }
 
             // じゅもん一覧についている ▶︎ を消す
             selectMagic1Label.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0)
@@ -292,10 +294,10 @@ class battleCommandViewController: UIViewController {
             }
         // 【モンスター選択するフェーズ】
         } else if selectingMonster {
-            if selectableMonsterNum - 1 < 0 {    // これ以上左にモンスターいないとき
+            if selectMonsterNum - 1 < 0 {    // これ以上左にモンスターいないとき
                 // 何もしない
             } else {
-                selectableMonsterNum -= 1
+                selectMonsterNum -= 1
                 selectMonsterImage()    // 選択モンスターに応じて▼を動かす
             }
         }        
@@ -314,12 +316,12 @@ class battleCommandViewController: UIViewController {
 
         // 【モンスター選択するフェーズ】
         } else if selectingMonster {
-            if selectableMonsterNum + 1 >= selectableMonster.count {    // これ以上右にモンスターいないとき
+            if selectMonsterNum + 1 >= selectableMonster.count {    // これ以上右にモンスターいないとき
                 // 何もしない
             } else {
-                selectableMonsterNum += 1
+                selectMonsterNum += 1
                 selectMonsterImage()    // 選択モンスターに応じて▼を動かす
-                print(selectableMonster)
+                print(selectMonsterNum)
             }
         }
     }
@@ -346,27 +348,24 @@ class battleCommandViewController: UIViewController {
 
     // 生存モンスターを配列にぶちこむ処理
     func selectMonster() {
-        if monsterName1 != "" {
 
-        //if monster1["hp"]! > 0 {
+        if monster1["hp"]! > 0 {
             selectableMonster.append(1)
         }
-        if monsterName2 != "" {
-        //if monster2["hp"]! > 0 {
+       if monster2["hp"]! > 0 {
             selectableMonster.append(2)
         }
-        if monsterName3 != "" {
-        //if monster3["hp"]! > 0 {
+        if monster3["hp"]! > 0 {
             selectableMonster.append(3)
         }
-        if monsterName4 != "" {
-        //if monster4["hp"]! > 0 {
+        if monster4["hp"]! > 0 {
             selectableMonster.append(4)
         }
     }
 
+    // モンスター選択の時の▼の表示処理
     func selectMonsterImage() {
-        switch selectableMonster[selectableMonsterNum] {
+        switch selectableMonster[selectMonsterNum] {
         case 1:
             selectMonsterImage1Label.text = "▼"    // モンスター1選択の▼を出す
             selectMonsterImage2Label.text = ""    // モンスター2選択の▼を消す
@@ -573,8 +572,9 @@ class battleCommandViewController: UIViewController {
             print(monster4)
         //}
         // どのモンスターに対して攻撃タイプを選択したか
-        vc.magicNum = magicNum
+        vc.magicNum = magicNum    // 攻撃タイプ
         print(magicNum)
+        vc.selectMonsterNum = selectMonsterNum    // どのモンスターか
 
     }
 }

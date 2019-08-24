@@ -48,6 +48,9 @@ class battleMessageViewController: UIViewController {
     /// どんな攻撃をするか管理
     var magicNum = 0
 
+    /// どのモンスターに攻撃するか。配列番号。0ならモンスター1を攻撃。
+    var selectMonsterNum = 0
+
 
     /// メインボタンを押した時に画面遷移するかどうか判断
     var toSelect: Bool = false
@@ -80,69 +83,10 @@ class battleMessageViewController: UIViewController {
     // 28 スターダスト
 
 
-    // 【モンスターデータ共通の入れ物】
-    var monsterData: [String: Int] = [
-        "maxHP": 0,    // 最大HP
-        "atk": 0,    // 攻撃力
-        "def": 0,    // 守備力
-        "agi": 0,    // すばやさ
-        "exp": 0,    // 経験値
-        "gold": 0    // ゴールド
-    ]
-
-    // 【モンスター情報】
-    var monsterStatus: [[String: Int]] = [
-        ["hp": 1, "atk": 1, "def": 1, "agi": 1, "exp": 1, "gold": 1],    // 0. スライム
-        ["hp": 1, "atk": 1, "def": 1, "agi": 1, "exp": 1, "gold": 1],    // 1. バット
-        ["hp": 1, "atk": 1, "def": 1, "agi": 1, "exp": 1, "gold": 1],    // 2. マタンゴ
-        ["hp": 1, "atk": 1, "def": 1, "agi": 1, "exp": 1, "gold": 1],    // 3. ピヨネズミ
-        ["hp": 1, "atk": 1, "def": 1, "agi": 1, "exp": 1, "gold": 1],    // 4. レイン
-        ["hp": 1, "atk": 1, "def": 1, "agi": 1, "exp": 1, "gold": 1],    // 5. プランタ
-        ["hp": 1, "atk": 1, "def": 1, "agi": 1, "exp": 1, "gold": 1],    // 6. ボーン
-        ["hp": 1, "atk": 1, "def": 1, "agi": 1, "exp": 1, "gold": 1],    // 7. ラコステ
-        ["hp": 1, "atk": 1, "def": 1, "agi": 1, "exp": 1, "gold": 1],    // 8. ナルシカラス
-        ["hp": 1, "atk": 1, "def": 1, "agi": 1, "exp": 1, "gold": 1],    // 9. ゴーレム
-        ["hp": 1, "atk": 1, "def": 1, "agi": 1, "exp": 1, "gold": 1],    // 10. トロール
-        ["hp": 1, "atk": 1, "def": 1, "agi": 1, "exp": 1, "gold": 1],    // 11. ハーミット
-        ["hp": 1, "atk": 1, "def": 1, "agi": 1, "exp": 1, "gold": 1],    // 12. ティグレ
-        ["hp": 0, "atk": 0, "def": 0, "agi": 0, "exp": 0, "gold": 0]    // 13. なし
-    ]
-
-    //let a = monsterStatus[0]["hp"]
-    //print(a!)
-
-
-
-
-    // モンスターの名前
-    let monsterName: [String] = [
-        "スライム",
-        "バット",
-        "マタンゴ",
-        "ピヨネズミ",
-        "レイン",
-        "プランタ",
-        "ボーン",
-        "ラコステ",
-        "ナルシカラス",
-        "ゴーレム",
-        "トロール",
-        "ハーミット",
-        "ティグレ",
-    ]
-
-
-
-
-
     override func viewDidLoad() {
         super.viewDidLoad()
-        // 画面にモンスター画像を表示
-        //appearMonster()
-
         // 画面遷移OK
         toSelect = true
-
     }
 
 
@@ -174,20 +118,60 @@ class battleMessageViewController: UIViewController {
 
     // 【モンスターを出現させる処理】
     func appearMonster() {
-        monsterImage1.image = UIImage(named: "\(monsterName1)")    // 1匹目の画像を表示
-            monsterImage2.image = UIImage(named: "\(monsterName2)")    // 1匹目の画像を表示
+        if monster1["hp"] == 0 {    // モンスター1がいなかったら
+            // 画像を消す
+            monsterImage1.image = UIImage(named: "透明")    // 適当に画像いれてるだけ
+            monsterImage1.alpha = 0    // ここで透明にしてる
+        } else {    // モンスター1がいたら
+            // 画像を表示
+            monsterImage1.image = UIImage(named: "\(monsterName1)")
+        }
 
-            monsterImage3.image = UIImage(named: "\(monsterName3)")    // 1匹目の画像を表示
+        if monster2["hp"] == 0 {
+            monsterImage2.image = UIImage(named: "透明")
+            monsterImage2.alpha = 0
+        } else {
+            monsterImage2.image = UIImage(named: "\(monsterName2)")
+        }
 
-            monsterImage4.image = UIImage(named: "\(monsterName4)")    // 1匹目の画像を表示
+        if monster3["hp"] == 0 {
+            monsterImage3.image = UIImage(named: "透明")
+            monsterImage3.alpha = 0
+        } else {
+            monsterImage3.image = UIImage(named: "\(monsterName3)")
+        }
 
-
+        if monster4["hp"] == 0 {
+            monsterImage4.image = UIImage(named: "透明")
+            monsterImage4.alpha = 0
+        } else {
+            monsterImage4.image = UIImage(named: "\(monsterName4)")
+        }
     }
 
 
 
     // 【攻撃の処理】
+/*
+    // 攻撃タイプごとの処理
+    func atkType() {
+        switch magicNum {
+        case: 0    // 通常攻撃
 
+            case: 1    // ヒール
+            case: 2    // ひのたま
+            case: 3    // つららおとし
+            case: 4    // しょうげきは
+            case: 5    // ライトビーム
+            case: 6    // メガヒール
+            case: 7    // スターダスト
+
+        default:
+            return
+        }
+    }
+
+*/
 
 
 
@@ -214,31 +198,25 @@ class battleMessageViewController: UIViewController {
         vc.name = player["name"] as! String
         vc.player["nowHP"] = player["nowHP"]
         vc.player["nowMP"] = player["nowMP"]
+        player["Lv"] = 30
         vc.player["Lv"] = player["Lv"]
 
 
 
-        // 2. 生き残ってるモンスター
-        //if monster1["hp"]! > 0 {
-        //monster2["hp"] = 10
+        // 2. モンスター情報
         vc.monsterName1 = monsterName1
         vc.monster1 = monster1
-        //}
-        //if monster2["hp"]! > 0 {
+
         vc.monsterName2 = monsterName2
         vc.monster2 = monster2
-        //}
-        //if monster3["hp"]! > 0 {
+
         vc.monsterName3 = monsterName3
         vc.monster3 = monster3
-        //}
-        //if monster4["hp"]! > 0 {
+
         vc.monsterName4 = monsterName4
         vc.monster4 = monster4
-        //}
 
 
-        //vc.select = selectNum
     }
 
 
