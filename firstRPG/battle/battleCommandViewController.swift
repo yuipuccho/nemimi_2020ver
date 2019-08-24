@@ -55,6 +55,9 @@ class battleCommandViewController: UIViewController {
     /// 都合上作成
     var select = 0
 
+    /// 獲得経験値
+    var allExp = 0
+
 
 
 
@@ -590,6 +593,9 @@ class battleCommandViewController: UIViewController {
 
         // プレイヤー攻撃の処理を呼ぶ
         vc.toPlayerAtk = true
+
+        // 経験値
+        vc.allExp = allExp
         
 
 

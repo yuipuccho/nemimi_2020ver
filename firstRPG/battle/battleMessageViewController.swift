@@ -229,24 +229,24 @@ class battleMessageViewController: UIViewController {
                 giveDamage = playerAtkStatus * playerAtkStatus / monster1["def"]!    // 与ダメージの計算
                 monster1["hp"] = monster1["hp"]! - giveDamage    // 与ダメージ反映
                 // バトルメッセージ表示
-                messageTextView.text = "\(String(describing: player["name"]))のこうげき！\n\(monsterName1)に \(giveDamage)のダメージをあたえた！"
+                messageTextView.text = "\(String(describing: player["name"]))のこうげき！\n\(monsterName1)に \(giveDamage)のダメージ！"
             case 2:
                 giveDamage = playerAtkStatus * playerAtkStatus / monster2["def"]!    // 与ダメージの計算
                 monster2["hp"] = monster2["hp"]! - giveDamage    // 与ダメージ反映
                 // バトルメッセージ表示
-                messageTextView.text = "\(String(describing: player["name"]))のこうげき！\n\(monsterName1)に \(giveDamage)のダメージをあたえた！"
+                messageTextView.text = "\(String(describing: player["name"]))のこうげき！\n\(monsterName1)に \(giveDamage)のダメージ！"
 
             case 3:
                 giveDamage = playerAtkStatus * playerAtkStatus / monster3["def"]!    // 与ダメージの計算
                 monster3["hp"] = monster3["hp"]! - giveDamage    // 与ダメージ反映
                 // バトルメッセージ表示
-                messageTextView.text = "\(String(describing: player["name"]))のこうげき！\n\(monsterName3)に \(giveDamage)のダメージをあたえた！"
+                messageTextView.text = "\(String(describing: player["name"]))のこうげき！\n\(monsterName3)に \(giveDamage)のダメージ！"
 
             case 4:
                 giveDamage = playerAtkStatus * playerAtkStatus / monster4["def"]!    // 与ダメージの計算
                 monster4["hp"] = monster4["hp"]! - giveDamage    // 与ダメージ反映
                 // バトルメッセージ表示
-                messageTextView.text = "\(String(describing: player["name"]))のこうげき！\n\(monsterName4)に \(giveDamage)のダメージをあたえた！"
+                messageTextView.text = "\(String(describing: player["name"]))のこうげき！\n\(monsterName4)に \(giveDamage)のダメージ！"
 
             default:
                 return
@@ -268,25 +268,25 @@ class battleMessageViewController: UIViewController {
                 monster1["hp"] = monster1["hp"]! - giveDamage
                 playerMP = playerMP - 5    // MPを減らす
                 // バトルメッセージ表示
-                messageTextView.text = "\(String(describing: player["name"]))は \(magicName)をとなえた！" + "\n\(monsterName1)に \(giveDamage)のダメージをあたえた！"
+                messageTextView.text = "\(String(describing: player["name"]))は \(magicName)をとなえた！" + "\n\(monsterName1)に \(giveDamage)のダメージ！"
             case 2:
                 giveDamage = Int.random(in: 10...20)    // この辺後で調整する
                 monster2["hp"] = monster2["hp"]! - giveDamage
                 playerMP = playerMP - 5    // MPを減らす
                 // バトルメッセージ表示
-                messageTextView.text = "\(String(describing: player["name"]))は \(magicName)をとなえた！" + "\n\(monsterName2)に \(giveDamage)のダメージをあたえた！"
+                messageTextView.text = "\(String(describing: player["name"]))は \(magicName)をとなえた！" + "\n\(monsterName2)に \(giveDamage)のダメージ！"
             case 3:
                 giveDamage = Int.random(in: 10...20)    // この辺後で調整する
                 monster3["hp"] = monster3["hp"]! - giveDamage
                 playerMP = playerMP - 5    // MPを減らす
                 // バトルメッセージ表示
-                messageTextView.text = "\(String(describing: player["name"]))は \(magicName)をとなえた！" + "\n\(monsterName3)に \(giveDamage)のダメージをあたえた！"
+                messageTextView.text = "\(String(describing: player["name"]))は \(magicName)をとなえた！" + "\n\(monsterName3)に \(giveDamage)のダメージ！"
             case 4:
                 giveDamage = Int.random(in: 10...20)    // この辺後で調整する
                 monster4["hp"] = monster4["hp"]! - giveDamage
                 playerMP = playerMP - 5    // MPを減らす
                 // バトルメッセージ表示
-                messageTextView.text = "\(String(describing: player["name"]))は \(magicName)をとなえた！" + "\n\(monsterName4)に \(giveDamage)のダメージをあたえた！"
+                messageTextView.text = "\(String(describing: player["name"]))は \(magicName)をとなえた！" + "\n\(monsterName4)に \(giveDamage)のダメージ！"
             default:
                 return
             }
@@ -301,25 +301,25 @@ class battleMessageViewController: UIViewController {
                 monster1["hp"] = monster1["hp"]! - giveDamage
                 playerMP = playerMP - 5    // MPを減らす
                 // バトルメッセージ表示
-                messageTextView.text = "\(String(describing: player["name"]))は \(magicName)をとなえた！" + "\n\(monsterName1)に \(giveDamage)のダメージをあたえた！"
+                messageTextView.text = "\(String(describing: player["name"]))は \(magicName)をとなえた！" + "\n\(monsterName1)に \(giveDamage)のダメージ！"
             case 2:
                 giveDamage = Int.random(in: 10...20)    // この辺後で調整する
                 monster2["hp"] = monster2["hp"]! - giveDamage
                 playerMP = playerMP - 5    // MPを減らす
                 // バトルメッセージ表示
-                messageTextView.text = "\(String(describing: player["name"]))は \(magicName)をとなえた！" + "\n\(monsterName2)に \(giveDamage)のダメージをあたえた！"
+                messageTextView.text = "\(String(describing: player["name"]))は \(magicName)をとなえた！" + "\n\(monsterName2)に \(giveDamage)のダメージ！"
             case 3:
                 giveDamage = Int.random(in: 10...20)    // この辺後で調整する
                 monster3["hp"] = monster3["hp"]! - giveDamage
                 playerMP = playerMP - 5    // MPを減らす
                 // バトルメッセージ表示
-                messageTextView.text = "\(String(describing: player["name"]))は \(magicName)をとなえた！" + "\n\(monsterName3)に \(giveDamage)のダメージをあたえた！"
+                messageTextView.text = "\(String(describing: player["name"]))は \(magicName)をとなえた！" + "\n\(monsterName3)に \(giveDamage)のダメージ！"
             case 4:
                 giveDamage = Int.random(in: 10...20)    // この辺後で調整する
                 monster4["hp"] = monster4["hp"]! - giveDamage
                 playerMP = playerMP - 5    // MPを減らす
                 // バトルメッセージ表示
-                messageTextView.text = "\(String(describing: player["name"]))は \(magicName)をとなえた！" + "\n\(monsterName4)に \(giveDamage)のダメージをあたえた！"
+                messageTextView.text = "\(String(describing: player["name"]))は \(magicName)をとなえた！" + "\n\(monsterName4)に \(giveDamage)のダメージ！"
             default:
                 return
             }
@@ -331,25 +331,25 @@ class battleMessageViewController: UIViewController {
                 monster1["hp"] = monster1["hp"]! - giveDamage
                 playerMP = playerMP - 5    // MPを減らす
                 // バトルメッセージ表示
-                messageTextView.text = "\(String(describing: player["name"]))は \(magicName)をとなえた！" + "\n\(monsterName1)に \(giveDamage)のダメージをあたえた！"
+                messageTextView.text = "\(String(describing: player["name"]))は \(magicName)をとなえた！" + "\n\(monsterName1)に \(giveDamage)のダメージ！"
             case 2:
                 giveDamage = Int.random(in: 10...20)    // この辺後で調整する
                 monster2["hp"] = monster2["hp"]! - giveDamage
                 playerMP = playerMP - 5    // MPを減らす
                 // バトルメッセージ表示
-                messageTextView.text = "\(String(describing: player["name"]))は \(magicName)をとなえた！" + "\n\(monsterName2)に \(giveDamage)のダメージをあたえた！"
+                messageTextView.text = "\(String(describing: player["name"]))は \(magicName)をとなえた！" + "\n\(monsterName2)に \(giveDamage)のダメージ！"
             case 3:
                 giveDamage = Int.random(in: 10...20)    // この辺後で調整する
                 monster3["hp"] = monster3["hp"]! - giveDamage
                 playerMP = playerMP - 5    // MPを減らす
                 // バトルメッセージ表示
-                messageTextView.text = "\(String(describing: player["name"]))は \(magicName)をとなえた！" + "\n\(monsterName3)に \(giveDamage)のダメージをあたえた！"
+                messageTextView.text = "\(String(describing: player["name"]))は \(magicName)をとなえた！" + "\n\(monsterName3)に \(giveDamage)のダメージ！"
             case 4:
                 giveDamage = Int.random(in: 10...20)    // この辺後で調整する
                 monster4["hp"] = monster4["hp"]! - giveDamage
                 playerMP = playerMP - 5    // MPを減らす
                 // バトルメッセージ表示
-                messageTextView.text = "\(String(describing: player["name"]))は \(magicName)をとなえた！" + "\n\(monsterName4)に \(giveDamage)のダメージをあたえた！"
+                messageTextView.text = "\(String(describing: player["name"]))は \(magicName)をとなえた！" + "\n\(monsterName4)に \(giveDamage)のダメージ！"
             default:
                 return
             }
@@ -361,25 +361,25 @@ class battleMessageViewController: UIViewController {
                 monster1["hp"] = monster1["hp"]! - giveDamage
                 playerMP = playerMP - 5    // MPを減らす
                 // バトルメッセージ表示
-                messageTextView.text = "\(String(describing: player["name"]))は \(magicName)をとなえた！" + "\n\(monsterName1)に \(giveDamage)のダメージをあたえた！"
+                messageTextView.text = "\(String(describing: player["name"]))は \(magicName)をとなえた！" + "\n\(monsterName1)に \(giveDamage)のダメージ！"
             case 2:
                 giveDamage = Int.random(in: 10...20)    // この辺後で調整する
                 monster2["hp"] = monster2["hp"]! - giveDamage
                 playerMP = playerMP - 5    // MPを減らす
                 // バトルメッセージ表示
-                messageTextView.text = "\(String(describing: player["name"]))は \(magicName)をとなえた！" + "\n\(monsterName2)に \(giveDamage)のダメージをあたえた！"
+                messageTextView.text = "\(String(describing: player["name"]))は \(magicName)をとなえた！" + "\n\(monsterName2)に \(giveDamage)のダメージ！"
             case 3:
                 giveDamage = Int.random(in: 10...20)    // この辺後で調整する
                 monster3["hp"] = monster3["hp"]! - giveDamage
                 playerMP = playerMP - 5    // MPを減らす
                 // バトルメッセージ表示
-                messageTextView.text = "\(String(describing: player["name"]))は \(magicName)をとなえた！" + "\n\(monsterName3)に \(giveDamage)のダメージをあたえた！"
+                messageTextView.text = "\(String(describing: player["name"]))は \(magicName)をとなえた！" + "\n\(monsterName3)に \(giveDamage)のダメージ！"
             case 4:
                 giveDamage = Int.random(in: 10...20)    // この辺後で調整する
                 monster4["hp"] = monster4["hp"]! - giveDamage
                 playerMP = playerMP - 5    // MPを減らす
                 // バトルメッセージ表示
-                messageTextView.text = "\(String(describing: player["name"]))は \(magicName)をとなえた！" + "\n\(monsterName4)に \(giveDamage)のダメージをあたえた！"
+                messageTextView.text = "\(String(describing: player["name"]))は \(magicName)をとなえた！" + "\n\(monsterName4)に \(giveDamage)のダメージ！"
             default:
                 return
             }
@@ -399,25 +399,25 @@ class battleMessageViewController: UIViewController {
                 monster1["hp"] = monster1["hp"]! - giveDamage
                 playerMP = playerMP - 5    // MPを減らす
                 // バトルメッセージ表示
-                messageTextView.text = "\(String(describing: player["name"]))は \(magicName)をとなえた！" + "\n\(monsterName1)に \(giveDamage)のダメージをあたえた！"
+                messageTextView.text = "\(String(describing: player["name"]))は \(magicName)をとなえた！" + "\n\(monsterName1)に \(giveDamage)のダメージ！"
             case 2:
                 giveDamage = Int.random(in: 10...20)    // この辺後で調整する
                 monster2["hp"] = monster2["hp"]! - giveDamage
                 playerMP = playerMP - 5    // MPを減らす
                 // バトルメッセージ表示
-                messageTextView.text = "\(String(describing: player["name"]))は \(magicName)をとなえた！" + "\n\(monsterName2)に \(giveDamage)のダメージをあたえた！"
+                messageTextView.text = "\(String(describing: player["name"]))は \(magicName)をとなえた！" + "\n\(monsterName2)に \(giveDamage)のダメージ！"
             case 3:
                 giveDamage = Int.random(in: 10...20)    // この辺後で調整する
                 monster3["hp"] = monster3["hp"]! - giveDamage
                 playerMP = playerMP - 5    // MPを減らす
                 // バトルメッセージ表示
-                messageTextView.text = "\(String(describing: player["name"]))は \(magicName)をとなえた！" + "\n\(monsterName3)に \(giveDamage)のダメージをあたえた！"
+                messageTextView.text = "\(String(describing: player["name"]))は \(magicName)をとなえた！" + "\n\(monsterName3)に \(giveDamage)のダメージ！"
             case 4:
                 giveDamage = Int.random(in: 10...20)    // この辺後で調整する
                 monster4["hp"] = monster4["hp"]! - giveDamage
                 playerMP = playerMP - 5    // MPを減らす
                 // バトルメッセージ表示
-                messageTextView.text = "\(String(describing: player["name"]))は \(magicName)をとなえた！" + "\n\(monsterName4)に \(giveDamage)のダメージをあたえた！"
+                messageTextView.text = "\(String(describing: player["name"]))は \(magicName)をとなえた！" + "\n\(monsterName4)に \(giveDamage)のダメージ！"
             default:
                 return
             }
@@ -435,36 +435,53 @@ class battleMessageViewController: UIViewController {
 
     // 2. ターゲットモンスターのHP判定処理
     func targetMonsterHP() {
+        print("targetMonsterHPのなか")
         switch selectMonsterNum {
         case 1:    // モンスター1を選択した時
             if monster1["hp"]! <= 0 {    // モンスター1死んじゃった
                 messageTextView.text = messageTextView.text + "\n\(monsterName1)をたおした！"    // バトルメッセージ表示
                 monsterImage1.alpha = 0    // 画像を消す
-                allExp = allExp + monster1["exp"]!
+                print(allExp)
+                print(monster1["exp"])
+                allExp += monster1["exp"]!
+                print("allExp")
+                print(allExp)
             }
 
         case 2:    // モンスター2を選択した時
             if monster2["hp"]! <= 0 {
                 messageTextView.text = messageTextView.text + "\n\(monsterName2)をたおした！"    // バトルメッセージ表示
                 monsterImage2.alpha = 0    // 画像を消す
-                allExp = allExp + monster2["exp"]!
+                print(allExp)
+                print(monster2["exp"])
+                allExp += monster2["exp"]!
+                print("allExp")
+                print(allExp)
             }
 
         case 3:
             if monster3["hp"]! <= 0 {
                 messageTextView.text = messageTextView.text + "\n\(monsterName3)をたおした！"    // バトルメッセージ表示
                 monsterImage3.alpha = 0    // 画像を消す
-                allExp = allExp + monster3["exp"]!
+                print(allExp)
+                print(monster3["exp"])
+                allExp += monster3["exp"]!
+                print("allExp")
+                print(allExp)
             }
 
         case 4:
             if monster4["hp"]! <= 0 {
                 messageTextView.text = messageTextView.text + "\n\(monsterName4)をたおした！"    // バトルメッセージ表示
                 monsterImage4.alpha = 0    // 画像を消す
-                allExp = allExp + monster4["exp"]!
+                print(allExp)
+                print(monster4["exp"])
+                allExp += monster4["exp"]!
+                print("allExp")
+                print(allExp)
             }
         default:
-            return
+            break    // ここreturnだと、ヒール等回復系のとき処理を抜けちゃうから困る。
         }
         if monster1["hp"]! <= 0 && monster2["hp"]! <= 0 && monster3["hp"]! <= 0 && monster4["hp"]! <= 0 {    // 敵全滅！
             // メインボタン押した時の処理
@@ -481,6 +498,7 @@ class battleMessageViewController: UIViewController {
             toMonsterAtk1 = true
             toFinishBattle = false
             toPlayerDie = false
+            print("toMonsterAtkture")
         }
     }
 
@@ -495,10 +513,10 @@ class battleMessageViewController: UIViewController {
         if monster1["hp"]! >= 1 {    // モンスター1が生きてるとき
             monsterCount += 1    // 生存モンスターカウントを +1
             takeDamage = monster1["atk"]! * monster1["atk"]! / playerDefStatus    // ダメージ計算
-            playerHP = playerHP - takeDamage    // ダメージ反映
+            playerHP = playerHP - takeDamage    // ダメージ反映う
             print("monsterAtk2")
             // バトルメッセージ格納
-            monsterAtkMessage.append("\(monsterName1)のこうげき！\n\(String(describing: player["name"]))は\(takeDamage)のダメージを受けた!")
+            monsterAtkMessage.append("\(monsterName1)のこうげき！\n\(String(describing: player["name"]))は \(takeDamage)のダメージをうけた!")
             if playerHP <= 0 {    // プレイヤー死んだとき
                 // メインボタン押した時の処理
                 toBattleCommand = false
@@ -513,7 +531,7 @@ class battleMessageViewController: UIViewController {
             takeDamage = monster2["atk"]! * monster2["atk"]! / playerDefStatus    // ダメージ計算
             playerHP = playerHP - takeDamage    // ダメージ反映
             // バトルメッセージ格納
-            monsterAtkMessage.append("\(monsterName2)のこうげき！\n\(String(describing: player["name"]))は\(takeDamage)のダメージを受けた!")
+            monsterAtkMessage.append("\(monsterName2)のこうげき！\n\(String(describing: player["name"]))は \(takeDamage)のダメージをうけた!")
             if playerHP <= 0 {    // プレイヤー死んだとき
                 // メインボタン押した時の処理
                 toBattleCommand = false
@@ -528,7 +546,7 @@ class battleMessageViewController: UIViewController {
             takeDamage = monster3["atk"]! * monster3["atk"]! / playerDefStatus    // ダメージ計算
             playerHP = playerHP - takeDamage    // ダメージ反映
             // バトルメッセージ格納
-            monsterAtkMessage.append("\(monsterName3)のこうげき！\n\(String(describing: player["name"]))は\(takeDamage)のダメージを受けた!")
+            monsterAtkMessage.append("\(monsterName3)のこうげき！\n\(String(describing: player["name"]))は \(takeDamage)のダメージをうけた!")
             if playerHP <= 0 {    // プレイヤー死んだとき
                 // メインボタン押した時の処理
                 toBattleCommand = false
@@ -543,7 +561,7 @@ class battleMessageViewController: UIViewController {
             takeDamage = monster4["atk"]! * monster4["atk"]! / playerDefStatus    // ダメージ計算
             playerHP = playerHP - takeDamage    // ダメージ反映
             // バトルメッセージ格納
-            monsterAtkMessage.append("\(monsterName4)のこうげき！\n\(String(describing: player["name"]))は\(takeDamage)のダメージを受けた!")
+            monsterAtkMessage.append("\(monsterName4)のこうげき！\n\(String(describing: player["name"]))は \(takeDamage)のダメージをうけた!")
             if playerHP <= 0 {    // プレイヤー死んだとき
                 // メインボタン押した時の処理
                 toBattleCommand = false
@@ -574,7 +592,7 @@ class battleMessageViewController: UIViewController {
             if count == 0 {    // メインボタンカウントが0のとき
                 messageTextView.text = monsterAtkMessage[0]    // メッセージ表示
                 if count + 1 == monsterAtkMessage.count {    // モンスターのターンが終わりの時
-                    print("こいつが犯人")
+
                     toMonsterAtk1 = false    // モンスターからの攻撃のフェーズ終わり
                     toBattleCommand = true    // コマンド選択画面遷移のフェーズへ
                 } else {    // モンスターのターンが続くとき
@@ -587,7 +605,7 @@ class battleMessageViewController: UIViewController {
             } else if count == 1 {    // メインボタンカウントが1のとき
                 messageTextView.text = monsterAtkMessage[1]    // メッセージ表示
                 if count + 1 == monsterAtkMessage.count {    // モンスターのターンが終わりの時
-                    print("koko?")
+           
                     toMonsterAtk1 = false    // モンスターからの攻撃のフェーズ終わり
                     toBattleCommand = true    // コマンド選択画面遷移のフェーズへ
                 } else {    // モンスターのターンが続くとき
@@ -663,6 +681,9 @@ class battleMessageViewController: UIViewController {
         vc.monster4 = monster4
 
         toBattleCommand = false
+
+        // 経験値
+        vc.allExp = allExp
 
 
     }
