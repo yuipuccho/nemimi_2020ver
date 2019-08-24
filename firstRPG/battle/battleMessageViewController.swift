@@ -51,9 +51,54 @@ class battleMessageViewController: UIViewController {
     /// どのモンスターに攻撃するか。配列番号。0ならモンスター1を攻撃。
     var selectMonsterNum = 0
 
+    /// ターゲットにしたモンスターのステータスをいれる
+    var targetMonster: [String: Int] = [:]
 
-    /// メインボタンを押した時に画面遷移するかどうか判断
-    var toSelect: Bool = false
+    /// ターゲットにしたモンスターの名前をいれる
+    var targetMonsterName = ""
+
+    /// 使用したじゅもんの名前を入れる
+    var magicName = ""
+
+    /// 与ダメージ
+    var giveDamage = 0
+
+    /// 被ダメージ
+    var takeDamage = 0
+
+    /// 獲得経験値
+    var allExp = 0
+
+
+    /// メインボタンを押した時にバトルコマンド画面に遷移するかどうか判断（バトルまだ続くよ〜）
+    var toBattleCommand: Bool = false
+
+    /// メインボタンを押した時にマップに画面遷移するかどうか判断（バトル終わってマップに戻るよ〜）
+    var toBack: Bool = false
+
+    /// メインボタンを押した時に最初に画面繊維するかどうか判断（プレイヤー死んじゃったよ〜）
+    var toPlayerDie: Bool = false
+
+    /// メインボタンを押した時にモンスターの攻撃のテキストになるかどうか判断（次モンスターの攻撃のターンだよ〜）
+    var toMonsterAtk1: Bool = false
+
+    /// メインボタンを押した時にバトル終了のテキストになるかどうか判断（バトル終了のテキストだすよ〜）
+    var toFinishBattle: Bool = false
+
+    /// モンスター出現処理を呼ぶ
+    var toMonsterApper: Bool = false
+
+    /// プレイヤー攻撃処理を呼ぶ
+    var toPlayerAtk: Bool = false
+
+    /// 生存モンスター数カウントに使う
+    var monsterCount = 0
+
+    /// メインボタン押した数のカウントに使う
+    var count = 0
+
+    /// モンスターから攻撃を受けた時のバトルメッセージをとりま格納する配列
+    var monsterAtkMessage: [String] = []
 
 
 
@@ -85,8 +130,6 @@ class battleMessageViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // 画面遷移OK
-        toSelect = true
     }
 
 
@@ -113,12 +156,26 @@ class battleMessageViewController: UIViewController {
         print(monsterName4)
         print(monster4)
 
+        if toMonsterApper == true {
+            messageTextView.text = "まもののむれが あらわれた！"
+            toMonsterApper = false
+            toBattleCommand = true
+
+        } else if toPlayerAtk == true {
+            print(selectMonsterNum)
+            atkType()    // 攻撃タイプごとの処理
+            print("atkType")
+            targetMonsterHP()    // 攻撃したモンスターのHP判定処理
+            print("targetMonsterHP")
+            toPlayerAtk = false
+        }
+
     }
 
 
     // 【モンスターを出現させる処理】
     func appearMonster() {
-        if monster1["hp"] == 0 {    // モンスター1がいなかったら
+        if monster1["hp"]! <= 0 {    // モンスター1がいなかったら
             // 画像を消す
             monsterImage1.image = UIImage(named: "透明")    // 適当に画像いれてるだけ
             monsterImage1.alpha = 0    // ここで透明にしてる
@@ -127,21 +184,21 @@ class battleMessageViewController: UIViewController {
             monsterImage1.image = UIImage(named: "\(monsterName1)")
         }
 
-        if monster2["hp"] == 0 {
+        if monster2["hp"]! <= 0 {
             monsterImage2.image = UIImage(named: "透明")
             monsterImage2.alpha = 0
         } else {
             monsterImage2.image = UIImage(named: "\(monsterName2)")
         }
 
-        if monster3["hp"] == 0 {
+        if monster3["hp"]! <= 0 {
             monsterImage3.image = UIImage(named: "透明")
             monsterImage3.alpha = 0
         } else {
             monsterImage3.image = UIImage(named: "\(monsterName3)")
         }
 
-        if monster4["hp"] == 0 {
+        if monster4["hp"]! <= 0 {
             monsterImage4.image = UIImage(named: "透明")
             monsterImage4.alpha = 0
         } else {
@@ -151,33 +208,451 @@ class battleMessageViewController: UIViewController {
 
 
 
-    // 【攻撃の処理】
-/*
-    // 攻撃タイプごとの処理
-    func atkType() {
-        switch magicNum {
-        case: 0    // 通常攻撃
+    // 【攻撃の処理】をここから書いてくよ〜
+    // 攻撃力の2乗 / 防御力
+    // 100 * 100 / 100 = 100
+    // 20 * 20 / 10 = 40
 
-            case: 1    // ヒール
-            case: 2    // ひのたま
-            case: 3    // つららおとし
-            case: 4    // しょうげきは
-            case: 5    // ライトビーム
-            case: 6    // メガヒール
-            case: 7    // スターダスト
+
+    // 1. 攻撃タイプごとの処理
+    func atkType() {    // giveDamage に計算したダメージをいれる
+        let playerAtkStatus = player["atk"] as! Int    // プレイヤーの攻撃力
+        var playerHP = player["nowHP"] as! Int    // プレイヤーの今のHP
+        var playerMP = player["nowMP"] as! Int    // プレイヤーの今のMP
+
+        switch magicNum {
+        case 0:    // 通常攻撃
+            switch selectMonsterNum {
+            case 1:    // モンスター1を選択した時
+                giveDamage = playerAtkStatus * playerAtkStatus / monster1["def"]!    // 与ダメージの計算
+                monster1["hp"] = monster1["hp"]! - giveDamage    // 与ダメージ反映
+                // バトルメッセージ表示
+                messageTextView.text = "\(String(describing: player["name"]))のこうげき！\n\(monsterName1)に \(giveDamage)のダメージをあたえた！"
+            case 2:
+                giveDamage = playerAtkStatus * playerAtkStatus / monster2["def"]!    // 与ダメージの計算
+                monster2["hp"] = monster2["hp"]! - giveDamage    // 与ダメージ反映
+                // バトルメッセージ表示
+                messageTextView.text = "\(String(describing: player["name"]))のこうげき！\n\(monsterName1)に \(giveDamage)のダメージをあたえた！"
+
+            case 3:
+                giveDamage = playerAtkStatus * playerAtkStatus / monster3["def"]!    // 与ダメージの計算
+                monster3["hp"] = monster3["hp"]! - giveDamage    // 与ダメージ反映
+                // バトルメッセージ表示
+                messageTextView.text = "\(String(describing: player["name"]))のこうげき！\n\(monsterName3)に \(giveDamage)のダメージをあたえた！"
+
+            case 4:
+                giveDamage = playerAtkStatus * playerAtkStatus / monster4["def"]!    // 与ダメージの計算
+                monster4["hp"] = monster4["hp"]! - giveDamage    // 与ダメージ反映
+                // バトルメッセージ表示
+                messageTextView.text = "\(String(describing: player["name"]))のこうげき！\n\(monsterName4)に \(giveDamage)のダメージをあたえた！"
+
+            default:
+                return
+            }
+
+
+        case 1:    // ヒール
+            giveDamage = Int.random(in: 30...50)    // 30~50のランダム
+            playerHP = playerHP + giveDamage    // プレイヤーのHPを回復
+            playerMP = playerMP - 5    // MPを減らす ここも後で調整
+            // バトルメッセージ表示
+            messageTextView.text = "\(String(describing: player["name"]))は \(magicName)をとなえた！" + "\(String(describing: player["name"]))のHPが \(giveDamage)かいふくした！"
+
+
+        case 2:    // ひのたま
+            switch selectMonsterNum {
+            case 1:    // モンスター1を選択した時
+                giveDamage = Int.random(in: 10...20)    // この辺後で調整する
+                monster1["hp"] = monster1["hp"]! - giveDamage
+                playerMP = playerMP - 5    // MPを減らす
+                // バトルメッセージ表示
+                messageTextView.text = "\(String(describing: player["name"]))は \(magicName)をとなえた！" + "\n\(monsterName1)に \(giveDamage)のダメージをあたえた！"
+            case 2:
+                giveDamage = Int.random(in: 10...20)    // この辺後で調整する
+                monster2["hp"] = monster2["hp"]! - giveDamage
+                playerMP = playerMP - 5    // MPを減らす
+                // バトルメッセージ表示
+                messageTextView.text = "\(String(describing: player["name"]))は \(magicName)をとなえた！" + "\n\(monsterName2)に \(giveDamage)のダメージをあたえた！"
+            case 3:
+                giveDamage = Int.random(in: 10...20)    // この辺後で調整する
+                monster3["hp"] = monster3["hp"]! - giveDamage
+                playerMP = playerMP - 5    // MPを減らす
+                // バトルメッセージ表示
+                messageTextView.text = "\(String(describing: player["name"]))は \(magicName)をとなえた！" + "\n\(monsterName3)に \(giveDamage)のダメージをあたえた！"
+            case 4:
+                giveDamage = Int.random(in: 10...20)    // この辺後で調整する
+                monster4["hp"] = monster4["hp"]! - giveDamage
+                playerMP = playerMP - 5    // MPを減らす
+                // バトルメッセージ表示
+                messageTextView.text = "\(String(describing: player["name"]))は \(magicName)をとなえた！" + "\n\(monsterName4)に \(giveDamage)のダメージをあたえた！"
+            default:
+                return
+            }
+
+
+
+
+        case 3:    // つららおとし
+            switch selectMonsterNum {
+            case 1:    // モンスター1を選択した時
+                giveDamage = Int.random(in: 10...20)    // この辺後で調整する
+                monster1["hp"] = monster1["hp"]! - giveDamage
+                playerMP = playerMP - 5    // MPを減らす
+                // バトルメッセージ表示
+                messageTextView.text = "\(String(describing: player["name"]))は \(magicName)をとなえた！" + "\n\(monsterName1)に \(giveDamage)のダメージをあたえた！"
+            case 2:
+                giveDamage = Int.random(in: 10...20)    // この辺後で調整する
+                monster2["hp"] = monster2["hp"]! - giveDamage
+                playerMP = playerMP - 5    // MPを減らす
+                // バトルメッセージ表示
+                messageTextView.text = "\(String(describing: player["name"]))は \(magicName)をとなえた！" + "\n\(monsterName2)に \(giveDamage)のダメージをあたえた！"
+            case 3:
+                giveDamage = Int.random(in: 10...20)    // この辺後で調整する
+                monster3["hp"] = monster3["hp"]! - giveDamage
+                playerMP = playerMP - 5    // MPを減らす
+                // バトルメッセージ表示
+                messageTextView.text = "\(String(describing: player["name"]))は \(magicName)をとなえた！" + "\n\(monsterName3)に \(giveDamage)のダメージをあたえた！"
+            case 4:
+                giveDamage = Int.random(in: 10...20)    // この辺後で調整する
+                monster4["hp"] = monster4["hp"]! - giveDamage
+                playerMP = playerMP - 5    // MPを減らす
+                // バトルメッセージ表示
+                messageTextView.text = "\(String(describing: player["name"]))は \(magicName)をとなえた！" + "\n\(monsterName4)に \(giveDamage)のダメージをあたえた！"
+            default:
+                return
+            }
+
+        case 4:    // しょうげきは
+            switch selectMonsterNum {
+            case 1:    // モンスター1を選択した時
+                giveDamage = Int.random(in: 10...20)    // この辺後で調整する
+                monster1["hp"] = monster1["hp"]! - giveDamage
+                playerMP = playerMP - 5    // MPを減らす
+                // バトルメッセージ表示
+                messageTextView.text = "\(String(describing: player["name"]))は \(magicName)をとなえた！" + "\n\(monsterName1)に \(giveDamage)のダメージをあたえた！"
+            case 2:
+                giveDamage = Int.random(in: 10...20)    // この辺後で調整する
+                monster2["hp"] = monster2["hp"]! - giveDamage
+                playerMP = playerMP - 5    // MPを減らす
+                // バトルメッセージ表示
+                messageTextView.text = "\(String(describing: player["name"]))は \(magicName)をとなえた！" + "\n\(monsterName2)に \(giveDamage)のダメージをあたえた！"
+            case 3:
+                giveDamage = Int.random(in: 10...20)    // この辺後で調整する
+                monster3["hp"] = monster3["hp"]! - giveDamage
+                playerMP = playerMP - 5    // MPを減らす
+                // バトルメッセージ表示
+                messageTextView.text = "\(String(describing: player["name"]))は \(magicName)をとなえた！" + "\n\(monsterName3)に \(giveDamage)のダメージをあたえた！"
+            case 4:
+                giveDamage = Int.random(in: 10...20)    // この辺後で調整する
+                monster4["hp"] = monster4["hp"]! - giveDamage
+                playerMP = playerMP - 5    // MPを減らす
+                // バトルメッセージ表示
+                messageTextView.text = "\(String(describing: player["name"]))は \(magicName)をとなえた！" + "\n\(monsterName4)に \(giveDamage)のダメージをあたえた！"
+            default:
+                return
+            }
+
+        case 5:    // ライトビーム
+            switch selectMonsterNum {
+            case 1:    // モンスター1を選択した時
+                giveDamage = Int.random(in: 10...20)    // この辺後で調整する
+                monster1["hp"] = monster1["hp"]! - giveDamage
+                playerMP = playerMP - 5    // MPを減らす
+                // バトルメッセージ表示
+                messageTextView.text = "\(String(describing: player["name"]))は \(magicName)をとなえた！" + "\n\(monsterName1)に \(giveDamage)のダメージをあたえた！"
+            case 2:
+                giveDamage = Int.random(in: 10...20)    // この辺後で調整する
+                monster2["hp"] = monster2["hp"]! - giveDamage
+                playerMP = playerMP - 5    // MPを減らす
+                // バトルメッセージ表示
+                messageTextView.text = "\(String(describing: player["name"]))は \(magicName)をとなえた！" + "\n\(monsterName2)に \(giveDamage)のダメージをあたえた！"
+            case 3:
+                giveDamage = Int.random(in: 10...20)    // この辺後で調整する
+                monster3["hp"] = monster3["hp"]! - giveDamage
+                playerMP = playerMP - 5    // MPを減らす
+                // バトルメッセージ表示
+                messageTextView.text = "\(String(describing: player["name"]))は \(magicName)をとなえた！" + "\n\(monsterName3)に \(giveDamage)のダメージをあたえた！"
+            case 4:
+                giveDamage = Int.random(in: 10...20)    // この辺後で調整する
+                monster4["hp"] = monster4["hp"]! - giveDamage
+                playerMP = playerMP - 5    // MPを減らす
+                // バトルメッセージ表示
+                messageTextView.text = "\(String(describing: player["name"]))は \(magicName)をとなえた！" + "\n\(monsterName4)に \(giveDamage)のダメージをあたえた！"
+            default:
+                return
+            }
+
+        case 6:    // メガヒール
+            switch selectMonsterNum {
+            case 1:    // モンスター1を選択した時
+                giveDamage = Int.random(in: 10...20)    // この辺後で調整する
+                monster1["hp"] = monster1["hp"]! - giveDamage
+                playerMP = playerMP - 5    // MPを減らす
+                // バトルメッセージ表示
+                messageTextView.text = "\(String(describing: player["name"]))は \(magicName)をとなえた！" + "\n\(monsterName1)に \(giveDamage)のダメージをあたえた！"
+            case 2:
+                giveDamage = Int.random(in: 10...20)    // この辺後で調整する
+                monster2["hp"] = monster2["hp"]! - giveDamage
+                playerMP = playerMP - 5    // MPを減らす
+                // バトルメッセージ表示
+                messageTextView.text = "\(String(describing: player["name"]))は \(magicName)をとなえた！" + "\n\(monsterName2)に \(giveDamage)のダメージをあたえた！"
+            case 3:
+                giveDamage = Int.random(in: 10...20)    // この辺後で調整する
+                monster3["hp"] = monster3["hp"]! - giveDamage
+                playerMP = playerMP - 5    // MPを減らす
+                // バトルメッセージ表示
+                messageTextView.text = "\(String(describing: player["name"]))は \(magicName)をとなえた！" + "\n\(monsterName3)に \(giveDamage)のダメージをあたえた！"
+            case 4:
+                giveDamage = Int.random(in: 10...20)    // この辺後で調整する
+                monster4["hp"] = monster4["hp"]! - giveDamage
+                playerMP = playerMP - 5    // MPを減らす
+                // バトルメッセージ表示
+                messageTextView.text = "\(String(describing: player["name"]))は \(magicName)をとなえた！" + "\n\(monsterName4)に \(giveDamage)のダメージをあたえた！"
+            default:
+                return
+            }
+        case 7:    // スターダスト
+            switch selectMonsterNum {
+            case 1:    // モンスター1を選択した時
+                giveDamage = Int.random(in: 10...20)    // この辺後で調整する
+                monster1["hp"] = monster1["hp"]! - giveDamage
+                playerMP = playerMP - 5    // MPを減らす
+                // バトルメッセージ表示
+                messageTextView.text = "\(String(describing: player["name"]))は \(magicName)をとなえた！" + "\n\(monsterName1)に \(giveDamage)のダメージをあたえた！"
+            case 2:
+                giveDamage = Int.random(in: 10...20)    // この辺後で調整する
+                monster2["hp"] = monster2["hp"]! - giveDamage
+                playerMP = playerMP - 5    // MPを減らす
+                // バトルメッセージ表示
+                messageTextView.text = "\(String(describing: player["name"]))は \(magicName)をとなえた！" + "\n\(monsterName2)に \(giveDamage)のダメージをあたえた！"
+            case 3:
+                giveDamage = Int.random(in: 10...20)    // この辺後で調整する
+                monster3["hp"] = monster3["hp"]! - giveDamage
+                playerMP = playerMP - 5    // MPを減らす
+                // バトルメッセージ表示
+                messageTextView.text = "\(String(describing: player["name"]))は \(magicName)をとなえた！" + "\n\(monsterName3)に \(giveDamage)のダメージをあたえた！"
+            case 4:
+                giveDamage = Int.random(in: 10...20)    // この辺後で調整する
+                monster4["hp"] = monster4["hp"]! - giveDamage
+                playerMP = playerMP - 5    // MPを減らす
+                // バトルメッセージ表示
+                messageTextView.text = "\(String(describing: player["name"]))は \(magicName)をとなえた！" + "\n\(monsterName4)に \(giveDamage)のダメージをあたえた！"
+            default:
+                return
+            }
 
         default:
             return
         }
+
+        player["nowHP"] = playerHP    // 計算結果を代入
+        player["nowMP"] = playerMP    // 計算結果を代入
     }
 
-*/
+
+    // 2. ターゲットモンスターのHP判定処理
+    func targetMonsterHP() {
+        switch selectMonsterNum {
+        case 1:    // モンスター1を選択した時
+            if monster1["hp"]! <= 0 {    // モンスター1死んじゃった
+                messageTextView.text = messageTextView.text + "\n\(monsterName1)をたおした！"    // バトルメッセージ表示
+                monsterImage1.alpha = 0    // 画像を消す
+                allExp = allExp + monster1["exp"]!
+            }
+
+        case 2:    // モンスター2を選択した時
+            if monster2["hp"]! <= 0 {
+                messageTextView.text = messageTextView.text + "\n\(monsterName2)をたおした！"    // バトルメッセージ表示
+                monsterImage2.alpha = 0    // 画像を消す
+                allExp = allExp + monster2["exp"]!
+            }
+
+        case 3:
+            if monster3["hp"]! <= 0 {
+                messageTextView.text = messageTextView.text + "\n\(monsterName3)をたおした！"    // バトルメッセージ表示
+                monsterImage3.alpha = 0    // 画像を消す
+                allExp = allExp + monster3["exp"]!
+            }
+
+        case 4:
+            if monster4["hp"]! <= 0 {
+                messageTextView.text = messageTextView.text + "\n\(monsterName4)をたおした！"    // バトルメッセージ表示
+                monsterImage4.alpha = 0    // 画像を消す
+                allExp = allExp + monster4["exp"]!
+            }
+        default:
+            return
+        }
+        if monster1["hp"]! <= 0 && monster2["hp"]! <= 0 && monster3["hp"]! <= 0 && monster4["hp"]! <= 0 {    // 敵全滅！
+            // メインボタン押した時の処理
+            toBattleCommand = false
+            toBack = false
+            toMonsterAtk1 = false
+            toFinishBattle = true
+            toPlayerDie = false
+
+        } else {    // 敵まだのこってる！
+            // メインボタン押した時の処理
+            toBattleCommand = false
+            toBack = false
+            toMonsterAtk1 = true
+            toFinishBattle = false
+            toPlayerDie = false
+        }
+    }
+
+
+    // 3. モンスターからの攻撃の処理
+    func monsterAtk() {
+        print("monsterAtk0")
+        let playerDefStatus = player["def"] as! Int
+        var playerHP = player["nowHP"] as! Int
+        print("monsterATK1")
+
+        if monster1["hp"]! >= 1 {    // モンスター1が生きてるとき
+            monsterCount += 1    // 生存モンスターカウントを +1
+            takeDamage = monster1["atk"]! * monster1["atk"]! / playerDefStatus    // ダメージ計算
+            playerHP = playerHP - takeDamage    // ダメージ反映
+            print("monsterAtk2")
+            // バトルメッセージ格納
+            monsterAtkMessage.append("\(monsterName1)のこうげき！\n\(String(describing: player["name"]))は\(takeDamage)のダメージを受けた!")
+            if playerHP <= 0 {    // プレイヤー死んだとき
+                // メインボタン押した時の処理
+                toBattleCommand = false
+                toBack = false
+                toMonsterAtk1 = false
+                toFinishBattle = false
+                toPlayerDie = true
+            }
+        }
+        if monster2["hp"]! >= 1 {    // モンスター2が生きてるとき
+            monsterCount += 1
+            takeDamage = monster2["atk"]! * monster2["atk"]! / playerDefStatus    // ダメージ計算
+            playerHP = playerHP - takeDamage    // ダメージ反映
+            // バトルメッセージ格納
+            monsterAtkMessage.append("\(monsterName2)のこうげき！\n\(String(describing: player["name"]))は\(takeDamage)のダメージを受けた!")
+            if playerHP <= 0 {    // プレイヤー死んだとき
+                // メインボタン押した時の処理
+                toBattleCommand = false
+                toBack = false
+                toMonsterAtk1 = false
+                toFinishBattle = false
+                toPlayerDie = true
+            }
+        }
+        if monster3["hp"]! >= 1 {    // モンスター3が生きてるとき
+            monsterCount += 1
+            takeDamage = monster3["atk"]! * monster3["atk"]! / playerDefStatus    // ダメージ計算
+            playerHP = playerHP - takeDamage    // ダメージ反映
+            // バトルメッセージ格納
+            monsterAtkMessage.append("\(monsterName3)のこうげき！\n\(String(describing: player["name"]))は\(takeDamage)のダメージを受けた!")
+            if playerHP <= 0 {    // プレイヤー死んだとき
+                // メインボタン押した時の処理
+                toBattleCommand = false
+                toBack = false
+                toMonsterAtk1 = false
+                toFinishBattle = false
+                toPlayerDie = true
+            }
+        }
+        if monster4["hp"]! >= 1 {    // モンスター4が生きてるとき
+            monsterCount += 1
+            takeDamage = monster4["atk"]! * monster4["atk"]! / playerDefStatus    // ダメージ計算
+            playerHP = playerHP - takeDamage    // ダメージ反映
+            // バトルメッセージ格納
+            monsterAtkMessage.append("\(monsterName4)のこうげき！\n\(String(describing: player["name"]))は\(takeDamage)のダメージを受けた!")
+            if playerHP <= 0 {    // プレイヤー死んだとき
+                // メインボタン押した時の処理
+                toBattleCommand = false
+                toBack = false
+                toMonsterAtk1 = false
+                toFinishBattle = false
+                toPlayerDie = true
+            }
+        }
+        /*// 全モンスターからの攻撃が終わって画面遷移
+        // メインボタン押した時の処理
+        toBattleCommand = true
+        print("おまえか")
+        toBack = false
+        toMonsterAtk1 = false
+        toFinishBattle = false
+ toPlayerDie = false*/
+    }
+
+
 
 
 
     @IBAction func mainButton(_ sender: UIButton) {    // メインボタン
-        if toSelect == true {
+        // バトルコマンド選択画面に遷移する
+        if toBattleCommand == true {
             self.performSegue(withIdentifier: "toBattleCommand", sender: nil)    // 画面遷移
+
+        // バトル終了してマップに戻る
+        } else if toBack == true {
+
+
+        // モンスターからの攻撃メッセージを表示
+        } else if toMonsterAtk1 == true {
+            print("monsterAtk開始")
+            monsterAtk()
+            print("monsterAtk終了")
+            print(monsterAtkMessage)
+
+            if count == 0 {    // メインボタンカウントが0のとき
+                messageTextView.text = monsterAtkMessage[0]    // メッセージ表示
+                if count + 1 == monsterAtkMessage.count {    // モンスターのターンが終わりの時
+                    print("こいつが犯人")
+                    toMonsterAtk1 = false    // モンスターからの攻撃のフェーズ終わり
+                    toBattleCommand = true    // コマンド選択画面遷移のフェーズへ
+                } else {    // モンスターのターンが続くとき
+                    count += 1    // メインボタンカウントを +1
+                }
+
+            print("count0")
+                print(count)
+
+            } else if count == 1 {    // メインボタンカウントが1のとき
+                messageTextView.text = monsterAtkMessage[1]    // メッセージ表示
+                if count + 1 == monsterAtkMessage.count {    // モンスターのターンが終わりの時
+                    print("koko?")
+                    toMonsterAtk1 = false    // モンスターからの攻撃のフェーズ終わり
+                    toBattleCommand = true    // コマンド選択画面遷移のフェーズへ
+                } else {    // モンスターのターンが続くとき
+                    count += 1    // メインボタンカウントを +1
+                }
+
+            print("count1")
+
+            } else if count == 2 {    // メインボタンカウントが2のとき
+                messageTextView.text = monsterAtkMessage[2]    // メッセージ表示
+                if count + 1 == monsterAtkMessage.count {    // モンスターのターンが終わりの時
+                    toMonsterAtk1 = false    // モンスターからの攻撃のフェーズ終わり
+                    toBattleCommand = true    // コマンド選択画面遷移のフェーズへ
+                } else {    // モンスターのターンが続くとき
+                    count += 1    // メインボタンカウントを +1
+                }
+
+            print("count2")
+
+            } else if count == 3 {    // メインボタンカウントが3のとき
+                messageTextView.text = monsterAtkMessage[3]    // メッセージ表示
+                if count + 1 == monsterAtkMessage.count {    // モンスターのターンが終わりの時
+                    toMonsterAtk1 = false    // モンスターからの攻撃のフェーズ終わり
+                    toBattleCommand = true    // コマンド選択画面遷移のフェーズへ
+                }
+                print("count3")
+            }
+
+
+        // 敵を全滅させた時のメッセージ表示
+        } else if toFinishBattle == true {
+            messageTextView.text = "\(allExp)のけいけんちを かくとく！"
+            // レベルアップした時の処理を追加
+
+        // プレイヤー死んだときの処理
+        } else if toPlayerDie == true {
 
         }
     }
@@ -215,6 +690,8 @@ class battleMessageViewController: UIViewController {
 
         vc.monsterName4 = monsterName4
         vc.monster4 = monster4
+
+        toBattleCommand = false
 
 
     }

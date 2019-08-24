@@ -52,6 +52,9 @@ class battleCommandViewController: UIViewController {
     /// モンスター番号
     var selectMonsterNum = 0
 
+    /// 都合上作成
+    var select = 0
+
 
 
 
@@ -170,7 +173,7 @@ class battleCommandViewController: UIViewController {
 
 
         // モンスター画像表示
-        if monster1["hp"] == 0 {    // モンスター1がいなかったら
+        if monster1["hp"]! <= 0 {    // モンスター1がいなかったら
             // 画像を消す
             monsterImage1.image = UIImage(named: "透明")    // 適当に画像いれてるだけ
             monsterImage1.alpha = 0    // ここで透明にしてる
@@ -179,21 +182,21 @@ class battleCommandViewController: UIViewController {
             monsterImage1.image = UIImage(named: "\(monsterName1)")
         }
 
-        if monster2["hp"] == 0 {
+        if monster2["hp"]! <= 0 {
             monsterImage2.image = UIImage(named: "透明")
             monsterImage2.alpha = 0
         } else {
             monsterImage2.image = UIImage(named: "\(monsterName2)")
         }
 
-        if monster3["hp"] == 0 {
+        if monster3["hp"]! <= 0 {
             monsterImage3.image = UIImage(named: "透明")
             monsterImage3.alpha = 0
         } else {
             monsterImage3.image = UIImage(named: "\(monsterName3)")
         }
 
-        if monster4["hp"] == 0 {
+        if monster4["hp"]! <= 0 {
             monsterImage4.image = UIImage(named: "透明")
             monsterImage4.alpha = 0
         } else {
@@ -224,19 +227,25 @@ class battleCommandViewController: UIViewController {
 
         // 「じゅもん」が選択されている時
         } else if selectMatkLabel.text == "▶︎" {
+            
             selectMatkLabel.text = ""    // じゅもんの ▶︎ を消す
             magicSelectView.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.6510595034)    // じゅもん選択画面の背景を表示する
             selectMagic1Label.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)    // じゅもん1 の ▶︎を表示
             availableMagic()    // 使用可能なじゅもんを表示
             selectingMagic = true    // じゅもん選択のフェーズだよ
             selectingAtkType = false
+            print("ここはおけ")
 
         // ヒールなど、じゅもん一覧のどれかが選択されている時
         } else if selectingMagic {
             // ここにmagicNum を取得する処理を追加する
+            print("magicNum")
+            print(magicNum)
             // ヒール、メガヒールを選択していたら遷移
             if magicNum == 1 || magicNum == 6 {
+                print("kokodayone")
                 performSegue(withIdentifier: "toBattleMessage", sender: nil)    // 画面遷移
+
             }
 
             // じゅもん一覧についている ▶︎ を消す
@@ -258,6 +267,7 @@ class battleCommandViewController: UIViewController {
         // 攻撃するモンスターが選択されている時
         } else if selectingMonster {
             performSegue(withIdentifier: "toBattleMessage", sender: nil)    // 画面遷移
+            print("バトルメッセージに遷移")
 
         }
     }
@@ -321,7 +331,7 @@ class battleCommandViewController: UIViewController {
             } else {
                 selectMonsterNum += 1
                 selectMonsterImage()    // 選択モンスターに応じて▼を動かす
-                print(selectMonsterNum)
+
             }
         }
     }
@@ -538,6 +548,8 @@ class battleCommandViewController: UIViewController {
         }
 
 
+
+
         // 向こうに返す情報は
         // プレイヤー情報
         vc.name = player["name"] as! String
@@ -547,34 +559,35 @@ class battleCommandViewController: UIViewController {
 
 
         // モンスター情報
-        //if monsterName1 != "" {
-            vc.monsterName1 = monsterName1
-            vc.monster1 = monster1
-            print(monsterName1)
-            print(monster1)
+        // モンスター1
+        vc.monsterName1 = monsterName1
+        vc.monster1 = monster1
+        print(monsterName1)
+        print(monster1)
+        // モンスター2
+        print(monsterName2)
+        vc.monsterName2 = monsterName2
+        vc.monster2 = monster2
+        print(monster2)
+        // モンスター3
+        vc.monsterName3 = monsterName3
+        vc.monster3 = monster3
+        print(monsterName3)
+        print(monster3)
+        // モンスター4
+        vc.monsterName4 = monsterName4
+        vc.monster4 = monster4
+        print(monsterName4)
+        print(monster4)
 
-        //} else if monsterName2 != "" {
-            print(monsterName2)
-            vc.monsterName2 = monsterName2
-            vc.monster2 = monster2
-            print(monster2)
-
-        //} else if monsterName3 != "" {
-            vc.monsterName3 = monsterName3
-            vc.monster3 = monster3
-            print(monsterName3)
-            print(monster3)
-
-        //} else if monsterName4 != "" {
-            vc.monsterName4 = monsterName4
-            vc.monster4 = monster4
-            print(monsterName4)
-            print(monster4)
-        //}
         // どのモンスターに対して攻撃タイプを選択したか
         vc.magicNum = magicNum    // 攻撃タイプ
-        print(magicNum)
-        vc.selectMonsterNum = selectMonsterNum    // どのモンスターか
+        vc.selectMonsterNum = select    // どのモンスターか
+
+        // プレイヤー攻撃の処理を呼ぶ
+        vc.toPlayerAtk = true
+        
+
 
     }
 }

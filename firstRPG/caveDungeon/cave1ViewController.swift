@@ -302,21 +302,21 @@ class cave1ViewController: UIViewController {
             return
         }
 
-        //vc.monster = monster    // エンカウントしたモンスター情報を渡す
+        // エンカウントしたモンスター情報を渡す
         vc.monsterName1 = monsterName1
         vc.monster1 = monster1
-        //}
-        //if monster2["hp"]! > 0 {
+
         vc.monsterName2 = monsterName2
         vc.monster2 = monster2
-        //}
-        //if monster3["hp"]! > 0 {
+
         vc.monsterName3 = monsterName3
         vc.monster3 = monster3
-        //}
-        //if monster4["hp"]! > 0 {
+
         vc.monsterName4 = monsterName4
         vc.monster4 = monster4
+
+        // モンスター出現処理を呼ぶ
+        vc.toMonsterApper = true
 
  }
 
