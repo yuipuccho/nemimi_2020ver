@@ -169,7 +169,6 @@ class battleMessageViewController: UIViewController {
             targetMonsterHP()    // 攻撃したモンスターのHP判定処理
             print("targetMonsterHP")
             monsterAtk()
-            
             toPlayerAtk = false
         }
 
@@ -386,34 +385,13 @@ class battleMessageViewController: UIViewController {
             }
 
         case 6:    // メガヒール
-            switch selectMonsterNum {
-            case 1:    // モンスター1を選択した時
-                giveDamage = Int.random(in: 10...20)    // この辺後で調整する
-                monster1["hp"] = monster1["hp"]! - giveDamage
-                playerMP = playerMP - 5    // MPを減らす
-                // バトルメッセージ表示
-                messageTextView.text = "\(String(describing: player["name"]))は \(magicName)をとなえた！" + "\n\(monsterName1)に \(giveDamage)のダメージをあたえた！"
-            case 2:
-                giveDamage = Int.random(in: 10...20)    // この辺後で調整する
-                monster2["hp"] = monster2["hp"]! - giveDamage
-                playerMP = playerMP - 5    // MPを減らす
-                // バトルメッセージ表示
-                messageTextView.text = "\(String(describing: player["name"]))は \(magicName)をとなえた！" + "\n\(monsterName2)に \(giveDamage)のダメージをあたえた！"
-            case 3:
-                giveDamage = Int.random(in: 10...20)    // この辺後で調整する
-                monster3["hp"] = monster3["hp"]! - giveDamage
-                playerMP = playerMP - 5    // MPを減らす
-                // バトルメッセージ表示
-                messageTextView.text = "\(String(describing: player["name"]))は \(magicName)をとなえた！" + "\n\(monsterName3)に \(giveDamage)のダメージをあたえた！"
-            case 4:
-                giveDamage = Int.random(in: 10...20)    // この辺後で調整する
-                monster4["hp"] = monster4["hp"]! - giveDamage
-                playerMP = playerMP - 5    // MPを減らす
-                // バトルメッセージ表示
-                messageTextView.text = "\(String(describing: player["name"]))は \(magicName)をとなえた！" + "\n\(monsterName4)に \(giveDamage)のダメージをあたえた！"
-            default:
-                return
-            }
+            giveDamage = Int.random(in: 70...100)    // 70~100のランダム
+            playerHP = playerHP + giveDamage    // プレイヤーのHPを回復
+            playerMP = playerMP - 5    // MPを減らす ここも後で調整
+            // バトルメッセージ表示
+            messageTextView.text = "\(String(describing: player["name"]))は \(magicName)をとなえた！" + "\(String(describing: player["name"]))のHPが \(giveDamage)かいふくした！"
+
+
         case 7:    // スターダスト
             switch selectMonsterNum {
             case 1:    // モンスター1を選択した時
@@ -449,7 +427,9 @@ class battleMessageViewController: UIViewController {
         }
 
         player["nowHP"] = playerHP    // 計算結果を代入
+        hpLabel.text = "HP: \(playerHP)"    // ラベルに反映
         player["nowMP"] = playerMP    // 計算結果を代入
+        mpLabel.text = "MP: \(playerMP)"    // ラベルに反映
     }
 
 
@@ -573,14 +553,6 @@ class battleMessageViewController: UIViewController {
                 toPlayerDie = true
             }
         }
-        /*// 全モンスターからの攻撃が終わって画面遷移
-        // メインボタン押した時の処理
-        toBattleCommand = true
-        print("おまえか")
-        toBack = false
-        toMonsterAtk1 = false
-        toFinishBattle = false
- toPlayerDie = false*/
     }
 
 

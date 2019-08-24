@@ -246,23 +246,24 @@ class battleCommandViewController: UIViewController {
                 print("kokodayone")
                 performSegue(withIdentifier: "toBattleMessage", sender: nil)    // 画面遷移
 
+            } else {
+
+                // じゅもん一覧についている ▶︎ を消す
+                selectMagic1Label.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0)
+                selectMagic2Label.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0)
+                selectMagic3Label.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0)
+                selectMagic4Label.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0)
+                selectMagic5Label.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0)
+                selectMagic6Label.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0)
+                selectMagic7Label.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0)
+                selectMagic8Label.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0)
+
+                selectMonster()    // 生存モンスターを配列にぶちこむ
+                selectMonsterImage()    // モンスター選択の▼を表示する処理
+
+                selectingMonster = true    // どのモンスターを攻撃するか選択するフェーズへ
+                selectingMagic = false
             }
-
-            // じゅもん一覧についている ▶︎ を消す
-            selectMagic1Label.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0)
-            selectMagic2Label.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0)
-            selectMagic3Label.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0)
-            selectMagic4Label.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0)
-            selectMagic5Label.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0)
-            selectMagic6Label.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0)
-            selectMagic7Label.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0)
-            selectMagic8Label.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0)
-
-            selectMonster()    // 生存モンスターを配列にぶちこむ
-            selectMonsterImage()    // モンスター選択の▼を表示する処理
-
-            selectingMonster = true    // どのモンスターを攻撃するか選択するフェーズへ
-            selectingMagic = false
 
         // 攻撃するモンスターが選択されている時
         } else if selectingMonster {
@@ -582,7 +583,10 @@ class battleCommandViewController: UIViewController {
 
         // どのモンスターに対して攻撃タイプを選択したか
         vc.magicNum = magicNum    // 攻撃タイプ
+
+        if magicNum != 1 && magicNum != 6 {
         vc.selectMonsterNum = selectableMonster[selectMonsterNum]   // どのモンスターか
+        }
 
         // プレイヤー攻撃の処理を呼ぶ
         vc.toPlayerAtk = true
