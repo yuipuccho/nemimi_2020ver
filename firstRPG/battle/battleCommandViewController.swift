@@ -62,21 +62,7 @@ class battleCommandViewController: UIViewController {
 
 
     /// 【プレイヤーのパラメータ】
-    var player: [String: Any] = [
-        "name": "ほげぇ",
-        "Lv": 1,    // レベル
-        "maxHP": 50,    // 最大HP
-        "maxMP": 10,    // 最大MP
-        "nowHP": 50,
-        "nowMP": 10,
-        //"atk": 20,    // 攻撃力
-        //"def": 10,    // 守備力
-        //"agi": 8,    // すばやさ
-        //"itemAtk": 0,    // 装備の攻撃力
-        //"itemDef": 0,    // 装備の守備力
-        //"exp": 0,    // 経験値
-        //"gold": 0    // 所持金
-    ]
+    var player: [String: Any] = [:]
 
 
     @IBOutlet weak var nameLabel: UILabel!    // プレイヤーの名前
@@ -555,10 +541,7 @@ class battleCommandViewController: UIViewController {
 
         // 向こうに返す情報は
         // プレイヤー情報
-        vc.name = player["name"] as! String
-        vc.player["nowHP"] = player["nowHP"]
-        vc.player["nowMP"] = player["nowMP"]
-        vc.player["Lv"] = player["Lv"]
+        vc.player = player
 
 
         // モンスター情報

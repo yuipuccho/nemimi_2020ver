@@ -110,21 +110,7 @@ class battleMessageViewController: UIViewController {
     
     
     /// 【プレイヤーのパラメータ】
-    var player: [String: Any] = [
-        "name": "ほげぇ",
-        "Lv": 1,    // レベル
-        "maxHP": 24,    // 最大HP
-        "maxMP": 10,    // 最大MP
-        "nowHP": 24,
-        "nowMP": 10,
-        "atk": 12,    // 攻撃力
-        "def": 15,    // 守備力
-        "agi": 8,    // すばやさ
-        "itemAtk": 0,    // 装備の攻撃力
-        "itemDef": 0,    // 装備の守備力
-        "exp": 0,    // 経験値
-        "gold": 0    // 所持金
-    ]
+    var player: [String: Any] = [:]
     
     // 1 ヒール
     // 5 ひのたま
@@ -673,6 +659,11 @@ class battleMessageViewController: UIViewController {
     
     
     @IBAction func mainButton(_ sender: UIButton) {    // メインボタン
+        let playerName = player["name"] as! String
+        var playerHP = player["nowHP"] as! Int
+        var playerMP = player["nowMP"] as! Int
+        var playerLv = player["Lv"] as! Int
+
         // バトルコマンド選択画面に遷移する
         if toBattleCommand == true {
             self.performSegue(withIdentifier: "toBattleCommand", sender: nil)    // 画面遷移
@@ -735,10 +726,36 @@ class battleMessageViewController: UIViewController {
             }
             
             
-            // 敵を全滅させた時のメッセージ表示
+            // 敵を全滅させた時の処理
         } else if toFinishBattle == true {
+            // メッセージ表示
             messageTextView.text = "\(allExp)のけいけんちを かくとく！"
+            // 獲得経験値を加算
+            player["exp"] = player["exp"] as! Int + allExp
+
+
             // レベルアップした時の処理を追加
+            // とりま格納
+            let exp = player["exp"] as! Int
+
+            if exp >= 15 && exp < 40 && exp - allExp < 15 {    // Lv2: 必要経験値15
+                player["Lv"] = 2    // レベル2
+                player["maxHP"] = 30    // 最大HP
+                player["maxMP"] = 12    // 最大MP
+                player["nowHP"] = player["maxHP"]    // HP全快
+                player["nowMP"] = player["maxMP"]    // MP全快
+                player["atk"] = 14    // 攻撃力
+                player["def"] = 17    // 守備力
+
+                messageTextView.text = messageTextView.text + "\n\(playerName)は レベル2に あがった！"
+                playerHP = player["nowHP"] as! Int
+                playerMP = player["nowMP"] as! Int
+                playerLv = player["Lv"] as! Int
+                hpLabel.text = "HP: \(playerHP)"
+                mpLabel.text = "MP: \(playerMP)"
+                lvLabel.text = "Lv: \(playerLv)"
+
+            }
             
             
             toFinishBattle = false
@@ -829,11 +846,9 @@ class battleMessageViewController: UIViewController {
 
             // 向こうで必要な情報は
             // 1. プレイヤーの名前、HP、MP,Lv
-            vc.name = player["name"] as! String
-            vc.player["nowHP"] = player["nowHP"]
-            vc.player["nowMP"] = player["nowMP"]
-            player["Lv"] = 30    // テストプレイでつけてるだけ
-            vc.player["Lv"] = player["Lv"]
+            vc.player = player
+            //player["Lv"] = 30    // テストプレイでつけてるだけ。あとで消す。
+
 
             // 2. モンスター情報
             vc.monsterName1 = monsterName1
@@ -858,11 +873,8 @@ class battleMessageViewController: UIViewController {
 
             let vc: cave1ViewController = (segue.destination as? cave1ViewController)!
 
-            // プレイヤーの名前、HP、MP,Lv
-            vc.player["nowHP"] = player["nowHP"]
-            vc.player["nowMP"] = player["nowMP"]
-            vc.player["Lv"] = player["Lv"]
-
+            // プレイヤーの情報
+            vc.player = player
         }
     }
 

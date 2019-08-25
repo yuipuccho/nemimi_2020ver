@@ -23,6 +23,13 @@ class cave1ViewController: UIViewController {
         "maxMP": 10,    // 最大MP
         "nowHP": 24,
         "nowMP": 10,
+        "atk": 12,    // 攻撃力
+        "def": 15,    // 守備力
+        "agi": 8,    // すばやさ
+        "itemAtk": 0,    // 装備の攻撃力
+        "itemDef": 0,    // 装備の守備力
+        "exp": 0,    // 経験値
+        "gold": 0    // 所持金
     ]
 
     var currentNum = 241    // プレイヤーの位置が配列の何番めか
@@ -311,10 +318,8 @@ class cave1ViewController: UIViewController {
         guard segue.identifier == "toBattle", let vc = segue.destination as? battleMessageViewController else {
             return
         }
-        // プレイヤーの名前、HP、MP,Lv
-        vc.player["nowHP"] = player["nowHP"]
-        vc.player["nowMP"] = player["nowMP"]
-        vc.player["Lv"] = player["Lv"]
+        // プレイヤーの情報
+        vc.player = player
 
         // エンカウントしたモンスター情報を渡す
         vc.monsterName1 = monsterName1
