@@ -77,10 +77,13 @@ class battleMessageViewController: UIViewController {
     var toBack: Bool = false
 
     /// メインボタンを押した時に最初に画面繊維するかどうか判断（プレイヤー死んじゃったよ〜）
+    var toRestart: Bool = false
+
+    /// プレイヤー死亡時のテキストになるかどうか判断
     var toPlayerDie: Bool = false
 
     /// メインボタンを押した時にモンスターの攻撃のテキストになるかどうか判断（次モンスターの攻撃のターンだよ〜）
-    var toMonsterAtk1: Bool = false
+    var toMonsterAtk: Bool = false
 
     /// メインボタンを押した時にバトル終了のテキストになるかどうか判断（バトル終了のテキストだすよ〜）
     var toFinishBattle: Bool = false
@@ -90,6 +93,7 @@ class battleMessageViewController: UIViewController {
 
     /// プレイヤー攻撃処理を呼ぶ
     var toPlayerAtk: Bool = false
+
 
     /// 生存モンスター数カウントに使う
     var monsterCount = 0
@@ -499,7 +503,7 @@ class battleMessageViewController: UIViewController {
             // メインボタン押した時の処理
             toBattleCommand = false
             toBack = false
-            toMonsterAtk1 = false
+            toMonsterAtk = false
             toFinishBattle = true
             toPlayerDie = false
 
@@ -507,7 +511,7 @@ class battleMessageViewController: UIViewController {
             // メインボタン押した時の処理
             toBattleCommand = false
             toBack = false
-            toMonsterAtk1 = true
+            toMonsterAtk = true
             toFinishBattle = false
             toPlayerDie = false
             print("toMonsterAtkture")
@@ -549,7 +553,7 @@ class battleMessageViewController: UIViewController {
                 // メインボタン押した時の処理
                 toBattleCommand = false
                 toBack = false
-                toMonsterAtk1 = false
+                toMonsterAtk = false
                 toFinishBattle = false
                 toPlayerDie = true
 
@@ -584,7 +588,7 @@ class battleMessageViewController: UIViewController {
                 // メインボタン押した時の処理
                 toBattleCommand = false
                 toBack = false
-                toMonsterAtk1 = false
+                toMonsterAtk = false
                 toFinishBattle = false
                 toPlayerDie = true
 
@@ -619,7 +623,7 @@ class battleMessageViewController: UIViewController {
                 // メインボタン押した時の処理
                 toBattleCommand = false
                 toBack = false
-                toMonsterAtk1 = false
+                toMonsterAtk = false
                 toFinishBattle = false
                 toPlayerDie = true
 
@@ -653,7 +657,7 @@ class battleMessageViewController: UIViewController {
                 // メインボタン押した時の処理
                 toBattleCommand = false
                 toBack = false
-                toMonsterAtk1 = false
+                toMonsterAtk = false
                 toFinishBattle = false
                 toPlayerDie = true
 
@@ -678,14 +682,14 @@ class battleMessageViewController: UIViewController {
 
 
         // モンスターからの攻撃メッセージを表示
-        } else if toMonsterAtk1 == true {
+        } else if toMonsterAtk == true {
 
             if count == 0 {    // メインボタンカウントが0のとき
                 messageTextView.text = monsterAtkMessage[0]    // メッセージ表示
                 hpLabel.text = "HP: \(monsterAtkHP[0])"
                 if count + 1 == monsterAtkMessage.count {    // モンスターのターンが終わりの時
 
-                    toMonsterAtk1 = false    // モンスターからの攻撃のフェーズ終わり
+                    toMonsterAtk = false    // モンスターからの攻撃のフェーズ終わり
                     toBattleCommand = true    // コマンド選択画面遷移のフェーズへ
                 } else {    // モンスターのターンが続くとき
                     count += 1    // メインボタンカウントを +1
@@ -699,7 +703,7 @@ class battleMessageViewController: UIViewController {
                 hpLabel.text = "HP: \(monsterAtkHP[1])"
                 if count + 1 == monsterAtkMessage.count {    // モンスターのターンが終わりの時
            
-                    toMonsterAtk1 = false    // モンスターからの攻撃のフェーズ終わり
+                    toMonsterAtk = false    // モンスターからの攻撃のフェーズ終わり
                     toBattleCommand = true    // コマンド選択画面遷移のフェーズへ
                 } else {    // モンスターのターンが続くとき
                     count += 1    // メインボタンカウントを +1
@@ -711,7 +715,7 @@ class battleMessageViewController: UIViewController {
                 messageTextView.text = monsterAtkMessage[2]    // メッセージ表示
                 hpLabel.text = "HP: \(monsterAtkHP[2])"
                 if count + 1 == monsterAtkMessage.count {    // モンスターのターンが終わりの時
-                    toMonsterAtk1 = false    // モンスターからの攻撃のフェーズ終わり
+                    toMonsterAtk = false    // モンスターからの攻撃のフェーズ終わり
                     toBattleCommand = true    // コマンド選択画面遷移のフェーズへ
                 } else {    // モンスターのターンが続くとき
                     count += 1    // メインボタンカウントを +1
@@ -723,7 +727,7 @@ class battleMessageViewController: UIViewController {
                 messageTextView.text = monsterAtkMessage[3]    // メッセージ表示
                 hpLabel.text = "HP: \(monsterAtkHP[3])"
                 if count + 1 == monsterAtkMessage.count {    // モンスターのターンが終わりの時
-                    toMonsterAtk1 = false    // モンスターからの攻撃のフェーズ終わり
+                    toMonsterAtk = false    // モンスターからの攻撃のフェーズ終わり
                     toBattleCommand = true    // コマンド選択画面遷移のフェーズへ
                 }
                 print("count3")
@@ -748,7 +752,7 @@ class battleMessageViewController: UIViewController {
                 if count + 1 == monsterAtkMessage.count {    // モンスターのターンが終わりの時
 
                     toPlayerDie = false    // 終わり
-                    self.performSegue(withIdentifier: "toRestart", sender: nil)
+                    toRestart = true
                 } else {    // モンスターのターンが続くとき
                     count += 1    // メインボタンカウントを +1
                 }
@@ -762,7 +766,7 @@ class battleMessageViewController: UIViewController {
                 if count + 1 == monsterAtkMessage.count {    // モンスターのターンが終わりの時
 
                     toPlayerDie = false    // 終わり
-                    self.performSegue(withIdentifier: "toRestart", sender: nil)
+                    toRestart = true
                 } else {    // モンスターのターンが続くとき
                     count += 1    // メインボタンカウントを +1
                 }
@@ -774,7 +778,7 @@ class battleMessageViewController: UIViewController {
                 hpLabel.text = "HP: \(monsterAtkHP[2])"
                 if count + 1 == monsterAtkMessage.count {    // モンスターのターンが終わりの時
                     toPlayerDie = false    // 終わり
-                    self.performSegue(withIdentifier: "toRestart", sender: nil)
+                    toRestart = true
                 } else {    // モンスターのターンが続くとき
                     count += 1    // メインボタンカウントを +1
                 }
@@ -786,7 +790,7 @@ class battleMessageViewController: UIViewController {
                 hpLabel.text = "HP: \(monsterAtkHP[3])"
                 if count + 1 == monsterAtkMessage.count {    // モンスターのターンが終わりの時
                     toPlayerDie = false    // 終わり
-                    self.performSegue(withIdentifier: "toRestart", sender: nil)
+                    toRestart = true
                 }
                 print("diecount3")
 
@@ -795,11 +799,13 @@ class battleMessageViewController: UIViewController {
                 hpLabel.text = "HP: \(monsterAtkHP[4])"
                 if count + 1 == monsterAtkMessage.count {    // モンスターのターンが終わりの時
                     toPlayerDie = false    // 終わり
-                    self.performSegue(withIdentifier: "toRestart", sender: nil)
+                    toRestart = true
                 }
               print("diecount4")
 
             }
+        } else if toRestart == true {
+            self.performSegue(withIdentifier: "toRestart", sender: nil)    // 最初のマップに遷移
 
         }
     }
