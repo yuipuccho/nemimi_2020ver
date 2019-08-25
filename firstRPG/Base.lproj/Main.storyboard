@@ -1249,6 +1249,7 @@
                         <outlet property="playerImage" destination="Hf0-jO-Dqw" id="lxV-Bv-stm"/>
                         <outlet property="restartLocation" destination="C3J-x0-7Iy" id="WZv-1X-S71"/>
                         <segue destination="pY7-AG-JsT" kind="show" identifier="toBattle" id="58s-R3-No3"/>
+                        <segue destination="IMm-Jw-zwl" kind="show" identifier="toCave2" id="GHO-8N-sQv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -3518,6 +3519,9 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ヒーロー前" translatesAutoresizingMaskIntoConstraints="NO" id="4VB-lH-U1o">
                                 <rect key="frame" x="484" y="293.5" width="26.5" height="26.5"/>
                             </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="回復ポイント3" translatesAutoresizingMaskIntoConstraints="NO" id="Fs1-cT-WvF">
+                                <rect key="frame" x="457.5" y="26.5" width="26.5" height="27"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -3526,15 +3530,15 @@
                             <constraint firstItem="hix-EW-kdN" firstAttribute="centerX" secondItem="kax-Ap-HUX" secondAttribute="centerX" id="NAg-BY-bSu"/>
                             <constraint firstItem="4VB-lH-U1o" firstAttribute="top" secondItem="uNJ-DS-of2" secondAttribute="top" id="UTh-tN-ujP"/>
                             <constraint firstItem="4VB-lH-U1o" firstAttribute="leading" secondItem="uNJ-DS-of2" secondAttribute="leading" id="XfC-ea-nVy"/>
+                            <constraint firstItem="Fs1-cT-WvF" firstAttribute="trailing" secondItem="enM-iJ-PRq" secondAttribute="trailing" id="bzO-8m-GmQ"/>
                             <constraint firstItem="4VB-lH-U1o" firstAttribute="trailing" secondItem="uNJ-DS-of2" secondAttribute="trailing" id="inr-Ej-JI6"/>
                             <constraint firstItem="yoQ-gg-cDY" firstAttribute="bottom" secondItem="hix-EW-kdN" secondAttribute="bottom" id="jno-8Y-tyL"/>
+                            <constraint firstItem="Fs1-cT-WvF" firstAttribute="bottom" secondItem="enM-iJ-PRq" secondAttribute="bottom" id="tZL-vn-buJ"/>
+                            <constraint firstItem="Fs1-cT-WvF" firstAttribute="top" secondItem="enM-iJ-PRq" secondAttribute="top" id="yTb-1g-CET"/>
+                            <constraint firstItem="Fs1-cT-WvF" firstAttribute="leading" secondItem="enM-iJ-PRq" secondAttribute="leading" id="zVX-il-mQX"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="yoQ-gg-cDY"/>
                     </view>
-                    <connections>
-                        <outlet property="gameView" destination="hix-EW-kdN" id="cAq-zO-YCZ"/>
-                        <outlet property="playerImage" destination="4VB-lH-U1o" id="CSD-ya-zd1"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xiP-Y4-v8I" sceneMemberID="firstResponder"/>
             </objects>
@@ -4438,6 +4442,7 @@
         <image name="右カーブ1" width="32" height="32"/>
         <image name="右下のすみっこ" width="32" height="32"/>
         <image name="右縦1" width="32" height="32"/>
+        <image name="回復ポイント3" width="16" height="16"/>
         <image name="土付き右" width="32" height="32"/>
         <image name="土付き左" width="32" height="32"/>
         <image name="地面" width="32" height="32"/>
@@ -4478,6 +4483,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="0BB-4w-l0D"/>
-        <segue reference="vQB-Ca-9LJ"/>
+        <segue reference="58s-R3-No3"/>
     </inferredMetricsTieBreakers>
 </document>

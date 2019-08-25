@@ -18,17 +18,17 @@ class cave1ViewController: UIViewController {
     /// 【プレイヤーのパラメータ】
     var player: [String: Any] = [
         "name": "ほげぇ",
-        "Lv": 19,    // レベル
+        "Lv": 1,    // レベル
         "maxHP": 24,    // 最大HP
         "maxMP": 10,    // 最大MP
         "nowHP": 24,
         "nowMP": 10,
-        "atk": 12,    // 攻撃力
+        "atk": 120,    // 攻撃力
         "def": 15,    // 守備力
         "agi": 8,    // すばやさ
         "itemAtk": 0,    // 装備の攻撃力
         "itemDef": 0,    // 装備の守備力
-        "exp": 6790,    // 経験値
+        "exp": 0,    // 経験値
         "gold": 0    // 所持金
     ]
 
@@ -48,8 +48,9 @@ class cave1ViewController: UIViewController {
     var monster:[Int] = []
 
     // 配列をくんでやるぜ！！！ (12 * 21 = 252 0スタートだから251まで)
+    // 0: 不可, 1: 可, 2: 前のマップへ遷移, 3: 次のマップへ遷移, 4: 回復ポイント
     let line = [
-        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 2, 2, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 3, 3, 3, 0,
         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0,
         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0,
         0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0,
@@ -141,11 +142,18 @@ class cave1ViewController: UIViewController {
 
     // 上ボタンを押している時 touchDown
     @IBAction func upButton(_ sender: UIButton) {
+        // 次のマップに遷移するかどうか
+        if self.line[currentNum] == 3 {
+            print("おk")
+            performSegue(withIdentifier: "toCave2", sender: nil)
+            print("2へせんい")
+        }
+
         if currentNum - 21 >= 0 {  // 移動先の配列番号が存在するか確認
             self.currentNum -= 21    // 配列番号を移動先の番号に変える。(self つけないとボタンが反応してくれなくなる)
             print(currentNum)
 
-            if self.line[currentNum] == 1 {    // 1なら移動可能
+            if self.line[currentNum] >= 1 && self.line[currentNum] <= 4 {    // 1-4なら移動可能
                 // 【普通に移動できるとき】
                 // 1. プレイヤーを移動させる
                 UIView.animate(withDuration: 1, animations: {
@@ -170,7 +178,7 @@ class cave1ViewController: UIViewController {
         if currentNum - 1 >= 0 {  // 移動先の配列番号が存在するか確認
             self.currentNum -= 1    // 配列番号を移動先の番号に変える。(self つけないとボタンが反応してくれなくなる)
 
-            if self.line[currentNum] == 1 {    // 1なら移動可能
+            if self.line[currentNum] >= 1 && self.line[currentNum] <= 4 {    // 1-4なら移動可能
                 UIView.animate(withDuration: 1, animations: {
                     self.playerImage.center.x -= self.gameView.frame.size.width / 21
                 })
@@ -193,7 +201,7 @@ class cave1ViewController: UIViewController {
         if currentNum + 1 <= 251 {  // 移動先の配列番号が存在するか確認
             self.currentNum += 1    // 配列番号を移動先の番号に変える。(self つけないとボタンが反応してくれなくなる)
 
-            if self.line[currentNum] == 1 {    // 1なら移動可能
+            if self.line[currentNum] >= 1 && self.line[currentNum] <= 4 {    // 1-4なら移動可能
                 UIView.animate(withDuration: 1, animations: {
                     self.playerImage.center.x += self.gameView.frame.size.width / 21
                 })
@@ -216,7 +224,7 @@ class cave1ViewController: UIViewController {
         if currentNum + 21 <= 251 {  // 移動先の配列番号が存在するか確認
             self.currentNum += 21    // 配列番号を移動先の番号に変える。(self つけないとボタンが反応してくれなくなる)
 
-            if self.line[currentNum] == 1 {    // 1なら移動可能
+            if self.line[currentNum] >= 1 && self.line[currentNum] <= 4 {    // 1-4なら移動可能
                 // 【普通に移動できるとき】
                 UIView.animate(withDuration: 1, animations: {
                     self.playerImage.center.y += self.gameView.frame.size.height / 12
@@ -330,48 +338,51 @@ class cave1ViewController: UIViewController {
     // segue遷移前動作
     // セグエ実行前処理 / セグエの identifier 確認 / 遷移先ViewController の取得
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard segue.identifier == "toBattle", let vc = segue.destination as? battleMessageViewController else {
-            return
+
+        // バトル画面への遷移前処理
+        if (segue.identifier == "toBattle") {
+
+            let vc: battleMessageViewController = (segue.destination as? battleMessageViewController)!
+
+            // プレイヤーの情報
+            vc.player = player
+
+            // エンカウントしたモンスター情報を渡す
+            vc.monsterName1 = monsterName1
+            vc.monster1 = monster1
+
+            vc.monsterName2 = monsterName2
+            vc.monster2 = monster2
+
+            vc.monsterName3 = monsterName3
+            vc.monster3 = monster3
+
+            vc.monsterName4 = monsterName4
+            vc.monster4 = monster4
+
+            // モンスター出現処理を呼ぶ
+            vc.toMonsterApper = true
+
+            // プレイヤー座標格納
+            playerLeftLocation = playerImage.frame.origin.x
+            playerOverLocation = playerImage.frame.origin.y
+            vc.playerLeftLocation = playerLeftLocation
+            vc.playerOverLocation = playerOverLocation
+
+            vc.currentNum = currentNum
+
+            print(playerLeftLocation)
+            print(playerOverLocation)
+
+
+            // cave2への遷移前処理
+        //} else if (segue.identifier == "toCave2") {
+          //  let vc: cave2ViewController = (segue.destination as? cave2ViewController)!
+
+            // vc.player = player
+
+
         }
-        // プレイヤーの情報
-        vc.player = player
-
-        // エンカウントしたモンスター情報を渡す
-        vc.monsterName1 = monsterName1
-        vc.monster1 = monster1
-
-        vc.monsterName2 = monsterName2
-        vc.monster2 = monster2
-
-        vc.monsterName3 = monsterName3
-        vc.monster3 = monster3
-
-        vc.monsterName4 = monsterName4
-        vc.monster4 = monster4
-
-        // モンスター出現処理を呼ぶ
-        vc.toMonsterApper = true
-
-
-        // プレイヤー座標格納
-        playerLeftLocation = playerImage.frame.origin.x
-
-        playerOverLocation = playerImage.frame.origin.y
-
-
-        vc.playerLeftLocation = playerLeftLocation
-
-        vc.playerOverLocation = playerOverLocation
-        
-
-        vc.currentNum = currentNum
-
-        print(playerLeftLocation)
-        print(playerOverLocation)
-
-
 
     }
-
-
 }
