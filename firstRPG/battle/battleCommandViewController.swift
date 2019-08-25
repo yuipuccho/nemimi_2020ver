@@ -18,10 +18,10 @@ class battleCommandViewController: UIViewController {
 
     var currentNum = 0
 
-    var name = ""
-    var hp = 0
-    var mp = 0
-    var lv = 0
+    var playerName = ""
+    var playerHP = 0
+    var playerMP = 0
+    var playerLv = 0
 
     /// モンスター名前
     var monsterName1 = ""
@@ -50,6 +50,9 @@ class battleCommandViewController: UIViewController {
 
     /// じゅもん使える数
     var magicMaxNum = 0
+
+    /// MP不足で使えないじゅもんを格納
+    var notAvailableMagicNum: [Int] = []
 
     /// 攻撃するモンスターを選択中だよ
     var selectingMonster = false
@@ -131,14 +134,14 @@ class battleCommandViewController: UIViewController {
         print(monster4)
 
         // プレイヤーステータス表示
-        hp = player["nowHP"] as! Int
-        mp = player["nowMP"] as! Int
-        lv = player["Lv"] as! Int
+        playerHP = player["nowHP"] as! Int
+        playerMP = player["nowMP"] as! Int
+        playerLv = player["Lv"] as! Int
 
         nameLabel.text = player["name"] as? String
-        hpLabel.text = "HP: \(hp)"
-        mpLabel.text = "MP: \(mp)"
-        lvLabel.text = "Lv: \(lv)"
+        hpLabel.text = "HP: \(playerHP)"
+        mpLabel.text = "MP: \(playerMP)"
+        lvLabel.text = "Lv: \(playerLv)"
 
         // 最初の画面なのでじゅもん一覧とかいらんやつを消す
         // じゅもん系
@@ -238,6 +241,10 @@ class battleCommandViewController: UIViewController {
             // ここにmagicNum を取得する処理を追加する
             print("magicNum")
             print(magicNum)
+            // MPたりなかったら処理を抜ける
+            if notAvailableMagicNum.contains(magicNum){
+                return
+            }
             // ヒール、メガヒールを選択していたら遷移
             if magicNum == 1 || magicNum == 6 {
                 print("kokodayone")
@@ -352,7 +359,9 @@ class battleCommandViewController: UIViewController {
         }
     }
 
-
+    @IBAction func backButton(_ sender: Any) {
+    }
+    
 
     // 生存モンスターを配列にぶちこむ処理
     func selectMonster() {
@@ -415,53 +424,112 @@ class battleCommandViewController: UIViewController {
 
     // じゅもん表示処理 残りMPによって色を変える処理も追加したい
     func availableMagic() {
-        switch lv {
-        case 1..<5:
-            magic1Label.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        switch playerLv {
+        case 1..<5:    // ヒール lv: 1, MP: -3
+            checkMagic1()    // 残りMPによって処理を変える
             magicMaxNum = 1
-        case 5..<10:
-            magic1Label.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
-            magic2Label.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        case 5..<10:    // ひのたま lv: 5, MP: -2
+            checkMagic1()
+            checkMagic2()
             magicMaxNum = 2
-        case 10..<16:
-            magic1Label.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
-            magic2Label.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
-            magic3Label.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        case 10..<16:    // つららおとし lv: 10, MP: -4
+            checkMagic1()
+            checkMagic2()
+            checkMagic3()
             magicMaxNum = 3
-        case 16..<20:
-            magic1Label.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
-            magic2Label.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
-            magic3Label.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
-            magic4Label.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        case 16..<20:    // しょうげきは lv: 16, MP: -5
+            checkMagic1()
+            checkMagic2()
+            checkMagic3()
+            checkMagic4()
             magicMaxNum = 4
-        case 20..<23:
-            magic1Label.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
-            magic2Label.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
-            magic3Label.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
-            magic4Label.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
-            magic5Label.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        case 20..<23:    // ライトビーム lv: 20, MP: -8
+            checkMagic1()
+            checkMagic2()
+            checkMagic3()
+            checkMagic4()
+            checkMagic5()
             magicMaxNum = 5
-        case 23..<28:
-            magic1Label.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
-            magic2Label.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
-            magic3Label.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
-            magic4Label.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
-            magic5Label.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
-            magic6Label.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        case 23..<28:    // メガヒール lv: 23, MP: -6
+            checkMagic1()
+            checkMagic2()
+            checkMagic3()
+            checkMagic4()
+            checkMagic5()
+            checkMagic6()
             magicMaxNum = 6
-        case 28..<100:
-            magic1Label.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
-            magic2Label.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
-            magic3Label.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
-            magic4Label.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
-            magic5Label.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
-            magic6Label.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
-            magic7Label.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        case 28..<100:    // スターダスト lv: 28, MP: -13
+            checkMagic1()
+            checkMagic2()
+            checkMagic3()
+            checkMagic4()
+            checkMagic5()
+            checkMagic6()
+            checkMagic7()
             magicMaxNum = 7
         default:
             return
         }
     }
+
+    // 残りMPごとのじゅもん選択処理
+    func checkMagic1() {
+        if playerMP < 3 {
+            magic1Label.textColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
+            notAvailableMagicNum.append(1)
+        } else {
+            magic1Label.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        }
+    }
+    func checkMagic2() {
+        if playerMP < 2 {
+            magic2Label.textColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
+            notAvailableMagicNum.append(2)
+        } else {
+            magic2Label.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        }
+    }
+    func checkMagic3() {
+        if playerMP < 4 {
+            magic3Label.textColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
+            notAvailableMagicNum.append(3)
+        } else {
+            magic3Label.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        }
+    }
+    func checkMagic4() {
+        if playerMP < 5 {
+            magic4Label.textColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
+            notAvailableMagicNum.append(4)
+        } else {
+            magic4Label.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        }
+    }
+    func checkMagic5() {
+        if playerMP < 8 {
+            magic5Label.textColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
+            notAvailableMagicNum.append(5)
+        } else {
+            magic5Label.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        }
+    }
+    func checkMagic6() {
+        if playerMP < 6 {
+            magic6Label.textColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
+            notAvailableMagicNum.append(6)
+        } else {
+            magic6Label.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        }
+    }
+    func checkMagic7() {
+        if playerMP < 13 {
+            magic7Label.textColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
+            notAvailableMagicNum.append(7)
+        } else {
+            magic7Label.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        }
+    }
+
 
     // じゅもん選択処理
     func moveSelectMagicIcon() {

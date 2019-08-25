@@ -18,7 +18,7 @@ class cave1ViewController: UIViewController {
     /// 【プレイヤーのパラメータ】
     var player: [String: Any] = [
         "name": "ほげぇ",
-        "Lv": 1,    // レベル
+        "Lv": 19,    // レベル
         "maxHP": 24,    // 最大HP
         "maxMP": 10,    // 最大MP
         "nowHP": 24,
@@ -28,7 +28,7 @@ class cave1ViewController: UIViewController {
         "agi": 8,    // すばやさ
         "itemAtk": 0,    // 装備の攻撃力
         "itemDef": 0,    // 装備の守備力
-        "exp": 0,    // 経験値
+        "exp": 6790,    // 経験値
         "gold": 0    // 所持金
     ]
 
