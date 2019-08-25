@@ -255,10 +255,19 @@ class battleMessageViewController: UIViewController {
 
         case 1:    // ヒール
             giveDamage = Int.random(in: 30...50)    // 30~50のランダム
-            playerHP = playerHP + giveDamage    // プレイヤーのHPを回復
+
+            // HPの処理
+            if playerHP + giveDamage > player["maxHP"] as! Int {    // 回復後のHPが上限HPをこえた場合
+                giveDamage = player["maxHP"] as! Int - playerHP    // 回復量を 上限HP - 現在のHP で計算
+                playerHP = player["maxHP"] as! Int    // プレイヤーのHPを上限に
+            } else {
+                playerHP = playerHP + giveDamage
+            }
+
+
             playerMP = playerMP - 5    // MPを減らす ここも後で調整
             // バトルメッセージ表示
-            messageTextView.text = "\(playerName)は ヒールを となえた！" + "\(playerName)のHPが \(giveDamage)かいふくした！"
+            messageTextView.text = "\(playerName)は ヒールを となえた！" + "\n\(playerName)のHPが \(giveDamage)かいふくした！"
 
 
         case 2:    // ひのたま
@@ -386,10 +395,18 @@ class battleMessageViewController: UIViewController {
 
         case 6:    // メガヒール
             giveDamage = Int.random(in: 70...100)    // 70~100のランダム
-            playerHP = playerHP + giveDamage    // プレイヤーのHPを回復
+
+            // HPの処理
+            if playerHP + giveDamage > player["maxHP"] as! Int {    // 回復後のHPが上限HPをこえた場合
+                giveDamage = player["maxHP"] as! Int - playerHP    // 回復量を 上限HP - 現在のHP で計算
+                playerHP = player["maxHP"] as! Int    // プレイヤーのHPを上限に
+            } else {
+                playerHP = playerHP + giveDamage
+            }
+
             playerMP = playerMP - 5    // MPを減らす ここも後で調整
             // バトルメッセージ表示
-            messageTextView.text = "\(playerName)は メガヒールを となえた！" + "\(playerName)のHPが \(giveDamage)かいふくした！"
+            messageTextView.text = "\(playerName)は メガヒールを となえた！" + "\n\(playerName)のHPが \(giveDamage)かいふくした！"
 
 
         case 7:    // スターダスト
