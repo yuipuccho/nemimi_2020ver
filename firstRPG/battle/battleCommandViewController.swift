@@ -228,7 +228,7 @@ class battleCommandViewController: UIViewController {
             selectingMonster = true    // 3. どのモンスターを攻撃するか選択するフェーズへ
             selectingAtkType = false
 
-        // 「じゅもん」が選択されている時
+            // 「じゅもん」が選択されている時
         } else if selectMatkLabel.text == "▶︎" {
             
             selectMatkLabel.text = ""    // じゅもんの ▶︎ を消す
@@ -239,7 +239,7 @@ class battleCommandViewController: UIViewController {
             selectingAtkType = false
             print("ここはおけ")
 
-        // ヒールなど、じゅもん一覧のどれかが選択されている時
+            // ヒールなど、じゅもん一覧のどれかが選択されている時
         } else if selectingMagic {
             // ここにmagicNum を取得する処理を追加する
             print("magicNum")
@@ -268,7 +268,7 @@ class battleCommandViewController: UIViewController {
                 selectingMagic = false
             }
 
-        // 攻撃するモンスターが選択されている時
+            // 攻撃するモンスターが選択されている時
         } else if selectingMonster {
             performSegue(withIdentifier: "toBattleMessage", sender: nil)    // 画面遷移
             print("バトルメッセージに遷移")
@@ -284,7 +284,7 @@ class battleCommandViewController: UIViewController {
             selectAtkLabel.text = "▶︎"
             selectMatkLabel.text = ""
 
-        // 【じゅもんを選択するフェーズ】
+            // 【じゅもんを選択するフェーズ】
         } else if selectingMagic {
             // じゅもん選択の▶︎を動かすよ〜
             if magicNum - 1 < 1 || magicNum - 1 == 4 {    // これ以上上にいけないとき
@@ -306,7 +306,7 @@ class battleCommandViewController: UIViewController {
                 magicNum -= 4    // じゅもん番号を -4
                 moveSelectMagicIcon()    // じゅもん番号に応じて▶︎を動かす
             }
-        // 【モンスター選択するフェーズ】
+            // 【モンスター選択するフェーズ】
         } else if selectingMonster {
             if selectMonsterNum - 1 < 0 {    // これ以上左にモンスターいないとき
                 // 何もしない
@@ -328,7 +328,7 @@ class battleCommandViewController: UIViewController {
                 moveSelectMagicIcon()    // じゅもん番号に応じて▶︎を動かす
             }
 
-        // 【モンスター選択するフェーズ】
+            // 【モンスター選択するフェーズ】
         } else if selectingMonster {
             if selectMonsterNum + 1 >= selectableMonster.count {    // これ以上右にモンスターいないとき
                 // 何もしない
@@ -347,7 +347,7 @@ class battleCommandViewController: UIViewController {
             selectAtkLabel.text = ""
             selectMatkLabel.text = "▶︎"
 
-        // 【じゅもんを選択するフェーズ】
+            // 【じゅもんを選択するフェーズ】
         } else if selectingMagic {
             if magicNum + 1 > magicMaxNum || magicNum + 1 == 5 {    // これ以上下にいけないとき
                 // 何もしない
@@ -366,7 +366,7 @@ class battleCommandViewController: UIViewController {
         if monster1["hp"]! > 0 {
             selectableMonster.append(1)
         }
-       if monster2["hp"]! > 0 {
+        if monster2["hp"]! > 0 {
             selectableMonster.append(2)
         }
         if monster3["hp"]! > 0 {
@@ -587,7 +587,7 @@ class battleCommandViewController: UIViewController {
         vc.magicNum = magicNum    // 攻撃タイプ
 
         if magicNum != 1 && magicNum != 6 {
-        vc.selectMonsterNum = selectableMonster[selectMonsterNum]   // どのモンスターか
+            vc.selectMonsterNum = selectableMonster[selectMonsterNum]   // どのモンスターか
         }
 
         // プレイヤー攻撃の処理を呼ぶ

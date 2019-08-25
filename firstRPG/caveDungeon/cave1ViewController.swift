@@ -15,6 +15,16 @@ class cave1ViewController: UIViewController {
     @IBOutlet weak var gameView: UIView!
     @IBOutlet weak var playerImage: UIImageView!    // プレイヤー
 
+    /// 【プレイヤーのパラメータ】
+    var player: [String: Any] = [
+        "name": "ほげぇ",
+        "Lv": 1,    // レベル
+        "maxHP": 24,    // 最大HP
+        "maxMP": 10,    // 最大MP
+        "nowHP": 24,
+        "nowMP": 10,
+    ]
+
     var currentNum = 241    // プレイヤーの位置が配列の何番めか
 
     var count = 0    // 歩数のカウント
@@ -52,8 +62,8 @@ class cave1ViewController: UIViewController {
 
     // 【モンスター情報】
     var monsterStatus: [[String: Int]] = [
-        ["hp": 7, "atk": 7, "def": 14, "agi": 1, "exp": 1, "gold": 1],    // 0. スライム
-        ["hp": 10, "atk": 10, "def": 16, "agi": 1, "exp": 4, "gold": 1],    // 1. バット
+        ["hp": 7, "atk": 5, "def": 16, "agi": 1, "exp": 2, "gold": 1],    // 0. スライム
+        ["hp": 10, "atk": 6, "def": 18, "agi": 1, "exp": 3, "gold": 1],    // 1. バット
         ["hp": 1, "atk": 1, "def": 1, "agi": 1, "exp": 1, "gold": 1],    // 2. マタンゴ
         ["hp": 1, "atk": 1, "def": 1, "agi": 1, "exp": 1, "gold": 1],    // 3. ピヨネズミ
         ["hp": 1, "atk": 1, "def": 1, "agi": 1, "exp": 1, "gold": 1],    // 4. レイン
@@ -301,6 +311,10 @@ class cave1ViewController: UIViewController {
         guard segue.identifier == "toBattle", let vc = segue.destination as? battleMessageViewController else {
             return
         }
+        // プレイヤーの名前、HP、MP,Lv
+        vc.player["nowHP"] = player["nowHP"]
+        vc.player["nowMP"] = player["nowMP"]
+        vc.player["Lv"] = player["Lv"]
 
         // エンカウントしたモンスター情報を渡す
         vc.monsterName1 = monsterName1
@@ -318,13 +332,13 @@ class cave1ViewController: UIViewController {
         // モンスター出現処理を呼ぶ
         vc.toMonsterApper = true
 
- }
+    }
 
 
 
 
 
-
+    
 
 
 }

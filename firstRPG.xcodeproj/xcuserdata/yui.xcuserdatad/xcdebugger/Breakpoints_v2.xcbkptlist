@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "firstRPG/battle/battleMessageViewController.swift"
-            timestampString = "588394729.354117"
+            timestampString = "588396687.963774"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "459"
-            endingLineNumber = "459"
+            startingLineNumber = "460"
+            endingLineNumber = "460"
             landmarkName = "battleMessageViewController"
             landmarkType = "3">
          </BreakpointContent>
