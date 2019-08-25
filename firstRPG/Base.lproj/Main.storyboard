@@ -232,6 +232,8 @@
                         <outlet property="mpLabel" destination="g6U-v4-6ff" id="lxD-0n-SHu"/>
                         <outlet property="nameLabel" destination="Lug-Je-KnK" id="gQ6-Tb-3Ch"/>
                         <segue destination="LSy-9n-y8y" kind="show" identifier="toBattleCommand" animates="NO" id="4YM-AB-cmK"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="toCave1" id="RTa-DA-z8X"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="toRestart" id="0BB-4w-l0D"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0MO-Nz-nyS" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1219,6 +1221,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="f82-xP-eWM"/>
                     <connections>
                         <outlet property="gameView" destination="lvg-s5-IrG" id="BAw-7B-XDb"/>
                         <outlet property="playerImage" destination="Hf0-jO-Dqw" id="lxV-Bv-stm"/>
@@ -4434,6 +4437,7 @@
         <image name="黒" width="32" height="32"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="58s-R3-No3"/>
+        <segue reference="0BB-4w-l0D"/>
+        <segue reference="vQB-Ca-9LJ"/>
     </inferredMetricsTieBreakers>
 </document>

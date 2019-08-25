@@ -553,7 +553,6 @@ class battleCommandViewController: UIViewController {
 
 
 
-
         // 向こうに返す情報は
         // プレイヤー情報
         vc.name = player["name"] as! String

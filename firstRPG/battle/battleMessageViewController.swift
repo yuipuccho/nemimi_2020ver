@@ -100,6 +100,9 @@ class battleMessageViewController: UIViewController {
     /// モンスターから攻撃を受けた時のバトルメッセージをとりま格納する配列
     var monsterAtkMessage: [String] = []
 
+    /// モンスターから攻撃を受けた時のhpをとりま格納する配列
+    var monsterAtkHP: [String] = []
+
 
     /// 【プレイヤーのパラメータ】
     var player: [String: Any] = [
@@ -458,44 +461,36 @@ class battleMessageViewController: UIViewController {
             if monster1["hp"]! <= 0 {    // モンスター1死んじゃった
                 messageTextView.text = messageTextView.text + "\n\(monsterName1)を たおした！"    // バトルメッセージ表示
                 monsterImage1.alpha = 0    // 画像を消す
-                print(allExp)
-                print(monster1["exp"])
+
                 allExp += monster1["exp"]!
-                print("allExp")
-                print(allExp)
+
             }
 
         case 2:    // モンスター2を選択した時
             if monster2["hp"]! <= 0 {
                 messageTextView.text = messageTextView.text + "\n\(monsterName2)を たおした！"    // バトルメッセージ表示
                 monsterImage2.alpha = 0    // 画像を消す
-                print(allExp)
-                print(monster2["exp"])
+
                 allExp += monster2["exp"]!
-                print("allExp")
-                print(allExp)
+
             }
 
         case 3:
             if monster3["hp"]! <= 0 {
                 messageTextView.text = messageTextView.text + "\n\(monsterName3)を たおした！"    // バトルメッセージ表示
                 monsterImage3.alpha = 0    // 画像を消す
-                print(allExp)
-                print(monster3["exp"])
+
                 allExp += monster3["exp"]!
-                print("allExp")
-                print(allExp)
+
             }
 
         case 4:
             if monster4["hp"]! <= 0 {
                 messageTextView.text = messageTextView.text + "\n\(monsterName4)を たおした！"    // バトルメッセージ表示
                 monsterImage4.alpha = 0    // 画像を消す
-                print(allExp)
-                print(monster4["exp"])
+
                 allExp += monster4["exp"]!
-                print("allExp")
-                print(allExp)
+
             }
         default:
             break    // ここreturnだと、ヒール等回復系のとき処理を抜けちゃうから困る。
@@ -529,62 +524,141 @@ class battleMessageViewController: UIViewController {
         if monster1["hp"]! >= 1 {    // モンスター1が生きてるとき
             monsterCount += 1    // 生存モンスターカウントを +1
             takeDamage = monster1["atk"]! * monster1["atk"]! / playerDefStatus    // ダメージ計算
-            playerHP = playerHP - takeDamage    // ダメージ反映う
-            print("monsterAtk2")
+
+            playerHP = playerHP - takeDamage    // ダメージ反映
+            player["nowHP"] = playerHP
+
             // バトルメッセージ格納
             monsterAtkMessage.append("\(monsterName1)のこうげき！\n\(playerName)は \(takeDamage)のダメージをうけた!")
-            if playerHP <= 0 {    // プレイヤー死んだとき
+
+            if playerHP > 0 {    // プレイヤー生きてるとき
+                // HP格納
+                monsterAtkHP.append("\(playerHP)")
+
+            } else {    // プレイヤー死んだとき
+                playerHP = 0    // HP0にする
+                player["nowHP"] = playerHP
+                // HP格納
+                monsterAtkHP.append("\(playerHP)")
+
+                // バトルメッセージ格納
+                monsterAtkMessage.append("\(playerName)は しんでしまった！")
+                // 配列数合わせるためもう一度HP格納
+                monsterAtkHP.append("\(playerHP)")
+
                 // メインボタン押した時の処理
                 toBattleCommand = false
                 toBack = false
                 toMonsterAtk1 = false
                 toFinishBattle = false
                 toPlayerDie = true
+
+                return
+
             }
         }
         if monster2["hp"]! >= 1 {    // モンスター2が生きてるとき
             monsterCount += 1
             takeDamage = monster2["atk"]! * monster2["atk"]! / playerDefStatus    // ダメージ計算
             playerHP = playerHP - takeDamage    // ダメージ反映
+            player["nowHP"] = playerHP
+
             // バトルメッセージ格納
             monsterAtkMessage.append("\(monsterName2)のこうげき！\n\(playerName)は \(takeDamage)のダメージをうけた!")
-            if playerHP <= 0 {    // プレイヤー死んだとき
+
+            if playerHP > 0 {    // プレイヤー生きてるとき
+                // HP格納
+                monsterAtkHP.append("\(playerHP)")
+
+            } else {    // プレイヤー死んだとき
+                playerHP = 0    // HP0にする
+                player["nowHP"] = playerHP
+                // HP格納
+                monsterAtkHP.append("\(playerHP)")
+
+                // バトルメッセージ格納
+                monsterAtkMessage.append("\(playerName)は しんでしまった！")
+                // 配列数合わせるためもう一度HP格納
+                monsterAtkHP.append("\(playerHP)")
+
                 // メインボタン押した時の処理
                 toBattleCommand = false
                 toBack = false
                 toMonsterAtk1 = false
                 toFinishBattle = false
                 toPlayerDie = true
+
+                return
             }
         }
+
         if monster3["hp"]! >= 1 {    // モンスター3が生きてるとき
             monsterCount += 1
             takeDamage = monster3["atk"]! * monster3["atk"]! / playerDefStatus    // ダメージ計算
             playerHP = playerHP - takeDamage    // ダメージ反映
+            player["nowHP"] = playerHP
+
             // バトルメッセージ格納
             monsterAtkMessage.append("\(monsterName3)のこうげき！\n\(playerName)は \(takeDamage)のダメージをうけた!")
-            if playerHP <= 0 {    // プレイヤー死んだとき
+
+            if playerHP > 0 {    // プレイヤー生きてるとき
+                // HP格納
+                monsterAtkHP.append("\(playerHP)")
+
+            } else {    // プレイヤー死んだとき
+                playerHP = 0    // HP0にする
+                player["nowHP"] = playerHP
+                // HP格納
+                monsterAtkHP.append("\(playerHP)")
+
+                // バトルメッセージ格納
+                monsterAtkMessage.append("\(playerName)は しんでしまった！")
+                // 配列数合わせるためもう一度HP格納
+                monsterAtkHP.append("\(playerHP)")
+
                 // メインボタン押した時の処理
                 toBattleCommand = false
                 toBack = false
                 toMonsterAtk1 = false
                 toFinishBattle = false
                 toPlayerDie = true
+
+                return
             }
         }
         if monster4["hp"]! >= 1 {    // モンスター4が生きてるとき
             monsterCount += 1
             takeDamage = monster4["atk"]! * monster4["atk"]! / playerDefStatus    // ダメージ計算
             playerHP = playerHP - takeDamage    // ダメージ反映
+            player["nowHP"] = playerHP
+
             // バトルメッセージ格納
-            monsterAtkMessage.append("\(monsterName4)のこうげき！\n\(playerName)は \(takeDamage)のダメージをうけた!")
-            if playerHP <= 0 {    // プレイヤー死んだとき
+            monsterAtkMessage.append("\(monsterName1)のこうげき！\n\(playerName)は \(takeDamage)のダメージをうけた!")
+
+            if playerHP > 0 {    // プレイヤー生きてるとき
+                // HP格納
+                monsterAtkHP.append("\(playerHP)")
+
+            } else {    // プレイヤー死んだとき
+                playerHP = 0    // HP0にする
+                player["nowHP"] = playerHP
+                // HP格納
+                monsterAtkHP.append("\(playerHP)")
+
+                // バトルメッセージ格納
+                monsterAtkMessage.append("\(playerName)は しんでしまった！")
+                // 配列数合わせるためもう一度HP格納
+                monsterAtkHP.append("\(playerHP)")
+
                 // メインボタン押した時の処理
                 toBattleCommand = false
                 toBack = false
                 toMonsterAtk1 = false
                 toFinishBattle = false
                 toPlayerDie = true
+
+                return
+
             }
         }
     }
@@ -600,6 +674,7 @@ class battleMessageViewController: UIViewController {
 
         // バトル終了してマップに戻る
         } else if toBack == true {
+            self.performSegue(withIdentifier: "toCave1", sender: nil)
 
 
         // モンスターからの攻撃メッセージを表示
@@ -607,6 +682,7 @@ class battleMessageViewController: UIViewController {
 
             if count == 0 {    // メインボタンカウントが0のとき
                 messageTextView.text = monsterAtkMessage[0]    // メッセージ表示
+                hpLabel.text = "HP: \(monsterAtkHP[0])"
                 if count + 1 == monsterAtkMessage.count {    // モンスターのターンが終わりの時
 
                     toMonsterAtk1 = false    // モンスターからの攻撃のフェーズ終わり
@@ -620,6 +696,7 @@ class battleMessageViewController: UIViewController {
 
             } else if count == 1 {    // メインボタンカウントが1のとき
                 messageTextView.text = monsterAtkMessage[1]    // メッセージ表示
+                hpLabel.text = "HP: \(monsterAtkHP[1])"
                 if count + 1 == monsterAtkMessage.count {    // モンスターのターンが終わりの時
            
                     toMonsterAtk1 = false    // モンスターからの攻撃のフェーズ終わり
@@ -632,6 +709,7 @@ class battleMessageViewController: UIViewController {
 
             } else if count == 2 {    // メインボタンカウントが2のとき
                 messageTextView.text = monsterAtkMessage[2]    // メッセージ表示
+                hpLabel.text = "HP: \(monsterAtkHP[2])"
                 if count + 1 == monsterAtkMessage.count {    // モンスターのターンが終わりの時
                     toMonsterAtk1 = false    // モンスターからの攻撃のフェーズ終わり
                     toBattleCommand = true    // コマンド選択画面遷移のフェーズへ
@@ -643,6 +721,7 @@ class battleMessageViewController: UIViewController {
 
             } else if count == 3 {    // メインボタンカウントが3のとき
                 messageTextView.text = monsterAtkMessage[3]    // メッセージ表示
+                hpLabel.text = "HP: \(monsterAtkHP[3])"
                 if count + 1 == monsterAtkMessage.count {    // モンスターのターンが終わりの時
                     toMonsterAtk1 = false    // モンスターからの攻撃のフェーズ終わり
                     toBattleCommand = true    // コマンド選択画面遷移のフェーズへ
@@ -656,8 +735,71 @@ class battleMessageViewController: UIViewController {
             messageTextView.text = "\(allExp)のけいけんちを かくとく！"
             // レベルアップした時の処理を追加
 
+            
+            toFinishBattle = false
+            toBack = true
+
+
         // プレイヤー死んだときの処理
         } else if toPlayerDie == true {
+            if count == 0 {    // メインボタンカウントが0のとき
+                messageTextView.text = monsterAtkMessage[0]    // メッセージ表示
+                hpLabel.text = "HP: \(monsterAtkHP[0])"
+                if count + 1 == monsterAtkMessage.count {    // モンスターのターンが終わりの時
+
+                    toPlayerDie = false    // 終わり
+                    self.performSegue(withIdentifier: "toRestart", sender: nil)
+                } else {    // モンスターのターンが続くとき
+                    count += 1    // メインボタンカウントを +1
+                }
+
+                print("diecount0")
+                print(count)
+
+            } else if count == 1 {    // メインボタンカウントが1のとき
+                messageTextView.text = monsterAtkMessage[1]    // メッセージ表示
+                hpLabel.text = "HP: \(monsterAtkHP[1])"
+                if count + 1 == monsterAtkMessage.count {    // モンスターのターンが終わりの時
+
+                    toPlayerDie = false    // 終わり
+                    self.performSegue(withIdentifier: "toRestart", sender: nil)
+                } else {    // モンスターのターンが続くとき
+                    count += 1    // メインボタンカウントを +1
+                }
+
+                print("diecount1")
+
+            } else if count == 2 {    // メインボタンカウントが2のとき
+                messageTextView.text = monsterAtkMessage[2]    // メッセージ表示
+                hpLabel.text = "HP: \(monsterAtkHP[2])"
+                if count + 1 == monsterAtkMessage.count {    // モンスターのターンが終わりの時
+                    toPlayerDie = false    // 終わり
+                    self.performSegue(withIdentifier: "toRestart", sender: nil)
+                } else {    // モンスターのターンが続くとき
+                    count += 1    // メインボタンカウントを +1
+                }
+
+                print("diecount2")
+
+            } else if count == 3 {    // メインボタンカウントが3のとき
+                messageTextView.text = monsterAtkMessage[3]    // メッセージ表示
+                hpLabel.text = "HP: \(monsterAtkHP[3])"
+                if count + 1 == monsterAtkMessage.count {    // モンスターのターンが終わりの時
+                    toPlayerDie = false    // 終わり
+                    self.performSegue(withIdentifier: "toRestart", sender: nil)
+                }
+                print("diecount3")
+
+            } else if count == 4 {    // メインボタンカウントが4のとき
+                messageTextView.text = monsterAtkMessage[4]    // メッセージ表示
+                hpLabel.text = "HP: \(monsterAtkHP[4])"
+                if count + 1 == monsterAtkMessage.count {    // モンスターのターンが終わりの時
+                    toPlayerDie = false    // 終わり
+                    self.performSegue(withIdentifier: "toRestart", sender: nil)
+                }
+              print("diecount4")
+
+            }
 
         }
     }

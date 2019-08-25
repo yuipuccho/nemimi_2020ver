@@ -52,7 +52,7 @@ class cave1ViewController: UIViewController {
 
     // 【モンスター情報】
     var monsterStatus: [[String: Int]] = [
-        ["hp": 1, "atk": 1, "def": 1, "agi": 1, "exp": 1, "gold": 1],    // 0. スライム
+        ["hp": 1000, "atk": 100, "def": 1, "agi": 1, "exp": 1, "gold": 1],    // 0. スライム
         ["hp": 1, "atk": 1, "def": 1, "agi": 1, "exp": 1, "gold": 1],    // 1. バット
         ["hp": 1, "atk": 1, "def": 1, "agi": 1, "exp": 1, "gold": 1],    // 2. マタンゴ
         ["hp": 1, "atk": 1, "def": 1, "agi": 1, "exp": 1, "gold": 1],    // 3. ピヨネズミ
