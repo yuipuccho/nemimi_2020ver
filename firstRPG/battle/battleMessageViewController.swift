@@ -112,12 +112,12 @@ class battleMessageViewController: UIViewController {
     var player: [String: Any] = [
         "name": "ほげぇ",
         "Lv": 1,    // レベル
-        "maxHP": 50,    // 最大HP
+        "maxHP": 24,    // 最大HP
         "maxMP": 10,    // 最大MP
-        "nowHP": 50,
+        "nowHP": 24,
         "nowMP": 10,
-        "atk": 20,    // 攻撃力
-        "def": 10,    // 守備力
+        "atk": 12,    // 攻撃力
+        "def": 15,    // 守備力
         "agi": 8,    // すばやさ
         "itemAtk": 0,    // 装備の攻撃力
         "itemDef": 0,    // 装備の守備力
@@ -791,6 +791,8 @@ class battleMessageViewController: UIViewController {
                 if count + 1 == monsterAtkMessage.count {    // モンスターのターンが終わりの時
                     toPlayerDie = false    // 終わり
                     toRestart = true
+                } else {    // モンスターのターンが続くとき
+                    count += 1    // メインボタンカウントを +1
                 }
                 print("diecount3")
 

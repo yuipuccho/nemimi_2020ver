@@ -69,13 +69,13 @@ class battleCommandViewController: UIViewController {
         "maxMP": 10,    // 最大MP
         "nowHP": 50,
         "nowMP": 10,
-        "atk": 20,    // 攻撃力
-        "def": 10,    // 守備力
-        "agi": 8,    // すばやさ
-        "itemAtk": 0,    // 装備の攻撃力
-        "itemDef": 0,    // 装備の守備力
-        "exp": 0,    // 経験値
-        "gold": 0    // 所持金
+        //"atk": 20,    // 攻撃力
+        //"def": 10,    // 守備力
+        //"agi": 8,    // すばやさ
+        //"itemAtk": 0,    // 装備の攻撃力
+        //"itemDef": 0,    // 装備の守備力
+        //"exp": 0,    // 経験値
+        //"gold": 0    // 所持金
     ]
 
 
