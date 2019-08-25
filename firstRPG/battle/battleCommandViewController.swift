@@ -12,9 +12,9 @@ class battleCommandViewController: UIViewController {
 
     // プレイヤー座標
     var playerLeftLocation: CGFloat = 0
-    var playerRightLocation: CGFloat = 0
+
     var playerOverLocation: CGFloat = 0
-    var playerUnderLocation: CGFloat = 0
+
 
     var currentNum = 0
 
@@ -588,9 +588,9 @@ class battleCommandViewController: UIViewController {
         vc.allExp = allExp
 
         vc.playerLeftLocation = playerLeftLocation
-        vc.playerRightLocation = playerRightLocation
+        
         vc.playerOverLocation = playerOverLocation
-        vc.playerUnderLocation = playerUnderLocation
+
 
         vc.currentNum = currentNum
 

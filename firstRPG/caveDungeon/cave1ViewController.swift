@@ -41,9 +41,9 @@ class cave1ViewController: UIViewController {
 
     // プレイヤースタート地点座標
     var playerLeftLocation: CGFloat = 266.5
-    var playerRightLocation: CGFloat = 293.5
+
     var playerOverLocation: CGFloat = 0.0
-    var playerUnderLocation: CGFloat = 26.5
+
 
     var monster:[Int] = []
 
@@ -81,19 +81,20 @@ class cave1ViewController: UIViewController {
     var monsterStatus: [[String: Int]] = [
         ["hp": 7, "atk": 5, "def": 16, "agi": 1, "exp": 2, "gold": 1],    // 0. スライム
         ["hp": 10, "atk": 6, "def": 18, "agi": 1, "exp": 3, "gold": 1],    // 1. バット
-        ["hp": 1, "atk": 1, "def": 1, "agi": 1, "exp": 1, "gold": 1],    // 2. マタンゴ
-        ["hp": 1, "atk": 1, "def": 1, "agi": 1, "exp": 1, "gold": 1],    // 3. ピヨネズミ
-        ["hp": 1, "atk": 1, "def": 1, "agi": 1, "exp": 1, "gold": 1],    // 4. レイン
-        ["hp": 1, "atk": 1, "def": 1, "agi": 1, "exp": 1, "gold": 1],    // 5. プランタ
-        ["hp": 1, "atk": 1, "def": 1, "agi": 1, "exp": 1, "gold": 1],    // 6. ボーン
-        ["hp": 1, "atk": 1, "def": 1, "agi": 1, "exp": 1, "gold": 1],    // 7. ラコステ
-        ["hp": 1, "atk": 1, "def": 1, "agi": 1, "exp": 1, "gold": 1],    // 8. ナルシカラス
-        ["hp": 1, "atk": 1, "def": 1, "agi": 1, "exp": 1, "gold": 1],    // 9. ゴーレム
-        ["hp": 1, "atk": 1, "def": 1, "agi": 1, "exp": 1, "gold": 1],    // 10. トロール
-        ["hp": 1, "atk": 1, "def": 1, "agi": 1, "exp": 1, "gold": 1],    // 11. ハーミット
-        ["hp": 1, "atk": 1, "def": 1, "agi": 1, "exp": 1, "gold": 1],    // 12. ティグレ
+        ["hp": 15, "atk": 10, "def": 22, "agi": 1, "exp": 10, "gold": 1],    // 2. マタンゴ
+        ["hp": 20, "atk": 14, "def": 30, "agi": 1, "exp": 15, "gold": 1],    // 3. ピヨネズミ
+        ["hp": 28, "atk": 18, "def": 34, "agi": 1, "exp": 30, "gold": 1],    // 4. レイン
+        ["hp": 40, "atk": 24, "def": 45, "agi": 1, "exp": 45, "gold": 1],    // 5. プランタ
+        ["hp": 50, "atk": 40, "def": 80, "agi": 1, "exp": 60, "gold": 1],    // 6. ボーン
+        ["hp": 80, "atk": 48, "def": 120, "agi": 1, "exp": 123, "gold": 1],    // 7. ラコステ
+        ["hp": 100, "atk": 86, "def": 240, "agi": 1, "exp": 238, "gold": 1],    // 8. ナルシカラス
+        ["hp": 160, "atk": 150, "def": 270, "agi": 1, "exp": 470, "gold": 1],    // 9. ゴーレム
+        ["hp": 190, "atk": 210, "def": 400, "agi": 1, "exp": 630, "gold": 1],    // 10. トロール
+        ["hp": 1000, "atk": 50, "def": 150, "agi": 1, "exp": 1000, "gold": 1],    // 11. ハーミット
+        ["hp": 2500, "atk": 220, "def": 550, "agi": 1, "exp": 4000, "gold": 1],    // 12. ティグレ
         ["hp": 0, "atk": 0, "def": 0, "agi": 0, "exp": 0, "gold": 0]    // 13. なし
     ]
+
 
     //let a = monsterStatus[0]["hp"]
     //print(a!)
@@ -354,14 +355,14 @@ class cave1ViewController: UIViewController {
 
         // プレイヤー座標格納
         playerLeftLocation = playerImage.frame.origin.x
-        playerRightLocation = playerImage.frame.origin.x + playerImage.frame.size.width
+
         playerOverLocation = playerImage.frame.origin.y
-        playerUnderLocation = playerImage.frame.origin.y + playerImage.frame.size.height
+
 
         vc.playerLeftLocation = playerLeftLocation
-        vc.playerRightLocation = playerRightLocation
+
         vc.playerOverLocation = playerOverLocation
-        vc.playerUnderLocation = playerUnderLocation
+        
 
         vc.currentNum = currentNum
 
