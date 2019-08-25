@@ -868,6 +868,20 @@ class battleMessageViewController: UIViewController {
             // 経験値
             vc.allExp = allExp
 
+
+        // 死んだ時の遷移前処理
+        } else if (segue.identifier == "toRestart") {
+
+            let vc: cave1ViewController = (segue.destination as? cave1ViewController)!
+
+            // プレイヤーのHP,MPを全快にする
+            player["nowHP"] = player["maxHP"]
+            player["nowMP"] = player["maxMP"]
+
+            // プレイヤーの情報
+            vc.player = player
+
+
         // cave1への遷移前処理
         } else if (segue.identifier == "toCave1") {
 
@@ -877,8 +891,5 @@ class battleMessageViewController: UIViewController {
             vc.player = player
         }
     }
-
-//死んだ時レベル引き継ぎ
-
 
 }
