@@ -36,6 +36,15 @@ class cave1ViewController: UIViewController {
 
     var count = 0    // 歩数のカウント
 
+    @IBOutlet weak var restartLocation: UIImageView!
+
+
+    // プレイヤースタート地点座標
+    var playerLeftLocation: CGFloat = 266.5
+    var playerRightLocation: CGFloat = 293.5
+    var playerOverLocation: CGFloat = 0.0
+    var playerUnderLocation: CGFloat = 26.5
+
     var monster:[Int] = []
 
     // 配列をくんでやるぜ！！！ (12 * 21 = 252 0スタートだから251まで)
@@ -66,6 +75,7 @@ class cave1ViewController: UIViewController {
     var monster2: [String: Int] = [:]
     var monster3: [String: Int] = [:]
     var monster4: [String: Int] = [:]
+
 
     // 【モンスター情報】
     var monsterStatus: [[String: Int]] = [
@@ -112,8 +122,11 @@ class cave1ViewController: UIViewController {
 
 
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func viewWillAppear(_ animated: Bool) {
+        let playerFrame = CGRect(x: playerLeftLocation, y: 26.5 * 11 - playerOverLocation, width: 27.0, height: 26.5)
+        print(playerFrame)
+
+        playerImage.frame = playerFrame
     }
 
     // ステータスバー邪魔だから消す
@@ -129,6 +142,7 @@ class cave1ViewController: UIViewController {
     @IBAction func upButton(_ sender: UIButton) {
         if currentNum - 21 >= 0 {  // 移動先の配列番号が存在するか確認
             self.currentNum -= 21    // 配列番号を移動先の番号に変える。(self つけないとボタンが反応してくれなくなる)
+            print(currentNum)
 
             if self.line[currentNum] == 1 {    // 1なら移動可能
                 // 【普通に移動できるとき】
@@ -337,13 +351,26 @@ class cave1ViewController: UIViewController {
         // モンスター出現処理を呼ぶ
         vc.toMonsterApper = true
 
+
+        // プレイヤー座標格納
+        playerLeftLocation = playerImage.frame.origin.x
+        playerRightLocation = playerImage.frame.origin.x + playerImage.frame.size.width
+        playerOverLocation = playerImage.frame.origin.y
+        playerUnderLocation = playerImage.frame.origin.y + playerImage.frame.size.height
+
+        vc.playerLeftLocation = playerLeftLocation
+        vc.playerRightLocation = playerRightLocation
+        vc.playerOverLocation = playerOverLocation
+        vc.playerUnderLocation = playerUnderLocation
+
+        vc.currentNum = currentNum
+
+        print(playerLeftLocation)
+        print(playerOverLocation)
+
+
+
     }
-
-
-
-
-
-    
 
 
 }

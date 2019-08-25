@@ -23,6 +23,15 @@ class battleMessageViewController: UIViewController {
     
     @IBOutlet weak var messageTextView: UITextView!    // バトルメッセージ
 
+
+    // プレイヤー座標
+    var playerLeftLocation: CGFloat = 0
+    var playerRightLocation: CGFloat = 0
+    var playerOverLocation: CGFloat = 0
+    var playerUnderLocation: CGFloat = 0
+
+    var currentNum = 0
+
     // つかってる？
     var name = ""
     var hp = 0
@@ -868,6 +877,13 @@ class battleMessageViewController: UIViewController {
             // 経験値
             vc.allExp = allExp
 
+            vc.playerLeftLocation = playerLeftLocation
+            vc.playerRightLocation = playerRightLocation
+            vc.playerOverLocation = playerOverLocation
+            vc.playerUnderLocation = playerUnderLocation
+
+            vc.currentNum = currentNum
+
 
         // 死んだ時の遷移前処理
         } else if (segue.identifier == "toRestart") {
@@ -882,6 +898,12 @@ class battleMessageViewController: UIViewController {
             vc.player = player
 
 
+            vc.playerLeftLocation = 266.5
+            vc.playerRightLocation = 293.5
+            vc.playerOverLocation = 0.0
+            vc.playerUnderLocation = 26.5
+
+
         // cave1への遷移前処理
         } else if (segue.identifier == "toCave1") {
 
@@ -889,7 +911,13 @@ class battleMessageViewController: UIViewController {
 
             // プレイヤーの情報
             vc.player = player
+
+            vc.playerLeftLocation = playerLeftLocation
+            vc.playerRightLocation = playerRightLocation
+            vc.playerOverLocation = 26.5 * 11 - playerOverLocation
+            vc.playerUnderLocation = playerUnderLocation
+
+            vc.currentNum = currentNum
         }
     }
-
 }

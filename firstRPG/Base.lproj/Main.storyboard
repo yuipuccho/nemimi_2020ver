@@ -1086,8 +1086,9 @@
                                 <rect key="frame" x="4" y="0.0" width="560" height="320"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ヒーロー前" translatesAutoresizingMaskIntoConstraints="NO" id="Hf0-jO-Dqw">
-                                <rect key="frame" x="270.5" y="293.5" width="27" height="26.5"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ヒーロー前" translatesAutoresizingMaskIntoConstraints="NO" id="Hf0-jO-Dqw">
+                                <rect key="frame" x="270.5" y="293.5" width="32" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zbq-2Y-2H3">
                                 <rect key="frame" x="4" y="0.0" width="560" height="320"/>
@@ -1203,12 +1204,8 @@
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="Hf0-jO-Dqw" firstAttribute="top" secondItem="C3J-x0-7Iy" secondAttribute="top" id="ARE-Y2-i9R"/>
                             <constraint firstItem="IhJ-Ls-Our" firstAttribute="bottom" secondItem="lvg-s5-IrG" secondAttribute="bottom" id="IjX-n1-BFw"/>
-                            <constraint firstItem="Hf0-jO-Dqw" firstAttribute="leading" secondItem="C3J-x0-7Iy" secondAttribute="leading" id="PQJ-5x-mNF"/>
                             <constraint firstItem="zbq-2Y-2H3" firstAttribute="trailing" secondItem="lvg-s5-IrG" secondAttribute="trailing" id="VhM-ze-22U"/>
-                            <constraint firstItem="Hf0-jO-Dqw" firstAttribute="trailing" secondItem="C3J-x0-7Iy" secondAttribute="trailing" id="aDc-mT-YnT"/>
-                            <constraint firstItem="Hf0-jO-Dqw" firstAttribute="bottom" secondItem="C3J-x0-7Iy" secondAttribute="bottom" id="aRa-hI-dm4"/>
                             <constraint firstItem="lvg-s5-IrG" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="atL-jN-xoy"/>
                             <constraint firstItem="zbq-2Y-2H3" firstAttribute="leading" secondItem="lvg-s5-IrG" secondAttribute="leading" id="bo2-yN-4ZS"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="lvg-s5-IrG" secondAttribute="bottom" id="bw9-IE-V1z"/>
@@ -1225,6 +1222,7 @@
                     <connections>
                         <outlet property="gameView" destination="lvg-s5-IrG" id="BAw-7B-XDb"/>
                         <outlet property="playerImage" destination="Hf0-jO-Dqw" id="lxV-Bv-stm"/>
+                        <outlet property="restartLocation" destination="C3J-x0-7Iy" id="WZv-1X-S71"/>
                         <segue destination="pY7-AG-JsT" kind="show" identifier="toBattle" id="58s-R3-No3"/>
                     </connections>
                 </viewController>
@@ -4438,6 +4436,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="0BB-4w-l0D"/>
-        <segue reference="vQB-Ca-9LJ"/>
+        <segue reference="58s-R3-No3"/>
     </inferredMetricsTieBreakers>
 </document>
