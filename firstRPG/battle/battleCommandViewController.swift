@@ -63,9 +63,6 @@ class battleCommandViewController: UIViewController {
     /// モンスター番号
     var selectMonsterNum = 0
 
-    /// 都合上作成
-    var select = 0
-
     /// 獲得経験値
     var allExp = 0
 
@@ -359,7 +356,47 @@ class battleCommandViewController: UIViewController {
         }
     }
 
+
+    // 戻るボタン
     @IBAction func backButton(_ sender: Any) {
+        // じゅもん系
+        magicSelectView.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0)    // 背景を透明に
+        selectMagic1Label.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0)
+        selectMagic2Label.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0)
+        selectMagic3Label.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0)
+        selectMagic4Label.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0)
+        selectMagic5Label.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0)
+        selectMagic6Label.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0)
+        selectMagic7Label.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0)
+        selectMagic8Label.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0)
+        magic1Label.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0)
+        magic2Label.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0)
+        magic3Label.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0)
+        magic4Label.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0)
+        magic5Label.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0)
+        magic6Label.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0)
+        magic7Label.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0)
+        magic8Label.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0)
+
+        selectMatkLabel.text = ""
+
+        // モンスター選択の▼
+        selectMonsterImage1Label.text = ""
+        selectMonsterImage2Label.text = ""
+        selectMonsterImage3Label.text = ""
+        selectMonsterImage4Label.text = ""
+
+        count = 0
+        selectingAtkType = true
+        selectingMagic = false
+        magicNum = 1
+        magicMaxNum = 0
+        notAvailableMagicNum = []
+        selectingMonster = false
+        selectAtkLabel.text = "▶︎"
+        selectableMonster = []
+        selectMonsterNum = 0
+
     }
     
 
