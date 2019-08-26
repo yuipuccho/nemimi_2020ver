@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BA2A9CAF230E65FE00E13DC8 /* caveLastViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2A9CAE230E65FE00E13DC8 /* caveLastViewController.swift */; };
+		BA2A9CAF230E65FE00E13DC8 /* cave9ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2A9CAE230E65FE00E13DC8 /* cave9ViewController.swift */; };
 		BA2A9CB1230E6E3B00E13DC8 /* cave2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2A9CB0230E6E3B00E13DC8 /* cave2ViewController.swift */; };
 		BA38499B2305548C006E7BA0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA38499A2305548C006E7BA0 /* AppDelegate.swift */; };
 		BA38499D2305548C006E7BA0 /* cave1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA38499C2305548C006E7BA0 /* cave1ViewController.swift */; };
@@ -18,10 +18,15 @@
 		BA3849FD230BC306006E7BA0 /* battleMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3849FC230BC306006E7BA0 /* battleMessageViewController.swift */; };
 		BA384A01230C1E5D006E7BA0 /* battleCommandViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA384A00230C1E5D006E7BA0 /* battleCommandViewController.swift */; };
 		BA4447F323103B37006E4E16 /* cave3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4447F223103B37006E4E16 /* cave3ViewController.swift */; };
+		BA89C2FD2313DF3F00EBBAC8 /* cave4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA89C2FC2313DF3F00EBBAC8 /* cave4ViewController.swift */; };
+		BA89C2FF2313DF4F00EBBAC8 /* cave5ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA89C2FE2313DF4F00EBBAC8 /* cave5ViewController.swift */; };
+		BA89C3012313DF5D00EBBAC8 /* cave6ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA89C3002313DF5D00EBBAC8 /* cave6ViewController.swift */; };
+		BA89C3032313DF7200EBBAC8 /* cave7ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA89C3022313DF7200EBBAC8 /* cave7ViewController.swift */; };
+		BA89C3052313DF8100EBBAC8 /* cave8ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA89C3042313DF8100EBBAC8 /* cave8ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		BA2A9CAE230E65FE00E13DC8 /* caveLastViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = caveLastViewController.swift; sourceTree = "<group>"; };
+		BA2A9CAE230E65FE00E13DC8 /* cave9ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cave9ViewController.swift; sourceTree = "<group>"; };
 		BA2A9CB0230E6E3B00E13DC8 /* cave2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cave2ViewController.swift; sourceTree = "<group>"; };
 		BA3849972305548C006E7BA0 /* firstRPG.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = firstRPG.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA38499A2305548C006E7BA0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -34,6 +39,11 @@
 		BA3849FC230BC306006E7BA0 /* battleMessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = battleMessageViewController.swift; sourceTree = "<group>"; };
 		BA384A00230C1E5D006E7BA0 /* battleCommandViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = battleCommandViewController.swift; sourceTree = "<group>"; };
 		BA4447F223103B37006E4E16 /* cave3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cave3ViewController.swift; sourceTree = "<group>"; };
+		BA89C2FC2313DF3F00EBBAC8 /* cave4ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cave4ViewController.swift; sourceTree = "<group>"; };
+		BA89C2FE2313DF4F00EBBAC8 /* cave5ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cave5ViewController.swift; sourceTree = "<group>"; };
+		BA89C3002313DF5D00EBBAC8 /* cave6ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cave6ViewController.swift; sourceTree = "<group>"; };
+		BA89C3022313DF7200EBBAC8 /* cave7ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cave7ViewController.swift; sourceTree = "<group>"; };
+		BA89C3042313DF8100EBBAC8 /* cave8ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cave8ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,8 +102,13 @@
 			children = (
 				BA38499C2305548C006E7BA0 /* cave1ViewController.swift */,
 				BA2A9CB0230E6E3B00E13DC8 /* cave2ViewController.swift */,
-				BA2A9CAE230E65FE00E13DC8 /* caveLastViewController.swift */,
 				BA4447F223103B37006E4E16 /* cave3ViewController.swift */,
+				BA89C2FC2313DF3F00EBBAC8 /* cave4ViewController.swift */,
+				BA89C2FE2313DF4F00EBBAC8 /* cave5ViewController.swift */,
+				BA89C3002313DF5D00EBBAC8 /* cave6ViewController.swift */,
+				BA89C3022313DF7200EBBAC8 /* cave7ViewController.swift */,
+				BA89C3042313DF8100EBBAC8 /* cave8ViewController.swift */,
+				BA2A9CAE230E65FE00E13DC8 /* cave9ViewController.swift */,
 			);
 			path = caveDungeon;
 			sourceTree = "<group>";
@@ -169,14 +184,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA89C2FD2313DF3F00EBBAC8 /* cave4ViewController.swift in Sources */,
+				BA89C3032313DF7200EBBAC8 /* cave7ViewController.swift in Sources */,
+				BA89C3012313DF5D00EBBAC8 /* cave6ViewController.swift in Sources */,
 				BA3849FB2309219A006E7BA0 /* GameScene.swift in Sources */,
 				BA384A01230C1E5D006E7BA0 /* battleCommandViewController.swift in Sources */,
 				BA2A9CB1230E6E3B00E13DC8 /* cave2ViewController.swift in Sources */,
 				BA38499D2305548C006E7BA0 /* cave1ViewController.swift in Sources */,
-				BA2A9CAF230E65FE00E13DC8 /* caveLastViewController.swift in Sources */,
+				BA2A9CAF230E65FE00E13DC8 /* cave9ViewController.swift in Sources */,
 				BA4447F323103B37006E4E16 /* cave3ViewController.swift in Sources */,
 				BA38499B2305548C006E7BA0 /* AppDelegate.swift in Sources */,
 				BA3849FD230BC306006E7BA0 /* battleMessageViewController.swift in Sources */,
+				BA89C2FF2313DF4F00EBBAC8 /* cave5ViewController.swift in Sources */,
+				BA89C3052313DF8100EBBAC8 /* cave8ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

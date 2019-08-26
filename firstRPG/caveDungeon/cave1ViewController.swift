@@ -41,7 +41,7 @@ class cave1ViewController: UIViewController {
     // プレイヤースタート地点座標
     var playerLeftLocation: CGFloat = 266.5
 
-    var playerOverLocation: CGFloat = 0.0
+    var playerOverLocation: CGFloat = 291.5
 
 
     var monster:[Int] = []
@@ -124,7 +124,7 @@ class cave1ViewController: UIViewController {
 
 
     override func viewWillAppear(_ animated: Bool) {
-        let playerFrame = CGRect(x: playerLeftLocation, y: 26.5 * 11 - playerOverLocation, width: 27.0, height: 26.5)
+        let playerFrame = CGRect(x: playerLeftLocation, y: playerOverLocation, width: 27.0, height: 26.5)
         print(playerFrame)
 
         playerImage.frame = playerFrame
@@ -381,9 +381,12 @@ class cave1ViewController: UIViewController {
         } else if (segue.identifier == "toCave2") {
             let vc: cave2ViewController = (segue.destination as? cave2ViewController)!
 
-             vc.player = player
+            vc.player = player
+            vc.playerLeftLocation = 457.5
+            vc.playerOverLocation = 291.5
             print(playerLeftLocation)
             print(playerOverLocation)
+            vc.currentNum = 248
 
 
         }

@@ -1096,7 +1096,7 @@ class battleMessageViewController: UIViewController {
 
             vc.playerLeftLocation = 266.5
 
-            vc.playerOverLocation = 0.0
+            vc.playerOverLocation = 291.5
 
 
 
@@ -1105,29 +1105,78 @@ class battleMessageViewController: UIViewController {
         } else if (segue.identifier == "toCave1") {    // cave1への遷移前処理
 
             let vc: cave1ViewController = (segue.destination as? cave1ViewController)!
-
             // プレイヤーの情報
             vc.player = player
-
             vc.playerLeftLocation = playerLeftLocation
-
-            vc.playerOverLocation = 26.5 * 11 - playerOverLocation
-
+            vc.playerOverLocation = playerOverLocation
             vc.currentNum = currentNum
-
 
         } else if (segue.identifier == "toCave2") {    // cave2への遷移処理
-
             let vc: cave2ViewController = (segue.destination as? cave2ViewController)!
-
             // プレイヤーの情報
             vc.player = player
-
             vc.playerLeftLocation = playerLeftLocation
+            vc.playerOverLocation = playerOverLocation
+            vc.currentNum = currentNum
 
-            vc.playerOverLocation = 26.5 * 11 - playerOverLocation
+        } else if (segue.identifier == "toCave3") {    // cave3への遷移処理
+            let vc: cave3ViewController = (segue.destination as? cave3ViewController)!
+            // プレイヤーの情報
+            vc.player = player
+            vc.playerLeftLocation = playerLeftLocation
+            vc.playerOverLocation = playerOverLocation
+            vc.currentNum = currentNum
+            
+        }
+/*
+        } else if (segue.identifier == "toCave4") {    // cave4への遷移処理
+            let vc: cave4ViewController = (segue.destination as? cave4ViewController)!
+            // プレイヤーの情報
+            vc.player = player
+            vc.playerLeftLocation = playerLeftLocation
+            vc.playerOverLocation = playerOverLocation
+            vc.currentNum = currentNum
 
+        } else if (segue.identifier == "toCave2") {    // cave5への遷移処理
+            let vc: cave5ViewController = (segue.destination as? cave5ViewController)!
+            // プレイヤーの情報
+            vc.player = player
+            vc.playerLeftLocation = playerLeftLocation
+            vc.playerOverLocation = playerOverLocation
+            vc.currentNum = currentNum
+
+        } else if (segue.identifier == "toCave6") {    // cave6への遷移処理
+            let vc: cave6ViewController = (segue.destination as? cave6ViewController)!
+            // プレイヤーの情報
+            vc.player = player
+            vc.playerLeftLocation = playerLeftLocation
+            vc.playerOverLocation = playerOverLocation
+            vc.currentNum = currentNum
+
+        } else if (segue.identifier == "toCave7") {    // cave7への遷移処理
+            let vc: cave7ViewController = (segue.destination as? cave7ViewController)!
+            // プレイヤーの情報
+            vc.player = player
+            vc.playerLeftLocation = playerLeftLocation
+            vc.playerOverLocation = playerOverLocation
+            vc.currentNum = currentNum
+
+        } else if (segue.identifier == "toCave8") {    // cave8への遷移処理
+            let vc: cave8ViewController = (segue.destination as? cave8ViewController)!
+            // プレイヤーの情報
+            vc.player = player
+            vc.playerLeftLocation = playerLeftLocation
+            vc.playerOverLocation = playerOverLocation
+            vc.currentNum = currentNum
+
+        } else if (segue.identifier == "toCave9") {    // cave9への遷移処理
+            let vc: cave9ViewController = (segue.destination as? cave9ViewController)!
+            // プレイヤーの情報
+            vc.player = player
+            vc.playerLeftLocation = playerLeftLocation
+            vc.playerOverLocation = playerOverLocation
             vc.currentNum = currentNum
         }
+ */
     }
 }

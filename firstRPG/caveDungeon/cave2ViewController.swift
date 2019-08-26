@@ -16,6 +16,8 @@ class cave2ViewController: UIViewController {
 
     /// 【プレイヤーのパラメータ】
     var player: [String: Any] = [:]
+    //var player: [String: Any] = ["name": "ほげぇ", "maxHP": 48, "maxMP": 18, "atk": 20, "def": 28, "nowHP": 48, "nowMP": 18, "exp":300, "Lv": 5]
+
 
     var currentNum = 248    // ★プレイヤーの位置が配列の何番めか
 
@@ -25,7 +27,7 @@ class cave2ViewController: UIViewController {
     // プレイヤースタート地点座標
     var playerLeftLocation: CGFloat = 457.5
 
-    var playerOverLocation: CGFloat = 0.0
+    var playerOverLocation: CGFloat = 291.5
 
 
     var monster:[Int] = []
@@ -112,7 +114,7 @@ class cave2ViewController: UIViewController {
         print(playerLeftLocation)
         print(playerOverLocation)
         // プレイヤー画像の位置
-        let playerFrame = CGRect(x: playerLeftLocation, y: 26.5 * 11 - playerOverLocation, width: 27.0, height: 26.5)
+        let playerFrame = CGRect(x: playerLeftLocation, y: playerOverLocation, width: 27.0, height: 26.5)
         print(playerFrame)
 
         playerImage.frame = playerFrame
@@ -434,19 +436,21 @@ class cave2ViewController: UIViewController {
 
             vc.player = player
             vc.playerLeftLocation = 457.5
-            vc.playerOverLocation = 291.5
+            vc.playerOverLocation = 0.0
             vc.currentNum = 17
 
 
+
+
+             // cave3への遷移前処理
+        } else if (segue.identifier == "toCave3") {
+            let vc: cave3ViewController = (segue.destination as? cave3ViewController)!
+
+            vc.player = player
+            vc.playerLeftLocation = 538.5
+            vc.playerOverLocation = 26.5
+            vc.currentNum = 41
         }
-
-
-            // cave3への遷移前処理
-            //} else if (segue.identifier == "toCave3") {
-            //  let vc: cave3ViewController = (segue.destination as? cave3ViewController)!
-
-        // vc.player = player}
-
 
 
 
