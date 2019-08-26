@@ -352,25 +352,25 @@ class battleMessageViewController: UIViewController {
         case 3:    // つららおとし
             switch selectMonsterNum {
             case 1:    // モンスター1を選択した時
-                giveDamage = Int.random(in: 30...45)    // この辺後で調整する
+                giveDamage = Int.random(in: 35...50)    // この辺後で調整する
                 monster1["hp"] = monster1["hp"]! - giveDamage
                 playerMP = playerMP - 4    // MPを減らす
                 // バトルメッセージ表示
                 messageTextView.text = "\(playerName)は つららをおとした！" + "\n\(monsterName1)に \(giveDamage)のダメージ！"
             case 2:
-                giveDamage = Int.random(in: 30...45)    // この辺後で調整する
+                giveDamage = Int.random(in: 35...50)    // この辺後で調整する
                 monster2["hp"] = monster2["hp"]! - giveDamage
                 playerMP = playerMP - 4    // MPを減らす
                 // バトルメッセージ表示
                 messageTextView.text = "\(playerName)は つららをおとした！" + "\n\(monsterName2)に \(giveDamage)のダメージ！"
             case 3:
-                giveDamage = Int.random(in: 30...45)    // この辺後で調整する
+                giveDamage = Int.random(in: 35...50)    // この辺後で調整する
                 monster3["hp"] = monster3["hp"]! - giveDamage
                 playerMP = playerMP - 4    // MPを減らす
                 // バトルメッセージ表示
                 messageTextView.text = "\(playerName)は つららをおとした！" + "\n\(monsterName3)に \(giveDamage)のダメージ！"
             case 4:
-                giveDamage = Int.random(in: 30...45)    // この辺後で調整する
+                giveDamage = Int.random(in: 35...50)    // この辺後で調整する
                 monster4["hp"] = monster4["hp"]! - giveDamage
                 playerMP = playerMP - 4    // MPを減らす
                 // バトルメッセージ表示
@@ -382,25 +382,25 @@ class battleMessageViewController: UIViewController {
         case 4:    // しょうげきは
             switch selectMonsterNum {
             case 1:    // モンスター1を選択した時
-                giveDamage = Int.random(in: 40...55)    // この辺後で調整する
+                giveDamage = Int.random(in: 50...65)    // この辺後で調整する
                 monster1["hp"] = monster1["hp"]! - giveDamage
                 playerMP = playerMP - 5    // MPを減らす
                 // バトルメッセージ表示
                 messageTextView.text = "\(playerName)は しょうげきはを まきおこした！" + "\n\(monsterName1)に \(giveDamage)のダメージ！"
             case 2:
-                giveDamage = Int.random(in: 40...55)    // この辺後で調整する
+                giveDamage = Int.random(in: 50...65)    // この辺後で調整する
                 monster2["hp"] = monster2["hp"]! - giveDamage
                 playerMP = playerMP - 5    // MPを減らす
                 // バトルメッセージ表示
                 messageTextView.text = "\(playerName)は しょうげきはを まきおこした！" + "\n\(monsterName2)に \(giveDamage)のダメージ！"
             case 3:
-                giveDamage = Int.random(in: 40...55)    // この辺後で調整する
+                giveDamage = Int.random(in: 50...65)    // この辺後で調整する
                 monster3["hp"] = monster3["hp"]! - giveDamage
                 playerMP = playerMP - 5    // MPを減らす
                 // バトルメッセージ表示
                 messageTextView.text = "\(playerName)は しょうげきはを まきおこした！" + "\n\(monsterName3)に \(giveDamage)のダメージ！"
             case 4:
-                giveDamage = Int.random(in: 40...55)    // この辺後で調整する
+                giveDamage = Int.random(in: 50...65)    // この辺後で調整する
                 monster4["hp"] = monster4["hp"]! - giveDamage
                 playerMP = playerMP - 5    // MPを減らす
                 // バトルメッセージ表示
