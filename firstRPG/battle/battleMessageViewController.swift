@@ -1126,9 +1126,7 @@ class battleMessageViewController: UIViewController {
             vc.playerLeftLocation = playerLeftLocation
             vc.playerOverLocation = playerOverLocation
             vc.currentNum = currentNum
-            
-        }
-/*
+
         } else if (segue.identifier == "toCave4") {    // cave4への遷移処理
             let vc: cave4ViewController = (segue.destination as? cave4ViewController)!
             // プレイヤーの情報
@@ -1136,7 +1134,8 @@ class battleMessageViewController: UIViewController {
             vc.playerLeftLocation = playerLeftLocation
             vc.playerOverLocation = playerOverLocation
             vc.currentNum = currentNum
-
+        }
+/*
         } else if (segue.identifier == "toCave2") {    // cave5への遷移処理
             let vc: cave5ViewController = (segue.destination as? cave5ViewController)!
             // プレイヤーの情報

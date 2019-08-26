@@ -85,7 +85,7 @@ class cave1ViewController: UIViewController {
         ["hp": 20, "atk": 13, "def": 26, "agi": 1, "exp": 20, "gold": 1],    // 3. ピヨネズミ
         ["hp": 28, "atk": 18, "def": 34, "agi": 1, "exp": 45, "gold": 1],    // 4. レイン
         ["hp": 40, "atk": 24, "def": 45, "agi": 1, "exp": 55, "gold": 1],    // 5. プランタ
-        ["hp": 50, "atk": 40, "def": 80, "agi": 1, "exp": 75, "gold": 1],    // 6. ボーン
+        ["hp": 50, "atk": 40, "def": 80, "agi": 1, "exp": 85, "gold": 1],    // 6. ボーン
         ["hp": 80, "atk": 48, "def": 120, "agi": 1, "exp": 123, "gold": 1],    // 7. ラコステ
         ["hp": 100, "atk": 86, "def": 240, "agi": 1, "exp": 238, "gold": 1],    // 8. ナルシカラス
         ["hp": 160, "atk": 150, "def": 270, "agi": 1, "exp": 470, "gold": 1],    // 9. ゴーレム
