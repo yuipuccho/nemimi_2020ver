@@ -36,7 +36,6 @@ class cave1ViewController: UIViewController {
 
     var count = 0    // 歩数のカウント
 
-    @IBOutlet weak var restartLocation: UIImageView!
 
 
     // プレイヤースタート地点座標
@@ -80,10 +79,10 @@ class cave1ViewController: UIViewController {
 
     // 【モンスター情報】
     var monsterStatus: [[String: Int]] = [
-        ["hp": 7, "atk": 5, "def": 16, "agi": 1, "exp": 2, "gold": 1],    // 0. スライム
-        ["hp": 10, "atk": 6, "def": 18, "agi": 1, "exp": 3, "gold": 1],    // 1. バット
-        ["hp": 15, "atk": 10, "def": 22, "agi": 1, "exp": 10, "gold": 1],    // 2. マタンゴ
-        ["hp": 20, "atk": 14, "def": 30, "agi": 1, "exp": 15, "gold": 1],    // 3. ピヨネズミ
+        ["hp": 7, "atk": 5, "def": 16, "agi": 1, "exp": 7, "gold": 1],    // 0. スライム
+        ["hp": 10, "atk": 6, "def": 18, "agi": 1, "exp": 8, "gold": 1],    // 1. バット
+        ["hp": 15, "atk": 10, "def": 22, "agi": 1, "exp": 15, "gold": 1],    // 2. マタンゴ
+        ["hp": 20, "atk": 13, "def": 26, "agi": 1, "exp": 20, "gold": 1],    // 3. ピヨネズミ
         ["hp": 28, "atk": 18, "def": 34, "agi": 1, "exp": 30, "gold": 1],    // 4. レイン
         ["hp": 40, "atk": 24, "def": 45, "agi": 1, "exp": 45, "gold": 1],    // 5. プランタ
         ["hp": 50, "atk": 40, "def": 80, "agi": 1, "exp": 60, "gold": 1],    // 6. ボーン
@@ -363,6 +362,9 @@ class cave1ViewController: UIViewController {
             // モンスター出現処理を呼ぶ
             vc.toMonsterApper = true
 
+            // マップ情報
+            vc.toCave1 = true
+
             // プレイヤー座標格納
             playerLeftLocation = playerImage.frame.origin.x
             playerOverLocation = playerImage.frame.origin.y
@@ -376,10 +378,10 @@ class cave1ViewController: UIViewController {
 
 
             // cave2への遷移前処理
-        //} else if (segue.identifier == "toCave2") {
-          //  let vc: cave2ViewController = (segue.destination as? cave2ViewController)!
+        } else if (segue.identifier == "toCave2") {
+            let vc: cave2ViewController = (segue.destination as? cave2ViewController)!
 
-            // vc.player = player
+             vc.player = player
 
 
         }

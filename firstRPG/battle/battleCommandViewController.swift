@@ -10,6 +10,17 @@ import UIKit
 
 class battleCommandViewController: UIViewController {
 
+    // 遷移元マップ情報
+    var toCave1: Bool = false
+    var toCave2: Bool = false
+    var toCave3: Bool = false
+    var toCave4: Bool = false
+    var toCave5: Bool = false
+    var toCave6: Bool = false
+    var toCave7: Bool = false
+    var toCave8: Bool = false
+    var toCave9: Bool = false
+
     // プレイヤー座標
     var playerLeftLocation: CGFloat = 0
 
@@ -692,8 +703,18 @@ class battleCommandViewController: UIViewController {
         // 経験値
         vc.allExp = allExp
 
+        // 遷移元マップ情報
+        vc.toCave1 = toCave1
+        vc.toCave2 = toCave2
+        vc.toCave3 = toCave3
+        vc.toCave4 = toCave4
+        vc.toCave5 = toCave5
+        vc.toCave6 = toCave6
+        vc.toCave7 = toCave7
+        vc.toCave8 = toCave8
+        vc.toCave9 = toCave9
+
         vc.playerLeftLocation = playerLeftLocation
-        
         vc.playerOverLocation = playerOverLocation
 
 

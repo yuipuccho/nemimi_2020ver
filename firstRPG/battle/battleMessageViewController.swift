@@ -23,8 +23,19 @@ class battleMessageViewController: UIViewController {
     
     @IBOutlet weak var messageTextView: UITextView!    // バトルメッセージ
 
+    // 遷移元マップ情報
+    var toCave1: Bool = false
+    var toCave2: Bool = false
+    var toCave3: Bool = false
+    var toCave4: Bool = false
+    var toCave5: Bool = false
+    var toCave6: Bool = false
+    var toCave7: Bool = false
+    var toCave8: Bool = false
+    var toCave9: Bool = false
 
-    // プレイヤー座標
+
+    // 遷移元プレイヤー座標
     var playerLeftLocation: CGFloat = 0
 
     var playerOverLocation: CGFloat = 0
@@ -711,7 +722,25 @@ class battleMessageViewController: UIViewController {
             
             // バトル終了してマップに戻る
         } else if toBack == true {
-            self.performSegue(withIdentifier: "toCave1", sender: nil)
+            if toCave1 == true {
+                self.performSegue(withIdentifier: "toCave1", sender: nil)
+            } else if toCave2 == true {
+                self.performSegue(withIdentifier: "toCave2", sender: nil)
+            } else if toCave3 == true {
+                self.performSegue(withIdentifier: "toCave3", sender: nil)
+            } else if toCave4 == true {
+                self.performSegue(withIdentifier: "toCave4", sender: nil)
+            } else if toCave5 == true {
+                self.performSegue(withIdentifier: "toCave5", sender: nil)
+            } else if toCave6 == true {
+                self.performSegue(withIdentifier: "toCave6", sender: nil)
+            } else if toCave7 == true {
+                self.performSegue(withIdentifier: "toCave7", sender: nil)
+            } else if toCave8 == true {
+                self.performSegue(withIdentifier: "toCave8", sender: nil)
+            } else if toCave9 == true {
+                self.performSegue(withIdentifier: "toCave9", sender: nil)
+            }
             
             
             // モンスターからの攻撃メッセージを表示
@@ -779,7 +808,7 @@ class battleMessageViewController: UIViewController {
             // とりま格納
             exp = player["exp"] as! Int
 
-            if exp >= 15 && exp < 100 && exp - allExp < 15 {    // Lv2: 必要経験値15
+            if exp >= 45 && exp < 100 && exp - allExp < 45 {    // Lv2: 必要経験値45
                 player = lv2
                 print(exp)
                 print(player)
@@ -1033,8 +1062,19 @@ class battleMessageViewController: UIViewController {
             // 経験値
             vc.allExp = allExp
 
-            vc.playerLeftLocation = playerLeftLocation
 
+            // 遷移元マップ情報
+            vc.toCave1 = toCave1
+            vc.toCave2 = toCave2
+            vc.toCave3 = toCave3
+            vc.toCave4 = toCave4
+            vc.toCave5 = toCave5
+            vc.toCave6 = toCave6
+            vc.toCave7 = toCave7
+            vc.toCave8 = toCave8
+            vc.toCave9 = toCave9
+            
+            vc.playerLeftLocation = playerLeftLocation
             vc.playerOverLocation = playerOverLocation
 
 
@@ -1061,10 +1101,24 @@ class battleMessageViewController: UIViewController {
 
 
 
-            // cave1への遷移前処理
-        } else if (segue.identifier == "toCave1") {
+
+        } else if (segue.identifier == "toCave1") {    // cave1への遷移前処理
 
             let vc: cave1ViewController = (segue.destination as? cave1ViewController)!
+
+            // プレイヤーの情報
+            vc.player = player
+
+            vc.playerLeftLocation = playerLeftLocation
+
+            vc.playerOverLocation = 26.5 * 11 - playerOverLocation
+
+            vc.currentNum = currentNum
+
+
+        } else if (segue.identifier == "toCave2") {    // cave2への遷移処理
+
+            let vc: cave2ViewController = (segue.destination as? cave2ViewController)!
 
             // プレイヤーの情報
             vc.player = player
