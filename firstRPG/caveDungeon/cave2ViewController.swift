@@ -181,8 +181,8 @@ class cave2ViewController: UIViewController {
             // 次のマップに遷移するかどうか
             if self.line[currentNum] == 3 {
                 print("おk")
-                performSegue(withIdentifier: "toCave2", sender: nil)
-                print("2へせんい")
+                performSegue(withIdentifier: "toCave3", sender: nil)
+                print("3へせんい")
             }
 
             if currentNum - 1 >= 0 {  // 移動先の配列番号が存在するか確認
@@ -253,6 +253,14 @@ class cave2ViewController: UIViewController {
     // 下ボタン
     @IBAction func downButton(_ sender: UIButton) {
         if textView.isHidden == true {    // メッセージがない時のみ移動可能
+
+            // 前のマップに遷移するかどうか
+            if self.line[currentNum] == 2 {
+                print("おk")
+                performSegue(withIdentifier: "toCave1", sender: nil)
+                print("1へせんい")
+            }
+
             if currentNum + 21 <= 251 {  // 移動先の配列番号が存在するか確認
                 self.currentNum += 21    // 配列番号を移動先の番号に変える。(self つけないとボタンが反応してくれなくなる)
 
@@ -420,14 +428,27 @@ class cave2ViewController: UIViewController {
             print(playerOverLocation)
 
 
-            // cave2への遷移前処理
-            //} else if (segue.identifier == "toCave2") {
-            //  let vc: cave2ViewController = (segue.destination as? cave2ViewController)!
+            // cave1への遷移前処理
+        } else if (segue.identifier == "toCave1") {
+            let vc: cave1ViewController = (segue.destination as? cave1ViewController)!
 
-            // vc.player = player
+            vc.player = player
+            vc.playerLeftLocation = 457.5
+            vc.playerOverLocation = 291.5
+            vc.currentNum = 17
 
 
         }
+
+
+            // cave3への遷移前処理
+            //} else if (segue.identifier == "toCave3") {
+            //  let vc: cave3ViewController = (segue.destination as? cave3ViewController)!
+
+        // vc.player = player}
+
+
+
 
     }
 }

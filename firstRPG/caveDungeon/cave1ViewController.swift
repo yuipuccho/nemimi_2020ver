@@ -23,7 +23,7 @@ class cave1ViewController: UIViewController {
         "maxMP": 10,    // 最大MP
         "nowHP": 24,
         "nowMP": 10,
-        "atk": 120,    // 攻撃力
+        "atk": 12,    // 攻撃力
         "def": 15,    // 守備力
         "agi": 8,    // すばやさ
         "itemAtk": 0,    // 装備の攻撃力
@@ -382,6 +382,8 @@ class cave1ViewController: UIViewController {
             let vc: cave2ViewController = (segue.destination as? cave2ViewController)!
 
              vc.player = player
+            print(playerLeftLocation)
+            print(playerOverLocation)
 
 
         }
