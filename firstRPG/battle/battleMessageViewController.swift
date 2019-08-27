@@ -604,8 +604,19 @@ class battleMessageViewController: UIViewController {
             }
         }
         if monster2["hp"]! >= 1 {    // モンスター2が生きてるとき
+            var addDamage = 0
             monsterCount += 1
-            takeDamage = monster2["atk"]! * monster2["atk"]! / playerDefStatus    // ダメージ計算
+            if toCave6 == true {    // ハーミットの時
+                addDamage = Int.random(in: 0...40)
+                takeDamage = monster2["atk"]! * monster2["atk"]! / playerDefStatus + addDamage
+
+            } else if toCave9 == true {    // ティグラの時
+                addDamage = Int.random(in: 0...80)
+                takeDamage = monster2["atk"]! * monster2["atk"]! / playerDefStatus + addDamage
+
+            } else {    // 雑魚の時
+                takeDamage = monster2["atk"]! * monster2["atk"]! / playerDefStatus    // ダメージ計算
+            }
             playerHP = playerHP - takeDamage    // ダメージ反映
             player["nowHP"] = playerHP
             
@@ -1170,6 +1181,7 @@ class battleMessageViewController: UIViewController {
             vc.playerLeftLocation = playerLeftLocation
             vc.playerOverLocation = playerOverLocation
             vc.currentNum = currentNum
+            vc.afterBattle = true
          // ハーミット討伐済かどうか
          vc.defeatHermit = defeatHermit
     }

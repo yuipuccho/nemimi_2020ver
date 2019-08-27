@@ -17,12 +17,14 @@ class cave6ViewController: UIViewController {
     
     /// 【プレイヤーのパラメータ】
     //var player: [String: Any] = [:]
-    var player:  [String: Any] = ["name": "ほげぇ", "maxHP": 150, "maxMP": 80, "atk": 80, "def": 520, "nowHP": 150, "nowMP": 80, "exp":6800, "Lv": 20]
+    var player:  [String: Any] = ["name": "ほげぇ", "maxHP": 150, "maxMP": 80, "atk": 800, "def": 520, "nowHP": 150, "nowMP": 80, "exp":6800, "Lv": 20]
     var currentNum = 241    // ★プレイヤーの位置が配列の何番めか
 
     var count = 0    // 歩数のカウント
 
     var buttonCount = 0    // メインボタンのカウント
+
+    var afterBattle: Bool = false    // ハーミットとの戦闘後かどうか
 
 
     // ★プレイヤースタート地点座標
@@ -107,7 +109,15 @@ class cave6ViewController: UIViewController {
 
         playerImage.frame = playerFrame
 
-        textView.isHidden = true    // メッセージを非表示に
+        if afterBattle == false {    // ハーミットとの戦闘直後でない場合
+            textView.isHidden = true    // メッセージを非表示に
+        } else {    // ハーミットとの戦闘直後の場合
+            textView.isHidden = false    // メッセージを表示
+            textView.text = ""
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                self.textView.text = "ハーミット「この私がやぶれるとは......。」"
+            }
+        }
 
         if defeatHermit == false {    // ハーミット倒してないとき
             hermitImage.isHidden = false    // ハーミットのアイコンだす
@@ -163,21 +173,49 @@ class cave6ViewController: UIViewController {
 
     // メインボタンを押した時の処理
     @IBAction func mainButton(_ sender: Any) {
-
-        if line[currentNum] == 5 {    // ハーミットの前でメインボタンを押した時
+        if afterBattle == false {    // ハーミットとの戦闘前
+            if line[currentNum] == 5 {    // ハーミットの前でメインボタンを押した時
+                switch buttonCount {
+                case 0:
+                    buttonCount += 1    // カウントを +1
+                    textView.isHidden = false    // メッセージ表示
+                    textView.text = "ハーミット「ホホホ......。\n  こんなところまで 追ってくるとは......。」"
+                case 1:
+                    buttonCount += 1    // カウントを +1
+                    textView.text = "ハーミット「己のおろかさを\n  思い知りなさい......！」"
+                case 2:
+                    encount()
+                    performSegue(withIdentifier: "toBattle", sender: nil)
+                default:
+                    return
+                }
+            }
+        } else {    // ハーミットとの戦闘後
             switch buttonCount {
             case 0:
                 buttonCount += 1    // カウントを +1
-                textView.isHidden = false    // メッセージ表示
-                textView.text = "ハーミット「ホホホ......。\n  こんなところまで 追ってくるとは......。」"
+                textView.text = "ハーミット「......うぐっ！！」"
             case 1:
-                buttonCount += 1    // カウントを +1
-                textView.text = "ハーミット「己のおろかさを\n  思い知りなさい......！」"
-            case 2:
-                performSegue(withIdentifier: "toBattle", sender: nil)
+                hermitImage.isHidden = true
+                textView.isHidden = true
+                defeatHermit = true
+                line = [
+                    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                    0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 3, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0,
+                    0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0,
+                    0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0,
+                    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                ]
+                afterBattle = false
             default:
                 return
-
             }
         }
     }
