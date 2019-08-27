@@ -1134,16 +1134,17 @@ class battleMessageViewController: UIViewController {
             vc.playerLeftLocation = playerLeftLocation
             vc.playerOverLocation = playerOverLocation
             vc.currentNum = currentNum
-        }
-/*
-        } else if (segue.identifier == "toCave2") {    // cave5への遷移処理
+
+
+        } else if (segue.identifier == "toCave5") {    // cave5への遷移処理
             let vc: cave5ViewController = (segue.destination as? cave5ViewController)!
             // プレイヤーの情報
             vc.player = player
             vc.playerLeftLocation = playerLeftLocation
             vc.playerOverLocation = playerOverLocation
             vc.currentNum = currentNum
-
+        }
+/*
         } else if (segue.identifier == "toCave6") {    // cave6への遷移処理
             let vc: cave6ViewController = (segue.destination as? cave6ViewController)!
             // プレイヤーの情報

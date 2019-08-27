@@ -15,8 +15,8 @@ class cave3ViewController: UIViewController {
     @IBOutlet weak var textView: UITextView!
 
     /// 【プレイヤーのパラメータ】
-    //var player: [String: Any] = [:]
-    var player: [String: Any] = ["name": "ほげぇ", "maxHP": 79, "maxMP": 30, "atk": 31, "def": 80, "nowHP": 79, "nowMP": 30, "exp":1400, "Lv": 10]
+    var player: [String: Any] = [:]
+    //var player: [String: Any] = ["name": "ほげぇ", "maxHP": 79, "maxMP": 30, "atk": 31, "def": 80, "nowHP": 79, "nowMP": 30, "exp":1400, "Lv": 10]
 
     var currentNum = 41    // ★プレイヤーの位置が配列の何番めか
 

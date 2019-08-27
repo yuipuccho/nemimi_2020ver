@@ -16,8 +16,7 @@ class cave4ViewController: UIViewController {
 
     /// 【プレイヤーのパラメータ】
     var player: [String: Any] = [:]
-    //var player: [String: Any] = ["name": "ほげぇ", "maxHP": 79, "maxMP": 30, "atk": 31, "def": 80, "nowHP": 79, "nowMP": 30, "exp":1400, "Lv": 10]
-
+    //var player: [String: Any] = ["name": "ほげぇ", "maxHP": 121, "maxMP": 55, "atk": 58, "def": 250, "nowHP": 121, "nowMP": 55, "exp":4300, "Lv": 16]
     var currentNum = 234    // ★プレイヤーの位置が配列の何番めか
 
     var count = 0    // 歩数のカウント
@@ -441,14 +440,16 @@ class cave4ViewController: UIViewController {
             vc.playerOverLocation = 81.5
             vc.currentNum = 66
 
+
+
+
+        // ★cave5への遷移前処理
+        } else if (segue.identifier == "toCave5") {
+          let vc: cave5ViewController = (segue.destination as? cave5ViewController)!
+
+         vc.player = player
+            
         }
-
-
-        // ★cave3への遷移前処理
-        //} else if (segue.identifier == "toCave3") {
-        //  let vc: cave3ViewController = (segue.destination as? cave3ViewController)!
-
-        // vc.player = player}
 
 
     }
