@@ -82,10 +82,6 @@ class cave2ViewController: UIViewController {
     ]
 
 
-    //let a = monsterStatus[0]["hp"]
-    //print(a!)
-
-
 
 
     // モンスターの名前
@@ -105,6 +101,9 @@ class cave2ViewController: UIViewController {
         "ティグレ",
         ""
     ]
+
+    // ハーミット討伐済かどうか
+    var defeatHermit: Bool = false
 
 
 
@@ -429,6 +428,9 @@ class cave2ViewController: UIViewController {
             print(playerLeftLocation)
             print(playerOverLocation)
 
+            // ハーミット討伐済かどうか
+            vc.defeatHermit = defeatHermit
+
 
             // cave1への遷移前処理
         } else if (segue.identifier == "toCave1") {
@@ -438,6 +440,9 @@ class cave2ViewController: UIViewController {
             vc.playerLeftLocation = 457.5
             vc.playerOverLocation = 0.0
             vc.currentNum = 17
+
+            // ハーミット討伐済かどうか
+            vc.defeatHermit = defeatHermit
 
 
 
@@ -450,6 +455,9 @@ class cave2ViewController: UIViewController {
             vc.playerLeftLocation = 538.5
             vc.playerOverLocation = 26.5
             vc.currentNum = 41
+
+            // ハーミット討伐済かどうか
+            vc.defeatHermit = defeatHermit
         }
 
 

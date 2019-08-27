@@ -120,7 +120,8 @@ class cave1ViewController: UIViewController {
         ""
     ]
 
-
+    // ハーミット討伐済かどうか
+    var defeatHermit: Bool = false
 
 
     override func viewWillAppear(_ animated: Bool) {
@@ -376,6 +377,9 @@ class cave1ViewController: UIViewController {
             print(playerLeftLocation)
             print(playerOverLocation)
 
+            // ハーミット討伐済かどうか
+            vc.defeatHermit = defeatHermit
+
 
             // cave2への遷移前処理
         } else if (segue.identifier == "toCave2") {
@@ -387,6 +391,9 @@ class cave1ViewController: UIViewController {
             print(playerLeftLocation)
             print(playerOverLocation)
             vc.currentNum = 248
+
+            // ハーミット討伐済かどうか
+            vc.defeatHermit = defeatHermit
 
 
         }

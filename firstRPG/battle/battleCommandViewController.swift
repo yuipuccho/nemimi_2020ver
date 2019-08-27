@@ -46,6 +46,9 @@ class battleCommandViewController: UIViewController {
     var monster3: [String: Int] = [:]
     var monster4: [String: Int] = [:]
 
+    // ハーミット討伐済かどうか
+    var defeatHermit: Bool = false
+
 
     /// メインボタンを何回押したかカウント
     var count = 0
@@ -719,6 +722,8 @@ class battleCommandViewController: UIViewController {
 
 
         vc.currentNum = currentNum
+        // ハーミット討伐済かどうか
+        vc.defeatHermit = defeatHermit
 
     }
 }

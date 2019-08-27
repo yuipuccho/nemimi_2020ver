@@ -103,6 +103,9 @@ class cave5ViewController: UIViewController {
         ""
     ]
 
+    // ハーミット討伐済かどうか
+    var defeatHermit: Bool = false
+
 
 
 
@@ -430,6 +433,9 @@ class cave5ViewController: UIViewController {
             print(playerLeftLocation)
             print(playerOverLocation)
 
+            // ハーミット討伐済かどうか
+            vc.defeatHermit = defeatHermit
+
 
             // ★cave4への遷移前処理
         } else if (segue.identifier == "toCave4") {
@@ -440,14 +446,21 @@ class cave5ViewController: UIViewController {
             vc.playerOverLocation = 79.5
             vc.currentNum = 73
 
-        }
+            // ハーミット討伐済かどうか
+            vc.defeatHermit = defeatHermit
+
+
 
 
         // ★cave6への遷移前処理
-        //} else if (segue.identifier == "toCave6") {
-        //  let vc: cave6ViewController = (segue.destination as? cave6ViewController)!
+        } else if (segue.identifier == "toCave6") {
+          let vc: cave6ViewController = (segue.destination as? cave6ViewController)!
 
-        // vc.player = player}
+         vc.player = player
+        // ハーミット討伐済かどうか
+        vc.defeatHermit = defeatHermit
+            
+        }
 
 
     }
