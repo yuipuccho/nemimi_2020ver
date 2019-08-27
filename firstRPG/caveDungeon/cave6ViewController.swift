@@ -563,17 +563,19 @@ class cave6ViewController: UIViewController {
             // ハーミット討伐済かどうか
             vc.defeatHermit = defeatHermit
 
-        }
+
 
 
         // ★cave7への遷移前処理
-        //} else if (segue.identifier == "toCave7") {
-        //  let vc: cave7ViewController = (segue.destination as? cave7ViewController)!
+        } else if (segue.identifier == "toCave7") {
+          let vc: cave7ViewController = (segue.destination as? cave7ViewController)!
 
-        // vc.player = player
+         vc.player = player
 
-        // ハーミット討伐済かどうか
-        //vc.defeatHermit = defeatHermit}
+         // ハーミット討伐済かどうか
+         vc.defeatHermit = defeatHermit
+
+        }
 
 
 
