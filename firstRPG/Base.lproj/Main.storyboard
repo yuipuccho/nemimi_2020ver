@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cQM-HF-MfT">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Rfa-QV-Onu">
     <device id="retina4_0" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
@@ -10398,6 +10398,7 @@
                                         <state key="normal" image="icon_130261_64"/>
                                         <connections>
                                             <action selector="mainButton:" destination="BBQ-Rh-IIw" eventType="touchUpInside" id="Mci-96-FZt"/>
+                                            <action selector="mainButton:" destination="i7F-3l-JTt" eventType="touchUpInside" id="cka-CX-n5O"/>
                                             <action selector="mainButton:" destination="cQM-HF-MfT" eventType="touchUpInside" id="n2o-PY-vbN"/>
                                             <action selector="mainButton:" destination="T6C-kC-tbL" eventType="touchUpInside" id="tiJ-Lm-UvI"/>
                                             <action selector="mainButton:" destination="IMm-Jw-zwl" eventType="touchUpInside" id="xLv-aF-heI"/>
@@ -10420,6 +10421,7 @@
                                                         <rect key="frame" x="23.5" y="0.0" width="23" height="23.5"/>
                                                         <state key="normal" title="button" image="jbutton"/>
                                                         <connections>
+                                                            <action selector="upButton:" destination="i7F-3l-JTt" eventType="touchUpInside" id="96i-Uk-ovQ"/>
                                                             <action selector="upButton:" destination="IMm-Jw-zwl" eventType="touchUpInside" id="ESD-0r-czq"/>
                                                             <action selector="upButton:" destination="BBQ-Rh-IIw" eventType="touchUpInside" id="Ld1-tF-Pxg"/>
                                                             <action selector="upButton:" destination="cQM-HF-MfT" eventType="touchUpInside" id="NpD-uf-qkM"/>
@@ -10447,6 +10449,7 @@
                                                             <action selector="leftButton:" destination="cQM-HF-MfT" eventType="touchUpInside" id="6rp-wj-5In"/>
                                                             <action selector="leftButton:" destination="8oD-8e-0LV" eventType="touchUpInside" id="J08-w1-fZY"/>
                                                             <action selector="leftButton:" destination="IMm-Jw-zwl" eventType="touchUpInside" id="XkO-EO-3aj"/>
+                                                            <action selector="leftButton:" destination="i7F-3l-JTt" eventType="touchUpInside" id="bu5-7c-2xD"/>
                                                             <action selector="leftButton:" destination="BYZ-38-t0r" eventType="touchDown" id="pgU-yS-KMv"/>
                                                             <action selector="leftButton:" destination="BBQ-Rh-IIw" eventType="touchUpInside" id="xXM-QO-uS9"/>
                                                         </connections>
@@ -10465,6 +10468,7 @@
                                                             <action selector="rightButton:" destination="IMm-Jw-zwl" eventType="touchUpInside" id="3qL-Qr-FrW"/>
                                                             <action selector="rightButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8e7-4e-Fwp"/>
                                                             <action selector="rightButton:" destination="cQM-HF-MfT" eventType="touchUpInside" id="AdD-sb-7UR"/>
+                                                            <action selector="rightButton:" destination="i7F-3l-JTt" eventType="touchUpInside" id="Ea4-o4-edu"/>
                                                             <action selector="rightButton:" destination="8oD-8e-0LV" eventType="touchUpInside" id="JrU-H7-1wf"/>
                                                             <action selector="rightButton:" destination="BBQ-Rh-IIw" eventType="touchUpInside" id="l50-N4-uPX"/>
                                                         </connections>
@@ -10486,6 +10490,7 @@
                                                         <connections>
                                                             <action selector="downButton:" destination="T6C-kC-tbL" eventType="touchUpInside" id="MSx-Uc-1B6"/>
                                                             <action selector="downButton:" destination="cQM-HF-MfT" eventType="touchUpInside" id="Sbt-nv-zUs"/>
+                                                            <action selector="downButton:" destination="i7F-3l-JTt" eventType="touchUpInside" id="XYQ-sG-6rZ"/>
                                                             <action selector="downButton:" destination="IMm-Jw-zwl" eventType="touchUpInside" id="Yes-HQ-nNg"/>
                                                             <action selector="downButton:" destination="8oD-8e-0LV" eventType="touchUpInside" id="aeS-UC-i04"/>
                                                             <action selector="downButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="l8W-4g-D6V"/>
@@ -10581,6 +10586,9 @@
                         <viewLayoutGuide key="safeArea" id="7cC-Kx-02Y"/>
                     </view>
                     <connections>
+                        <outlet property="gameView" destination="Qpq-Ee-hnE" id="FgN-ua-D7w"/>
+                        <outlet property="playerImage" destination="D2B-kU-SJY" id="IrK-DV-U2J"/>
+                        <outlet property="textView" destination="PSq-OS-dFE" id="AU4-Uy-T8n"/>
                         <segue destination="Rfa-QV-Onu" kind="show" identifier="toCave7" id="PIq-sP-KnF"/>
                         <segue destination="pY7-AG-JsT" kind="show" identifier="toBattle" id="p0g-Lr-Zh5"/>
                         <segue destination="gte-P1-FwM" kind="show" identifier="toCave9" id="c06-vC-yHc"/>

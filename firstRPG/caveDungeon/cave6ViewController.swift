@@ -16,8 +16,8 @@ class cave6ViewController: UIViewController {
     @IBOutlet weak var hermitImage: UIImageView!    // ハーミット
     
     /// 【プレイヤーのパラメータ】
-    //var player: [String: Any] = [:]
-    var player:  [String: Any] = ["name": "ほげぇ", "maxHP": 150, "maxMP": 80, "atk": 800, "def": 520, "nowHP": 150, "nowMP": 80, "exp":6800, "Lv": 20]
+    var player: [String: Any] = [:]
+    //var player:  [String: Any] = ["name": "ほげぇ", "maxHP": 150, "maxMP": 80, "atk": 80, "def": 520, "nowHP": 150, "nowMP": 80, "exp":6800, "Lv": 20]
     var currentNum = 241    // ★プレイヤーの位置が配列の何番めか
 
     var count = 0    // 歩数のカウント
