@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Rfa-QV-Onu">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gte-P1-FwM">
     <device id="retina4_0" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
@@ -2756,8 +2756,9 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="姫" translatesAutoresizingMaskIntoConstraints="NO" id="TEK-Qh-GJa">
                                 <rect key="frame" x="244" y="80" width="26.5" height="26.5"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ヒーロー前" translatesAutoresizingMaskIntoConstraints="NO" id="WXD-Ik-aCo">
-                                <rect key="frame" x="270.5" y="293.5" width="27" height="26.5"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ヒーロー前" translatesAutoresizingMaskIntoConstraints="NO" id="WXD-Ik-aCo">
+                                <rect key="frame" x="270.5" y="293.5" width="32" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EHI-dx-sXd">
                                 <rect key="frame" x="130" y="222" width="308" height="88"/>
@@ -2785,6 +2786,7 @@
                                             <action selector="mainButton:" destination="BBQ-Rh-IIw" eventType="touchUpInside" id="Tlc-Rk-lT7"/>
                                             <action selector="mainButton:" destination="T6C-kC-tbL" eventType="touchUpInside" id="XN9-EU-d4R"/>
                                             <action selector="mainButton:" destination="IMm-Jw-zwl" eventType="touchUpInside" id="dk7-YX-pY7"/>
+                                            <action selector="mainButton:" destination="gte-P1-FwM" eventType="touchUpInside" id="gxv-z3-Md6"/>
                                             <action selector="mainButton:" destination="8oD-8e-0LV" eventType="touchUpInside" id="uOg-nI-P5a"/>
                                         </connections>
                                     </button>
@@ -2808,6 +2810,7 @@
                                                             <action selector="upButton:" destination="8oD-8e-0LV" eventType="touchUpInside" id="QjP-iq-bxf"/>
                                                             <action selector="upButton:" destination="T6C-kC-tbL" eventType="touchUpInside" id="UOd-fg-cb2"/>
                                                             <action selector="upButton:" destination="BBQ-Rh-IIw" eventType="touchUpInside" id="izn-70-cn5"/>
+                                                            <action selector="upButton:" destination="gte-P1-FwM" eventType="touchUpInside" id="laJ-2z-VMf"/>
                                                             <action selector="upButton:" destination="BYZ-38-t0r" eventType="touchDown" id="q0z-od-xIU"/>
                                                             <action selector="upButton:" destination="cQM-HF-MfT" eventType="touchUpInside" id="xHo-RF-0cd"/>
                                                         </connections>
@@ -2829,6 +2832,7 @@
                                                         <connections>
                                                             <action selector="leftButton:" destination="BYZ-38-t0r" eventType="touchDown" id="4Hm-EY-eBU"/>
                                                             <action selector="leftButton:" destination="8oD-8e-0LV" eventType="touchUpInside" id="H9B-oG-PCU"/>
+                                                            <action selector="leftButton:" destination="gte-P1-FwM" eventType="touchUpInside" id="MfG-sK-SRV"/>
                                                             <action selector="leftButton:" destination="T6C-kC-tbL" eventType="touchUpInside" id="USL-Dq-RoC"/>
                                                             <action selector="leftButton:" destination="BBQ-Rh-IIw" eventType="touchUpInside" id="WFo-TX-Je2"/>
                                                             <action selector="leftButton:" destination="cQM-HF-MfT" eventType="touchUpInside" id="tBR-LT-YMp"/>
@@ -2845,12 +2849,7 @@
                                                         <rect key="frame" x="46.5" y="0.0" width="23.5" height="23"/>
                                                         <state key="normal" title="Button" image="rbutton"/>
                                                         <connections>
-                                                            <action selector="rightButton:" destination="8oD-8e-0LV" eventType="touchUpInside" id="8Tj-CG-yqM"/>
-                                                            <action selector="rightButton:" destination="cQM-HF-MfT" eventType="touchUpInside" id="8f7-Dg-Y13"/>
-                                                            <action selector="rightButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KLS-uS-f3z"/>
-                                                            <action selector="rightButton:" destination="BBQ-Rh-IIw" eventType="touchUpInside" id="NtI-I6-nxi"/>
-                                                            <action selector="rightButton:" destination="IMm-Jw-zwl" eventType="touchUpInside" id="Yl9-CX-scO"/>
-                                                            <action selector="rightButton:" destination="T6C-kC-tbL" eventType="touchUpInside" id="Yle-Eb-V6X"/>
+                                                            <action selector="rightButton:" destination="gte-P1-FwM" eventType="touchUpInside" id="v69-kQ-IO0"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -2868,12 +2867,7 @@
                                                         <rect key="frame" x="23.5" y="0.0" width="23" height="23.5"/>
                                                         <state key="normal" title="Button" image="dbutton"/>
                                                         <connections>
-                                                            <action selector="downButton:" destination="T6C-kC-tbL" eventType="touchUpInside" id="S9J-xq-p5D"/>
-                                                            <action selector="downButton:" destination="IMm-Jw-zwl" eventType="touchUpInside" id="TaE-b8-HIi"/>
-                                                            <action selector="downButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eYt-eo-FaU"/>
-                                                            <action selector="downButton:" destination="BBQ-Rh-IIw" eventType="touchUpInside" id="fkh-6z-G4x"/>
-                                                            <action selector="downButton:" destination="8oD-8e-0LV" eventType="touchUpInside" id="lJL-G5-TSr"/>
-                                                            <action selector="downButton:" destination="cQM-HF-MfT" eventType="touchUpInside" id="zLy-YX-Hjc"/>
+                                                            <action selector="downButton:" destination="gte-P1-FwM" eventType="touchUpInside" id="j7d-fl-VxA"/>
                                                         </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ul9-Ig-cRy">
@@ -2949,8 +2943,6 @@
                             <constraint firstItem="E6j-Ri-5yo" firstAttribute="top" secondItem="5M5-gg-35D" secondAttribute="top" id="Gu0-IA-RDM"/>
                             <constraint firstItem="RNU-t1-xi2" firstAttribute="top" secondItem="Pxx-N1-VFZ" secondAttribute="top" id="H7E-hn-axR"/>
                             <constraint firstItem="IjS-aF-Kyu" firstAttribute="trailing" secondItem="Q4i-t6-S9F" secondAttribute="trailing" id="Hc2-cB-xmo"/>
-                            <constraint firstItem="WXD-Ik-aCo" firstAttribute="leading" secondItem="2rx-pK-ALl" secondAttribute="leading" id="I3m-pt-D1z"/>
-                            <constraint firstItem="WXD-Ik-aCo" firstAttribute="trailing" secondItem="2rx-pK-ALl" secondAttribute="trailing" id="IjE-ni-HsK"/>
                             <constraint firstItem="WxA-vF-oI1" firstAttribute="leading" secondItem="AXQ-wt-TeZ" secondAttribute="leading" id="J8u-iN-pgx"/>
                             <constraint firstItem="bTi-L0-3VV" firstAttribute="top" secondItem="HSd-1I-Aco" secondAttribute="top" id="Jhq-0i-3rO"/>
                             <constraint firstItem="bxy-3p-8if" firstAttribute="trailing" secondItem="W7f-9j-QXx" secondAttribute="trailing" id="L5I-DG-cuZ"/>
@@ -3007,9 +2999,7 @@
                             <constraint firstItem="gFJ-81-P66" firstAttribute="leading" secondItem="Ruk-3h-WP2" secondAttribute="leading" id="rZb-0W-2iE"/>
                             <constraint firstItem="TEK-Qh-GJa" firstAttribute="trailing" secondItem="JZQ-3H-WQd" secondAttribute="trailing" id="reh-Pj-lLh"/>
                             <constraint firstItem="gFJ-81-P66" firstAttribute="bottom" secondItem="Ruk-3h-WP2" secondAttribute="bottom" id="rn3-Dm-ToT"/>
-                            <constraint firstItem="WXD-Ik-aCo" firstAttribute="bottom" secondItem="2rx-pK-ALl" secondAttribute="bottom" id="s0y-hJ-iNp"/>
                             <constraint firstItem="uHE-MF-pOM" firstAttribute="top" secondItem="eae-TL-vb1" secondAttribute="top" id="sg7-VL-FyC"/>
-                            <constraint firstItem="WXD-Ik-aCo" firstAttribute="top" secondItem="2rx-pK-ALl" secondAttribute="top" id="siy-Ev-OR9"/>
                             <constraint firstItem="EHI-dx-sXd" firstAttribute="centerX" secondItem="Hp3-NL-IKg" secondAttribute="centerX" id="snp-aP-c2w"/>
                             <constraint firstItem="gFJ-81-P66" firstAttribute="top" secondItem="Ruk-3h-WP2" secondAttribute="top" id="uFy-hb-Tq6"/>
                             <constraint firstItem="bTi-L0-3VV" firstAttribute="trailing" secondItem="HSd-1I-Aco" secondAttribute="trailing" id="vne-Fh-dS2"/>
@@ -3025,6 +3015,11 @@
                         <viewLayoutGuide key="safeArea" id="evh-P6-kFM"/>
                     </view>
                     <connections>
+                        <outlet property="gameView" destination="W7f-9j-QXx" id="LBU-Pp-CO7"/>
+                        <outlet property="playerImage" destination="WXD-Ik-aCo" id="fkk-Yi-1Qa"/>
+                        <outlet property="princessImage" destination="TEK-Qh-GJa" id="Ugv-Bu-jlJ"/>
+                        <outlet property="textView" destination="EHI-dx-sXd" id="6tX-MN-vRh"/>
+                        <outlet property="thigreImage" destination="3CA-a7-cJo" id="ZCa-oZ-ODD"/>
                         <segue destination="i7F-3l-JTt" kind="show" identifier="toCave8" id="nV6-8i-tlJ"/>
                         <segue destination="pY7-AG-JsT" kind="show" identifier="toBattle" id="ilG-nT-t9J"/>
                     </connections>
@@ -10745,7 +10740,7 @@
         <image name="黒" width="32" height="32"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="04q-Tt-L2J"/>
+        <segue reference="nV6-8i-tlJ"/>
         <segue reference="PIq-sP-KnF"/>
         <segue reference="MQO-Ny-RYg"/>
         <segue reference="Bpa-q2-f7B"/>
@@ -10754,6 +10749,6 @@
         <segue reference="82U-Ja-PaT"/>
         <segue reference="c06-vC-yHc"/>
         <segue reference="RTa-DA-z8X"/>
-        <segue reference="d5u-nO-qWX"/>
+        <segue reference="ilG-nT-t9J"/>
     </inferredMetricsTieBreakers>
 </document>

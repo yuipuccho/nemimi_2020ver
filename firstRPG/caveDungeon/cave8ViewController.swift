@@ -16,7 +16,7 @@ class cave8ViewController: UIViewController {
 
     /// 【プレイヤーのパラメータ】
     //var player: [String: Any] = [:]
-    var player: [String: Any] = ["name": "ほげぇ", "maxHP": 121, "maxMP": 55, "atk": 58, "def": 250, "nowHP": 121, "nowMP": 55, "exp":4300, "Lv": 16]
+    var player: [String: Any] = ["name": "ほげぇ", "maxHP": 222, "maxMP": 130, "atk": 208, "def": 4000, "nowHP": 222, "nowMP": 130, "exp":35000, "Lv": 30]
     var currentNum = 241    // ★プレイヤーの位置が配列の何番めか
 
     var count = 0    // 歩数のカウント
@@ -448,18 +448,18 @@ class cave8ViewController: UIViewController {
             vc.defeatHermit = defeatHermit
 
 
-        }
-        /*
-         // ★cave8への遷移前処理
-         } else if (segue.identifier == "toCave8") {
-         let vc: cave8ViewController = (segue.destination as? cave8ViewController)!
+
+
+         // ★cave9への遷移前処理
+         } else if (segue.identifier == "toCave9") {
+         let vc: cave9ViewController = (segue.destination as? cave9ViewController)!
 
          vc.player = player
          // ハーミット討伐済かどうか
          vc.defeatHermit = defeatHermit
 
          }
-         */
+
 
     }
 }

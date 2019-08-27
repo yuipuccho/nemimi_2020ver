@@ -150,31 +150,31 @@ class battleMessageViewController: UIViewController {
     let lv13: [String: Any] = ["name": "ほげぇ", "maxHP": 100, "maxMP": 42, "atk": 43, "def": 150, "nowHP": 0, "nowMP": 0, "exp":0, "Lv": 13]
     let lv14: [String: Any] = ["name": "ほげぇ", "maxHP": 107, "maxMP": 46, "atk": 48, "def": 170, "nowHP": 0, "nowMP": 0, "exp":0, "Lv": 14]
     let lv15: [String: Any] = ["name": "ほげぇ", "maxHP": 114, "maxMP": 50, "atk": 53, "def": 200, "nowHP": 0, "nowMP": 0, "exp":0, "Lv": 15]
-    let lv16: [String: Any] = ["name": "ほげぇ", "maxHP": 121, "maxMP": 55, "atk": 58, "def": 250, "nowHP": 0, "nowMP": 0, "exp":0, "Lv": 16]
-    let lv17: [String: Any] = ["name": "ほげぇ", "maxHP": 128, "maxMP": 60, "atk": 60, "def": 300, "nowHP": 0, "nowMP": 0, "exp":0, "Lv": 17]
-    let lv18: [String: Any] = ["name": "ほげぇ", "maxHP": 135, "maxMP": 65, "atk": 66, "def": 350, "nowHP": 0, "nowMP": 0, "exp":0, "Lv": 18]
-    let lv19: [String: Any] = ["name": "ほげぇ", "maxHP": 142, "maxMP": 70, "atk": 72, "def": 420, "nowHP": 0, "nowMP": 0, "exp":0, "Lv": 19]
-    let lv20: [String: Any] = ["name": "ほげぇ", "maxHP": 150, "maxMP": 80, "atk": 80, "def": 520, "nowHP": 0, "nowMP": 0, "exp":0, "Lv": 20]
-    let lv21: [String: Any] = ["name": "ほげぇ", "maxHP": 157, "maxMP": 85, "atk": 88, "def": 620, "nowHP": 0, "nowMP": 0, "exp":0, "Lv": 21]
-    let lv22: [String: Any] = ["name": "ほげぇ", "maxHP": 163, "maxMP": 90, "atk": 96, "def": 700, "nowHP": 0, "nowMP": 0, "exp":0, "Lv": 22]
-    let lv23: [String: Any] = ["name": "ほげぇ", "maxHP": 170, "maxMP": 95, "atk": 104, "def": 800, "nowHP": 0, "nowMP": 0, "exp":0, "Lv": 23]
-    let lv24: [String: Any] = ["name": "ほげぇ", "maxHP": 177, "maxMP": 100, "atk": 112, "def": 950, "nowHP": 0, "nowMP": 0, "exp":0, "Lv": 24]
-    let lv25: [String: Any] = ["name": "ほげぇ", "maxHP": 285, "maxMP": 105, "atk": 122, "def": 1200, "nowHP": 0, "nowMP": 0, "exp":0, "Lv": 25]
-    let lv26: [String: Any] = ["name": "ほげぇ", "maxHP": 192, "maxMP": 110, "atk": 136, "def": 1500, "nowHP": 0, "nowMP": 0, "exp":0, "Lv": 26]
-    let lv27: [String: Any] = ["name": "ほげぇ", "maxHP": 200, "maxMP": 115, "atk": 150, "def": 1800, "nowHP": 0, "nowMP": 0, "exp":0, "Lv": 27]
-    let lv28: [String: Any] = ["name": "ほげぇ", "maxHP": 207, "maxMP": 120, "atk": 168, "def": 2200, "nowHP": 0, "nowMP": 0, "exp":0, "Lv": 28]
-    let lv29: [String: Any] = ["name": "ほげぇ", "maxHP": 215, "maxMP": 125, "atk": 188, "def": 3000, "nowHP": 0, "nowMP": 0, "exp":0, "Lv": 29]
-    let lv30: [String: Any] = ["name": "ほげぇ", "maxHP": 222, "maxMP": 130, "atk": 208, "def": 4000, "nowHP": 0, "nowMP": 0, "exp":0, "Lv": 30]
-    let lv31: [String: Any] = ["name": "ほげぇ", "maxHP": 230, "maxMP": 135, "atk": 215, "def": 5000, "nowHP": 0, "nowMP": 0, "exp":0, "Lv": 31]
-    let lv32: [String: Any] = ["name": "ほげぇ", "maxHP": 237, "maxMP": 140, "atk": 220, "def": 5500, "nowHP": 0, "nowMP": 0, "exp":0, "Lv": 32]
-    let lv33: [String: Any] = ["name": "ほげぇ", "maxHP": 245, "maxMP": 145, "atk": 225, "def": 6000, "nowHP": 0, "nowMP": 0, "exp":0, "Lv": 33]
-    let lv34: [String: Any] = ["name": "ほげぇ", "maxHP": 252, "maxMP": 150, "atk": 230, "def": 6500, "nowHP": 0, "nowMP": 0, "exp":0, "Lv": 34]
-    let lv35: [String: Any] = ["name": "ほげぇ", "maxHP": 260, "maxMP": 155, "atk": 235, "def": 7000, "nowHP": 0, "nowMP": 0, "exp":0, "Lv": 35]
-    let lv36: [String: Any] = ["name": "ほげぇ", "maxHP": 268, "maxMP": 160, "atk": 240, "def": 7500, "nowHP": 0, "nowMP": 0, "exp":0, "Lv": 36]
-    let lv37: [String: Any] = ["name": "ほげぇ", "maxHP": 276, "maxMP": 165, "atk": 245, "def": 8000, "nowHP": 0, "nowMP": 0, "exp":0, "Lv": 37]
-    let lv38: [String: Any] = ["name": "ほげぇ", "maxHP": 284, "maxMP": 170, "atk": 250, "def": 8500, "nowHP": 0, "nowMP": 0, "exp":0, "Lv": 38]
-    let lv39: [String: Any] = ["name": "ほげぇ", "maxHP": 292, "maxMP": 175, "atk": 255, "def": 9000, "nowHP": 0, "nowMP": 0, "exp":0, "Lv": 39]
-    let lv40: [String: Any] = ["name": "ほげぇ", "maxHP": 300, "maxMP": 180, "atk": 260, "def": 9500, "nowHP": 0, "nowMP": 0, "exp":0, "Lv": 40]
+    let lv16: [String: Any] = ["name": "ほげぇ", "maxHP": 121, "maxMP": 58, "atk": 58, "def": 250, "nowHP": 0, "nowMP": 0, "exp":0, "Lv": 16]
+    let lv17: [String: Any] = ["name": "ほげぇ", "maxHP": 128, "maxMP": 68, "atk": 60, "def": 300, "nowHP": 0, "nowMP": 0, "exp":0, "Lv": 17]
+    let lv18: [String: Any] = ["name": "ほげぇ", "maxHP": 135, "maxMP": 81, "atk": 66, "def": 350, "nowHP": 0, "nowMP": 0, "exp":0, "Lv": 18]
+    let lv19: [String: Any] = ["name": "ほげぇ", "maxHP": 142, "maxMP": 92, "atk": 72, "def": 420, "nowHP": 0, "nowMP": 0, "exp":0, "Lv": 19]
+    let lv20: [String: Any] = ["name": "ほげぇ", "maxHP": 150, "maxMP": 103, "atk": 80, "def": 520, "nowHP": 0, "nowMP": 0, "exp":0, "Lv": 20]
+    let lv21: [String: Any] = ["name": "ほげぇ", "maxHP": 157, "maxMP": 111, "atk": 88, "def": 620, "nowHP": 0, "nowMP": 0, "exp":0, "Lv": 21]
+    let lv22: [String: Any] = ["name": "ほげぇ", "maxHP": 163, "maxMP": 122, "atk": 96, "def": 700, "nowHP": 0, "nowMP": 0, "exp":0, "Lv": 22]
+    let lv23: [String: Any] = ["name": "ほげぇ", "maxHP": 170, "maxMP": 134, "atk": 104, "def": 800, "nowHP": 0, "nowMP": 0, "exp":0, "Lv": 23]
+    let lv24: [String: Any] = ["name": "ほげぇ", "maxHP": 177, "maxMP": 142, "atk": 112, "def": 950, "nowHP": 0, "nowMP": 0, "exp":0, "Lv": 24]
+    let lv25: [String: Any] = ["name": "ほげぇ", "maxHP": 285, "maxMP": 151, "atk": 122, "def": 1200, "nowHP": 0, "nowMP": 0, "exp":0, "Lv": 25]
+    let lv26: [String: Any] = ["name": "ほげぇ", "maxHP": 192, "maxMP": 160, "atk": 136, "def": 1500, "nowHP": 0, "nowMP": 0, "exp":0, "Lv": 26]
+    let lv27: [String: Any] = ["name": "ほげぇ", "maxHP": 200, "maxMP": 173, "atk": 150, "def": 1800, "nowHP": 0, "nowMP": 0, "exp":0, "Lv": 27]
+    let lv28: [String: Any] = ["name": "ほげぇ", "maxHP": 207, "maxMP": 181, "atk": 168, "def": 2200, "nowHP": 0, "nowMP": 0, "exp":0, "Lv": 28]
+    let lv29: [String: Any] = ["name": "ほげぇ", "maxHP": 215, "maxMP": 192, "atk": 188, "def": 3000, "nowHP": 0, "nowMP": 0, "exp":0, "Lv": 29]
+    let lv30: [String: Any] = ["name": "ほげぇ", "maxHP": 222, "maxMP": 203, "atk": 208, "def": 4000, "nowHP": 0, "nowMP": 0, "exp":0, "Lv": 30]
+    let lv31: [String: Any] = ["name": "ほげぇ", "maxHP": 230, "maxMP": 211, "atk": 215, "def": 5000, "nowHP": 0, "nowMP": 0, "exp":0, "Lv": 31]
+    let lv32: [String: Any] = ["name": "ほげぇ", "maxHP": 237, "maxMP": 224, "atk": 220, "def": 5500, "nowHP": 0, "nowMP": 0, "exp":0, "Lv": 32]
+    let lv33: [String: Any] = ["name": "ほげぇ", "maxHP": 245, "maxMP": 235, "atk": 225, "def": 6000, "nowHP": 0, "nowMP": 0, "exp":0, "Lv": 33]
+    let lv34: [String: Any] = ["name": "ほげぇ", "maxHP": 252, "maxMP": 241, "atk": 230, "def": 6500, "nowHP": 0, "nowMP": 0, "exp":0, "Lv": 34]
+    let lv35: [String: Any] = ["name": "ほげぇ", "maxHP": 260, "maxMP": 253, "atk": 235, "def": 7000, "nowHP": 0, "nowMP": 0, "exp":0, "Lv": 35]
+    let lv36: [String: Any] = ["name": "ほげぇ", "maxHP": 268, "maxMP": 262, "atk": 240, "def": 7500, "nowHP": 0, "nowMP": 0, "exp":0, "Lv": 36]
+    let lv37: [String: Any] = ["name": "ほげぇ", "maxHP": 276, "maxMP": 271, "atk": 245, "def": 8000, "nowHP": 0, "nowMP": 0, "exp":0, "Lv": 37]
+    let lv38: [String: Any] = ["name": "ほげぇ", "maxHP": 284, "maxMP": 283, "atk": 250, "def": 8500, "nowHP": 0, "nowMP": 0, "exp":0, "Lv": 38]
+    let lv39: [String: Any] = ["name": "ほげぇ", "maxHP": 292, "maxMP": 294, "atk": 255, "def": 9000, "nowHP": 0, "nowMP": 0, "exp":0, "Lv": 39]
+    let lv40: [String: Any] = ["name": "ほげぇ", "maxHP": 300, "maxMP": 300, "atk": 260, "def": 9500, "nowHP": 0, "nowMP": 0, "exp":0, "Lv": 40]
 
 
     override func viewDidLoad() {
@@ -415,25 +415,25 @@ class battleMessageViewController: UIViewController {
         case 5:    // ライトビーム
             switch selectMonsterNum {
             case 1:    // モンスター1を選択した時
-                giveDamage = Int.random(in: 70...90)    // この辺後で調整する
+                giveDamage = Int.random(in: 80...110)    // この辺後で調整する
                 monster1["hp"] = monster1["hp"]! - giveDamage
                 playerMP = playerMP - 8    // MPを減らす
                 // バトルメッセージ表示
                 messageTextView.text = "\(playerName)は ライトビームを はなった！" + "\n\(monsterName1)に \(giveDamage)のダメージ！"
             case 2:
-                giveDamage = Int.random(in: 70...90)    // この辺後で調整する
+                giveDamage = Int.random(in: 80...110)    // この辺後で調整する
                 monster2["hp"] = monster2["hp"]! - giveDamage
                 playerMP = playerMP - 8    // MPを減らす
                 // バトルメッセージ表示
                 messageTextView.text = "\(playerName)は ライトビームを はなった！" + "\n\(monsterName2)に \(giveDamage)のダメージ！"
             case 3:
-                giveDamage = Int.random(in: 70...90)    // この辺後で調整する
+                giveDamage = Int.random(in: 80...110)    // この辺後で調整する
                 monster3["hp"] = monster3["hp"]! - giveDamage
                 playerMP = playerMP - 8    // MPを減らす
                 // バトルメッセージ表示
                 messageTextView.text = "\(playerName)は ライトビームを はなった！" + "\n\(monsterName3)に \(giveDamage)のダメージ！"
             case 4:
-                giveDamage = Int.random(in: 70...90)    // この辺後で調整する
+                giveDamage = Int.random(in: 80...110)    // この辺後で調整する
                 monster4["hp"] = monster4["hp"]! - giveDamage
                 playerMP = playerMP - 8    // MPを減らす
                 // バトルメッセージ表示
@@ -443,7 +443,7 @@ class battleMessageViewController: UIViewController {
             }
             
         case 6:    // メガヒール
-            giveDamage = Int.random(in: 90...150)    // 90~150のランダム
+            giveDamage = Int.random(in: 100...150)    // 100~150のランダム
             
             // HPの処理
             if playerHP + giveDamage > player["maxHP"] as! Int {    // 回復後のHPが上限HPをこえた場合
@@ -461,25 +461,25 @@ class battleMessageViewController: UIViewController {
         case 7:    // スターダスト
             switch selectMonsterNum {
             case 1:    // モンスター1を選択した時
-                giveDamage = Int.random(in: 120...160)    // この辺後で調整する
+                giveDamage = Int.random(in: 160...300)    // この辺後で調整する
                 monster1["hp"] = monster1["hp"]! - giveDamage
                 playerMP = playerMP - 13    // MPを減らす
                 // バトルメッセージ表示
                 messageTextView.text = "\(playerName)は スターダストを となえた！" + "\n\(monsterName1)に \(giveDamage)のダメージ！"
             case 2:
-                giveDamage = Int.random(in: 120...160)    // この辺後で調整する
+                giveDamage = Int.random(in: 160...300)    // この辺後で調整する
                 monster2["hp"] = monster2["hp"]! - giveDamage
                 playerMP = playerMP - 13    // MPを減らす
                 // バトルメッセージ表示
                 messageTextView.text = "\(playerName)は スターダストを となえた！" + "\n\(monsterName2)に \(giveDamage)のダメージ！"
             case 3:
-                giveDamage = Int.random(in: 120...160)    // この辺後で調整する
+                giveDamage = Int.random(in: 160...300)    // この辺後で調整する
                 monster3["hp"] = monster3["hp"]! - giveDamage
                 playerMP = playerMP - 13    // MPを減らす
                 // バトルメッセージ表示
                 messageTextView.text = "\(playerName)は スターダストを となえた！" + "\n\(monsterName3)に \(giveDamage)のダメージ！"
             case 4:
-                giveDamage = Int.random(in: 120...160)    // この辺後で調整する
+                giveDamage = Int.random(in: 160...300)    // この辺後で調整する
                 monster4["hp"] = monster4["hp"]! - giveDamage
                 playerMP = playerMP - 13    // MPを減らす
                 // バトルメッセージ表示
@@ -611,7 +611,7 @@ class battleMessageViewController: UIViewController {
                 takeDamage = monster2["atk"]! * monster2["atk"]! / playerDefStatus + addDamage
 
             } else if toCave9 == true {    // ティグラの時
-                addDamage = Int.random(in: 0...80)
+                addDamage = Int.random(in: 0...60)
                 takeDamage = monster2["atk"]! * monster2["atk"]! / playerDefStatus + addDamage
 
             } else {    // 雑魚の時
@@ -1206,8 +1206,8 @@ class battleMessageViewController: UIViewController {
             vc.currentNum = currentNum
          // ハーミット討伐済かどうか
          vc.defeatHermit = defeatHermit
-        }
-/*
+
+
         } else if (segue.identifier == "toCave9") {    // cave9への遷移処理
             let vc: cave9ViewController = (segue.destination as? cave9ViewController)!
             // プレイヤーの情報
@@ -1215,9 +1215,10 @@ class battleMessageViewController: UIViewController {
             vc.playerLeftLocation = playerLeftLocation
             vc.playerOverLocation = playerOverLocation
             vc.currentNum = currentNum
+            vc.afterBattle = true
          // ハーミット討伐済かどうか
          vc.defeatHermit = defeatHermit
         }
- */
+
     }
 }
