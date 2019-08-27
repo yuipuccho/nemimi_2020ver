@@ -35,16 +35,16 @@ class cave7ViewController: UIViewController {
     let line = [
         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 3, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0,
-        0, 0, 0, 4, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 1, 0, 0, 0,
-        0, 0, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 0, 0,
-        0, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 0,
-        0, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 0,
-        0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0,
-        0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0,
-        0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        0, 1, 1, 1, 1, 3, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0,
+        0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 1, 0, 0, 0, 0,
+        0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0,
+        0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 1, 1, 0, 0, 0, 0,
+        0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 4, 1, 1, 1, 0, 0, 0,
+        0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 0, 0, 0, 0,
+        0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
     ]
 
     /// モンスター名前
@@ -80,8 +80,6 @@ class cave7ViewController: UIViewController {
     ]
 
 
-    //let a = monsterStatus[0]["hp"]
-    //print(a!)
 
 
 
@@ -146,8 +144,8 @@ class cave7ViewController: UIViewController {
             // ★次のマップに遷移するかどうか
             if self.line[currentNum] == 3 {
                 print("おk")
-                performSegue(withIdentifier: "toCave6", sender: nil)
-                print("6へせんい")
+                performSegue(withIdentifier: "toCave8", sender: nil)
+                print("8へせんい")
             }
 
             if currentNum - 21 >= 0 {  // 移動先の配列番号が存在するか確認
@@ -264,8 +262,8 @@ class cave7ViewController: UIViewController {
             // ★前のマップに遷移するかどうか
             if self.line[currentNum] == 2 {
                 print("おk")
-                performSegue(withIdentifier: "toCave4", sender: nil)
-                print("4へせんい")
+                performSegue(withIdentifier: "toCave6", sender: nil)
+                print("6へせんい")
             }
 
             if currentNum + 21 <= 251 {  // 移動先の配列番号が存在するか確認
@@ -311,8 +309,8 @@ class cave7ViewController: UIViewController {
         switch howMany {
         case 0:    // 2匹の場合
             let noMonster = 13
-            let monsterA = Int.random(in: 4...7)    // ★このマップでは4-7のモンスターが出現。
-            let monsterB = Int.random(in: 4...7)
+            let monsterA = Int.random(in: 6...9)    // ★このマップでは6-9のモンスターが出現。
+            let monsterB = Int.random(in: 6...9)
             monster = [noMonster, monsterA, monsterB, noMonster]    // バトルシーン遷移時にこの値を渡してモンスターを出現させる。
 
 
@@ -331,10 +329,10 @@ class cave7ViewController: UIViewController {
 
 
         case 1:    // 4匹の場合
-            let monsterC = Int.random(in: 4...7)    // ★
-            let monsterD = Int.random(in: 4...7)
-            let monsterE = Int.random(in: 4...7)
-            let monsterF = Int.random(in: 4...7)
+            let monsterC = Int.random(in: 6...9)    // ★
+            let monsterD = Int.random(in: 6...9)
+            let monsterE = Int.random(in: 6...9)
+            let monsterF = Int.random(in: 6...9)
             monster = [monsterC, monsterD, monsterE, monsterF]
 
 
@@ -421,7 +419,7 @@ class cave7ViewController: UIViewController {
             vc.toMonsterApper = true
 
             // ★マップ情報
-            vc.toCave5 = true
+            vc.toCave7 = true
 
             // プレイヤー座標格納
             playerLeftLocation = playerImage.frame.origin.x
@@ -438,31 +436,31 @@ class cave7ViewController: UIViewController {
             vc.defeatHermit = defeatHermit
 
 
-            // ★cave4への遷移前処理
-        } else if (segue.identifier == "toCave4") {
-            let vc: cave4ViewController = (segue.destination as? cave4ViewController)!
+            // ★cave6への遷移前処理
+        } else if (segue.identifier == "toCave6") {
+            let vc: cave6ViewController = (segue.destination as? cave6ViewController)!
 
             vc.player = player
             vc.playerLeftLocation = 270.5
-            vc.playerOverLocation = 79.5
-            vc.currentNum = 73
+            vc.playerOverLocation = 53
+            vc.currentNum = 52
 
             // ハーミット討伐済かどうか
             vc.defeatHermit = defeatHermit
 
 
-
-
-            // ★cave6への遷移前処理
-        } else if (segue.identifier == "toCave6") {
-            let vc: cave6ViewController = (segue.destination as? cave6ViewController)!
+        }
+/*
+            // ★cave8への遷移前処理
+        } else if (segue.identifier == "toCave8") {
+            let vc: cave8ViewController = (segue.destination as? cave8ViewController)!
 
             vc.player = player
             // ハーミット討伐済かどうか
             vc.defeatHermit = defeatHermit
 
         }
-
+*/
 
     }
 }

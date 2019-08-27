@@ -1184,8 +1184,8 @@ class battleMessageViewController: UIViewController {
             vc.afterBattle = true
          // ハーミット討伐済かどうか
          vc.defeatHermit = defeatHermit
-    }
-/*
+    
+
         } else if (segue.identifier == "toCave7") {    // cave7への遷移処理
             let vc: cave7ViewController = (segue.destination as? cave7ViewController)!
             // プレイヤーの情報
@@ -1195,7 +1195,8 @@ class battleMessageViewController: UIViewController {
             vc.currentNum = currentNum
          // ハーミット討伐済かどうか
          vc.defeatHermit = defeatHermit
-
+    }
+/*
         } else if (segue.identifier == "toCave8") {    // cave8への遷移処理
             let vc: cave8ViewController = (segue.destination as? cave8ViewController)!
             // プレイヤーの情報
