@@ -21,6 +21,17 @@ class battleMessageViewController: UIViewController {
     @IBOutlet weak var monsterImage3: UIImageView!
     @IBOutlet weak var monsterImage4: UIImageView!
     
+    @IBOutlet weak var effectImage1: UIImageView!
+    @IBOutlet weak var effectImage2: UIImageView!
+    @IBOutlet weak var effectImage3: UIImageView!
+    @IBOutlet weak var effectImage4: UIImageView!
+
+    @IBOutlet weak var bigEffectImage1: UIImageView!
+    @IBOutlet weak var bigEffectImage2: UIImageView!
+    @IBOutlet weak var bigEffectImage3: UIImageView!
+    @IBOutlet weak var bigEffectImage4: UIImageView!
+    
+    
     @IBOutlet weak var messageTextView: UITextView!    // バトルメッセージ
 
     // 遷移元マップ情報
@@ -211,14 +222,12 @@ class battleMessageViewController: UIViewController {
             toBattleCommand = true
             
         } else if toPlayerAtk == true {
-            print("kokomadehaok")
-            print(selectMonsterNum)
             atkType()    // 攻撃タイプごとの処理
-            print("atkType")
-            targetMonsterHP()    // 攻撃したモンスターのHP判定処理
-            print("targetMonsterHP")
-            monsterAtk()
-            toPlayerAtk = false
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) {
+                self.targetMonsterHP()    // 攻撃したモンスターのHP判定処理
+                self.monsterAtk()
+                self.toPlayerAtk = false
+            }
         }
         
     }
@@ -280,23 +289,140 @@ class battleMessageViewController: UIViewController {
                 monster1["hp"] = monster1["hp"]! - giveDamage    // 与ダメージ反映
                 // バトルメッセージ表示
                 messageTextView.text = "\(playerName)の こうげき！\n\(monsterName1)に \(giveDamage)のダメージ！"
+                // エフェクト表示
+                effectImage1.image = UIImage(named: "攻撃_01")
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.02) {
+                    self.effectImage1.image = UIImage(named: "攻撃_02")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.04) {
+                    self.effectImage1.image = UIImage(named: "攻撃_03")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.06) {
+                    self.effectImage1.image = UIImage(named: "攻撃_04")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.08) {
+                    self.effectImage1.image = UIImage(named: "攻撃_05")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.10) {
+                    self.effectImage1.image = UIImage(named: "攻撃_06")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.12) {
+                    self.effectImage1.image = UIImage(named: "攻撃_07")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.14) {
+                    self.effectImage1.image = UIImage(named: "攻撃_08")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.16) {
+                    self.effectImage1.image = UIImage(named: "攻撃_09")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.18) {
+                    self.effectImage1.isHidden = true
+                }
+
             case 2:
                 giveDamage = playerAtkStatus * playerAtkStatus / monster2["def"]!    // 与ダメージの計算
                 monster2["hp"] = monster2["hp"]! - giveDamage    // 与ダメージ反映
                 // バトルメッセージ表示
                 messageTextView.text = "\(playerName)の こうげき！\n\(monsterName2)に \(giveDamage)のダメージ！"
+                // エフェクト表示
+                effectImage2.image = UIImage(named: "攻撃_01")
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.02) {
+                    self.effectImage2.image = UIImage(named: "攻撃_02")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.04) {
+                    self.effectImage2.image = UIImage(named: "攻撃_03")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.06) {
+                    self.effectImage2.image = UIImage(named: "攻撃_04")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.08) {
+                    self.effectImage2.image = UIImage(named: "攻撃_05")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.10) {
+                    self.effectImage2.image = UIImage(named: "攻撃_06")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.12) {
+                    self.effectImage2.image = UIImage(named: "攻撃_07")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.14) {
+                    self.effectImage2.image = UIImage(named: "攻撃_08")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.16) {
+                    self.effectImage2.image = UIImage(named: "攻撃_09")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.18) {
+                    self.effectImage2.isHidden = true
+                }
                 
             case 3:
                 giveDamage = playerAtkStatus * playerAtkStatus / monster3["def"]!    // 与ダメージの計算
                 monster3["hp"] = monster3["hp"]! - giveDamage    // 与ダメージ反映
                 // バトルメッセージ表示
                 messageTextView.text = "\(playerName)の こうげき！\n\(monsterName3)に \(giveDamage)のダメージ！"
+                // エフェクト表示
+                effectImage3.image = UIImage(named: "攻撃_01")
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.02) {
+                    self.effectImage3.image = UIImage(named: "攻撃_02")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.04) {
+                    self.effectImage3.image = UIImage(named: "攻撃_03")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.06) {
+                    self.effectImage3.image = UIImage(named: "攻撃_04")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.08) {
+                    self.effectImage3.image = UIImage(named: "攻撃_05")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.10) {
+                    self.effectImage3.image = UIImage(named: "攻撃_06")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.12) {
+                    self.effectImage3.image = UIImage(named: "攻撃_07")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.14) {
+                    self.effectImage3.image = UIImage(named: "攻撃_08")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.16) {
+                    self.effectImage3.image = UIImage(named: "攻撃_09")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.18) {
+                    self.effectImage3.isHidden = true
+                }
                 
             case 4:
                 giveDamage = playerAtkStatus * playerAtkStatus / monster4["def"]!    // 与ダメージの計算
                 monster4["hp"] = monster4["hp"]! - giveDamage    // 与ダメージ反映
                 // バトルメッセージ表示
                 messageTextView.text = "\(playerName)の こうげき！\n\(monsterName4)に \(giveDamage)のダメージ！"
+                // エフェクト表示
+                effectImage4.image = UIImage(named: "攻撃_01")
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.02) {
+                    self.effectImage4.image = UIImage(named: "攻撃_02")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.04) {
+                    self.effectImage4.image = UIImage(named: "攻撃_03")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.06) {
+                    self.effectImage4.image = UIImage(named: "攻撃_04")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.08) {
+                    self.effectImage4.image = UIImage(named: "攻撃_05")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.10) {
+                    self.effectImage4.image = UIImage(named: "攻撃_06")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.12) {
+                    self.effectImage4.image = UIImage(named: "攻撃_07")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.14) {
+                    self.effectImage4.image = UIImage(named: "攻撃_08")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.16) {
+                    self.effectImage4.image = UIImage(named: "攻撃_09")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.18) {
+                    self.effectImage4.isHidden = true
+                }
                 
             default:
                 return
@@ -327,24 +453,130 @@ class battleMessageViewController: UIViewController {
                 playerMP = playerMP - 2    // MPを減らす
                 // バトルメッセージ表示
                 messageTextView.text = "\(playerName)は ひのたまを はなった！" + "\n\(monsterName1)に \(giveDamage)のダメージ！"
+                // エフェクト表示
+                effectImage1.image = UIImage(named: "ひのたま_01")
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.04) {
+                    self.effectImage1.image = UIImage(named: "ひのたま_02")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.08) {
+                    self.effectImage1.image = UIImage(named: "ひのたま_03")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.12) {
+                    self.effectImage1.image = UIImage(named: "ひのたま_04")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.16) {
+                    self.effectImage1.image = UIImage(named: "ひのたま_05")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.20) {
+                    self.effectImage1.image = UIImage(named: "ひのたま_06")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.24) {
+                    self.effectImage1.image = UIImage(named: "ひのたま_07")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.28) {
+                    self.effectImage1.image = UIImage(named: "ひのたま_08")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.32) {
+                    self.effectImage1.isHidden = true
+                }
+
+
             case 2:
                 giveDamage = Int.random(in: 10...25)    // この辺後で調整する
                 monster2["hp"] = monster2["hp"]! - giveDamage
                 playerMP = playerMP - 2    // MPを減らす
                 // バトルメッセージ表示
                 messageTextView.text = "\(playerName)は ひのたまを はなった！" + "\n\(monsterName2)に \(giveDamage)のダメージ！"
+                // エフェクト表示
+                effectImage2.image = UIImage(named: "ひのたま_01")
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.04) {
+                    self.effectImage2.image = UIImage(named: "ひのたま_02")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.08) {
+                    self.effectImage2.image = UIImage(named: "ひのたま_03")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.12) {
+                    self.effectImage2.image = UIImage(named: "ひのたま_04")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.16) {
+                    self.effectImage2.image = UIImage(named: "ひのたま_05")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.20) {
+                    self.effectImage2.image = UIImage(named: "ひのたま_06")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.24) {
+                    self.effectImage2.image = UIImage(named: "ひのたま_07")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.28) {
+                    self.effectImage2.image = UIImage(named: "ひのたま_08")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.32) {
+                    self.effectImage2.isHidden = true
+                }
             case 3:
                 giveDamage = Int.random(in: 10...25)    // この辺後で調整する
                 monster3["hp"] = monster3["hp"]! - giveDamage
                 playerMP = playerMP - 2    // MPを減らす
                 // バトルメッセージ表示
                 messageTextView.text = "\(playerName)は ひのたまを はなった！" + "\n\(monsterName3)に \(giveDamage)のダメージ！"
+                // エフェクト表示
+                effectImage3.image = UIImage(named: "ひのたま_01")
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.04) {
+                    self.effectImage3.image = UIImage(named: "ひのたま_02")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.08) {
+                    self.effectImage3.image = UIImage(named: "ひのたま_03")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.12) {
+                    self.effectImage3.image = UIImage(named: "ひのたま_04")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.16) {
+                    self.effectImage3.image = UIImage(named: "ひのたま_05")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.20) {
+                    self.effectImage3.image = UIImage(named: "ひのたま_06")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.24) {
+                    self.effectImage3.image = UIImage(named: "ひのたま_07")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.28) {
+                    self.effectImage3.image = UIImage(named: "ひのたま_08")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.32) {
+                    self.effectImage3.isHidden = true
+                }
             case 4:
                 giveDamage = Int.random(in: 10...25)    // この辺後で調整する
                 monster4["hp"] = monster4["hp"]! - giveDamage
                 playerMP = playerMP - 2    // MPを減らす
                 // バトルメッセージ表示
                 messageTextView.text = "\(playerName)は ひのたまを はなった！" + "\n\(monsterName4)に \(giveDamage)のダメージ！"
+                // エフェクト表示
+                effectImage4.image = UIImage(named: "ひのたま_01")
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.04) {
+                    self.effectImage4.image = UIImage(named: "ひのたま_02")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.08) {
+                    self.effectImage4.image = UIImage(named: "ひのたま_03")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.12) {
+                    self.effectImage4.image = UIImage(named: "ひのたま_04")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.16) {
+                    self.effectImage4.image = UIImage(named: "ひのたま_05")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.20) {
+                    self.effectImage4.image = UIImage(named: "ひのたま_06")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.24) {
+                    self.effectImage4.image = UIImage(named: "ひのたま_07")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.28) {
+                    self.effectImage4.image = UIImage(named: "ひのたま_08")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.32) {
+                    self.effectImage4.isHidden = true
+                }
             default:
                 return
             }
@@ -360,24 +592,152 @@ class battleMessageViewController: UIViewController {
                 playerMP = playerMP - 4    // MPを減らす
                 // バトルメッセージ表示
                 messageTextView.text = "\(playerName)は つららをおとした！" + "\n\(monsterName1)に \(giveDamage)のダメージ！"
+                // エフェクト表示
+                effectImage1.image = UIImage(named: "つららおとし1")
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.04) {
+                    self.effectImage1.image = UIImage(named: "つららおとし2")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.08) {
+                    self.effectImage1.image = UIImage(named: "つららおとし3")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.12) {
+                    self.effectImage1.image = UIImage(named: "つららおとし4")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.16) {
+                    self.effectImage1.image = UIImage(named: "つららおとし5")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.20) {
+                    self.effectImage1.image = UIImage(named: "つららおとし6")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.24) {
+                    self.effectImage1.image = UIImage(named: "つららおとし7")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.28) {
+                    self.effectImage1.image = UIImage(named: "つららおとし8")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.32) {
+                    self.effectImage1.image = UIImage(named: "つららおとし9")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.36) {
+                    self.effectImage1.image = UIImage(named: "つららおとし10")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.40) {
+                    self.effectImage1.isHidden = true
+                }
             case 2:
                 giveDamage = Int.random(in: 35...50)    // この辺後で調整する
                 monster2["hp"] = monster2["hp"]! - giveDamage
                 playerMP = playerMP - 4    // MPを減らす
                 // バトルメッセージ表示
                 messageTextView.text = "\(playerName)は つららをおとした！" + "\n\(monsterName2)に \(giveDamage)のダメージ！"
+                // エフェクト表示
+                effectImage2.image = UIImage(named: "つららおとし1")
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.04) {
+                    self.effectImage2.image = UIImage(named: "つららおとし2")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.08) {
+                    self.effectImage2.image = UIImage(named: "つららおとし3")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.12) {
+                    self.effectImage2.image = UIImage(named: "つららおとし4")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.16) {
+                    self.effectImage2.image = UIImage(named: "つららおとし5")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.20) {
+                    self.effectImage2.image = UIImage(named: "つららおとし6")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.24) {
+                    self.effectImage2.image = UIImage(named: "つららおとし7")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.28) {
+                    self.effectImage2.image = UIImage(named: "つららおとし8")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.32) {
+                    self.effectImage2.image = UIImage(named: "つららおとし9")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.36) {
+                    self.effectImage2.image = UIImage(named: "つららおとし10")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.40) {
+                    self.effectImage2.isHidden = true
+                }
             case 3:
                 giveDamage = Int.random(in: 35...50)    // この辺後で調整する
                 monster3["hp"] = monster3["hp"]! - giveDamage
                 playerMP = playerMP - 4    // MPを減らす
                 // バトルメッセージ表示
                 messageTextView.text = "\(playerName)は つららをおとした！" + "\n\(monsterName3)に \(giveDamage)のダメージ！"
+                // エフェクト表示
+                effectImage3.image = UIImage(named: "つららおとし1")
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.04) {
+                    self.effectImage3.image = UIImage(named: "つららおとし2")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.08) {
+                    self.effectImage3.image = UIImage(named: "つららおとし3")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.12) {
+                    self.effectImage3.image = UIImage(named: "つららおとし4")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.16) {
+                    self.effectImage3.image = UIImage(named: "つららおとし5")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.20) {
+                    self.effectImage3.image = UIImage(named: "つららおとし6")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.24) {
+                    self.effectImage3.image = UIImage(named: "つららおとし7")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.28) {
+                    self.effectImage3.image = UIImage(named: "つららおとし8")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.32) {
+                    self.effectImage3.image = UIImage(named: "つららおとし9")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.36) {
+                    self.effectImage3.image = UIImage(named: "つららおとし10")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.40) {
+                    self.effectImage3.isHidden = true
+                }
             case 4:
                 giveDamage = Int.random(in: 35...50)    // この辺後で調整する
                 monster4["hp"] = monster4["hp"]! - giveDamage
                 playerMP = playerMP - 4    // MPを減らす
                 // バトルメッセージ表示
                 messageTextView.text = "\(playerName)は つららをおとした！" + "\n\(monsterName4)に \(giveDamage)のダメージ！"
+                // エフェクト表示
+                effectImage4.image = UIImage(named: "つららおとし1")
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.04) {
+                    self.effectImage4.image = UIImage(named: "つららおとし2")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.08) {
+                    self.effectImage4.image = UIImage(named: "つららおとし3")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.12) {
+                    self.effectImage4.image = UIImage(named: "つららおとし4")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.16) {
+                    self.effectImage4.image = UIImage(named: "つららおとし5")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.20) {
+                    self.effectImage4.image = UIImage(named: "つららおとし6")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.24) {
+                    self.effectImage4.image = UIImage(named: "つららおとし7")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.28) {
+                    self.effectImage4.image = UIImage(named: "つららおとし8")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.32) {
+                    self.effectImage4.image = UIImage(named: "つららおとし9")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.36) {
+                    self.effectImage4.image = UIImage(named: "つららおとし10")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.40) {
+                    self.effectImage4.isHidden = true
+                }
             default:
                 return
             }
@@ -390,24 +750,153 @@ class battleMessageViewController: UIViewController {
                 playerMP = playerMP - 5    // MPを減らす
                 // バトルメッセージ表示
                 messageTextView.text = "\(playerName)は しょうげきはを まきおこした！" + "\n\(monsterName1)に \(giveDamage)のダメージ！"
+                // エフェクト表示
+                effectImage1.image = UIImage(named: "しょうげきは1")
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.04) {
+                    self.effectImage1.image = UIImage(named: "しょうげきは2")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.08) {
+                    self.effectImage1.image = UIImage(named: "しょうげきは3")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.12) {
+                    self.effectImage1.image = UIImage(named: "しょうげきは4")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.16) {
+                    self.effectImage1.image = UIImage(named: "しょうげきは5")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.20) {
+                    self.effectImage1.image = UIImage(named: "しょうげきは6")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.24) {
+                    self.effectImage1.image = UIImage(named: "しょうげきは7")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.28) {
+                    self.effectImage1.image = UIImage(named: "しょうげきは8")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.32) {
+                    self.effectImage1.image = UIImage(named: "しょうげきは9")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.36) {
+                    self.effectImage1.image = UIImage(named: "しょうげきは10")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.40) {
+                    self.effectImage1.isHidden = true
+                }
+                
             case 2:
                 giveDamage = Int.random(in: 50...65)    // この辺後で調整する
                 monster2["hp"] = monster2["hp"]! - giveDamage
                 playerMP = playerMP - 5    // MPを減らす
                 // バトルメッセージ表示
                 messageTextView.text = "\(playerName)は しょうげきはを まきおこした！" + "\n\(monsterName2)に \(giveDamage)のダメージ！"
+                // エフェクト表示
+                effectImage2.image = UIImage(named: "しょうげきは1")
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.04) {
+                    self.effectImage2.image = UIImage(named: "しょうげきは2")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.08) {
+                    self.effectImage2.image = UIImage(named: "しょうげきは3")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.12) {
+                    self.effectImage2.image = UIImage(named: "しょうげきは4")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.16) {
+                    self.effectImage2.image = UIImage(named: "しょうげきは5")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.20) {
+                    self.effectImage2.image = UIImage(named: "しょうげきは6")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.24) {
+                    self.effectImage2.image = UIImage(named: "しょうげきは7")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.28) {
+                    self.effectImage2.image = UIImage(named: "しょうげきは8")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.32) {
+                    self.effectImage2.image = UIImage(named: "しょうげきは9")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.36) {
+                    self.effectImage2.image = UIImage(named: "しょうげきは10")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.40) {
+                    self.effectImage2.isHidden = true
+                }
             case 3:
                 giveDamage = Int.random(in: 50...65)    // この辺後で調整する
                 monster3["hp"] = monster3["hp"]! - giveDamage
                 playerMP = playerMP - 5    // MPを減らす
                 // バトルメッセージ表示
                 messageTextView.text = "\(playerName)は しょうげきはを まきおこした！" + "\n\(monsterName3)に \(giveDamage)のダメージ！"
+                // エフェクト表示
+                effectImage3.image = UIImage(named: "しょうげきは1")
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.04) {
+                    self.effectImage3.image = UIImage(named: "しょうげきは2")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.08) {
+                    self.effectImage3.image = UIImage(named: "しょうげきは3")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.12) {
+                    self.effectImage3.image = UIImage(named: "しょうげきは4")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.16) {
+                    self.effectImage3.image = UIImage(named: "しょうげきは5")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.20) {
+                    self.effectImage3.image = UIImage(named: "しょうげきは6")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.24) {
+                    self.effectImage3.image = UIImage(named: "しょうげきは7")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.28) {
+                    self.effectImage3.image = UIImage(named: "しょうげきは8")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.32) {
+                    self.effectImage3.image = UIImage(named: "しょうげきは9")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.36) {
+                    self.effectImage3.image = UIImage(named: "しょうげきは10")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.40) {
+                    self.effectImage3.isHidden = true
+                }
             case 4:
                 giveDamage = Int.random(in: 50...65)    // この辺後で調整する
                 monster4["hp"] = monster4["hp"]! - giveDamage
                 playerMP = playerMP - 5    // MPを減らす
                 // バトルメッセージ表示
                 messageTextView.text = "\(playerName)は しょうげきはを まきおこした！" + "\n\(monsterName4)に \(giveDamage)のダメージ！"
+                // エフェクト表示
+                effectImage4.image = UIImage(named: "しょうげきは1")
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.04) {
+                    self.effectImage4.image = UIImage(named: "しょうげきは2")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.08) {
+                    self.effectImage4.image = UIImage(named: "しょうげきは3")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.12) {
+                    self.effectImage4.image = UIImage(named: "しょうげきは4")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.16) {
+                    self.effectImage4.image = UIImage(named: "しょうげきは5")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.20) {
+                    self.effectImage4.image = UIImage(named: "しょうげきは6")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.24) {
+                    self.effectImage4.image = UIImage(named: "しょうげきは7")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.28) {
+                    self.effectImage4.image = UIImage(named: "しょうげきは8")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.32) {
+                    self.effectImage4.image = UIImage(named: "しょうげきは9")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.36) {
+                    self.effectImage4.image = UIImage(named: "しょうげきは10")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.40) {
+                    self.effectImage4.isHidden = true
+                }
             default:
                 return
             }
@@ -420,24 +909,153 @@ class battleMessageViewController: UIViewController {
                 playerMP = playerMP - 8    // MPを減らす
                 // バトルメッセージ表示
                 messageTextView.text = "\(playerName)は ライトビームを はなった！" + "\n\(monsterName1)に \(giveDamage)のダメージ！"
+                // エフェクト表示
+                effectImage1.image = UIImage(named: "ライトビーム_01")
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.04) {
+                    self.effectImage1.image = UIImage(named: "ライトビーム_02")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.08) {
+                    self.effectImage1.image = UIImage(named: "ライトビーム_03")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.12) {
+                    self.effectImage1.image = UIImage(named: "ライトビーム_04")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.16) {
+                    self.effectImage1.image = UIImage(named: "ライトビーム_05")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.20) {
+                    self.effectImage1.image = UIImage(named: "ライトビーム_06")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.24) {
+                    self.effectImage1.image = UIImage(named: "ライトビーム_07")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.28) {
+                    self.effectImage1.image = UIImage(named: "ライトビーム_08")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.32) {
+                    self.effectImage1.image = UIImage(named: "ライトビーム_09")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.36) {
+                    self.effectImage1.image = UIImage(named: "ライトビーム_10")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.40) {
+                    self.effectImage1.isHidden = true
+                }
+                
             case 2:
                 giveDamage = Int.random(in: 80...110)    // この辺後で調整する
                 monster2["hp"] = monster2["hp"]! - giveDamage
                 playerMP = playerMP - 8    // MPを減らす
                 // バトルメッセージ表示
                 messageTextView.text = "\(playerName)は ライトビームを はなった！" + "\n\(monsterName2)に \(giveDamage)のダメージ！"
+                // エフェクト表示
+                effectImage2.image = UIImage(named: "ライトビーム_01")
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.04) {
+                    self.effectImage2.image = UIImage(named: "ライトビーム_02")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.08) {
+                    self.effectImage2.image = UIImage(named: "ライトビーム_03")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.12) {
+                    self.effectImage2.image = UIImage(named: "ライトビーム_04")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.16) {
+                    self.effectImage2.image = UIImage(named: "ライトビーム_05")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.20) {
+                    self.effectImage2.image = UIImage(named: "ライトビーム_06")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.24) {
+                    self.effectImage2.image = UIImage(named: "ライトビーム_07")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.28) {
+                    self.effectImage2.image = UIImage(named: "ライトビーム_08")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.32) {
+                    self.effectImage2.image = UIImage(named: "ライトビーム_09")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.36) {
+                    self.effectImage2.image = UIImage(named: "ライトビーム_10")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.40) {
+                    self.effectImage2.isHidden = true
+                }
             case 3:
                 giveDamage = Int.random(in: 80...110)    // この辺後で調整する
                 monster3["hp"] = monster3["hp"]! - giveDamage
                 playerMP = playerMP - 8    // MPを減らす
                 // バトルメッセージ表示
                 messageTextView.text = "\(playerName)は ライトビームを はなった！" + "\n\(monsterName3)に \(giveDamage)のダメージ！"
+                // エフェクト表示
+                effectImage3.image = UIImage(named: "ライトビーム_01")
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.04) {
+                    self.effectImage3.image = UIImage(named: "ライトビーム_02")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.08) {
+                    self.effectImage3.image = UIImage(named: "ライトビーム_03")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.12) {
+                    self.effectImage3.image = UIImage(named: "ライトビーム_04")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.16) {
+                    self.effectImage3.image = UIImage(named: "ライトビーム_05")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.20) {
+                    self.effectImage3.image = UIImage(named: "ライトビーム_06")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.24) {
+                    self.effectImage3.image = UIImage(named: "ライトビーム_07")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.28) {
+                    self.effectImage3.image = UIImage(named: "ライトビーム_08")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.32) {
+                    self.effectImage3.image = UIImage(named: "ライトビーム_09")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.36) {
+                    self.effectImage3.image = UIImage(named: "ライトビーム_10")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.40) {
+                    self.effectImage3.isHidden = true
+                }
             case 4:
                 giveDamage = Int.random(in: 80...110)    // この辺後で調整する
                 monster4["hp"] = monster4["hp"]! - giveDamage
                 playerMP = playerMP - 8    // MPを減らす
                 // バトルメッセージ表示
                 messageTextView.text = "\(playerName)は ライトビームを はなった！" + "\n\(monsterName4)に \(giveDamage)のダメージ！"
+                // エフェクト表示
+                effectImage4.image = UIImage(named: "ライトビーム_01")
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.04) {
+                    self.effectImage4.image = UIImage(named: "ライトビーム_02")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.08) {
+                    self.effectImage4.image = UIImage(named: "ライトビーム_03")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.12) {
+                    self.effectImage4.image = UIImage(named: "ライトビーム_04")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.16) {
+                    self.effectImage4.image = UIImage(named: "ライトビーム_05")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.20) {
+                    self.effectImage4.image = UIImage(named: "ライトビーム_06")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.24) {
+                    self.effectImage4.image = UIImage(named: "ライトビーム_07")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.28) {
+                    self.effectImage4.image = UIImage(named: "ライトビーム_08")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.32) {
+                    self.effectImage4.image = UIImage(named: "ライトビーム_09")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.36) {
+                    self.effectImage4.image = UIImage(named: "ライトビーム_10")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.40) {
+                    self.effectImage4.isHidden = true
+                }
             default:
                 return
             }
@@ -466,24 +1084,176 @@ class battleMessageViewController: UIViewController {
                 playerMP = playerMP - 13    // MPを減らす
                 // バトルメッセージ表示
                 messageTextView.text = "\(playerName)は スターダストを となえた！" + "\n\(monsterName1)に \(giveDamage)のダメージ！"
+                // エフェクト表示
+                bigEffectImage1.image = UIImage(named: "スターダスト1")
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.04) {
+                    self.bigEffectImage1.image = UIImage(named: "スターダスト2")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.08) {
+                    self.bigEffectImage1.image = UIImage(named: "スターダスト3")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.12) {
+                    self.bigEffectImage1.image = UIImage(named: "スターダスト4")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.16) {
+                    self.bigEffectImage1.image = UIImage(named: "スターダスト5")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.20) {
+                    self.bigEffectImage1.image = UIImage(named: "スターダスト6")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.24) {
+                    self.bigEffectImage1.image = UIImage(named: "スターダスト7")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.28) {
+                    self.bigEffectImage1.image = UIImage(named: "スターダスト8")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.32) {
+                    self.bigEffectImage1.image = UIImage(named: "スターダスト9")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.36) {
+                    self.bigEffectImage1.image = UIImage(named: "スターダスト10")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.40) {
+                    self.bigEffectImage1.image = UIImage(named: "スターダスト11")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.44) {
+                    self.bigEffectImage1.image = UIImage(named: "スターダスト12")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.48) {
+                    self.bigEffectImage1.isHidden = true
+                }
             case 2:
                 giveDamage = Int.random(in: 160...300)    // この辺後で調整する
                 monster2["hp"] = monster2["hp"]! - giveDamage
                 playerMP = playerMP - 13    // MPを減らす
                 // バトルメッセージ表示
                 messageTextView.text = "\(playerName)は スターダストを となえた！" + "\n\(monsterName2)に \(giveDamage)のダメージ！"
+                // エフェクト表示
+                bigEffectImage2.image = UIImage(named: "スターダスト1")
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.04) {
+                    self.bigEffectImage2.image = UIImage(named: "スターダスト2")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.08) {
+                    self.bigEffectImage2.image = UIImage(named: "スターダスト3")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.12) {
+                    self.bigEffectImage2.image = UIImage(named: "スターダスト4")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.16) {
+                    self.bigEffectImage2.image = UIImage(named: "スターダスト5")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.20) {
+                    self.bigEffectImage2.image = UIImage(named: "スターダスト6")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.24) {
+                    self.bigEffectImage2.image = UIImage(named: "スターダスト7")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.28) {
+                    self.bigEffectImage2.image = UIImage(named: "スターダスト8")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.32) {
+                    self.bigEffectImage2.image = UIImage(named: "スターダスト9")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.36) {
+                    self.bigEffectImage2.image = UIImage(named: "スターダスト10")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.40) {
+                    self.bigEffectImage2.image = UIImage(named: "スターダスト11")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.44) {
+                    self.bigEffectImage2.image = UIImage(named: "スターダスト12")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.48) {
+                    self.bigEffectImage2.isHidden = true
+                }
             case 3:
                 giveDamage = Int.random(in: 160...300)    // この辺後で調整する
                 monster3["hp"] = monster3["hp"]! - giveDamage
                 playerMP = playerMP - 13    // MPを減らす
                 // バトルメッセージ表示
                 messageTextView.text = "\(playerName)は スターダストを となえた！" + "\n\(monsterName3)に \(giveDamage)のダメージ！"
+                // エフェクト表示
+                bigEffectImage3.image = UIImage(named: "スターダスト1")
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.04) {
+                    self.bigEffectImage3.image = UIImage(named: "スターダスト2")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.08) {
+                    self.bigEffectImage3.image = UIImage(named: "スターダスト3")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.12) {
+                    self.bigEffectImage3.image = UIImage(named: "スターダスト4")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.16) {
+                    self.bigEffectImage3.image = UIImage(named: "スターダスト5")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.20) {
+                    self.bigEffectImage3.image = UIImage(named: "スターダスト6")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.24) {
+                    self.bigEffectImage3.image = UIImage(named: "スターダスト7")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.28) {
+                    self.bigEffectImage3.image = UIImage(named: "スターダスト8")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.32) {
+                    self.bigEffectImage3.image = UIImage(named: "スターダスト9")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.36) {
+                    self.bigEffectImage3.image = UIImage(named: "スターダスト10")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.40) {
+                    self.bigEffectImage3.image = UIImage(named: "スターダスト11")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.44) {
+                    self.bigEffectImage3.image = UIImage(named: "スターダスト12")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.48) {
+                    self.bigEffectImage3.isHidden = true
+                }
             case 4:
                 giveDamage = Int.random(in: 160...300)    // この辺後で調整する
                 monster4["hp"] = monster4["hp"]! - giveDamage
                 playerMP = playerMP - 13    // MPを減らす
                 // バトルメッセージ表示
                 messageTextView.text = "\(playerName)は スターダストを となえた！" + "\n\(monsterName4)に \(giveDamage)のダメージ！"
+                // エフェクト表示
+                bigEffectImage4.image = UIImage(named: "スターダスト1")
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.04) {
+                    self.bigEffectImage4.image = UIImage(named: "スターダスト2")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.08) {
+                    self.bigEffectImage4.image = UIImage(named: "スターダスト3")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.12) {
+                    self.bigEffectImage4.image = UIImage(named: "スターダスト4")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.16) {
+                    self.bigEffectImage4.image = UIImage(named: "スターダスト5")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.20) {
+                    self.bigEffectImage4.image = UIImage(named: "スターダスト6")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.24) {
+                    self.bigEffectImage4.image = UIImage(named: "スターダスト7")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.28) {
+                    self.bigEffectImage4.image = UIImage(named: "スターダスト8")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.32) {
+                    self.bigEffectImage4.image = UIImage(named: "スターダスト9")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.36) {
+                    self.bigEffectImage4.image = UIImage(named: "スターダスト10")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.40) {
+                    self.bigEffectImage4.image = UIImage(named: "スターダスト11")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.44) {
+                    self.bigEffectImage4.image = UIImage(named: "スターダスト12")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.48) {
+                    self.bigEffectImage4.isHidden = true
+                }
             default:
                 return
             }
@@ -1040,7 +1810,7 @@ class battleMessageViewController: UIViewController {
         lvLabel.text = "Lv: \(playerLv)"    // ラベル反映
     }
 
-    
+
     
 
     // segue遷移前動作
