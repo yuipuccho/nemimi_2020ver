@@ -59,8 +59,8 @@ class cave1ViewController: UIViewController {
         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 3, 3, 3, 0,
         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0,
         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0,
-        0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0,
-        0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0,
+        0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0,
+        0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0,
         0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0,
         0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0,
         0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0,
@@ -149,10 +149,11 @@ class cave1ViewController: UIViewController {
 
 
 
-    // 上ボタンを押している時 touchDown
-    @IBAction func upButton(_ sender: UIButton) {
+    // 上ボタンを押している時
+    @objc func timerUp() {
         // 次のマップに遷移するかどうか
         if self.line[currentNum] == 3 {
+            timer.invalidate()
             print("おk")
             performSegue(withIdentifier: "toCave2", sender: nil)
             print("2へせんい")
@@ -165,12 +166,12 @@ class cave1ViewController: UIViewController {
             if self.line[currentNum] >= 1 && self.line[currentNum] <= 4 {    // 1-4なら移動可能
                 // 【普通に移動できるとき】
                 // 1. プレイヤーを移動させる
-                UIView.animate(withDuration: 0.8, animations: {
+                UIView.animate(withDuration: 0.6, animations: {
                     self.playerImage.center.y -= self.gameView.frame.size.height / 12
 
                     // ☆
                     self.playerImage.image = UIImage(named: "ヒーロー上1")
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.15) {
                         self.playerImage.image = UIImage(named: "ヒーロー上2")
                     }
 
@@ -179,7 +180,7 @@ class cave1ViewController: UIViewController {
                 count += 1
 
                 // 3. エンカウント処理
-                //encount()
+                encount()
 
 
             } else if self.line[currentNum] == 0 {
@@ -190,17 +191,17 @@ class cave1ViewController: UIViewController {
     }
 
     // 左ボタン
-    @IBAction func leftButton(_ sender: UIButton) {
+    @objc func timerLeft() {
         if currentNum - 1 >= 0 {  // 移動先の配列番号が存在するか確認
             self.currentNum -= 1    // 配列番号を移動先の番号に変える。(self つけないとボタンが反応してくれなくなる)
 
             if self.line[currentNum] >= 1 && self.line[currentNum] <= 4 {    // 1-4なら移動可能
-                UIView.animate(withDuration: 0.8, animations: {
+                UIView.animate(withDuration: 0.6, animations: {
                     self.playerImage.center.x -= self.gameView.frame.size.width / 21
 
                     // ☆
                     self.playerImage.image = UIImage(named: "ヒーロー左1")
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.15) {
                         self.playerImage.image = UIImage(named: "ヒーロー左2")
                     }
                 })
@@ -209,7 +210,7 @@ class cave1ViewController: UIViewController {
                 count += 1
 
                 // 3. エンカウント処理
-                //encount()
+                encount()
 
             } else if self.line[currentNum] == 0 {
                 // 【障害物にあたったとき】
@@ -219,17 +220,17 @@ class cave1ViewController: UIViewController {
     }
 
     // 右ボタン
-    @IBAction func rightButton(_ sender: UIButton) {
+   @objc func timerRight() {
         if currentNum + 1 <= 251 {  // 移動先の配列番号が存在するか確認
             self.currentNum += 1    // 配列番号を移動先の番号に変える。(self つけないとボタンが反応してくれなくなる)
 
             if self.line[currentNum] >= 1 && self.line[currentNum] <= 4 {    // 1-4なら移動可能
-                UIView.animate(withDuration: 0.8, animations: {
+                UIView.animate(withDuration: 0.6, animations: {
                     self.playerImage.center.x += self.gameView.frame.size.width / 21
 
                     // ☆
                     self.playerImage.image = UIImage(named: "ヒーロー右1")
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.15) {
                         self.playerImage.image = UIImage(named: "ヒーロー右2")
                     }
                 })
@@ -238,7 +239,7 @@ class cave1ViewController: UIViewController {
                 count += 1
 
                 // 3. エンカウント処理
-                //encount()
+                encount()
 
             } else if self.line[currentNum] == 0 {
                 // 【障害物にあたったとき】
@@ -248,18 +249,18 @@ class cave1ViewController: UIViewController {
     }
 
     // 下ボタン
-    @IBAction func downButton(_ sender: UIButton) {
+    @objc func timerDown() {
         if currentNum + 21 <= 251 {  // 移動先の配列番号が存在するか確認
             self.currentNum += 21    // 配列番号を移動先の番号に変える。(self つけないとボタンが反応してくれなくなる)
 
             if self.line[currentNum] >= 1 && self.line[currentNum] <= 4 {    // 1-4なら移動可能
                 // 【普通に移動できるとき】
-                UIView.animate(withDuration: 0.8, animations: {
+                UIView.animate(withDuration: 0.6, animations: {
                     self.playerImage.center.y += self.gameView.frame.size.height / 12
 
                     // ☆
                     self.playerImage.image = UIImage(named: "ヒーロー下1")
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.15) {
                         self.playerImage.image = UIImage(named: "ヒーロー下2")
                     }
                 })
@@ -268,7 +269,7 @@ class cave1ViewController: UIViewController {
                 count += 1
 
                 // 3. エンカウント処理
-                //encount()
+                encount()
 
 
             } else if self.line[currentNum] == 0 {
@@ -341,20 +342,24 @@ class cave1ViewController: UIViewController {
         switch count {
         case 2:    // 歩数が2歩の時
             if int < 1 {    // 乱数が0だったら遷移して戦闘
+                timer.invalidate()
                 performSegue(withIdentifier: "toBattle", sender: nil)
                 print("せんい")
             }
         case 5:    // 歩数が5歩の時
             if int < 6 {     // 乱数が0~5だったら遷移して戦闘
+                timer.invalidate()
                 performSegue(withIdentifier: "toBattle", sender: nil)
                 print("せんい")
             }
         case 8:    // 歩数が8歩の時
             if int < 9 {    // 乱数が0~8だったら遷移して戦闘
+                timer.invalidate()
                 performSegue(withIdentifier: "toBattle", sender: nil)
                 print("せんい")
             }
         case 10:    // 歩数が10歩の時
+            timer.invalidate()
             performSegue(withIdentifier: "toBattle", sender: nil)    // 強制で戦闘
             print("せんい")
 
@@ -433,34 +438,14 @@ class cave1ViewController: UIViewController {
         }
     }
 
-    // ☆
 
-    // 上ボタンの処理
-    @objc func timerUp() {
-        self.upButton(upButton)
-    }
-
-    // 左ボタンの処理
-    @objc func timerLeft() {
-        self.leftButton(leftButton)
-    }
-
-    // 右ボタンの処理
-    @objc func timerRight() {
-        self.rightButton(rightButton)
-    }
-
-    // 下ボタンの処理
-    @objc func timerDown() {
-        self.downButton(downButton)
-    }
 
 
     // 上ボタン長押し
     @IBAction func upButtonLongTap(_ sender: UILongPressGestureRecognizer) {
 
         if(sender.state == UIGestureRecognizer.State.began) {
-           timer = Timer.scheduledTimer(timeInterval: 0.4, target: self, selector: #selector(cave1ViewController.timerUp), userInfo: nil, repeats: true)
+           timer = Timer.scheduledTimer(timeInterval: 0.3, target: self, selector: #selector(cave1ViewController.timerUp), userInfo: nil, repeats: true)
 
         } else if (sender.state == UIGestureRecognizer.State.ended) {
             timer.invalidate()
@@ -471,7 +456,7 @@ class cave1ViewController: UIViewController {
     // 左ボタン長押し
     @IBAction func leftButtonLongTap(_ sender: UILongPressGestureRecognizer) {
         if(sender.state == UIGestureRecognizer.State.began) {
-            timer = Timer.scheduledTimer(timeInterval: 0.4, target: self, selector: #selector(cave1ViewController.timerLeft), userInfo: nil, repeats: true)
+            timer = Timer.scheduledTimer(timeInterval: 0.3, target: self, selector: #selector(cave1ViewController.timerLeft), userInfo: nil, repeats: true)
 
         } else if (sender.state == UIGestureRecognizer.State.ended) {
             timer.invalidate()
@@ -481,7 +466,7 @@ class cave1ViewController: UIViewController {
 
     @IBAction func rightButtonLongTap(_ sender: UILongPressGestureRecognizer) {
         if(sender.state == UIGestureRecognizer.State.began) {
-            timer = Timer.scheduledTimer(timeInterval: 0.4, target: self, selector: #selector(cave1ViewController.timerRight), userInfo: nil, repeats: true)
+            timer = Timer.scheduledTimer(timeInterval: 0.3, target: self, selector: #selector(cave1ViewController.timerRight), userInfo: nil, repeats: true)
 
         } else if (sender.state == UIGestureRecognizer.State.ended) {
             timer.invalidate()
@@ -491,7 +476,7 @@ class cave1ViewController: UIViewController {
 
     @IBAction func downButtonLongTap(_ sender: UILongPressGestureRecognizer) {
         if(sender.state == UIGestureRecognizer.State.began) {
-            timer = Timer.scheduledTimer(timeInterval: 0.4, target: self, selector: #selector(cave1ViewController.timerDown), userInfo: nil, repeats: true)
+            timer = Timer.scheduledTimer(timeInterval: 0.3, target: self, selector: #selector(cave1ViewController.timerDown), userInfo: nil, repeats: true)
 
         } else if (sender.state == UIGestureRecognizer.State.ended) {
             timer.invalidate()

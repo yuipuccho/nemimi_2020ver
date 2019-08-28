@@ -17,6 +17,13 @@ class cave9ViewController: UIViewController {
     @IBOutlet weak var thigreImage: UIImageView!    // ティグレ
     @IBOutlet weak var princessImage: UIImageView!
 
+    @IBOutlet weak var upButton: UIButton!
+    @IBOutlet weak var leftButton: UIButton!
+    @IBOutlet weak var rightButton: UIButton!
+    @IBOutlet weak var downButton: UIButton!
+
+    weak var timer: Timer!
+
     /// 【プレイヤーのパラメータ】
     //var player: [String: Any] = [:]
     var player:  [String: Any] = ["name": "ほげぇ", "maxHP": 222, "maxMP": 180, "atk": 2080, "def": 4000, "nowHP": 222, "nowMP": 200, "exp":35000, "Lv": 30]
@@ -162,6 +169,7 @@ class cave9ViewController: UIViewController {
                     textView.text = "ティグレ「じゃまをするものは\n  八つ裂きにしてくれるわ！！」"
                 case 3:
                     encount()
+                    timer.invalidate()
                     performSegue(withIdentifier: "toBattle", sender: nil)
                 default:
                     return
@@ -218,6 +226,12 @@ class cave9ViewController: UIViewController {
                     // 1. プレイヤーを移動させる
                     UIView.animate(withDuration: 1, animations: {
                         self.playerImage.center.y -= self.gameView.frame.size.height / 12
+
+                        // ☆
+                        self.playerImage.image = UIImage(named: "ヒーロー上1")
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+                            self.playerImage.image = UIImage(named: "ヒーロー上2")
+                        }
                     })
                     // 2. 歩数をカウントする
                     count += 1
@@ -255,6 +269,12 @@ class cave9ViewController: UIViewController {
                 if self.line[currentNum] >= 1 && self.line[currentNum] <= 6 {    // 1-6なら移動可能
                     UIView.animate(withDuration: 1, animations: {
                         self.playerImage.center.x -= self.gameView.frame.size.width / 21
+
+                        // ☆
+                        self.playerImage.image = UIImage(named: "ヒーロー左1")
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+                            self.playerImage.image = UIImage(named: "ヒーロー左2")
+                        }
                     })
 
                     // 2. 歩数をカウントする
@@ -291,6 +311,12 @@ class cave9ViewController: UIViewController {
                 if self.line[currentNum] >= 1 && self.line[currentNum] <= 6 {    // 1-6なら移動可能
                     UIView.animate(withDuration: 1, animations: {
                         self.playerImage.center.x += self.gameView.frame.size.width / 21
+
+                        // ☆
+                        self.playerImage.image = UIImage(named: "ヒーロー右1")
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+                            self.playerImage.image = UIImage(named: "ヒーロー右2")
+                        }
                     })
 
                     // 2. 歩数をカウントする
@@ -322,6 +348,7 @@ class cave9ViewController: UIViewController {
 
             // ★前のマップに遷移するかどうか
             if self.line[currentNum] == 2 {
+                timer.invalidate()
                 print("おk")
                 performSegue(withIdentifier: "toCave8", sender: nil)
                 print("8へせんい")
@@ -334,6 +361,12 @@ class cave9ViewController: UIViewController {
                     // 【普通に移動できるとき】
                     UIView.animate(withDuration: 1, animations: {
                         self.playerImage.center.y += self.gameView.frame.size.height / 12
+
+                        // ☆
+                        self.playerImage.image = UIImage(named: "ヒーロー下1")
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+                            self.playerImage.image = UIImage(named: "ヒーロー下2")
+                        }
                     })
 
                     // 2. 歩数をカウントする
@@ -456,11 +489,72 @@ class cave9ViewController: UIViewController {
             // ハーミット討伐済かどうか
             vc.defeatHermit = defeatHermit
 
-
-
-
-
         }
 
     }
+    // ☆
+
+    // 上ボタンの処理
+    @objc func timerUp() {
+        self.upButton(upButton)
+    }
+
+    // 左ボタンの処理
+    @objc func timerLeft() {
+        self.leftButton(leftButton)
+    }
+
+    // 右ボタンの処理
+    @objc func timerRight() {
+        self.rightButton(rightButton)
+    }
+
+    // 下ボタンの処理
+    @objc func timerDown() {
+        self.downButton(downButton)
+    }
+    // 上ボタン長押し
+    @IBAction func upButtonLongTap(_ sender: UILongPressGestureRecognizer) {
+
+        if(sender.state == UIGestureRecognizer.State.began) {
+            timer = Timer.scheduledTimer(timeInterval: 0.4, target: self, selector: #selector(cave1ViewController.timerUp), userInfo: nil, repeats: true)
+
+        } else if (sender.state == UIGestureRecognizer.State.ended) {
+            timer.invalidate()
+        }
+    }
+
+
+    // 左ボタン長押し
+    @IBAction func leftButtonLongTap(_ sender: UILongPressGestureRecognizer) {
+        if(sender.state == UIGestureRecognizer.State.began) {
+            timer = Timer.scheduledTimer(timeInterval: 0.4, target: self, selector: #selector(cave1ViewController.timerLeft), userInfo: nil, repeats: true)
+
+        } else if (sender.state == UIGestureRecognizer.State.ended) {
+            timer.invalidate()
+        }
+    }
+
+
+    @IBAction func rightButtonLongTap(_ sender: UILongPressGestureRecognizer) {
+        if(sender.state == UIGestureRecognizer.State.began) {
+            timer = Timer.scheduledTimer(timeInterval: 0.4, target: self, selector: #selector(cave1ViewController.timerRight), userInfo: nil, repeats: true)
+
+        } else if (sender.state == UIGestureRecognizer.State.ended) {
+            timer.invalidate()
+        }
+    }
+
+
+    @IBAction func downButtonLongTap(_ sender: UILongPressGestureRecognizer) {
+        if(sender.state == UIGestureRecognizer.State.began) {
+            timer = Timer.scheduledTimer(timeInterval: 0.4, target: self, selector: #selector(cave1ViewController.timerDown), userInfo: nil, repeats: true)
+
+        } else if (sender.state == UIGestureRecognizer.State.ended) {
+            timer.invalidate()
+        }
+    }
 }
+
+
+

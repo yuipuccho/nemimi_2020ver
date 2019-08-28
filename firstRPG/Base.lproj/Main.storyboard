@@ -182,9 +182,6 @@
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yVl-jM-QRI">
                                                         <rect key="frame" x="23.5" y="0.0" width="23" height="23.5"/>
                                                         <state key="normal" title="button" image="jbutton"/>
-                                                        <connections>
-                                                            <action selector="upButton:" destination="BYZ-38-t0r" eventType="touchDown" id="ZPy-lW-Mu0"/>
-                                                        </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bdZ-0o-jaI">
                                                         <rect key="frame" x="46.5" y="0.0" width="23.5" height="23.5"/>
@@ -200,9 +197,6 @@
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NR0-j4-Ixe">
                                                         <rect key="frame" x="0.0" y="0.0" width="23.5" height="23"/>
                                                         <state key="normal" title="Button" image="lbutton"/>
-                                                        <connections>
-                                                            <action selector="leftButton:" destination="BYZ-38-t0r" eventType="touchDown" id="GWx-Ax-q57"/>
-                                                        </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sva-RZ-KiS">
                                                         <rect key="frame" x="23.5" y="0.0" width="23" height="23"/>
@@ -213,9 +207,6 @@
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZaG-dj-QWO">
                                                         <rect key="frame" x="46.5" y="0.0" width="23.5" height="23"/>
                                                         <state key="normal" title="Button" image="rbutton"/>
-                                                        <connections>
-                                                            <action selector="rightButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2Ue-Y2-9D2"/>
-                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -231,9 +222,6 @@
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fxQ-gE-Fdn">
                                                         <rect key="frame" x="23.5" y="0.0" width="23" height="23.5"/>
                                                         <state key="normal" title="Button" image="dbutton"/>
-                                                        <connections>
-                                                            <action selector="downButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PGs-LO-a92"/>
-                                                        </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X8n-06-CKw">
                                                         <rect key="frame" x="46.5" y="0.0" width="23.5" height="23.5"/>
@@ -1234,7 +1222,6 @@
                                                         <gestureRecognizers/>
                                                         <state key="normal" title="button" image="jbutton"/>
                                                         <connections>
-                                                            <action selector="upButton:" destination="BYZ-38-t0r" eventType="touchDown" id="3rD-cs-R4y"/>
                                                             <outletCollection property="gestureRecognizers" destination="WEE-6J-gQB" appends="YES" id="Af6-lQ-xIz"/>
                                                         </connections>
                                                     </button>
@@ -1254,7 +1241,6 @@
                                                         <gestureRecognizers/>
                                                         <state key="normal" title="Button" image="lbutton"/>
                                                         <connections>
-                                                            <action selector="leftButton:" destination="BYZ-38-t0r" eventType="touchDown" id="PSe-su-fYa"/>
                                                             <outletCollection property="gestureRecognizers" destination="R6q-YS-ahm" appends="YES" id="Z0R-Uc-MRb"/>
                                                         </connections>
                                                     </button>
@@ -1269,7 +1255,6 @@
                                                         <gestureRecognizers/>
                                                         <state key="normal" title="Button" image="rbutton"/>
                                                         <connections>
-                                                            <action selector="rightButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bgK-eM-Hu1"/>
                                                             <outletCollection property="gestureRecognizers" destination="Qj8-wM-0Ag" appends="YES" id="A7X-aO-pl6"/>
                                                         </connections>
                                                     </button>
@@ -1289,7 +1274,6 @@
                                                         <gestureRecognizers/>
                                                         <state key="normal" title="Button" image="dbutton"/>
                                                         <connections>
-                                                            <action selector="downButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tc7-xr-wz3"/>
                                                             <outletCollection property="gestureRecognizers" destination="DvM-bf-piD" appends="YES" id="zEj-2s-vb1"/>
                                                         </connections>
                                                     </button>
@@ -1802,7 +1786,6 @@
                                                         <rect key="frame" x="23.5" y="0.0" width="23" height="23.5"/>
                                                         <state key="normal" title="button" image="jbutton"/>
                                                         <connections>
-                                                            <action selector="upButton:" destination="BYZ-38-t0r" eventType="touchDown" id="ERX-Sm-qDl"/>
                                                             <action selector="upButton:" destination="LSy-9n-y8y" eventType="touchUpInside" id="gvr-Ze-1j6"/>
                                                         </connections>
                                                     </button>
@@ -1822,7 +1805,6 @@
                                                         <state key="normal" title="Button" image="lbutton"/>
                                                         <connections>
                                                             <action selector="leftButton:" destination="LSy-9n-y8y" eventType="touchUpInside" id="E3F-RV-lTN"/>
-                                                            <action selector="leftButton:" destination="BYZ-38-t0r" eventType="touchDown" id="kWd-Ur-YrV"/>
                                                         </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m0Y-iU-kLE">
@@ -1835,7 +1817,6 @@
                                                         <rect key="frame" x="46.5" y="0.0" width="23.5" height="23"/>
                                                         <state key="normal" title="Button" image="rbutton"/>
                                                         <connections>
-                                                            <action selector="rightButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Eyt-fT-GHO"/>
                                                             <action selector="rightButton:" destination="LSy-9n-y8y" eventType="touchUpInside" id="d6h-So-5j2"/>
                                                         </connections>
                                                     </button>
@@ -1854,7 +1835,6 @@
                                                         <rect key="frame" x="23.5" y="0.0" width="23" height="23.5"/>
                                                         <state key="normal" title="Button" image="dbutton"/>
                                                         <connections>
-                                                            <action selector="downButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SVR-JE-dif"/>
                                                             <action selector="downButton:" destination="LSy-9n-y8y" eventType="touchUpInside" id="v4s-pE-bPX"/>
                                                         </connections>
                                                     </button>
@@ -2908,6 +2888,7 @@
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QK4-gb-DBd">
                                                         <rect key="frame" x="23.5" y="0.0" width="23" height="23.5"/>
+                                                        <gestureRecognizers/>
                                                         <state key="normal" title="button" image="jbutton"/>
                                                         <connections>
                                                             <action selector="upButton:" destination="IMm-Jw-zwl" eventType="touchUpInside" id="C3X-J7-tP3"/>
@@ -2915,8 +2896,8 @@
                                                             <action selector="upButton:" destination="T6C-kC-tbL" eventType="touchUpInside" id="UOd-fg-cb2"/>
                                                             <action selector="upButton:" destination="BBQ-Rh-IIw" eventType="touchUpInside" id="izn-70-cn5"/>
                                                             <action selector="upButton:" destination="gte-P1-FwM" eventType="touchUpInside" id="laJ-2z-VMf"/>
-                                                            <action selector="upButton:" destination="BYZ-38-t0r" eventType="touchDown" id="q0z-od-xIU"/>
                                                             <action selector="upButton:" destination="cQM-HF-MfT" eventType="touchUpInside" id="xHo-RF-0cd"/>
+                                                            <outletCollection property="gestureRecognizers" destination="g19-af-F48" appends="YES" id="MPV-oo-BaN"/>
                                                         </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qBK-yd-5R4">
@@ -2932,15 +2913,16 @@
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sce-UJ-klt">
                                                         <rect key="frame" x="0.0" y="0.0" width="23.5" height="23"/>
+                                                        <gestureRecognizers/>
                                                         <state key="normal" title="Button" image="lbutton"/>
                                                         <connections>
-                                                            <action selector="leftButton:" destination="BYZ-38-t0r" eventType="touchDown" id="4Hm-EY-eBU"/>
                                                             <action selector="leftButton:" destination="8oD-8e-0LV" eventType="touchUpInside" id="H9B-oG-PCU"/>
                                                             <action selector="leftButton:" destination="gte-P1-FwM" eventType="touchUpInside" id="MfG-sK-SRV"/>
                                                             <action selector="leftButton:" destination="T6C-kC-tbL" eventType="touchUpInside" id="USL-Dq-RoC"/>
                                                             <action selector="leftButton:" destination="BBQ-Rh-IIw" eventType="touchUpInside" id="WFo-TX-Je2"/>
                                                             <action selector="leftButton:" destination="cQM-HF-MfT" eventType="touchUpInside" id="tBR-LT-YMp"/>
                                                             <action selector="leftButton:" destination="IMm-Jw-zwl" eventType="touchUpInside" id="zuh-O5-0d5"/>
+                                                            <outletCollection property="gestureRecognizers" destination="JWS-Cx-PbJ" appends="YES" id="iNy-ap-e3y"/>
                                                         </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3qh-Fv-doY">
@@ -2951,9 +2933,11 @@
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oeP-AB-QEO">
                                                         <rect key="frame" x="46.5" y="0.0" width="23.5" height="23"/>
+                                                        <gestureRecognizers/>
                                                         <state key="normal" title="Button" image="rbutton"/>
                                                         <connections>
                                                             <action selector="rightButton:" destination="gte-P1-FwM" eventType="touchUpInside" id="v69-kQ-IO0"/>
+                                                            <outletCollection property="gestureRecognizers" destination="bK1-fe-yc4" appends="YES" id="pQI-Hl-YZu"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -2969,9 +2953,11 @@
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wdQ-Tl-wtO">
                                                         <rect key="frame" x="23.5" y="0.0" width="23" height="23.5"/>
+                                                        <gestureRecognizers/>
                                                         <state key="normal" title="Button" image="dbutton"/>
                                                         <connections>
                                                             <action selector="downButton:" destination="gte-P1-FwM" eventType="touchUpInside" id="j7d-fl-VxA"/>
+                                                            <outletCollection property="gestureRecognizers" destination="wa9-u0-gf5" appends="YES" id="DUA-wD-WXu"/>
                                                         </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ul9-Ig-cRy">
@@ -3119,16 +3105,40 @@
                         <viewLayoutGuide key="safeArea" id="evh-P6-kFM"/>
                     </view>
                     <connections>
+                        <outlet property="downButton" destination="wdQ-Tl-wtO" id="beI-AV-orM"/>
                         <outlet property="gameView" destination="W7f-9j-QXx" id="LBU-Pp-CO7"/>
+                        <outlet property="leftButton" destination="Sce-UJ-klt" id="Q6p-LY-BuM"/>
                         <outlet property="playerImage" destination="WXD-Ik-aCo" id="fkk-Yi-1Qa"/>
                         <outlet property="princessImage" destination="TEK-Qh-GJa" id="Ugv-Bu-jlJ"/>
+                        <outlet property="rightButton" destination="oeP-AB-QEO" id="Q5f-uz-yb1"/>
                         <outlet property="textView" destination="EHI-dx-sXd" id="6tX-MN-vRh"/>
                         <outlet property="thigreImage" destination="3CA-a7-cJo" id="ZCa-oZ-ODD"/>
+                        <outlet property="upButton" destination="QK4-gb-DBd" id="xVO-5B-SR4"/>
                         <segue destination="i7F-3l-JTt" kind="show" identifier="toCave8" id="nV6-8i-tlJ"/>
                         <segue destination="pY7-AG-JsT" kind="show" identifier="toBattle" id="ilG-nT-t9J"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gp5-z5-C40" sceneMemberID="firstResponder"/>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="g19-af-F48">
+                    <connections>
+                        <action selector="upButtonLongTap:" destination="gte-P1-FwM" id="lpz-mc-nhu"/>
+                    </connections>
+                </pongPressGestureRecognizer>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="JWS-Cx-PbJ">
+                    <connections>
+                        <action selector="leftButtonLongTap:" destination="gte-P1-FwM" id="3uG-GY-3Ze"/>
+                    </connections>
+                </pongPressGestureRecognizer>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="bK1-fe-yc4">
+                    <connections>
+                        <action selector="rightButtonLongTap:" destination="gte-P1-FwM" id="rJB-nA-TJj"/>
+                    </connections>
+                </pongPressGestureRecognizer>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="wa9-u0-gf5">
+                    <connections>
+                        <action selector="downButtonLongTap:" destination="gte-P1-FwM" id="Ojc-pj-icb"/>
+                    </connections>
+                </pongPressGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-1246" y="-6090"/>
         </scene>
@@ -4020,10 +4030,11 @@
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ANm-xd-TJX">
                                                         <rect key="frame" x="23.5" y="0.0" width="23" height="23.5"/>
+                                                        <gestureRecognizers/>
                                                         <state key="normal" title="button" image="jbutton"/>
                                                         <connections>
-                                                            <action selector="upButton:" destination="BYZ-38-t0r" eventType="touchDown" id="oUL-vP-qzJ"/>
                                                             <action selector="upButton:" destination="IMm-Jw-zwl" eventType="touchUpInside" id="qUL-Wd-faW"/>
+                                                            <outletCollection property="gestureRecognizers" destination="w9s-SF-7Em" appends="YES" id="sug-Zz-ZzI"/>
                                                         </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H03-QX-M1g">
@@ -4039,10 +4050,11 @@
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rTe-J8-sPO">
                                                         <rect key="frame" x="0.0" y="0.0" width="23.5" height="23"/>
+                                                        <gestureRecognizers/>
                                                         <state key="normal" title="Button" image="lbutton"/>
                                                         <connections>
                                                             <action selector="leftButton:" destination="IMm-Jw-zwl" eventType="touchUpInside" id="FAN-Hr-bnK"/>
-                                                            <action selector="leftButton:" destination="BYZ-38-t0r" eventType="touchDown" id="WWp-s2-XWR"/>
+                                                            <outletCollection property="gestureRecognizers" destination="27f-sd-BXQ" appends="YES" id="StG-9b-aZ2"/>
                                                         </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lbo-Nt-Chd">
@@ -4053,10 +4065,11 @@
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Exr-TA-bMn">
                                                         <rect key="frame" x="46.5" y="0.0" width="23.5" height="23"/>
+                                                        <gestureRecognizers/>
                                                         <state key="normal" title="Button" image="rbutton"/>
                                                         <connections>
-                                                            <action selector="rightButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ECr-0U-KgC"/>
                                                             <action selector="rightButton:" destination="IMm-Jw-zwl" eventType="touchUpInside" id="bS4-6e-Uej"/>
+                                                            <outletCollection property="gestureRecognizers" destination="N36-9F-TqY" appends="YES" id="nuK-o2-Oh3"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -4072,10 +4085,11 @@
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8s2-nJ-sJt">
                                                         <rect key="frame" x="23.5" y="0.0" width="23" height="23.5"/>
+                                                        <gestureRecognizers/>
                                                         <state key="normal" title="Button" image="dbutton"/>
                                                         <connections>
-                                                            <action selector="downButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6Tx-X2-Eih"/>
                                                             <action selector="downButton:" destination="IMm-Jw-zwl" eventType="touchUpInside" id="Mh1-nR-nGI"/>
+                                                            <outletCollection property="gestureRecognizers" destination="sxH-Rf-S8e" appends="YES" id="byy-XD-hT4"/>
                                                         </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1iG-VF-oAd">
@@ -4131,15 +4145,39 @@
                         <viewLayoutGuide key="safeArea" id="yoQ-gg-cDY"/>
                     </view>
                     <connections>
+                        <outlet property="downButton" destination="8s2-nJ-sJt" id="f8q-7E-dgd"/>
                         <outlet property="gameView" destination="hix-EW-kdN" id="PeY-BM-Fl0"/>
+                        <outlet property="leftButton" destination="rTe-J8-sPO" id="I9O-X2-hlr"/>
                         <outlet property="playerImage" destination="4VB-lH-U1o" id="Ykr-xQ-p6e"/>
+                        <outlet property="rightButton" destination="Exr-TA-bMn" id="jf5-V4-1SY"/>
                         <outlet property="textView" destination="Dkk-9H-dIC" id="QxL-Oe-1mG"/>
+                        <outlet property="upButton" destination="ANm-xd-TJX" id="UEs-6r-pOz"/>
                         <segue destination="pY7-AG-JsT" kind="show" identifier="toBattle" id="pA1-Ic-xPq"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="toCave1" id="YdU-Rl-iRW"/>
                         <segue destination="BBQ-Rh-IIw" kind="show" identifier="toCave3" id="nzU-Qz-Wtj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xiP-Y4-v8I" sceneMemberID="firstResponder"/>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="w9s-SF-7Em">
+                    <connections>
+                        <action selector="upButtonLongTap:" destination="IMm-Jw-zwl" id="gc2-mb-8IE"/>
+                    </connections>
+                </pongPressGestureRecognizer>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="27f-sd-BXQ">
+                    <connections>
+                        <action selector="leftButtonLongTap:" destination="IMm-Jw-zwl" id="oHv-5u-l1w"/>
+                    </connections>
+                </pongPressGestureRecognizer>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="N36-9F-TqY">
+                    <connections>
+                        <action selector="rightButtonLongTap:" destination="IMm-Jw-zwl" id="SzU-gE-oee"/>
+                    </connections>
+                </pongPressGestureRecognizer>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="sxH-Rf-S8e">
+                    <connections>
+                        <action selector="downButtonLongTap:" destination="IMm-Jw-zwl" id="3NQ-8s-p2S"/>
+                    </connections>
+                </pongPressGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-574.64788732394368" y="-783.75"/>
         </scene>
@@ -5038,11 +5076,12 @@
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SOf-Lw-4Yw">
                                                         <rect key="frame" x="23.5" y="0.0" width="23" height="23.5"/>
+                                                        <gestureRecognizers/>
                                                         <state key="normal" title="button" image="jbutton"/>
                                                         <connections>
                                                             <action selector="upButton:" destination="BBQ-Rh-IIw" eventType="touchUpInside" id="fmw-xR-eWx"/>
                                                             <action selector="upButton:" destination="IMm-Jw-zwl" eventType="touchUpInside" id="lg0-O1-vXc"/>
-                                                            <action selector="upButton:" destination="BYZ-38-t0r" eventType="touchDown" id="uKn-4z-pqL"/>
+                                                            <outletCollection property="gestureRecognizers" destination="MJV-cG-Qrr" appends="YES" id="AO7-Yr-bKn"/>
                                                         </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mc9-dy-UZ3">
@@ -5058,11 +5097,12 @@
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zHW-6l-HXb">
                                                         <rect key="frame" x="0.0" y="0.0" width="23.5" height="23"/>
+                                                        <gestureRecognizers/>
                                                         <state key="normal" title="Button" image="lbutton"/>
                                                         <connections>
-                                                            <action selector="leftButton:" destination="BYZ-38-t0r" eventType="touchDown" id="HKK-Fv-17b"/>
                                                             <action selector="leftButton:" destination="BBQ-Rh-IIw" eventType="touchUpInside" id="TNW-sb-oYO"/>
                                                             <action selector="leftButton:" destination="IMm-Jw-zwl" eventType="touchUpInside" id="bIx-oJ-8AY"/>
+                                                            <outletCollection property="gestureRecognizers" destination="TQ1-qM-DVH" appends="YES" id="sqg-qN-dSL"/>
                                                         </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1xU-Ya-GUH">
@@ -5073,11 +5113,12 @@
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0NF-ma-ovA">
                                                         <rect key="frame" x="46.5" y="0.0" width="23.5" height="23"/>
+                                                        <gestureRecognizers/>
                                                         <state key="normal" title="Button" image="rbutton"/>
                                                         <connections>
-                                                            <action selector="rightButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4Zs-nY-2r9"/>
                                                             <action selector="rightButton:" destination="BBQ-Rh-IIw" eventType="touchUpInside" id="TdK-l6-sMM"/>
                                                             <action selector="rightButton:" destination="IMm-Jw-zwl" eventType="touchUpInside" id="dfn-8d-2fN"/>
+                                                            <outletCollection property="gestureRecognizers" destination="6HD-ot-MH7" appends="YES" id="Rzf-h5-dyv"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -5093,11 +5134,12 @@
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ick-5y-cfM">
                                                         <rect key="frame" x="23.5" y="0.0" width="23" height="23.5"/>
+                                                        <gestureRecognizers/>
                                                         <state key="normal" title="Button" image="dbutton"/>
                                                         <connections>
                                                             <action selector="downButton:" destination="BBQ-Rh-IIw" eventType="touchUpInside" id="HQV-4U-o2t"/>
                                                             <action selector="downButton:" destination="IMm-Jw-zwl" eventType="touchUpInside" id="XCg-Ar-QRE"/>
-                                                            <action selector="downButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jsu-N6-2S2"/>
+                                                            <outletCollection property="gestureRecognizers" destination="E8J-lq-gKc" appends="YES" id="n7Q-Zh-rIb"/>
                                                         </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H5U-RF-Crk">
@@ -5161,15 +5203,39 @@
                         <viewLayoutGuide key="safeArea" id="w2d-T2-u0R"/>
                     </view>
                     <connections>
+                        <outlet property="downButton" destination="ick-5y-cfM" id="z1X-a8-qbx"/>
                         <outlet property="gameView" destination="8Cw-BR-T7K" id="Ne5-os-KVE"/>
+                        <outlet property="leftButton" destination="zHW-6l-HXb" id="htz-Gj-heR"/>
                         <outlet property="playerImage" destination="VD9-hl-LTW" id="5mY-IO-bl5"/>
+                        <outlet property="rightButton" destination="0NF-ma-ovA" id="J84-y8-why"/>
                         <outlet property="textView" destination="ykd-rQ-DJl" id="q9S-5T-6iK"/>
+                        <outlet property="upButton" destination="SOf-Lw-4Yw" id="WOR-Ig-8YH"/>
                         <segue destination="IMm-Jw-zwl" kind="show" identifier="toCave2" id="82U-Ja-PaT"/>
                         <segue destination="pY7-AG-JsT" kind="show" identifier="toBattle" id="SIO-OG-Cel"/>
                         <segue destination="8oD-8e-0LV" kind="show" identifier="toCave4" id="qTJ-uJ-GdS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V8Q-J7-idG" sceneMemberID="firstResponder"/>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="MJV-cG-Qrr">
+                    <connections>
+                        <action selector="upButtonLongTap:" destination="BBQ-Rh-IIw" id="1Ly-k8-2ov"/>
+                    </connections>
+                </pongPressGestureRecognizer>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="TQ1-qM-DVH">
+                    <connections>
+                        <action selector="leftButtonLongTap:" destination="BBQ-Rh-IIw" id="dLI-of-7xN"/>
+                    </connections>
+                </pongPressGestureRecognizer>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="6HD-ot-MH7">
+                    <connections>
+                        <action selector="rightButtonLongTap:" destination="BBQ-Rh-IIw" id="xgR-q0-39b"/>
+                    </connections>
+                </pongPressGestureRecognizer>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="E8J-lq-gKc">
+                    <connections>
+                        <action selector="downButtonLongTap:" destination="BBQ-Rh-IIw" id="ha5-fM-OIM"/>
+                    </connections>
+                </pongPressGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-1230" y="-784"/>
         </scene>
@@ -6093,12 +6159,11 @@
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2LM-uJ-nUq">
                                                         <rect key="frame" x="23.5" y="0.0" width="23" height="23.5"/>
+                                                        <gestureRecognizers/>
                                                         <state key="normal" title="button" image="jbutton"/>
                                                         <connections>
                                                             <action selector="upButton:" destination="8oD-8e-0LV" eventType="touchUpInside" id="AFD-fO-4q9"/>
-                                                            <action selector="upButton:" destination="IMm-Jw-zwl" eventType="touchUpInside" id="HYh-fN-58J"/>
-                                                            <action selector="upButton:" destination="BBQ-Rh-IIw" eventType="touchUpInside" id="PWm-U4-mwr"/>
-                                                            <action selector="upButton:" destination="BYZ-38-t0r" eventType="touchDown" id="zmf-Qg-2hh"/>
+                                                            <outletCollection property="gestureRecognizers" destination="FEm-dc-iuu" appends="YES" id="XHQ-5O-yjV"/>
                                                         </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BOP-JV-gmQ">
@@ -6114,12 +6179,11 @@
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7xT-j6-33x">
                                                         <rect key="frame" x="0.0" y="0.0" width="23.5" height="23"/>
+                                                        <gestureRecognizers/>
                                                         <state key="normal" title="Button" image="lbutton"/>
                                                         <connections>
-                                                            <action selector="leftButton:" destination="BBQ-Rh-IIw" eventType="touchUpInside" id="8sA-0g-XQa"/>
-                                                            <action selector="leftButton:" destination="8oD-8e-0LV" eventType="touchUpInside" id="GCp-wV-VNM"/>
-                                                            <action selector="leftButton:" destination="BYZ-38-t0r" eventType="touchDown" id="Kl2-P2-BtZ"/>
-                                                            <action selector="leftButton:" destination="IMm-Jw-zwl" eventType="touchUpInside" id="LbJ-qg-etw"/>
+                                                            <action selector="leftButton:" destination="8oD-8e-0LV" eventType="touchUpInside" id="VMd-4J-yFm"/>
+                                                            <outletCollection property="gestureRecognizers" destination="Izs-fu-lw2" appends="YES" id="Slv-67-M4B"/>
                                                         </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kyr-qn-4zK">
@@ -6130,12 +6194,11 @@
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pIr-UK-5EE">
                                                         <rect key="frame" x="46.5" y="0.0" width="23.5" height="23"/>
+                                                        <gestureRecognizers/>
                                                         <state key="normal" title="Button" image="rbutton"/>
                                                         <connections>
-                                                            <action selector="rightButton:" destination="BBQ-Rh-IIw" eventType="touchUpInside" id="9cY-tN-uSI"/>
                                                             <action selector="rightButton:" destination="8oD-8e-0LV" eventType="touchUpInside" id="RS3-rp-tW1"/>
-                                                            <action selector="rightButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kir-TB-tpO"/>
-                                                            <action selector="rightButton:" destination="IMm-Jw-zwl" eventType="touchUpInside" id="xHB-am-XEw"/>
+                                                            <outletCollection property="gestureRecognizers" destination="Cqp-3M-Gan" appends="YES" id="jxw-yf-NcH"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -6151,12 +6214,11 @@
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UyX-WN-tla">
                                                         <rect key="frame" x="23.5" y="0.0" width="23" height="23.5"/>
+                                                        <gestureRecognizers/>
                                                         <state key="normal" title="Button" image="dbutton"/>
                                                         <connections>
-                                                            <action selector="downButton:" destination="BBQ-Rh-IIw" eventType="touchUpInside" id="h33-y2-XX4"/>
                                                             <action selector="downButton:" destination="8oD-8e-0LV" eventType="touchUpInside" id="lXr-SE-D8V"/>
-                                                            <action selector="downButton:" destination="IMm-Jw-zwl" eventType="touchUpInside" id="mv1-JN-t0t"/>
-                                                            <action selector="downButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qiS-7z-tfg"/>
+                                                            <outletCollection property="gestureRecognizers" destination="r15-8f-rkY" appends="YES" id="FMX-d1-QXe"/>
                                                         </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ySH-3X-u7a">
@@ -6252,15 +6314,39 @@
                         <viewLayoutGuide key="safeArea" id="HAO-po-2NH"/>
                     </view>
                     <connections>
+                        <outlet property="downButton" destination="UyX-WN-tla" id="ePu-sC-FdY"/>
                         <outlet property="gameView" destination="XyB-kD-Sgp" id="pU0-dF-TUN"/>
+                        <outlet property="leftButton" destination="7xT-j6-33x" id="Aqi-rr-zlC"/>
                         <outlet property="playerImage" destination="IUe-60-3xe" id="zYn-pM-IIi"/>
+                        <outlet property="rightButton" destination="pIr-UK-5EE" id="oQE-z2-cY7"/>
                         <outlet property="textView" destination="35v-PR-J1p" id="tG3-Vl-B4f"/>
+                        <outlet property="upButton" destination="2LM-uJ-nUq" id="Y0I-QS-doA"/>
                         <segue destination="BBQ-Rh-IIw" kind="show" identifier="toCave3" id="wz1-nP-YBw"/>
                         <segue destination="pY7-AG-JsT" kind="show" identifier="toBattle" id="ZQU-Q0-M52"/>
                         <segue destination="T6C-kC-tbL" kind="show" identifier="toCave5" id="ykE-ta-Zl3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2AN-aS-J2W" sceneMemberID="firstResponder"/>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="FEm-dc-iuu">
+                    <connections>
+                        <action selector="upButtonLongTap:" destination="8oD-8e-0LV" id="AQ8-QV-7hf"/>
+                    </connections>
+                </pongPressGestureRecognizer>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="Izs-fu-lw2">
+                    <connections>
+                        <action selector="leftButtonLongTap:" destination="8oD-8e-0LV" id="Pz6-fr-vev"/>
+                    </connections>
+                </pongPressGestureRecognizer>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="Cqp-3M-Gan">
+                    <connections>
+                        <action selector="rightButtonLongTap:" destination="8oD-8e-0LV" id="2in-XH-4D7"/>
+                    </connections>
+                </pongPressGestureRecognizer>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="r15-8f-rkY">
+                    <connections>
+                        <action selector="downButtonLongTap:" destination="8oD-8e-0LV" id="sEY-cd-S0D"/>
+                    </connections>
+                </pongPressGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-1231" y="-1678"/>
         </scene>
@@ -7185,13 +7271,14 @@
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zVa-Ye-gc4">
                                                         <rect key="frame" x="23.5" y="0.0" width="23" height="23.5"/>
+                                                        <gestureRecognizers/>
                                                         <state key="normal" title="button" image="jbutton"/>
                                                         <connections>
                                                             <action selector="upButton:" destination="T6C-kC-tbL" eventType="touchUpInside" id="Bqi-IL-tha"/>
-                                                            <action selector="upButton:" destination="BYZ-38-t0r" eventType="touchDown" id="D0b-RI-7wM"/>
                                                             <action selector="upButton:" destination="8oD-8e-0LV" eventType="touchUpInside" id="U7y-eR-ckL"/>
                                                             <action selector="upButton:" destination="IMm-Jw-zwl" eventType="touchUpInside" id="YbN-lg-cvs"/>
                                                             <action selector="upButton:" destination="BBQ-Rh-IIw" eventType="touchUpInside" id="drn-pX-YtO"/>
+                                                            <outletCollection property="gestureRecognizers" destination="y00-4v-Wj5" appends="YES" id="gYQ-M2-zOJ"/>
                                                         </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sw7-bC-Tbh">
@@ -7207,13 +7294,13 @@
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6nV-fR-93p">
                                                         <rect key="frame" x="0.0" y="0.0" width="23.5" height="23"/>
+                                                        <gestureRecognizers/>
                                                         <state key="normal" title="Button" image="lbutton"/>
                                                         <connections>
                                                             <action selector="leftButton:" destination="IMm-Jw-zwl" eventType="touchUpInside" id="4yg-c1-v0k"/>
                                                             <action selector="leftButton:" destination="BBQ-Rh-IIw" eventType="touchUpInside" id="O8b-Rx-8GC"/>
                                                             <action selector="leftButton:" destination="T6C-kC-tbL" eventType="touchUpInside" id="ca8-ix-gJX"/>
-                                                            <action selector="leftButton:" destination="BYZ-38-t0r" eventType="touchDown" id="ond-Ag-UAJ"/>
-                                                            <action selector="leftButton:" destination="8oD-8e-0LV" eventType="touchUpInside" id="pJp-r8-KLt"/>
+                                                            <outletCollection property="gestureRecognizers" destination="OK9-fc-VkQ" appends="YES" id="KQO-xF-9jd"/>
                                                         </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QSV-5R-Y3h">
@@ -7224,13 +7311,14 @@
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XcG-9P-cwc">
                                                         <rect key="frame" x="46.5" y="0.0" width="23.5" height="23"/>
+                                                        <gestureRecognizers/>
                                                         <state key="normal" title="Button" image="rbutton"/>
                                                         <connections>
-                                                            <action selector="rightButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="46y-Xg-P1g"/>
                                                             <action selector="rightButton:" destination="BBQ-Rh-IIw" eventType="touchUpInside" id="eaY-uF-2tt"/>
                                                             <action selector="rightButton:" destination="IMm-Jw-zwl" eventType="touchUpInside" id="gGV-Mc-f36"/>
                                                             <action selector="rightButton:" destination="T6C-kC-tbL" eventType="touchUpInside" id="l9w-iP-qPD"/>
                                                             <action selector="rightButton:" destination="8oD-8e-0LV" eventType="touchUpInside" id="tJ8-am-nOF"/>
+                                                            <outletCollection property="gestureRecognizers" destination="grr-Fe-4jw" appends="YES" id="2sm-yz-Oz0"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -7246,13 +7334,13 @@
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RBr-2e-bPf">
                                                         <rect key="frame" x="23.5" y="0.0" width="23" height="23.5"/>
+                                                        <gestureRecognizers/>
                                                         <state key="normal" title="Button" image="dbutton"/>
                                                         <connections>
                                                             <action selector="downButton:" destination="T6C-kC-tbL" eventType="touchUpInside" id="FO5-pN-zia"/>
-                                                            <action selector="downButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pgv-mr-7A5"/>
                                                             <action selector="downButton:" destination="BBQ-Rh-IIw" eventType="touchUpInside" id="tmc-J1-D4V"/>
-                                                            <action selector="downButton:" destination="8oD-8e-0LV" eventType="touchUpInside" id="wRy-xu-Sh3"/>
                                                             <action selector="downButton:" destination="IMm-Jw-zwl" eventType="touchUpInside" id="xiN-sN-pFL"/>
+                                                            <outletCollection property="gestureRecognizers" destination="3y1-L1-aDd" appends="YES" id="QvN-jv-hfB"/>
                                                         </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K5t-rU-mMj">
@@ -7348,15 +7436,39 @@
                         <viewLayoutGuide key="safeArea" id="WBB-RU-Z9b"/>
                     </view>
                     <connections>
+                        <outlet property="downButton" destination="RBr-2e-bPf" id="iRI-yK-Ghd"/>
                         <outlet property="gameView" destination="sTh-aF-skI" id="xDP-JS-il8"/>
+                        <outlet property="leftButton" destination="6nV-fR-93p" id="mt5-YD-Rpw"/>
                         <outlet property="playerImage" destination="bDR-8N-zVZ" id="unH-Ss-bhA"/>
+                        <outlet property="rightButton" destination="XcG-9P-cwc" id="akS-Jo-USo"/>
                         <outlet property="textView" destination="pEV-uf-d2O" id="Yrh-Wh-CDh"/>
+                        <outlet property="upButton" destination="zVa-Ye-gc4" id="OWD-QB-Zaw"/>
                         <segue destination="8oD-8e-0LV" kind="show" identifier="toCave4" id="nXS-oX-Yd2"/>
                         <segue destination="pY7-AG-JsT" kind="show" identifier="toBattle" id="6Wx-z4-9VZ"/>
                         <segue destination="cQM-HF-MfT" kind="show" identifier="toCave6" id="PaU-Eq-c2K"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fcj-8U-ouo" sceneMemberID="firstResponder"/>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="y00-4v-Wj5">
+                    <connections>
+                        <action selector="upButtonLongTap:" destination="T6C-kC-tbL" id="J6z-qV-6cA"/>
+                    </connections>
+                </pongPressGestureRecognizer>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="OK9-fc-VkQ">
+                    <connections>
+                        <action selector="leftButtonLongTap:" destination="T6C-kC-tbL" id="w6d-BU-3y9"/>
+                    </connections>
+                </pongPressGestureRecognizer>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="grr-Fe-4jw">
+                    <connections>
+                        <action selector="rightButtonLongTap:" destination="T6C-kC-tbL" id="rbS-PA-H8D"/>
+                    </connections>
+                </pongPressGestureRecognizer>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="3y1-L1-aDd">
+                    <connections>
+                        <action selector="downButtonLongTap:" destination="T6C-kC-tbL" id="44f-R5-ubj"/>
+                    </connections>
+                </pongPressGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-1232.7464788732395" y="-2565"/>
         </scene>
@@ -8308,14 +8420,15 @@
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Usq-eY-Qn6">
                                                         <rect key="frame" x="23.5" y="0.0" width="23" height="23.5"/>
+                                                        <gestureRecognizers/>
                                                         <state key="normal" title="button" image="jbutton"/>
                                                         <connections>
-                                                            <action selector="upButton:" destination="BYZ-38-t0r" eventType="touchDown" id="26r-1X-eyE"/>
                                                             <action selector="upButton:" destination="BBQ-Rh-IIw" eventType="touchUpInside" id="60D-cd-7fw"/>
                                                             <action selector="upButton:" destination="T6C-kC-tbL" eventType="touchUpInside" id="8k6-zi-Tp0"/>
                                                             <action selector="upButton:" destination="8oD-8e-0LV" eventType="touchUpInside" id="IEp-YD-rm6"/>
                                                             <action selector="upButton:" destination="cQM-HF-MfT" eventType="touchUpInside" id="IiP-Ai-Abq"/>
                                                             <action selector="upButton:" destination="IMm-Jw-zwl" eventType="touchUpInside" id="z3i-vS-4OL"/>
+                                                            <outletCollection property="gestureRecognizers" destination="JPE-aO-qkD" appends="YES" id="P4R-P2-vnl"/>
                                                         </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qio-fS-cRQ">
@@ -8331,14 +8444,14 @@
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SF5-EV-RFS">
                                                         <rect key="frame" x="0.0" y="0.0" width="23.5" height="23"/>
+                                                        <gestureRecognizers/>
                                                         <state key="normal" title="Button" image="lbutton"/>
                                                         <connections>
                                                             <action selector="leftButton:" destination="cQM-HF-MfT" eventType="touchUpInside" id="2ny-ek-Jde"/>
-                                                            <action selector="leftButton:" destination="BYZ-38-t0r" eventType="touchDown" id="3vZ-zJ-OQX"/>
-                                                            <action selector="leftButton:" destination="8oD-8e-0LV" eventType="touchUpInside" id="7Yv-Do-Hj5"/>
                                                             <action selector="leftButton:" destination="T6C-kC-tbL" eventType="touchUpInside" id="DUV-uf-Nv6"/>
                                                             <action selector="leftButton:" destination="IMm-Jw-zwl" eventType="touchUpInside" id="PVz-Cw-J2X"/>
                                                             <action selector="leftButton:" destination="BBQ-Rh-IIw" eventType="touchUpInside" id="PjD-Z2-K5y"/>
+                                                            <outletCollection property="gestureRecognizers" destination="EQn-vN-0XY" appends="YES" id="BVs-tK-8Oa"/>
                                                         </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ygG-Vp-bS2">
@@ -8349,14 +8462,15 @@
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mvZ-7h-rOT">
                                                         <rect key="frame" x="46.5" y="0.0" width="23.5" height="23"/>
+                                                        <gestureRecognizers/>
                                                         <state key="normal" title="Button" image="rbutton"/>
                                                         <connections>
                                                             <action selector="rightButton:" destination="BBQ-Rh-IIw" eventType="touchUpInside" id="9ee-w5-jbE"/>
                                                             <action selector="rightButton:" destination="T6C-kC-tbL" eventType="touchUpInside" id="Ilm-JC-rJm"/>
-                                                            <action selector="rightButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KAz-Y7-w7l"/>
                                                             <action selector="rightButton:" destination="8oD-8e-0LV" eventType="touchUpInside" id="NDI-Ag-rrN"/>
                                                             <action selector="rightButton:" destination="cQM-HF-MfT" eventType="touchUpInside" id="vGC-Rk-8si"/>
                                                             <action selector="rightButton:" destination="IMm-Jw-zwl" eventType="touchUpInside" id="zXA-zk-Vak"/>
+                                                            <outletCollection property="gestureRecognizers" destination="wgx-Cf-4vM" appends="YES" id="UTB-hF-Vfb"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -8372,14 +8486,14 @@
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V3o-tv-Zqz">
                                                         <rect key="frame" x="23.5" y="0.0" width="23" height="23.5"/>
+                                                        <gestureRecognizers/>
                                                         <state key="normal" title="Button" image="dbutton"/>
                                                         <connections>
                                                             <action selector="downButton:" destination="cQM-HF-MfT" eventType="touchUpInside" id="1cp-jr-MuN"/>
-                                                            <action selector="downButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7X6-Wx-f9E"/>
                                                             <action selector="downButton:" destination="IMm-Jw-zwl" eventType="touchUpInside" id="IAB-YC-F3p"/>
                                                             <action selector="downButton:" destination="T6C-kC-tbL" eventType="touchUpInside" id="T2v-fM-e9N"/>
                                                             <action selector="downButton:" destination="BBQ-Rh-IIw" eventType="touchUpInside" id="dHd-tC-aUS"/>
-                                                            <action selector="downButton:" destination="8oD-8e-0LV" eventType="touchUpInside" id="sIk-7B-tso"/>
+                                                            <outletCollection property="gestureRecognizers" destination="1yP-w1-0L9" appends="YES" id="Ykl-EA-4Rz"/>
                                                         </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jqj-ng-ZCb">
@@ -8507,16 +8621,40 @@
                         <viewLayoutGuide key="safeArea" id="y8f-0V-mlM"/>
                     </view>
                     <connections>
+                        <outlet property="downButton" destination="V3o-tv-Zqz" id="QWv-c4-caL"/>
                         <outlet property="gameView" destination="YOy-4p-kxL" id="8Co-da-jBQ"/>
                         <outlet property="hermitImage" destination="0bJ-ae-JM5" id="ilo-ko-mrT"/>
+                        <outlet property="leftButton" destination="SF5-EV-RFS" id="SpU-Hj-nOQ"/>
                         <outlet property="playerImage" destination="094-Df-rha" id="7Ef-nu-9JS"/>
+                        <outlet property="rightButton" destination="mvZ-7h-rOT" id="Ng0-yH-Zkh"/>
                         <outlet property="textView" destination="RLs-rx-WoK" id="njH-vt-G8D"/>
+                        <outlet property="upButton" destination="Usq-eY-Qn6" id="jmw-O9-if9"/>
                         <segue destination="T6C-kC-tbL" kind="show" identifier="toCave5" id="Bpa-q2-f7B"/>
                         <segue destination="pY7-AG-JsT" kind="show" identifier="toBattle" id="06a-pc-Qda"/>
                         <segue destination="Rfa-QV-Onu" kind="show" identifier="toCave7" id="hGh-cG-zlR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JNZ-R5-R3F" sceneMemberID="firstResponder"/>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="JPE-aO-qkD">
+                    <connections>
+                        <action selector="upButtonLongTap:" destination="cQM-HF-MfT" id="eSj-CK-wm4"/>
+                    </connections>
+                </pongPressGestureRecognizer>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="EQn-vN-0XY">
+                    <connections>
+                        <action selector="leftButtonLongTap:" destination="cQM-HF-MfT" id="X79-g0-8me"/>
+                    </connections>
+                </pongPressGestureRecognizer>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="wgx-Cf-4vM">
+                    <connections>
+                        <action selector="rightButtonLongTap:" destination="cQM-HF-MfT" id="xPg-Hc-5aa"/>
+                    </connections>
+                </pongPressGestureRecognizer>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="1yP-w1-0L9">
+                    <connections>
+                        <action selector="downButtonLongTap:" destination="cQM-HF-MfT" id="LL8-ny-4aO"/>
+                    </connections>
+                </pongPressGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-1233" y="-3454"/>
         </scene>
@@ -9431,15 +9569,16 @@
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jyh-ZG-dKs">
                                                         <rect key="frame" x="23.5" y="0.0" width="23" height="23.5"/>
+                                                        <gestureRecognizers/>
                                                         <state key="normal" title="button" image="jbutton"/>
                                                         <connections>
                                                             <action selector="upButton:" destination="T6C-kC-tbL" eventType="touchUpInside" id="DZ6-g3-1gP"/>
                                                             <action selector="upButton:" destination="8oD-8e-0LV" eventType="touchUpInside" id="DsY-Uu-F8e"/>
-                                                            <action selector="upButton:" destination="BYZ-38-t0r" eventType="touchDown" id="IHK-Nv-zI1"/>
                                                             <action selector="upButton:" destination="Rfa-QV-Onu" eventType="touchUpInside" id="Lqy-oM-Gg3"/>
                                                             <action selector="upButton:" destination="BBQ-Rh-IIw" eventType="touchUpInside" id="Lw1-a7-BUj"/>
                                                             <action selector="upButton:" destination="cQM-HF-MfT" eventType="touchUpInside" id="kKs-Ee-U1J"/>
                                                             <action selector="upButton:" destination="IMm-Jw-zwl" eventType="touchUpInside" id="nL9-QV-S8x"/>
+                                                            <outletCollection property="gestureRecognizers" destination="N4r-R0-M2b" appends="YES" id="tiD-kL-05C"/>
                                                         </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hmq-Vw-JeP">
@@ -9455,15 +9594,15 @@
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0qb-pE-EZp">
                                                         <rect key="frame" x="0.0" y="0.0" width="23.5" height="23"/>
+                                                        <gestureRecognizers/>
                                                         <state key="normal" title="Button" image="lbutton"/>
                                                         <connections>
                                                             <action selector="leftButton:" destination="T6C-kC-tbL" eventType="touchUpInside" id="62k-ER-GMS"/>
                                                             <action selector="leftButton:" destination="BBQ-Rh-IIw" eventType="touchUpInside" id="QnQ-WH-o2f"/>
-                                                            <action selector="leftButton:" destination="8oD-8e-0LV" eventType="touchUpInside" id="VB1-nW-gNU"/>
                                                             <action selector="leftButton:" destination="cQM-HF-MfT" eventType="touchUpInside" id="c1b-Ym-FnU"/>
                                                             <action selector="leftButton:" destination="IMm-Jw-zwl" eventType="touchUpInside" id="eYa-cF-bUf"/>
-                                                            <action selector="leftButton:" destination="BYZ-38-t0r" eventType="touchDown" id="yqN-Bp-fdR"/>
                                                             <action selector="leftButton:" destination="Rfa-QV-Onu" eventType="touchUpInside" id="z1k-Gd-uRn"/>
+                                                            <outletCollection property="gestureRecognizers" destination="QAD-CH-tB5" appends="YES" id="2ar-nv-gRx"/>
                                                         </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cZ6-rh-PRK">
@@ -9474,6 +9613,7 @@
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nxn-jM-j2t">
                                                         <rect key="frame" x="46.5" y="0.0" width="23.5" height="23"/>
+                                                        <gestureRecognizers/>
                                                         <state key="normal" title="Button" image="rbutton"/>
                                                         <connections>
                                                             <action selector="rightButton:" destination="T6C-kC-tbL" eventType="touchUpInside" id="3Pb-mo-lfe"/>
@@ -9482,7 +9622,7 @@
                                                             <action selector="rightButton:" destination="8oD-8e-0LV" eventType="touchUpInside" id="igL-Qo-HHq"/>
                                                             <action selector="rightButton:" destination="IMm-Jw-zwl" eventType="touchUpInside" id="oVQ-eV-q2z"/>
                                                             <action selector="rightButton:" destination="cQM-HF-MfT" eventType="touchUpInside" id="qNM-qr-vgq"/>
-                                                            <action selector="rightButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tyg-u3-IiK"/>
+                                                            <outletCollection property="gestureRecognizers" destination="5Jy-nc-TEA" appends="YES" id="Nqe-sk-TkI"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -9498,15 +9638,15 @@
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bjD-Ti-DUz">
                                                         <rect key="frame" x="23.5" y="0.0" width="23" height="23.5"/>
+                                                        <gestureRecognizers/>
                                                         <state key="normal" title="Button" image="dbutton"/>
                                                         <connections>
                                                             <action selector="downButton:" destination="cQM-HF-MfT" eventType="touchUpInside" id="9eF-3f-yn4"/>
                                                             <action selector="downButton:" destination="Rfa-QV-Onu" eventType="touchUpInside" id="LcA-Zx-Pao"/>
-                                                            <action selector="downButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LzA-XY-mMi"/>
                                                             <action selector="downButton:" destination="T6C-kC-tbL" eventType="touchUpInside" id="VnQ-Af-YlT"/>
                                                             <action selector="downButton:" destination="BBQ-Rh-IIw" eventType="touchUpInside" id="lsC-bc-yQ8"/>
                                                             <action selector="downButton:" destination="IMm-Jw-zwl" eventType="touchUpInside" id="ps4-GT-cS2"/>
-                                                            <action selector="downButton:" destination="8oD-8e-0LV" eventType="touchUpInside" id="yCb-Rc-ypU"/>
+                                                            <outletCollection property="gestureRecognizers" destination="Vz4-QQ-3gg" appends="YES" id="7rg-dz-ub2"/>
                                                         </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wN3-B4-vD7">
@@ -9586,15 +9726,39 @@
                         <viewLayoutGuide key="safeArea" id="vfp-gX-xLe"/>
                     </view>
                     <connections>
+                        <outlet property="downButton" destination="bjD-Ti-DUz" id="2b9-qm-yv9"/>
                         <outlet property="gameView" destination="zAd-3J-uOT" id="EeZ-9D-X9g"/>
+                        <outlet property="leftButton" destination="0qb-pE-EZp" id="vO9-vC-37y"/>
                         <outlet property="playerImage" destination="Drs-ab-8n1" id="IOd-0Q-6w0"/>
+                        <outlet property="rightButton" destination="Nxn-jM-j2t" id="c3e-xl-zb9"/>
                         <outlet property="textView" destination="0LY-Ip-dkg" id="5EW-id-VZZ"/>
+                        <outlet property="upButton" destination="jyh-ZG-dKs" id="lv1-pn-9I9"/>
                         <segue destination="cQM-HF-MfT" kind="show" identifier="toCave6" id="MQO-Ny-RYg"/>
                         <segue destination="pY7-AG-JsT" kind="show" identifier="toBattle" id="d5u-nO-qWX"/>
                         <segue destination="i7F-3l-JTt" kind="show" identifier="toCave8" id="04q-Tt-L2J"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eRg-Xz-Bhi" sceneMemberID="firstResponder"/>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="N4r-R0-M2b">
+                    <connections>
+                        <action selector="upButtonLongTap:" destination="Rfa-QV-Onu" id="XiT-0V-mMI"/>
+                    </connections>
+                </pongPressGestureRecognizer>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="QAD-CH-tB5">
+                    <connections>
+                        <action selector="leftButtonLongTap:" destination="Rfa-QV-Onu" id="sEQ-nN-Goa"/>
+                    </connections>
+                </pongPressGestureRecognizer>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="5Jy-nc-TEA">
+                    <connections>
+                        <action selector="rightButtonLongTap:" destination="Rfa-QV-Onu" id="AlA-0y-C6w"/>
+                    </connections>
+                </pongPressGestureRecognizer>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="Vz4-QQ-3gg">
+                    <connections>
+                        <action selector="downButtonLongTap:" destination="Rfa-QV-Onu" id="7Bb-W4-CYL"/>
+                    </connections>
+                </pongPressGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-1231" y="-4384"/>
         </scene>
@@ -10518,15 +10682,16 @@
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B3l-eK-PIV">
                                                         <rect key="frame" x="23.5" y="0.0" width="23" height="23.5"/>
+                                                        <gestureRecognizers/>
                                                         <state key="normal" title="button" image="jbutton"/>
                                                         <connections>
                                                             <action selector="upButton:" destination="i7F-3l-JTt" eventType="touchUpInside" id="96i-Uk-ovQ"/>
                                                             <action selector="upButton:" destination="IMm-Jw-zwl" eventType="touchUpInside" id="ESD-0r-czq"/>
                                                             <action selector="upButton:" destination="BBQ-Rh-IIw" eventType="touchUpInside" id="Ld1-tF-Pxg"/>
                                                             <action selector="upButton:" destination="cQM-HF-MfT" eventType="touchUpInside" id="NpD-uf-qkM"/>
-                                                            <action selector="upButton:" destination="BYZ-38-t0r" eventType="touchDown" id="TRa-C3-dnU"/>
                                                             <action selector="upButton:" destination="T6C-kC-tbL" eventType="touchUpInside" id="VyX-Hq-obX"/>
                                                             <action selector="upButton:" destination="8oD-8e-0LV" eventType="touchUpInside" id="rUB-Kl-iPO"/>
+                                                            <outletCollection property="gestureRecognizers" destination="Gsa-0D-SD7" appends="YES" id="GS2-hL-aaH"/>
                                                         </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t1o-9U-YiV">
@@ -10542,15 +10707,15 @@
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O7g-Jo-zHd">
                                                         <rect key="frame" x="0.0" y="0.0" width="23.5" height="23"/>
+                                                        <gestureRecognizers/>
                                                         <state key="normal" title="Button" image="lbutton"/>
                                                         <connections>
                                                             <action selector="leftButton:" destination="T6C-kC-tbL" eventType="touchUpInside" id="5EH-Wt-jmo"/>
                                                             <action selector="leftButton:" destination="cQM-HF-MfT" eventType="touchUpInside" id="6rp-wj-5In"/>
-                                                            <action selector="leftButton:" destination="8oD-8e-0LV" eventType="touchUpInside" id="J08-w1-fZY"/>
                                                             <action selector="leftButton:" destination="IMm-Jw-zwl" eventType="touchUpInside" id="XkO-EO-3aj"/>
                                                             <action selector="leftButton:" destination="i7F-3l-JTt" eventType="touchUpInside" id="bu5-7c-2xD"/>
-                                                            <action selector="leftButton:" destination="BYZ-38-t0r" eventType="touchDown" id="pgU-yS-KMv"/>
                                                             <action selector="leftButton:" destination="BBQ-Rh-IIw" eventType="touchUpInside" id="xXM-QO-uS9"/>
+                                                            <outletCollection property="gestureRecognizers" destination="llV-rk-wJ5" appends="YES" id="1gD-Cn-MIA"/>
                                                         </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5vJ-ap-a5U">
@@ -10561,15 +10726,16 @@
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FSM-Rg-WFz">
                                                         <rect key="frame" x="46.5" y="0.0" width="23.5" height="23"/>
+                                                        <gestureRecognizers/>
                                                         <state key="normal" title="Button" image="rbutton"/>
                                                         <connections>
                                                             <action selector="rightButton:" destination="T6C-kC-tbL" eventType="touchUpInside" id="1tS-mF-2qd"/>
                                                             <action selector="rightButton:" destination="IMm-Jw-zwl" eventType="touchUpInside" id="3qL-Qr-FrW"/>
-                                                            <action selector="rightButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8e7-4e-Fwp"/>
                                                             <action selector="rightButton:" destination="cQM-HF-MfT" eventType="touchUpInside" id="AdD-sb-7UR"/>
                                                             <action selector="rightButton:" destination="i7F-3l-JTt" eventType="touchUpInside" id="Ea4-o4-edu"/>
                                                             <action selector="rightButton:" destination="8oD-8e-0LV" eventType="touchUpInside" id="JrU-H7-1wf"/>
                                                             <action selector="rightButton:" destination="BBQ-Rh-IIw" eventType="touchUpInside" id="l50-N4-uPX"/>
+                                                            <outletCollection property="gestureRecognizers" destination="DDR-L7-mBf" appends="YES" id="j1b-u2-UJ7"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -10585,15 +10751,15 @@
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TSn-5u-ZoJ">
                                                         <rect key="frame" x="23.5" y="0.0" width="23" height="23.5"/>
+                                                        <gestureRecognizers/>
                                                         <state key="normal" title="Button" image="dbutton"/>
                                                         <connections>
                                                             <action selector="downButton:" destination="T6C-kC-tbL" eventType="touchUpInside" id="MSx-Uc-1B6"/>
                                                             <action selector="downButton:" destination="cQM-HF-MfT" eventType="touchUpInside" id="Sbt-nv-zUs"/>
                                                             <action selector="downButton:" destination="i7F-3l-JTt" eventType="touchUpInside" id="XYQ-sG-6rZ"/>
                                                             <action selector="downButton:" destination="IMm-Jw-zwl" eventType="touchUpInside" id="Yes-HQ-nNg"/>
-                                                            <action selector="downButton:" destination="8oD-8e-0LV" eventType="touchUpInside" id="aeS-UC-i04"/>
-                                                            <action selector="downButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="l8W-4g-D6V"/>
                                                             <action selector="downButton:" destination="BBQ-Rh-IIw" eventType="touchUpInside" id="xX5-iC-sCQ"/>
+                                                            <outletCollection property="gestureRecognizers" destination="Eia-ZN-mcl" appends="YES" id="BDo-Z4-hzz"/>
                                                         </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UTc-xp-cpq">
@@ -10685,15 +10851,39 @@
                         <viewLayoutGuide key="safeArea" id="7cC-Kx-02Y"/>
                     </view>
                     <connections>
+                        <outlet property="downButton" destination="TSn-5u-ZoJ" id="JnS-jT-XhG"/>
                         <outlet property="gameView" destination="Qpq-Ee-hnE" id="FgN-ua-D7w"/>
+                        <outlet property="leftButton" destination="O7g-Jo-zHd" id="gPr-Dp-huT"/>
                         <outlet property="playerImage" destination="D2B-kU-SJY" id="IrK-DV-U2J"/>
+                        <outlet property="rightButton" destination="FSM-Rg-WFz" id="ZOu-px-cib"/>
                         <outlet property="textView" destination="PSq-OS-dFE" id="AU4-Uy-T8n"/>
+                        <outlet property="upButton" destination="B3l-eK-PIV" id="N4n-V2-8s1"/>
                         <segue destination="Rfa-QV-Onu" kind="show" identifier="toCave7" id="PIq-sP-KnF"/>
                         <segue destination="pY7-AG-JsT" kind="show" identifier="toBattle" id="p0g-Lr-Zh5"/>
                         <segue destination="gte-P1-FwM" kind="show" identifier="toCave9" id="c06-vC-yHc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E16-Cu-dLc" sceneMemberID="firstResponder"/>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="Gsa-0D-SD7">
+                    <connections>
+                        <action selector="upButtonLongTap:" destination="i7F-3l-JTt" id="ZPA-IH-qlO"/>
+                    </connections>
+                </pongPressGestureRecognizer>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="llV-rk-wJ5">
+                    <connections>
+                        <action selector="leftButtonLongTap:" destination="i7F-3l-JTt" id="z0U-i3-t0s"/>
+                    </connections>
+                </pongPressGestureRecognizer>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="DDR-L7-mBf">
+                    <connections>
+                        <action selector="rightButtonLongTap:" destination="i7F-3l-JTt" id="d3E-Ln-Nhx"/>
+                    </connections>
+                </pongPressGestureRecognizer>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="Eia-ZN-mcl">
+                    <connections>
+                        <action selector="downButtonLongTap:" destination="i7F-3l-JTt" id="pID-hh-cpv"/>
+                    </connections>
+                </pongPressGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-1234" y="-5233"/>
         </scene>
@@ -10844,15 +11034,15 @@
         <image name="黒" width="32" height="32"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="eIz-ka-7hn"/>
-        <segue reference="GEE-6o-grj"/>
-        <segue reference="L3j-XD-XUo"/>
-        <segue reference="uMu-kc-rdG"/>
-        <segue reference="fBp-28-chC"/>
-        <segue reference="4lg-59-Hir"/>
+        <segue reference="nV6-8i-tlJ"/>
+        <segue reference="PIq-sP-KnF"/>
+        <segue reference="MQO-Ny-RYg"/>
+        <segue reference="ykE-ta-Zl3"/>
+        <segue reference="nXS-oX-Yd2"/>
+        <segue reference="wz1-nP-YBw"/>
         <segue reference="GHO-8N-sQv"/>
-        <segue reference="nUF-Bt-wMs"/>
-        <segue reference="RTa-DA-z8X"/>
+        <segue reference="c06-vC-yHc"/>
+        <segue reference="YdU-Rl-iRW"/>
         <segue reference="58s-R3-No3"/>
     </inferredMetricsTieBreakers>
 </document>
