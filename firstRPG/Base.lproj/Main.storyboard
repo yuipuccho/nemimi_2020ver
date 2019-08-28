@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="i7F-3l-JTt">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_0" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
@@ -1231,9 +1231,11 @@
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kNE-zh-mS9">
                                                         <rect key="frame" x="23.5" y="0.0" width="23" height="23.5"/>
+                                                        <gestureRecognizers/>
                                                         <state key="normal" title="button" image="jbutton"/>
                                                         <connections>
                                                             <action selector="upButton:" destination="BYZ-38-t0r" eventType="touchDown" id="3rD-cs-R4y"/>
+                                                            <outletCollection property="gestureRecognizers" destination="WEE-6J-gQB" appends="YES" id="Af6-lQ-xIz"/>
                                                         </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PYS-Ol-AcV">
@@ -1249,9 +1251,11 @@
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2mZ-mc-GQp">
                                                         <rect key="frame" x="0.0" y="0.0" width="23.5" height="23"/>
+                                                        <gestureRecognizers/>
                                                         <state key="normal" title="Button" image="lbutton"/>
                                                         <connections>
                                                             <action selector="leftButton:" destination="BYZ-38-t0r" eventType="touchDown" id="PSe-su-fYa"/>
+                                                            <outletCollection property="gestureRecognizers" destination="R6q-YS-ahm" appends="YES" id="Z0R-Uc-MRb"/>
                                                         </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R82-VP-kFq">
@@ -1262,9 +1266,11 @@
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mws-cf-HXI">
                                                         <rect key="frame" x="46.5" y="0.0" width="23.5" height="23"/>
+                                                        <gestureRecognizers/>
                                                         <state key="normal" title="Button" image="rbutton"/>
                                                         <connections>
                                                             <action selector="rightButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bgK-eM-Hu1"/>
+                                                            <outletCollection property="gestureRecognizers" destination="Qj8-wM-0Ag" appends="YES" id="A7X-aO-pl6"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -1280,9 +1286,11 @@
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q4s-lN-cGu">
                                                         <rect key="frame" x="23.5" y="0.0" width="23" height="23.5"/>
+                                                        <gestureRecognizers/>
                                                         <state key="normal" title="Button" image="dbutton"/>
                                                         <connections>
                                                             <action selector="downButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tc7-xr-wz3"/>
+                                                            <outletCollection property="gestureRecognizers" destination="DvM-bf-piD" appends="YES" id="zEj-2s-vb1"/>
                                                         </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="giy-wn-zdE">
@@ -1353,13 +1361,37 @@
                     </view>
                     <navigationItem key="navigationItem" id="f82-xP-eWM"/>
                     <connections>
+                        <outlet property="downButton" destination="q4s-lN-cGu" id="KPB-US-5Kh"/>
                         <outlet property="gameView" destination="lvg-s5-IrG" id="BAw-7B-XDb"/>
+                        <outlet property="leftButton" destination="2mZ-mc-GQp" id="BIB-dg-9zv"/>
                         <outlet property="playerImage" destination="Hf0-jO-Dqw" id="lxV-Bv-stm"/>
+                        <outlet property="rightButton" destination="Mws-cf-HXI" id="HWY-8g-0E2"/>
+                        <outlet property="upButton" destination="kNE-zh-mS9" id="GLj-ah-n5S"/>
                         <segue destination="pY7-AG-JsT" kind="show" identifier="toBattle" id="58s-R3-No3"/>
                         <segue destination="IMm-Jw-zwl" kind="show" identifier="toCave2" id="GHO-8N-sQv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="WEE-6J-gQB">
+                    <connections>
+                        <action selector="upButtonLongTap:" destination="BYZ-38-t0r" id="wFu-5D-hql"/>
+                    </connections>
+                </pongPressGestureRecognizer>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="R6q-YS-ahm">
+                    <connections>
+                        <action selector="leftButtonLongTap:" destination="BYZ-38-t0r" id="0SJ-ic-vWJ"/>
+                    </connections>
+                </pongPressGestureRecognizer>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="Qj8-wM-0Ag">
+                    <connections>
+                        <action selector="rightButtonLongTap:" destination="BYZ-38-t0r" id="gUA-fJ-j1i"/>
+                    </connections>
+                </pongPressGestureRecognizer>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="DvM-bf-piD">
+                    <connections>
+                        <action selector="downButtonLongTap:" destination="BYZ-38-t0r" id="deM-6W-Oty"/>
+                    </connections>
+                </pongPressGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-573.5915492957746" y="31.875"/>
         </scene>
@@ -10818,9 +10850,9 @@
         <segue reference="uMu-kc-rdG"/>
         <segue reference="fBp-28-chC"/>
         <segue reference="4lg-59-Hir"/>
-        <segue reference="tx1-5A-7hu"/>
+        <segue reference="GHO-8N-sQv"/>
         <segue reference="nUF-Bt-wMs"/>
         <segue reference="RTa-DA-z8X"/>
-        <segue reference="p0g-Lr-Zh5"/>
+        <segue reference="58s-R3-No3"/>
     </inferredMetricsTieBreakers>
 </document>
