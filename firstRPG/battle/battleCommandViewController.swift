@@ -26,6 +26,8 @@ class battleCommandViewController: UIViewController {
 
     var playerOverLocation: CGFloat = 0
 
+    var playerApperImage = ""
+
 
     var currentNum = 0
 
@@ -720,6 +722,7 @@ class battleCommandViewController: UIViewController {
         vc.playerLeftLocation = playerLeftLocation
         vc.playerOverLocation = playerOverLocation
 
+        vc.playerApperImage = playerApperImage
 
         vc.currentNum = currentNum
         // ハーミット討伐済かどうか

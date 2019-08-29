@@ -30,6 +30,8 @@ class cave7ViewController: UIViewController {
 
     var count = 0    // 歩数のカウント
 
+    var playerApperImage = ""
+
 
     // ★プレイヤースタート地点座標
     var playerLeftLocation: CGFloat = 270.5
@@ -125,6 +127,7 @@ class cave7ViewController: UIViewController {
         print(playerFrame)
 
         playerImage.frame = playerFrame
+        playerImage.image = UIImage(named: "\(playerApperImage)")
 
         textView.isHidden = true    // メッセージを非表示に
     }
@@ -148,6 +151,8 @@ class cave7ViewController: UIViewController {
     // 上ボタンを押している時 touchDown
     @objc func timerUp() {
         if textView.isHidden == true {    // メッセージがない時のみ移動可能
+
+            playerApperImage = "ヒーロー上1"
 
             // ★次のマップに遷移するかどうか
             if self.line[currentNum] == 3 {
@@ -201,7 +206,7 @@ class cave7ViewController: UIViewController {
     @objc func timerLeft() {
         if textView.isHidden == true {    // メッセージがない時のみ移動可能
 
-
+            playerApperImage = "ヒーロー左1"
 
             if currentNum - 1 >= 0 {  // 移動先の配列番号が存在するか確認
                 self.currentNum -= 1    // 配列番号を移動先の番号に変える。(self つけないとボタンが反応してくれなくなる)
@@ -244,6 +249,8 @@ class cave7ViewController: UIViewController {
     @objc func timerRight() {
         if textView.isHidden == true {    // メッセージがない時のみ移動可能
 
+            playerApperImage = "ヒーロー右1"
+
 
             if currentNum + 1 <= 251 {  // 移動先の配列番号が存在するか確認
                 self.currentNum += 1    // 配列番号を移動先の番号に変える。(self つけないとボタンが反応してくれなくなる)
@@ -285,6 +292,8 @@ class cave7ViewController: UIViewController {
     // 下ボタン
     @objc func timerDown() {
         if textView.isHidden == true {    // メッセージがない時のみ移動可能
+
+            playerApperImage = "ヒーロー下1"
 
             // ★前のマップに遷移するかどうか
             if self.line[currentNum] == 2 {
@@ -470,6 +479,8 @@ class cave7ViewController: UIViewController {
             print(playerLeftLocation)
             print(playerOverLocation)
 
+            vc.playerApperImage = playerApperImage
+
             // ハーミット討伐済かどうか
             vc.defeatHermit = defeatHermit
 
@@ -490,6 +501,8 @@ class cave7ViewController: UIViewController {
 
             vc.currentNum = 52
 
+            vc.playerApperImage = "ヒーロー下1"
+
             // ハーミット討伐済かどうか
             vc.defeatHermit = defeatHermit
 
@@ -509,6 +522,8 @@ class cave7ViewController: UIViewController {
 
             vc.playerLeftLocation = gameView.frame.size.width / 21 * 10 + plusWidth
             vc.playerOverLocation = gameView.frame.size.height / 12 * 11 + plusHeight
+
+            vc.playerApperImage = "ヒーロー上1"
 
             // ハーミット討伐済かどうか
             vc.defeatHermit = defeatHermit

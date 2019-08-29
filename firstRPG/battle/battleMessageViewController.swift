@@ -11,6 +11,7 @@ import UIKit
 
 class battleMessageViewController: UIViewController {
     
+    @IBOutlet weak var gameView: UIView!
     @IBOutlet weak var nameLabel: UILabel!    // プレイヤーの名前
     @IBOutlet weak var hpLabel: UILabel!    // HP
     @IBOutlet weak var mpLabel: UILabel!    // MP
@@ -44,6 +45,8 @@ class battleMessageViewController: UIViewController {
     var toCave7: Bool = false
     var toCave8: Bool = false
     var toCave9: Bool = false
+
+    var playerApperImage = ""
 
 
     // 遷移元プレイヤー座標
@@ -1861,8 +1864,11 @@ class battleMessageViewController: UIViewController {
             vc.playerLeftLocation = playerLeftLocation
             vc.playerOverLocation = playerOverLocation
 
+            vc.playerApperImage = playerApperImage
+
 
             vc.currentNum = currentNum
+
             
             // ハーミット討伐済かどうか
             vc.defeatHermit = defeatHermit
@@ -1880,10 +1886,14 @@ class battleMessageViewController: UIViewController {
             // プレイヤーの情報
             vc.player = player
 
+            vc.playerApperImage = "ヒーロー上1"
 
-            vc.playerLeftLocation = 266.5
-
-            vc.playerOverLocation = 291.5
+            let width = view.frame.size.width - gameView.frame.size.width
+            let height = view.frame.size.height - gameView.frame.size.height
+            let plusWidth = width / 2
+            let plusHeight = height / 2
+            vc.playerLeftLocation = gameView.frame.size.width / 21 * 10 + plusWidth
+            vc.playerOverLocation = gameView.frame.size.height / 12 * 11 + plusHeight
             // ハーミット討伐済かどうか
             vc.defeatHermit = defeatHermit
 
@@ -1899,6 +1909,7 @@ class battleMessageViewController: UIViewController {
             vc.playerLeftLocation = playerLeftLocation
             vc.playerOverLocation = playerOverLocation
             vc.currentNum = currentNum
+            vc.playerApperImage = playerApperImage
             // ハーミット討伐済かどうか
             vc.defeatHermit = defeatHermit
 
@@ -1909,6 +1920,7 @@ class battleMessageViewController: UIViewController {
             vc.playerLeftLocation = playerLeftLocation
             vc.playerOverLocation = playerOverLocation
             vc.currentNum = currentNum
+            vc.playerApperImage = playerApperImage
             // ハーミット討伐済かどうか
             vc.defeatHermit = defeatHermit
 
@@ -1919,6 +1931,7 @@ class battleMessageViewController: UIViewController {
             vc.playerLeftLocation = playerLeftLocation
             vc.playerOverLocation = playerOverLocation
             vc.currentNum = currentNum
+            vc.playerApperImage = playerApperImage
             // ハーミット討伐済かどうか
             vc.defeatHermit = defeatHermit
 
@@ -1929,6 +1942,7 @@ class battleMessageViewController: UIViewController {
             vc.playerLeftLocation = playerLeftLocation
             vc.playerOverLocation = playerOverLocation
             vc.currentNum = currentNum
+            vc.playerApperImage = playerApperImage
             // ハーミット討伐済かどうか
             vc.defeatHermit = defeatHermit
 
@@ -1940,6 +1954,7 @@ class battleMessageViewController: UIViewController {
             vc.playerLeftLocation = playerLeftLocation
             vc.playerOverLocation = playerOverLocation
             vc.currentNum = currentNum
+            vc.playerApperImage = playerApperImage
             // ハーミット討伐済かどうか
             vc.defeatHermit = defeatHermit
         
@@ -1951,6 +1966,7 @@ class battleMessageViewController: UIViewController {
             vc.playerLeftLocation = playerLeftLocation
             vc.playerOverLocation = playerOverLocation
             vc.currentNum = currentNum
+            vc.playerApperImage = playerApperImage
             vc.afterBattle = true
          // ハーミット討伐済かどうか
          vc.defeatHermit = defeatHermit
@@ -1963,6 +1979,7 @@ class battleMessageViewController: UIViewController {
             vc.playerLeftLocation = playerLeftLocation
             vc.playerOverLocation = playerOverLocation
             vc.currentNum = currentNum
+            vc.playerApperImage = playerApperImage
          // ハーミット討伐済かどうか
          vc.defeatHermit = defeatHermit
 
@@ -1974,6 +1991,7 @@ class battleMessageViewController: UIViewController {
             vc.playerLeftLocation = playerLeftLocation
             vc.playerOverLocation = playerOverLocation
             vc.currentNum = currentNum
+            vc.playerApperImage = playerApperImage
          // ハーミット討伐済かどうか
          vc.defeatHermit = defeatHermit
 
@@ -1985,6 +2003,7 @@ class battleMessageViewController: UIViewController {
             vc.playerLeftLocation = playerLeftLocation
             vc.playerOverLocation = playerOverLocation
             vc.currentNum = currentNum
+            vc.playerApperImage = playerApperImage
             vc.afterBattle = true
          // ハーミット討伐済かどうか
          vc.defeatHermit = defeatHermit

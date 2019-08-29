@@ -94,6 +94,8 @@ class story2ViewController: UIViewController {
 
             vc.playerLeftLocation = gameView.frame.size.width / 21 * 10 + plusWidth
             vc.playerOverLocation = gameView.frame.size.height / 12 * 11 + plusHeight
+
+            vc.playerApperImage = "ヒーロー上1"
         }
     }
 

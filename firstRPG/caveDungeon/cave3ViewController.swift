@@ -30,6 +30,8 @@ class cave3ViewController: UIViewController {
 
     var count = 0    // 歩数のカウント
 
+    var playerApperImage = ""
+
 
     // プレイヤースタート地点座標(座標のしたにでたやつそのまま代入)
     var playerLeftLocation: CGFloat = 538.5
@@ -127,6 +129,7 @@ class cave3ViewController: UIViewController {
         print(playerFrame)
 
         playerImage.frame = playerFrame
+        playerImage.image = UIImage(named: "\(playerApperImage)")
 
         textView.isHidden = true    // メッセージを非表示に
     }
@@ -159,6 +162,8 @@ class cave3ViewController: UIViewController {
                 performSegue(withIdentifier: "toCave4", sender: nil)
                 print("4へせんい")
             }
+
+            playerApperImage = "ヒーロー上1"
 
             if currentNum - 21 >= 0 {  // 移動先の配列番号が存在するか確認
                 self.currentNum -= 21    // 配列番号を移動先の番号に変える。(self つけないとボタンが反応してくれなくなる)
@@ -204,7 +209,7 @@ class cave3ViewController: UIViewController {
     @objc func timerLeft() {
         if textView.isHidden == true {    // メッセージがない時のみ移動可能
 
-
+            playerApperImage = "ヒーロー左1"
 
             if currentNum - 1 >= 0 {  // 移動先の配列番号が存在するか確認
                 self.currentNum -= 1    // 配列番号を移動先の番号に変える。(self つけないとボタンが反応してくれなくなる)
@@ -247,6 +252,7 @@ class cave3ViewController: UIViewController {
     @objc func timerRight() {
         if textView.isHidden == true {    // メッセージがない時のみ移動可能
 
+
             // ★前のマップに遷移するかどうか
             if self.line[currentNum] == 2 {
                 timer.invalidate()
@@ -254,6 +260,8 @@ class cave3ViewController: UIViewController {
                 performSegue(withIdentifier: "toCave2", sender: nil)
                 print("2へせんい")
             }
+
+            playerApperImage = "ヒーロー右1"
 
             if currentNum + 1 <= 251 {  // 移動先の配列番号が存在するか確認
                 self.currentNum += 1    // 配列番号を移動先の番号に変える。(self つけないとボタンが反応してくれなくなる)
@@ -295,6 +303,8 @@ class cave3ViewController: UIViewController {
     // 下ボタン
     @objc func timerDown() {
         if textView.isHidden == true {    // メッセージがない時のみ移動可能
+
+            playerApperImage = "ヒーロー下1"
 
             if currentNum + 21 <= 251 {  // 移動先の配列番号が存在するか確認
                 self.currentNum += 21    // 配列番号を移動先の番号に変える。(self つけないとボタンが反応してくれなくなる)
@@ -472,6 +482,8 @@ class cave3ViewController: UIViewController {
             print(playerLeftLocation)
             print(playerOverLocation)
 
+            vc.playerApperImage = playerApperImage
+
             // ハーミット討伐済かどうか
             vc.defeatHermit = defeatHermit
 
@@ -492,6 +504,8 @@ class cave3ViewController: UIViewController {
 
             vc.currentNum = 21
 
+            vc.playerApperImage = "ヒーロー右1"
+
             // ハーミット討伐済かどうか
             vc.defeatHermit = defeatHermit
 
@@ -511,6 +525,8 @@ class cave3ViewController: UIViewController {
 
             vc.playerLeftLocation = gameView.frame.size.width / 21 * 3 + plusWidth
             vc.playerOverLocation = gameView.frame.size.height / 12 * 11 + plusHeight
+
+            vc.playerApperImage = "ヒーロー上1"
 
             // ハーミット討伐済かどうか
             vc.defeatHermit = defeatHermit

@@ -31,6 +31,8 @@ class cave2ViewController: UIViewController {
 
     var count = 0    // 歩数のカウント
 
+    var playerApperImage = ""
+
 
     // プレイヤースタート地点座標
     var playerLeftLocation: CGFloat = 0
@@ -125,6 +127,7 @@ class cave2ViewController: UIViewController {
         print(playerFrame)
 
         playerImage.frame = playerFrame
+        playerImage.image = UIImage(named: "\(playerApperImage)")
 
         textView.isHidden = true    // メッセージを非表示に
     }
@@ -148,6 +151,7 @@ class cave2ViewController: UIViewController {
     // 上ボタンを押している時 touchDown
     @objc func timerUp() {
         if textView.isHidden == true {    // メッセージがない時のみ移動可能
+            playerApperImage = "ヒーロー上1"
 
             if currentNum - 21 >= 0 {  // 移動先の配列番号が存在するか確認
                 self.currentNum -= 21    // 配列番号を移動先の番号に変える。(self つけないとボタンが反応してくれなくなる)
@@ -200,6 +204,7 @@ class cave2ViewController: UIViewController {
                 performSegue(withIdentifier: "toCave3", sender: nil)
                 print("3へせんい")
             }
+            playerApperImage = "ヒーロー左1"
 
             if currentNum - 1 >= 0 {  // 移動先の配列番号が存在するか確認
                 self.currentNum -= 1    // 配列番号を移動先の番号に変える。(self つけないとボタンが反応してくれなくなる)
@@ -241,6 +246,7 @@ class cave2ViewController: UIViewController {
     // 右ボタン
     @objc func timerRight() {
         if textView.isHidden == true {    // メッセージがない時のみ移動可能
+            playerApperImage = "ヒーロー右1"
             if currentNum + 1 <= 251 {  // 移動先の配列番号が存在するか確認
                 self.currentNum += 1    // 配列番号を移動先の番号に変える。(self つけないとボタンが反応してくれなくなる)
 
@@ -281,6 +287,7 @@ class cave2ViewController: UIViewController {
     // 下ボタン
     @objc func timerDown() {
         if textView.isHidden == true {    // メッセージがない時のみ移動可能
+            playerApperImage = "ヒーロー下1"
 
             // 前のマップに遷移するかどうか
             if self.line[currentNum] == 2 {
@@ -463,6 +470,8 @@ class cave2ViewController: UIViewController {
 
             vc.currentNum = currentNum
 
+            vc.playerApperImage = playerApperImage
+
             print(playerLeftLocation)
             print(playerOverLocation)
 
@@ -485,6 +494,8 @@ class cave2ViewController: UIViewController {
             vc.playerOverLocation = gameView.frame.size.height / 12 * 0 + plusHeight
 
             vc.currentNum = 17
+
+            vc.playerApperImage = "ヒーロー下1"
 
             // ハーミット討伐済かどうか
             vc.defeatHermit = defeatHermit
@@ -509,6 +520,8 @@ class cave2ViewController: UIViewController {
             vc.playerOverLocation = gameView.frame.size.height / 12 * 1 + plusHeight
 
             vc.currentNum = 41
+
+            vc.playerApperImage = "ヒーロー左1"
 
             // ハーミット討伐済かどうか
             vc.defeatHermit = defeatHermit

@@ -31,6 +31,8 @@ class cave9ViewController: UIViewController {
 
     var count = 0    // 歩数のカウント
 
+    var playerApperImage = ""
+
     var buttonCount = 0    // メインボタンのカウント
 
     var afterBattle: Bool = false    // ティグレとの戦闘後かどうか
@@ -130,6 +132,7 @@ class cave9ViewController: UIViewController {
         print(playerFrame)
 
         playerImage.frame = playerFrame
+        playerImage.image = UIImage(named: "\(playerApperImage)")
 
         if afterBattle == false {    // ハーミットとの戦闘直後でない場合
             textView.isHidden = true    // メッセージを非表示に
@@ -198,13 +201,18 @@ class cave9ViewController: UIViewController {
             case 1:
                 buttonCount += 1    // カウントを +1
                 thigreImage.isHidden = true
-                DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
-                    self.textView.text = "姫「たすけてくださって\n  ありがとうございます！」"
-                }
+
             case 2:
+                buttonCount += 1
+                textView.text = "姫「たすけてくださって\n  ありがとうございます！」"
+
+            case 3:
                 buttonCount += 1    // カウントを +1
                 textView.text = "姫「このご恩は 一生忘れませんわ！」"
-                // case 3:    遷移
+            case 4:
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                self.performSegue(withIdentifier: "toEnd", sender: nil)
+                }
 
             default:
                 return
@@ -216,6 +224,8 @@ class cave9ViewController: UIViewController {
     // 上ボタンを押している時 touchDown
     @objc func timerUp() {
         if textView.isHidden == true {    // メッセージがない時のみ移動可能
+
+            playerApperImage = "ヒーロー上1"
 
             if currentNum - 21 >= 0 {  // 移動先の配列番号が存在するか確認
                 self.currentNum -= 21    // 配列番号を移動先の番号に変える。(self つけないとボタンが反応してくれなくなる)
@@ -261,7 +271,7 @@ class cave9ViewController: UIViewController {
     @objc func timerLeft() {
         if textView.isHidden == true {    // メッセージがない時のみ移動可能
 
-
+            playerApperImage = "ヒーロー左1"
 
             if currentNum - 1 >= 0 {  // 移動先の配列番号が存在するか確認
                 self.currentNum -= 1    // 配列番号を移動先の番号に変える。(self つけないとボタンが反応してくれなくなる)
@@ -304,6 +314,8 @@ class cave9ViewController: UIViewController {
     @objc func timerRight() {
         if textView.isHidden == true {    // メッセージがない時のみ移動可能
 
+            playerApperImage = "ヒーロー右1"
+
 
             if currentNum + 1 <= 251 {  // 移動先の配列番号が存在するか確認
                 self.currentNum += 1    // 配列番号を移動先の番号に変える。(self つけないとボタンが反応してくれなくなる)
@@ -345,6 +357,8 @@ class cave9ViewController: UIViewController {
     // 下ボタン
     @objc func timerDown() {
         if textView.isHidden == true {    // メッセージがない時のみ移動可能
+
+            playerApperImage = "ヒーロー下1"
 
             // ★前のマップに遷移するかどうか
             if self.line[currentNum] == 2 {
@@ -473,6 +487,8 @@ class cave9ViewController: UIViewController {
             print(playerLeftLocation)
             print(playerOverLocation)
 
+            vc.playerApperImage = "ヒーロー上1"
+
             // ハーミット討伐済かどうか
             vc.defeatHermit = defeatHermit
 
@@ -492,6 +508,8 @@ class cave9ViewController: UIViewController {
             vc.playerOverLocation = gameView.frame.size.height / 12 * 3 + plusHeight
 
             vc.currentNum = 73
+
+            vc.playerApperImage = "ヒーロー下1"
 
             // ハーミット討伐済かどうか
             vc.defeatHermit = defeatHermit

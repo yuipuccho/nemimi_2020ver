@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BA1F24672317C0A8003BA769 /* titleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1F24662317C0A8003BA769 /* titleViewController.swift */; };
 		BA2A9CAF230E65FE00E13DC8 /* cave9ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2A9CAE230E65FE00E13DC8 /* cave9ViewController.swift */; };
 		BA2A9CB1230E6E3B00E13DC8 /* cave2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2A9CB0230E6E3B00E13DC8 /* cave2ViewController.swift */; };
 		BA38499B2305548C006E7BA0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA38499A2305548C006E7BA0 /* AppDelegate.swift */; };
@@ -29,6 +30,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BA1F24662317C0A8003BA769 /* titleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = titleViewController.swift; sourceTree = "<group>"; };
 		BA2A9CAE230E65FE00E13DC8 /* cave9ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cave9ViewController.swift; sourceTree = "<group>"; };
 		BA2A9CB0230E6E3B00E13DC8 /* cave2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cave2ViewController.swift; sourceTree = "<group>"; };
 		BA3849972305548C006E7BA0 /* firstRPG.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = firstRPG.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -126,6 +128,7 @@
 				BAC68A5823177FF400D78495 /* story1ViewController.swift */,
 				BAC68A5A2317814D00D78495 /* story2ViewController.swift */,
 				BAC68A5C2317816700D78495 /* story3ViewController.swift */,
+				BA1F24662317C0A8003BA769 /* titleViewController.swift */,
 			);
 			path = Story;
 			sourceTree = "<group>";
@@ -206,6 +209,7 @@
 				BA89C3032313DF7200EBBAC8 /* cave7ViewController.swift in Sources */,
 				BA89C3012313DF5D00EBBAC8 /* cave6ViewController.swift in Sources */,
 				BA3849FB2309219A006E7BA0 /* GameScene.swift in Sources */,
+				BA1F24672317C0A8003BA769 /* titleViewController.swift in Sources */,
 				BAC68A5923177FF400D78495 /* story1ViewController.swift in Sources */,
 				BA384A01230C1E5D006E7BA0 /* battleCommandViewController.swift in Sources */,
 				BA2A9CB1230E6E3B00E13DC8 /* cave2ViewController.swift in Sources */,
