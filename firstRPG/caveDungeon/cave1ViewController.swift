@@ -422,12 +422,12 @@ class cave1ViewController: UIViewController {
             vc.player = player
             
             let width = view.frame.size.width - gameView.frame.size.width
-            let height = view.frame.size.height - gameView.frame.size.height
+            
             let plusWidth = width / 2
-            let plusHeight = height / 2
+
             
             vc.playerLeftLocation = gameView.frame.size.width / 21 * 17 + plusWidth
-            vc.playerOverLocation = gameView.frame.size.height / 12 * 11 + plusHeight
+            vc.playerOverLocation = gameView.frame.size.height / 12 * 11
             
             vc.currentNum = 248
             

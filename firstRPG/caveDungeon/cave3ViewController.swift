@@ -495,12 +495,12 @@ class cave3ViewController: UIViewController {
             vc.player = player
             
             let width = view.frame.size.width - gameView.frame.size.width
-            let height = view.frame.size.height - gameView.frame.size.height
+
             let plusWidth = width / 2
-            let plusHeight = height / 2
+
             
             vc.playerLeftLocation = gameView.frame.size.width / 21 * 0 + plusWidth
-            vc.playerOverLocation = gameView.frame.size.height / 12 * 1 + plusHeight
+            vc.playerOverLocation = gameView.frame.size.height / 12 * 1
             
             vc.currentNum = 21
             
@@ -519,12 +519,12 @@ class cave3ViewController: UIViewController {
             vc.player = player
             
             let width = view.frame.size.width - gameView.frame.size.width
-            let height = view.frame.size.height - gameView.frame.size.height
+
             let plusWidth = width / 2
-            let plusHeight = height / 2
+
             
             vc.playerLeftLocation = gameView.frame.size.width / 21 * 3 + plusWidth
-            vc.playerOverLocation = gameView.frame.size.height / 12 * 11 + plusHeight
+
             
             vc.playerApperImage = "ヒーロー上1"
             

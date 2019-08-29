@@ -24,7 +24,7 @@ class story2ViewController: UIViewController {
     var count = 0
     var button = false
     var select = false
-    
+
     var player:[String: Any] = [
         "name": "ほげぇ",
         "Lv": 1,    // レベル
@@ -36,8 +36,9 @@ class story2ViewController: UIViewController {
         "def": 15,    // 守備力
         "exp": 0,    // 経験値
     ]
+
     
-    //var player: [String: Any] = ["name": "ほげぇ", "maxHP": 222, "maxMP": 130, "atk": 208, "def": 4000, "nowHP": 222, "nowMP": 130, "exp":35000, "Lv": 30]
+    //var player: [String: Any] = ["name": "ほげぇ", "maxHP": 222, "maxMP": 130, "atk": 2080, "def": 4000, "nowHP": 222, "nowMP": 130, "exp":350000, "Lv": 30]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -145,12 +146,12 @@ class story2ViewController: UIViewController {
             
             vc.player = player
             let width = view.frame.size.width - gameView.frame.size.width
-            let height = view.frame.size.height - gameView.frame.size.height
+  
             let plusWidth = width / 2
-            let plusHeight = height / 2
+
             
             vc.playerLeftLocation = gameView.frame.size.width / 21 * 10 + plusWidth
-            vc.playerOverLocation = gameView.frame.size.height / 12 * 11 + plusHeight
+            vc.playerOverLocation = gameView.frame.size.height / 12 * 11
             
             vc.playerApperImage = "ヒーロー上1"
         }
