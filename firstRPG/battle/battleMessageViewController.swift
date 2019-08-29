@@ -433,7 +433,7 @@ class battleMessageViewController: UIViewController {
             
             
         case 1:    // ヒール
-            giveDamage = Int.random(in: 30...60)    // 30~60のランダム
+            giveDamage = Int.random(in: 40...70)    // 40~70のランダム
             
             // HPの処理
             if playerHP + giveDamage > player["maxHP"] as! Int {    // 回復後のHPが上限HPをこえた場合
@@ -907,7 +907,7 @@ class battleMessageViewController: UIViewController {
         case 5:    // ライトビーム
             switch selectMonsterNum {
             case 1:    // モンスター1を選択した時
-                giveDamage = Int.random(in: 80...110)    // この辺後で調整する
+                giveDamage = Int.random(in: 90...130)    // この辺後で調整する
                 monster1["hp"] = monster1["hp"]! - giveDamage
                 playerMP = playerMP - 8    // MPを減らす
                 // バトルメッセージ表示
@@ -946,7 +946,7 @@ class battleMessageViewController: UIViewController {
                 }
                 
             case 2:
-                giveDamage = Int.random(in: 80...110)    // この辺後で調整する
+                giveDamage = Int.random(in: 90...130)    // この辺後で調整する
                 monster2["hp"] = monster2["hp"]! - giveDamage
                 playerMP = playerMP - 8    // MPを減らす
                 // バトルメッセージ表示
@@ -984,7 +984,7 @@ class battleMessageViewController: UIViewController {
                     self.effectImage2.isHidden = true
                 }
             case 3:
-                giveDamage = Int.random(in: 80...110)    // この辺後で調整する
+                giveDamage = Int.random(in: 90...130)    // この辺後で調整する
                 monster3["hp"] = monster3["hp"]! - giveDamage
                 playerMP = playerMP - 8    // MPを減らす
                 // バトルメッセージ表示
@@ -1022,7 +1022,7 @@ class battleMessageViewController: UIViewController {
                     self.effectImage3.isHidden = true
                 }
             case 4:
-                giveDamage = Int.random(in: 80...110)    // この辺後で調整する
+                giveDamage = Int.random(in: 90...130)    // この辺後で調整する
                 monster4["hp"] = monster4["hp"]! - giveDamage
                 playerMP = playerMP - 8    // MPを減らす
                 // バトルメッセージ表示
@@ -1669,6 +1669,7 @@ class battleMessageViewController: UIViewController {
             } else if exp >= 11900 && exp < 13600 && exp - allExp < 11900 {    // Lv23: 必要経験値11900
                 player = lv23
                 lvUp()
+                messageTextView.text = messageTextView.text + "\n\(playerName)は メガヒールを おぼえた！"
             } else if exp >= 13600 && exp < 15300 && exp - allExp < 13600 {    // Lv24: 必要経験値13600
                 player = lv24
                 lvUp()
