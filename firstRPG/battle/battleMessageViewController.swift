@@ -1958,7 +1958,7 @@ class battleMessageViewController: UIViewController {
             vc.playerApperImage = playerApperImage
             // ハーミット討伐済かどうか
             vc.defeatHermit = defeatHermit
-        
+
 
         } else if (segue.identifier == "toCave6") {    // cave6への遷移処理
             let vc: cave6ViewController = (segue.destination as? cave6ViewController)!
@@ -1969,9 +1969,9 @@ class battleMessageViewController: UIViewController {
             vc.currentNum = currentNum
             vc.playerApperImage = playerApperImage
             vc.afterBattle = true
-         // ハーミット討伐済かどうか
-         vc.defeatHermit = defeatHermit
-    
+            // ハーミット討伐済かどうか
+            vc.defeatHermit = defeatHermit
+
 
         } else if (segue.identifier == "toCave7") {    // cave7への遷移処理
             let vc: cave7ViewController = (segue.destination as? cave7ViewController)!
@@ -1981,8 +1981,8 @@ class battleMessageViewController: UIViewController {
             vc.playerOverLocation = playerOverLocation
             vc.currentNum = currentNum
             vc.playerApperImage = playerApperImage
-         // ハーミット討伐済かどうか
-         vc.defeatHermit = defeatHermit
+            // ハーミット討伐済かどうか
+            vc.defeatHermit = defeatHermit
 
 
         } else if (segue.identifier == "toCave8") {    // cave8への遷移処理
@@ -1993,8 +1993,8 @@ class battleMessageViewController: UIViewController {
             vc.playerOverLocation = playerOverLocation
             vc.currentNum = currentNum
             vc.playerApperImage = playerApperImage
-         // ハーミット討伐済かどうか
-         vc.defeatHermit = defeatHermit
+            // ハーミット討伐済かどうか
+            vc.defeatHermit = defeatHermit
 
 
         } else if (segue.identifier == "toCave9") {    // cave9への遷移処理
@@ -2006,8 +2006,8 @@ class battleMessageViewController: UIViewController {
             vc.currentNum = currentNum
             vc.playerApperImage = playerApperImage
             vc.afterBattle = true
-         // ハーミット討伐済かどうか
-         vc.defeatHermit = defeatHermit
+            // ハーミット討伐済かどうか
+            vc.defeatHermit = defeatHermit
         }
 
     }

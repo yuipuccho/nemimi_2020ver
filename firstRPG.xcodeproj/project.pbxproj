@@ -125,10 +125,10 @@
 		BAC68A5723177FC300D78495 /* Story */ = {
 			isa = PBXGroup;
 			children = (
+				BA1F24662317C0A8003BA769 /* titleViewController.swift */,
 				BAC68A5823177FF400D78495 /* story1ViewController.swift */,
 				BAC68A5A2317814D00D78495 /* story2ViewController.swift */,
 				BAC68A5C2317816700D78495 /* story3ViewController.swift */,
-				BA1F24662317C0A8003BA769 /* titleViewController.swift */,
 			);
 			path = Story;
 			sourceTree = "<group>";

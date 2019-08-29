@@ -9,21 +9,21 @@
 import UIKit
 
 class story1ViewController: UIViewController {
-
+    
     @IBOutlet weak var princessImage: UIImageView!
     @IBOutlet weak var hermitImage: UIImageView!
     @IBOutlet weak var textView: UITextView!
-
+    
     var count = 0
     var button = false
-
-
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         hermitImage.isHidden = true
         textView.isHidden = true
-
+        
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
             self.hermitImage.isHidden = false    // ハーミット登場
         }
@@ -32,11 +32,9 @@ class story1ViewController: UIViewController {
             self.textView.text = "＊「ホホホ......。」"
             self.button = true
         }
-
-
     }
     
-
+    
     @IBAction func mainButton(_ sender: UIButton) {
         if button == true {
             switch count {
@@ -51,13 +49,10 @@ class story1ViewController: UIViewController {
                 textView.text = "姫「きゃー！！」"
             case 3:
                 performSegue(withIdentifier: "toStory2", sender: nil)
-
-
+                
             default:
                 return
             }
         }
-
     }
-
 }

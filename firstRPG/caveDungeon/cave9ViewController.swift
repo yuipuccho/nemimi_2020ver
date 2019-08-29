@@ -172,7 +172,7 @@ class cave9ViewController: UIViewController {
                     textView.text = "ティグレ「じゃまをするものは\n  八つ裂きにしてくれるわ！！」"
                 case 3:
                     encount()
-                
+
                     performSegue(withIdentifier: "toBattle", sender: nil)
                 default:
                     return
@@ -191,7 +191,7 @@ class cave9ViewController: UIViewController {
 
                 }
             }
-
+            
         } else {    // ティグレとの戦闘後
             switch buttonCount {
             case 0:
@@ -211,7 +211,7 @@ class cave9ViewController: UIViewController {
                 textView.text = "姫「このご恩は 一生忘れませんわ！」"
             case 4:
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-                self.performSegue(withIdentifier: "toEnd", sender: nil)
+                    self.performSegue(withIdentifier: "toEnd", sender: nil)
                 }
 
             default:

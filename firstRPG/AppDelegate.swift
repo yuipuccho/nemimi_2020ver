@@ -12,28 +12,6 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    /*
-
-    // データ保存
-    // プレイヤー情報
-    var player:[String: Any] = [:]    // プレイヤー情報
-    // マップ情報
-    var toCave1: Bool = false
-    var toCave2: Bool = false
-    var toCave3: Bool = false
-    var toCave4: Bool = false
-    var toCave5: Bool = false
-    var toCave6: Bool = false
-    var toCave7: Bool = false
-    var toCave8: Bool = false
-    var toCave9: Bool = false
-
-    // プレイヤー座標
-    var playerLeftLocation: CGFloat = 0
-    var playerOverLocation: CGFloat = 0
-
-    var currentNum = 0
-*/
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {

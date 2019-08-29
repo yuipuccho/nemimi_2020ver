@@ -723,7 +723,7 @@ class battleCommandViewController: UIViewController {
         vc.playerOverLocation = playerOverLocation
 
         vc.playerApperImage = playerApperImage
-
+        
         vc.currentNum = currentNum
         // ハーミット討伐済かどうか
         vc.defeatHermit = defeatHermit
