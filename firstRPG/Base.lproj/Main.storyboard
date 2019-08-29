@@ -14,7 +14,7 @@
         <!--Battle Message View Controller-->
         <scene sceneID="8Jw-yU-Jup">
             <objects>
-                <viewController id="pY7-AG-JsT" customClass="battleMessageViewController" customModule="firstRPG" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="crossDissolve" id="pY7-AG-JsT" customClass="battleMessageViewController" customModule="firstRPG" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="np2-hk-sbP">
                         <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -336,7 +336,7 @@
         <!--Cave1 View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="cave1ViewController" customModule="firstRPG" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="crossDissolve" id="BYZ-38-t0r" customClass="cave1ViewController" customModule="firstRPG" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1929,7 +1929,7 @@
         <!--Cave9 View Controller-->
         <scene sceneID="rvN-hh-Kbc">
             <objects>
-                <viewController id="gte-P1-FwM" customClass="cave9ViewController" customModule="firstRPG" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="crossDissolve" id="gte-P1-FwM" customClass="cave9ViewController" customModule="firstRPG" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Hp3-NL-IKg">
                         <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -3132,7 +3132,7 @@
         <!--Cave2 View Controller-->
         <scene sceneID="TNM-eR-St6">
             <objects>
-                <viewController id="IMm-Jw-zwl" customClass="cave2ViewController" customModule="firstRPG" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="crossDissolve" id="IMm-Jw-zwl" customClass="cave2ViewController" customModule="firstRPG" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kax-Ap-HUX">
                         <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -4167,7 +4167,7 @@
         <!--Cave3 View Controller-->
         <scene sceneID="hA3-3X-ZrF">
             <objects>
-                <viewController id="BBQ-Rh-IIw" customClass="cave3ViewController" customModule="firstRPG" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="crossDissolve" id="BBQ-Rh-IIw" customClass="cave3ViewController" customModule="firstRPG" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eGj-mO-TMs">
                         <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -5217,7 +5217,7 @@
         <!--Cave4 View Controller-->
         <scene sceneID="Z6Y-hy-ewS">
             <objects>
-                <viewController id="8oD-8e-0LV" customClass="cave4ViewController" customModule="firstRPG" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="crossDissolve" id="8oD-8e-0LV" customClass="cave4ViewController" customModule="firstRPG" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="otM-gi-4GQ">
                         <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -6324,7 +6324,7 @@
         <!--Cave5 View Controller-->
         <scene sceneID="obT-9h-pdc">
             <objects>
-                <viewController id="T6C-kC-tbL" customClass="cave5ViewController" customModule="firstRPG" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="crossDissolve" id="T6C-kC-tbL" customClass="cave5ViewController" customModule="firstRPG" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BS9-5Z-b4T">
                         <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -7432,7 +7432,7 @@
         <!--Cave6 View Controller-->
         <scene sceneID="bFa-67-CTV">
             <objects>
-                <viewController id="cQM-HF-MfT" customClass="cave6ViewController" customModule="firstRPG" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="crossDissolve" id="cQM-HF-MfT" customClass="cave6ViewController" customModule="firstRPG" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ky4-BU-bRs">
                         <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -8600,7 +8600,7 @@
         <!--Cave7 View Controller-->
         <scene sceneID="cGU-qq-0sI">
             <objects>
-                <viewController id="Rfa-QV-Onu" customClass="cave7ViewController" customModule="firstRPG" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="crossDissolve" id="Rfa-QV-Onu" customClass="cave7ViewController" customModule="firstRPG" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0gd-mw-MPA">
                         <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -9682,7 +9682,7 @@
         <!--Cave8 View Controller-->
         <scene sceneID="7CI-KP-mFm">
             <objects>
-                <viewController id="i7F-3l-JTt" customClass="cave8ViewController" customModule="firstRPG" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="crossDissolve" id="i7F-3l-JTt" customClass="cave8ViewController" customModule="firstRPG" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="c4T-g4-l0y">
                         <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -10785,7 +10785,7 @@
         <!--Story1 View Controller-->
         <scene sceneID="nEM-xK-b1N">
             <objects>
-                <viewController id="4Z6-kI-icW" customClass="story1ViewController" customModule="firstRPG" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="crossDissolve" id="4Z6-kI-icW" customClass="story1ViewController" customModule="firstRPG" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1Zy-g1-HsY">
                         <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -11204,7 +11204,7 @@
         <!--Title View Controller-->
         <scene sceneID="zhd-VR-PPn">
             <objects>
-                <viewController id="R9I-h7-KcA" customClass="titleViewController" customModule="firstRPG" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="crossDissolve" id="R9I-h7-KcA" customClass="titleViewController" customModule="firstRPG" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7GS-l9-gXS">
                         <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -11216,7 +11216,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="560" height="320"/>
                                     </imageView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="タイトル_02" translatesAutoresizingMaskIntoConstraints="NO" id="DMA-Lb-aYd">
-                                        <rect key="frame" x="0.0" y="10" width="560" height="280"/>
+                                        <rect key="frame" x="0.0" y="10" width="560" height="280.00000000000006"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="DMA-Lb-aYd" secondAttribute="height" multiplier="2:1" id="O3d-is-nKm"/>
                                         </constraints>
@@ -11365,7 +11365,7 @@
         <!--Story3 View Controller-->
         <scene sceneID="4uL-y5-ZCQ">
             <objects>
-                <viewController id="Yp8-Bh-ajK" customClass="story3ViewController" customModule="firstRPG" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="crossDissolve" id="Yp8-Bh-ajK" customClass="story3ViewController" customModule="firstRPG" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="h00-m4-XjQ">
                         <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -11681,15 +11681,15 @@
         <image name="黒" width="32" height="32"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="04q-Tt-L2J"/>
-        <segue reference="hGh-cG-zlR"/>
+        <segue reference="nV6-8i-tlJ"/>
+        <segue reference="PIq-sP-KnF"/>
         <segue reference="MQO-Ny-RYg"/>
         <segue reference="Bpa-q2-f7B"/>
-        <segue reference="fBp-28-chC"/>
-        <segue reference="4lg-59-Hir"/>
-        <segue reference="tx1-5A-7hu"/>
-        <segue reference="nUF-Bt-wMs"/>
-        <segue reference="Jy2-vD-C5D"/>
-        <segue reference="vQB-Ca-9LJ"/>
+        <segue reference="nXS-oX-Yd2"/>
+        <segue reference="wz1-nP-YBw"/>
+        <segue reference="82U-Ja-PaT"/>
+        <segue reference="c06-vC-yHc"/>
+        <segue reference="RTa-DA-z8X"/>
+        <segue reference="ilG-nT-t9J"/>
     </inferredMetricsTieBreakers>
 </document>
