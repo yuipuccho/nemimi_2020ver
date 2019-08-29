@@ -33,9 +33,9 @@ class cave2ViewController: UIViewController {
 
 
     // プレイヤースタート地点座標
-    var playerLeftLocation: CGFloat = 457.5
+    var playerLeftLocation: CGFloat = 0
 
-    var playerOverLocation: CGFloat = 291.5
+    var playerOverLocation: CGFloat = 0
 
 
     var monster:[Int] = []
@@ -475,8 +475,15 @@ class cave2ViewController: UIViewController {
             let vc: cave1ViewController = (segue.destination as? cave1ViewController)!
 
             vc.player = player
-            vc.playerLeftLocation = 457.5
-            vc.playerOverLocation = 0.0
+
+            let width = view.frame.size.width - gameView.frame.size.width
+            let height = view.frame.size.height - gameView.frame.size.height
+            let plusWidth = width / 2
+            let plusHeight = height / 2
+
+            vc.playerLeftLocation = gameView.frame.size.width / 21 * 17 + plusWidth
+            vc.playerOverLocation = gameView.frame.size.height / 12 * 0 + plusHeight
+
             vc.currentNum = 17
 
             // ハーミット討伐済かどうか
@@ -492,8 +499,15 @@ class cave2ViewController: UIViewController {
             let vc: cave3ViewController = (segue.destination as? cave3ViewController)!
 
             vc.player = player
-            vc.playerLeftLocation = 538.5
-            vc.playerOverLocation = 26.5
+
+            let width = view.frame.size.width - gameView.frame.size.width
+            let height = view.frame.size.height - gameView.frame.size.height
+            let plusWidth = width / 2
+            let plusHeight = height / 2
+
+            vc.playerLeftLocation = gameView.frame.size.width / 21 * 20 + plusWidth
+            vc.playerOverLocation = gameView.frame.size.height / 12 * 1 + plusHeight
+
             vc.currentNum = 41
 
             // ハーミット討伐済かどうか

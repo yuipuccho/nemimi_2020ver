@@ -477,8 +477,15 @@ class cave8ViewController: UIViewController {
             let vc: cave7ViewController = (segue.destination as? cave7ViewController)!
 
             vc.player = player
-            vc.playerLeftLocation = 135.5
-            vc.playerOverLocation = 53
+
+            let width = view.frame.size.width - gameView.frame.size.width
+            let height = view.frame.size.height - gameView.frame.size.height
+            let plusWidth = width / 2
+            let plusHeight = height / 2
+
+            vc.playerLeftLocation = gameView.frame.size.width / 21 * 5 + plusWidth
+            vc.playerOverLocation = gameView.frame.size.height / 12 * 2 + plusHeight
+
             vc.currentNum = 47
 
             // ハーミット討伐済かどうか
@@ -492,6 +499,15 @@ class cave8ViewController: UIViewController {
          let vc: cave9ViewController = (segue.destination as? cave9ViewController)!
 
          vc.player = player
+
+            let width = view.frame.size.width - gameView.frame.size.width
+            let height = view.frame.size.height - gameView.frame.size.height
+            let plusWidth = width / 2
+            let plusHeight = height / 2
+
+            vc.playerLeftLocation = gameView.frame.size.width / 21 * 10 + plusWidth
+            vc.playerOverLocation = gameView.frame.size.height / 12 * 11 + plusHeight
+
          // ハーミット討伐済かどうか
          vc.defeatHermit = defeatHermit
 

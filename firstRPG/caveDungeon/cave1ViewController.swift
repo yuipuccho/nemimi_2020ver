@@ -7,7 +7,7 @@
 //
 
 import UIKit
-// import SpriteKit    // SpriteKit を使うためインポート
+
 
 class cave1ViewController: UIViewController {
     weak var timer: Timer!    // ⭐︎
@@ -46,9 +46,9 @@ class cave1ViewController: UIViewController {
 
 
     // プレイヤースタート地点座標
-    var playerLeftLocation: CGFloat = 266.5
+    var playerLeftLocation: CGFloat = 0
 
-    var playerOverLocation: CGFloat = 291.5
+    var playerOverLocation: CGFloat = 0
 
 
     var monster:[Int] = []
@@ -425,10 +425,15 @@ class cave1ViewController: UIViewController {
             let vc: cave2ViewController = (segue.destination as? cave2ViewController)!
 
             vc.player = player
-            vc.playerLeftLocation = 457.5
-            vc.playerOverLocation = 291.5
-            print(playerLeftLocation)
-            print(playerOverLocation)
+
+            let width = view.frame.size.width - gameView.frame.size.width
+            let height = view.frame.size.height - gameView.frame.size.height
+            let plusWidth = width / 2
+            let plusHeight = height / 2
+
+            vc.playerLeftLocation = gameView.frame.size.width / 21 * 17 + plusWidth
+            vc.playerOverLocation = gameView.frame.size.height / 12 * 11 + plusHeight
+
             vc.currentNum = 248
 
             // ハーミット討伐済かどうか

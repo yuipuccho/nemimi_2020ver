@@ -10,11 +10,30 @@ import UIKit
 
 class story2ViewController: UIViewController {
 
+    @IBOutlet weak var gameView: UIView!
     @IBOutlet weak var kingImage: UIImageView!
     @IBOutlet weak var textView: UITextView!
 
     var count = 0
     var button = false
+
+    /*var player:[String: Any] = [
+        "name": "ほげぇ",
+        "Lv": 1,    // レベル
+        "maxHP": 24,    // 最大HP
+        "maxMP": 10,    // 最大MP
+        "nowHP": 24,
+        "nowMP": 10,
+        "atk": 12,    // 攻撃力
+        "def": 15,    // 守備力
+        "agi": 8,    // すばやさ
+        "itemAtk": 0,    // 装備の攻撃力
+        "itemDef": 0,    // 装備の守備力
+        "exp": 0,    // 経験値
+        "gold": 0    // 所持金
+    ]*/
+
+    var player: [String: Any] = ["name": "ほげぇ", "maxHP": 222, "maxMP": 130, "atk": 208, "def": 4000, "nowHP": 222, "nowMP": 130, "exp":35000, "Lv": 30]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -60,6 +79,21 @@ class story2ViewController: UIViewController {
             default:
                 return
             }
+        }
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+
+        if (segue.identifier == "toCave1") {
+            let vc: cave1ViewController = (segue.destination as? cave1ViewController)!
+
+            vc.player = player
+            let width = view.frame.size.width - gameView.frame.size.width
+            let height = view.frame.size.height - gameView.frame.size.height
+            let plusWidth = width / 2
+            let plusHeight = height / 2
+
+            vc.playerLeftLocation = gameView.frame.size.width / 21 * 10 + plusWidth
+            vc.playerOverLocation = gameView.frame.size.height / 12 * 11 + plusHeight
         }
     }
 
