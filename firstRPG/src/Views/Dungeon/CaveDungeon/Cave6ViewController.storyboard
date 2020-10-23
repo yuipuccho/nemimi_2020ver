@@ -1,0 +1,1227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="landscape" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Cave6 View Controller-->
+        <scene sceneID="sb6-cT-dLi">
+            <objects>
+                <viewController modalTransitionStyle="crossDissolve" id="QSc-2U-JHM" customClass="cave6ViewController" customModule="firstRPG" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3BR-PV-8fS">
+                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b2o-Lq-k6p">
+                                <rect key="frame" x="104" y="0.0" width="688" height="393"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="dnk-WX-AVq">
+                                        <rect key="frame" x="0.0" y="0.0" width="688" height="393"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="maN-ha-Z8a">
+                                                <rect key="frame" x="0.0" y="0.0" width="688" height="33"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="黒" translatesAutoresizingMaskIntoConstraints="NO" id="Ygt-9C-EUA">
+                                                        <rect key="frame" x="0.0" y="0.0" width="33" height="33"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="黒" translatesAutoresizingMaskIntoConstraints="NO" id="gAb-qb-5eg">
+                                                        <rect key="frame" x="33" y="0.0" width="32.5" height="33"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="黒" translatesAutoresizingMaskIntoConstraints="NO" id="a6c-JW-OUh">
+                                                        <rect key="frame" x="65.5" y="0.0" width="33" height="33"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="右下のすみっこ" translatesAutoresizingMaskIntoConstraints="NO" id="mcH-oL-tsI">
+                                                        <rect key="frame" x="98.5" y="0.0" width="32.5" height="33"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="上左カーブ" translatesAutoresizingMaskIntoConstraints="NO" id="Ddd-cL-epD">
+                                                        <rect key="frame" x="131" y="0.0" width="33" height="33"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="崖ノーマル" translatesAutoresizingMaskIntoConstraints="NO" id="TWh-rj-ZKh">
+                                                        <rect key="frame" x="164" y="0.0" width="32.5" height="33"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="崖ノーマル" translatesAutoresizingMaskIntoConstraints="NO" id="kUy-eL-lhL">
+                                                        <rect key="frame" x="196.5" y="0.0" width="33" height="33"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="崖ノーマル" translatesAutoresizingMaskIntoConstraints="NO" id="m9s-U0-ma1">
+                                                        <rect key="frame" x="229.5" y="0.0" width="32.5" height="33"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="崖ノーマル" translatesAutoresizingMaskIntoConstraints="NO" id="jdv-yO-Rfe">
+                                                        <rect key="frame" x="262" y="0.0" width="33" height="33"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="トンネル左上" translatesAutoresizingMaskIntoConstraints="NO" id="f9J-bX-eZ8">
+                                                        <rect key="frame" x="295" y="0.0" width="32.5" height="33"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="トンネル中上" translatesAutoresizingMaskIntoConstraints="NO" id="8r7-JA-IKd">
+                                                        <rect key="frame" x="327.5" y="0.0" width="33" height="33"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="トンネル右上" translatesAutoresizingMaskIntoConstraints="NO" id="b6p-3Q-yef">
+                                                        <rect key="frame" x="360.5" y="0.0" width="32.5" height="33"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="崖ノーマル" translatesAutoresizingMaskIntoConstraints="NO" id="4w3-rt-TFa">
+                                                        <rect key="frame" x="393" y="0.0" width="33" height="33"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="崖ノーマル" translatesAutoresizingMaskIntoConstraints="NO" id="0jW-lL-iUy">
+                                                        <rect key="frame" x="426" y="0.0" width="32.5" height="33"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="崖ノーマル" translatesAutoresizingMaskIntoConstraints="NO" id="3I1-Pk-XH9">
+                                                        <rect key="frame" x="458.5" y="0.0" width="33" height="33"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="崖ノーマル" translatesAutoresizingMaskIntoConstraints="NO" id="zHx-Yu-KeU">
+                                                        <rect key="frame" x="491.5" y="0.0" width="32.5" height="33"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="2" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="上右カーブ" translatesAutoresizingMaskIntoConstraints="NO" id="u5d-Jm-b74">
+                                                        <rect key="frame" x="524" y="0.0" width="33" height="33"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="2" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="左下のすみっこ" translatesAutoresizingMaskIntoConstraints="NO" id="4BM-vd-Rpj">
+                                                        <rect key="frame" x="557" y="0.0" width="32.5" height="33"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="黒" translatesAutoresizingMaskIntoConstraints="NO" id="eES-Cc-uaj">
+                                                        <rect key="frame" x="589.5" y="0.0" width="33" height="33"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="黒" translatesAutoresizingMaskIntoConstraints="NO" id="IWG-7v-Kil">
+                                                        <rect key="frame" x="622.5" y="0.0" width="32.5" height="33"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="黒" translatesAutoresizingMaskIntoConstraints="NO" id="639-op-L0D">
+                                                        <rect key="frame" x="655" y="0.0" width="33" height="33"/>
+                                                    </imageView>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="WcQ-ZZ-XXx">
+                                                <rect key="frame" x="0.0" y="33" width="688" height="32.5"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="上" translatesAutoresizingMaskIntoConstraints="NO" id="VbU-2h-YaF">
+                                                        <rect key="frame" x="0.0" y="0.0" width="33" height="32.5"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="上" translatesAutoresizingMaskIntoConstraints="NO" id="loS-LF-hvW">
+                                                        <rect key="frame" x="33" y="0.0" width="32.5" height="32.5"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="上" translatesAutoresizingMaskIntoConstraints="NO" id="YDu-n0-DlN">
+                                                        <rect key="frame" x="65.5" y="0.0" width="33" height="32.5"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="上左カーブ" translatesAutoresizingMaskIntoConstraints="NO" id="WEk-FT-9br">
+                                                        <rect key="frame" x="98.5" y="0.0" width="32.5" height="32.5"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="崖左" translatesAutoresizingMaskIntoConstraints="NO" id="DuT-Nd-4e1">
+                                                        <rect key="frame" x="131" y="0.0" width="33" height="32.5"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="崖ノーマル下" translatesAutoresizingMaskIntoConstraints="NO" id="Opn-SL-i8d">
+                                                        <rect key="frame" x="164" y="0.0" width="32.5" height="32.5"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="崖ノーマル下" translatesAutoresizingMaskIntoConstraints="NO" id="3hb-Zi-aCj">
+                                                        <rect key="frame" x="196.5" y="0.0" width="33" height="32.5"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="崖ノーマル下" translatesAutoresizingMaskIntoConstraints="NO" id="sSA-6x-m6W">
+                                                        <rect key="frame" x="229.5" y="0.0" width="32.5" height="32.5"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="崖ノーマル下" translatesAutoresizingMaskIntoConstraints="NO" id="eEM-Ru-Gfq">
+                                                        <rect key="frame" x="262" y="0.0" width="33" height="32.5"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="トンネル左下" translatesAutoresizingMaskIntoConstraints="NO" id="gaY-sq-AUD">
+                                                        <rect key="frame" x="295" y="0.0" width="32.5" height="32.5"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="トンネル中下" translatesAutoresizingMaskIntoConstraints="NO" id="bLT-lJ-alF">
+                                                        <rect key="frame" x="327.5" y="0.0" width="33" height="32.5"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="トンネル右下" translatesAutoresizingMaskIntoConstraints="NO" id="wFO-n0-lMf">
+                                                        <rect key="frame" x="360.5" y="0.0" width="32.5" height="32.5"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="崖ノーマル下" translatesAutoresizingMaskIntoConstraints="NO" id="yOS-4X-oCZ">
+                                                        <rect key="frame" x="393" y="0.0" width="33" height="32.5"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="崖ノーマル下" translatesAutoresizingMaskIntoConstraints="NO" id="sSz-TZ-HgH">
+                                                        <rect key="frame" x="426" y="0.0" width="32.5" height="32.5"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="崖ノーマル下" translatesAutoresizingMaskIntoConstraints="NO" id="t4a-ZZ-xn3">
+                                                        <rect key="frame" x="458.5" y="0.0" width="33" height="32.5"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="崖ノーマル下" translatesAutoresizingMaskIntoConstraints="NO" id="s5G-ba-gcn">
+                                                        <rect key="frame" x="491.5" y="0.0" width="32.5" height="32.5"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="崖右" translatesAutoresizingMaskIntoConstraints="NO" id="ww4-tv-x2c">
+                                                        <rect key="frame" x="524" y="0.0" width="33" height="32.5"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="上右カーブ" translatesAutoresizingMaskIntoConstraints="NO" id="bYr-kd-jaI">
+                                                        <rect key="frame" x="557" y="0.0" width="32.5" height="32.5"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="上" translatesAutoresizingMaskIntoConstraints="NO" id="f8S-YT-Ed2">
+                                                        <rect key="frame" x="589.5" y="0.0" width="33" height="32.5"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="上" translatesAutoresizingMaskIntoConstraints="NO" id="YZy-vG-6f9">
+                                                        <rect key="frame" x="622.5" y="0.0" width="32.5" height="32.5"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="上" translatesAutoresizingMaskIntoConstraints="NO" id="uCp-re-ybX">
+                                                        <rect key="frame" x="655" y="0.0" width="33" height="32.5"/>
+                                                    </imageView>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="RNG-fU-RSn">
+                                                <rect key="frame" x="0.0" y="65.5" width="688" height="33"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="崖ノーマル" translatesAutoresizingMaskIntoConstraints="NO" id="5fE-Tl-if7">
+                                                        <rect key="frame" x="0.0" y="0.0" width="33" height="33"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="崖ノーマル" translatesAutoresizingMaskIntoConstraints="NO" id="g3l-i9-Syt">
+                                                        <rect key="frame" x="33" y="0.0" width="32.5" height="33"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="崖ノーマル" translatesAutoresizingMaskIntoConstraints="NO" id="IwY-PV-F2X">
+                                                        <rect key="frame" x="65.5" y="0.0" width="33" height="33"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="崖左" translatesAutoresizingMaskIntoConstraints="NO" id="6Dz-Kh-oXW">
+                                                        <rect key="frame" x="98.5" y="0.0" width="32.5" height="33"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="崖左下" translatesAutoresizingMaskIntoConstraints="NO" id="duw-ke-9T6">
+                                                        <rect key="frame" x="131" y="0.0" width="33" height="33"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="地面" translatesAutoresizingMaskIntoConstraints="NO" id="4Lg-OR-gWY">
+                                                        <rect key="frame" x="164" y="0.0" width="32.5" height="33"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="地面" translatesAutoresizingMaskIntoConstraints="NO" id="C1W-lV-AYV">
+                                                        <rect key="frame" x="196.5" y="0.0" width="33" height="33"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="地面" translatesAutoresizingMaskIntoConstraints="NO" id="y8M-AU-ycv">
+                                                        <rect key="frame" x="229.5" y="0.0" width="32.5" height="33"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="地面" translatesAutoresizingMaskIntoConstraints="NO" id="BXh-Vh-OeY">
+                                                        <rect key="frame" x="262" y="0.0" width="33" height="33"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="地面" translatesAutoresizingMaskIntoConstraints="NO" id="6ed-bn-PWb">
+                                                        <rect key="frame" x="295" y="0.0" width="32.5" height="33"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="地面" translatesAutoresizingMaskIntoConstraints="NO" id="e83-ej-LOA">
+                                                        <rect key="frame" x="327.5" y="0.0" width="33" height="33"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="地面" translatesAutoresizingMaskIntoConstraints="NO" id="Opc-1u-y65">
+                                                        <rect key="frame" x="360.5" y="0.0" width="32.5" height="33"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="地面" translatesAutoresizingMaskIntoConstraints="NO" id="msW-M4-MZT">
+                                                        <rect key="frame" x="393" y="0.0" width="33" height="33"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="地面" translatesAutoresizingMaskIntoConstraints="NO" id="zuF-bz-LGc">
+                                                        <rect key="frame" x="426" y="0.0" width="32.5" height="33"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="地面" translatesAutoresizingMaskIntoConstraints="NO" id="sHf-bE-qEi">
+                                                        <rect key="frame" x="458.5" y="0.0" width="33" height="33"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="地面" translatesAutoresizingMaskIntoConstraints="NO" id="4vI-T8-QGa">
+                                                        <rect key="frame" x="491.5" y="0.0" width="32.5" height="33"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="崖右下" translatesAutoresizingMaskIntoConstraints="NO" id="HCq-YF-mel">
+                                                        <rect key="frame" x="524" y="0.0" width="33" height="33"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="崖右" translatesAutoresizingMaskIntoConstraints="NO" id="N1I-ew-YOj">
+                                                        <rect key="frame" x="557" y="0.0" width="32.5" height="33"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="崖ノーマル" translatesAutoresizingMaskIntoConstraints="NO" id="wgd-zr-GIa">
+                                                        <rect key="frame" x="589.5" y="0.0" width="33" height="33"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="崖ノーマル" translatesAutoresizingMaskIntoConstraints="NO" id="H3d-Ej-Lev">
+                                                        <rect key="frame" x="622.5" y="0.0" width="32.5" height="33"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="崖ノーマル" translatesAutoresizingMaskIntoConstraints="NO" id="Kbe-ZP-RAd">
+                                                        <rect key="frame" x="655" y="0.0" width="33" height="33"/>
+                                                    </imageView>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="cc7-FO-rRh">
+                                                <rect key="frame" x="0.0" y="98.5" width="688" height="32.5"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="崖ノーマル" translatesAutoresizingMaskIntoConstraints="NO" id="13o-q9-YZT">
+                                                        <rect key="frame" x="0.0" y="0.0" width="33" height="32.5"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="崖ノーマル" translatesAutoresizingMaskIntoConstraints="NO" id="zUH-Ii-XNQ">
+                                                        <rect key="frame" x="33" y="0.0" width="32.5" height="32.5"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="崖ノーマル下" translatesAutoresizingMaskIntoConstraints="NO" id="JaN-LF-YW5">
+                                                        <rect key="frame" x="65.5" y="0.0" width="33" height="32.5"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="崖左下" translatesAutoresizingMaskIntoConstraints="NO" id="1no-wK-5L7">
+                                                        <rect key="frame" x="98.5" y="0.0" width="32.5" height="32.5"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="地面" translatesAutoresizingMaskIntoConstraints="NO" id="5db-sj-Fmo">
+                                                        <rect key="frame" x="131" y="0.0" width="33" height="32.5"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="地面" translatesAutoresizingMaskIntoConstraints="NO" id="sYc-yP-3LE">
+                                                        <rect key="frame" x="164" y="0.0" width="32.5" height="32.5"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="地面" translatesAutoresizingMaskIntoConstraints="NO" id="iBT-Kl-Pll">
+                                                        <rect key="frame" x="196.5" y="0.0" width="33" height="32.5"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="地面" translatesAutoresizingMaskIntoConstraints="NO" id="tDk-bO-neR">
+                                                        <rect key="frame" x="229.5" y="0.0" width="32.5" height="32.5"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="地面" translatesAutoresizingMaskIntoConstraints="NO" id="zcE-Ds-9QX">
+                                                        <rect key="frame" x="262" y="0.0" width="33" height="32.5"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="地面" translatesAutoresizingMaskIntoConstraints="NO" id="95g-bX-hdY">
+                                                        <rect key="frame" x="295" y="0.0" width="32.5" height="32.5"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="地面" translatesAutoresizingMaskIntoConstraints="NO" id="bgF-YF-sEy">
+                                                        <rect key="frame" x="327.5" y="0.0" width="33" height="32.5"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="地面" translatesAutoresizingMaskIntoConstraints="NO" id="UFA-Cp-Jxl">
+                                                        <rect key="frame" x="360.5" y="0.0" width="32.5" height="32.5"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="地面" translatesAutoresizingMaskIntoConstraints="NO" id="0ll-Fw-J8W">
+                                                        <rect key="frame" x="393" y="0.0" width="33" height="32.5"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="地面" translatesAutoresizingMaskIntoConstraints="NO" id="mh8-fw-lSn">
+                                                        <rect key="frame" x="426" y="0.0" width="32.5" height="32.5"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="地面" translatesAutoresizingMaskIntoConstraints="NO" id="vPl-HL-Cap">
+                                                        <rect key="frame" x="458.5" y="0.0" width="33" height="32.5"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="地面" translatesAutoresizingMaskIntoConstraints="NO" id="bIb-qf-9Hu">
+                                                        <rect key="frame" x="491.5" y="0.0" width="32.5" height="32.5"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="地面" translatesAutoresizingMaskIntoConstraints="NO" id="inP-Uu-f80">
+                                                        <rect key="frame" x="524" y="0.0" width="33" height="32.5"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="崖右下" translatesAutoresizingMaskIntoConstraints="NO" id="IAA-t3-tWo">
+                                                        <rect key="frame" x="557" y="0.0" width="32.5" height="32.5"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="崖ノーマル下" translatesAutoresizingMaskIntoConstraints="NO" id="DAc-QE-Les">
+                                                        <rect key="frame" x="589.5" y="0.0" width="33" height="32.5"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="崖ノーマル" translatesAutoresizingMaskIntoConstraints="NO" id="lH1-f4-VNf">
+                                                        <rect key="frame" x="622.5" y="0.0" width="32.5" height="32.5"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="崖ノーマル" translatesAutoresizingMaskIntoConstraints="NO" id="2kA-mO-8dp">
+                                                        <rect key="frame" x="655" y="0.0" width="33" height="32.5"/>
+                                                    </imageView>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="5ob-Vj-c3v">
+                                                <rect key="frame" x="0.0" y="131" width="688" height="33"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="崖水" translatesAutoresizingMaskIntoConstraints="NO" id="G91-Ys-8rK">
+                                                        <rect key="frame" x="0.0" y="0.0" width="33" height="33"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="崖水" translatesAutoresizingMaskIntoConstraints="NO" id="Ly5-JH-z37">
+                                                        <rect key="frame" x="33" y="0.0" width="32.5" height="33"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="段差右" translatesAutoresizingMaskIntoConstraints="NO" id="ohE-E0-gXf">
+                                                        <rect key="frame" x="65.5" y="0.0" width="33" height="33"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="段差" translatesAutoresizingMaskIntoConstraints="NO" id="rDu-qD-6NM">
+                                                        <rect key="frame" x="98.5" y="0.0" width="32.5" height="33"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="段差" translatesAutoresizingMaskIntoConstraints="NO" id="J8e-Mm-s8T">
+                                                        <rect key="frame" x="131" y="0.0" width="33" height="33"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="段差" translatesAutoresizingMaskIntoConstraints="NO" id="oHC-qq-fd3">
+                                                        <rect key="frame" x="164" y="0.0" width="32.5" height="33"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="段差" translatesAutoresizingMaskIntoConstraints="NO" id="lRO-QB-YzY">
+                                                        <rect key="frame" x="196.5" y="0.0" width="33" height="33"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="段差" translatesAutoresizingMaskIntoConstraints="NO" id="5nD-Nl-qdh">
+                                                        <rect key="frame" x="229.5" y="0.0" width="32.5" height="33"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="地面" translatesAutoresizingMaskIntoConstraints="NO" id="uOL-sV-0On">
+                                                        <rect key="frame" x="262" y="0.0" width="33" height="33"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="地面" translatesAutoresizingMaskIntoConstraints="NO" id="1H5-uJ-F2J">
+                                                        <rect key="frame" x="295" y="0.0" width="32.5" height="33"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="地面" translatesAutoresizingMaskIntoConstraints="NO" id="I07-aj-Efb">
+                                                        <rect key="frame" x="327.5" y="0.0" width="33" height="33"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="地面" translatesAutoresizingMaskIntoConstraints="NO" id="pok-fH-3sP">
+                                                        <rect key="frame" x="360.5" y="0.0" width="32.5" height="33"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="段差右下のすみっこ" translatesAutoresizingMaskIntoConstraints="NO" id="35z-W5-L4F">
+                                                        <rect key="frame" x="393" y="0.0" width="33" height="33"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="段差" translatesAutoresizingMaskIntoConstraints="NO" id="hQF-nt-dBB">
+                                                        <rect key="frame" x="426" y="0.0" width="32.5" height="33"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="段差" translatesAutoresizingMaskIntoConstraints="NO" id="ght-N5-6Gb">
+                                                        <rect key="frame" x="458.5" y="0.0" width="33" height="33"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="段差" translatesAutoresizingMaskIntoConstraints="NO" id="r4R-ca-MvA">
+                                                        <rect key="frame" x="491.5" y="0.0" width="32.5" height="33"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="段差" translatesAutoresizingMaskIntoConstraints="NO" id="hus-2K-rfH">
+                                                        <rect key="frame" x="524" y="0.0" width="33" height="33"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="段差" translatesAutoresizingMaskIntoConstraints="NO" id="WIj-V7-Qed">
+                                                        <rect key="frame" x="557" y="0.0" width="32.5" height="33"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="段差左" translatesAutoresizingMaskIntoConstraints="NO" id="u3c-c3-zrj">
+                                                        <rect key="frame" x="589.5" y="0.0" width="33" height="33"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="崖水" translatesAutoresizingMaskIntoConstraints="NO" id="1R2-gV-8JP">
+                                                        <rect key="frame" x="622.5" y="0.0" width="32.5" height="33"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="崖水" translatesAutoresizingMaskIntoConstraints="NO" id="Taq-Yq-drf">
+                                                        <rect key="frame" x="655" y="0.0" width="33" height="33"/>
+                                                    </imageView>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="v5y-L6-rv7">
+                                                <rect key="frame" x="0.0" y="164" width="688" height="32.5"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="水" translatesAutoresizingMaskIntoConstraints="NO" id="vvb-RH-aqw">
+                                                        <rect key="frame" x="0.0" y="0.0" width="33" height="32.5"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="崖水左下" translatesAutoresizingMaskIntoConstraints="NO" id="08n-6x-2pA">
+                                                        <rect key="frame" x="33" y="0.0" width="32.5" height="32.5"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="崖水左" translatesAutoresizingMaskIntoConstraints="NO" id="7oh-rn-K1j">
+                                                        <rect key="frame" x="65.5" y="0.0" width="33" height="32.5"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="崖水" translatesAutoresizingMaskIntoConstraints="NO" id="RP2-h8-P5m">
+                                                        <rect key="frame" x="98.5" y="0.0" width="32.5" height="32.5"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="崖水" translatesAutoresizingMaskIntoConstraints="NO" id="KZy-vw-a3F">
+                                                        <rect key="frame" x="131" y="0.0" width="33" height="32.5"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="崖水" translatesAutoresizingMaskIntoConstraints="NO" id="caZ-y5-Uys">
+                                                        <rect key="frame" x="164" y="0.0" width="32.5" height="32.5"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="崖水" translatesAutoresizingMaskIntoConstraints="NO" id="XMb-gU-GS8">
+                                                        <rect key="frame" x="196.5" y="0.0" width="33" height="32.5"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="崖水" translatesAutoresizingMaskIntoConstraints="NO" id="3xG-Gl-738">
+                                                        <rect key="frame" x="229.5" y="0.0" width="32.5" height="32.5"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="段差右" translatesAutoresizingMaskIntoConstraints="NO" id="Sjq-Dv-2qH">
+                                                        <rect key="frame" x="262" y="0.0" width="33" height="32.5"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="段差" translatesAutoresizingMaskIntoConstraints="NO" id="ddC-2o-vwm">
+                                                        <rect key="frame" x="295" y="0.0" width="32.5" height="32.5"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="段差" translatesAutoresizingMaskIntoConstraints="NO" id="gZW-FZ-9rn">
+                                                        <rect key="frame" x="327.5" y="0.0" width="33" height="32.5"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="段差" translatesAutoresizingMaskIntoConstraints="NO" id="rnR-5f-OGe">
+                                                        <rect key="frame" x="360.5" y="0.0" width="32.5" height="32.5"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="段差左" translatesAutoresizingMaskIntoConstraints="NO" id="kAl-ai-HvG">
+                                                        <rect key="frame" x="393" y="0.0" width="33" height="32.5"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="崖水" translatesAutoresizingMaskIntoConstraints="NO" id="1n3-jF-C6Y">
+                                                        <rect key="frame" x="426" y="0.0" width="32.5" height="32.5"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="崖水" translatesAutoresizingMaskIntoConstraints="NO" id="N5d-Xd-bPU">
+                                                        <rect key="frame" x="458.5" y="0.0" width="33" height="32.5"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="崖水" translatesAutoresizingMaskIntoConstraints="NO" id="XKt-Np-Fwy">
+                                                        <rect key="frame" x="491.5" y="0.0" width="32.5" height="32.5"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="崖水" translatesAutoresizingMaskIntoConstraints="NO" id="Sob-bi-oMM">
+                                                        <rect key="frame" x="524" y="0.0" width="33" height="32.5"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="崖水" translatesAutoresizingMaskIntoConstraints="NO" id="SQH-V5-890">
+                                                        <rect key="frame" x="557" y="0.0" width="32.5" height="32.5"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="崖水右" translatesAutoresizingMaskIntoConstraints="NO" id="RQS-1M-pg0">
+                                                        <rect key="frame" x="589.5" y="0.0" width="33" height="32.5"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="崖水右下" translatesAutoresizingMaskIntoConstraints="NO" id="OSx-h0-zvj">
+                                                        <rect key="frame" x="622.5" y="0.0" width="32.5" height="32.5"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="水" translatesAutoresizingMaskIntoConstraints="NO" id="DwB-73-DJX">
+                                                        <rect key="frame" x="655" y="0.0" width="33" height="32.5"/>
+                                                    </imageView>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Rkb-yo-lzD">
+                                                <rect key="frame" x="0.0" y="196.5" width="688" height="33"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="水" translatesAutoresizingMaskIntoConstraints="NO" id="1Ca-ih-9Si">
+                                                        <rect key="frame" x="0.0" y="0.0" width="33" height="33"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="水" translatesAutoresizingMaskIntoConstraints="NO" id="mC7-hJ-PY3">
+                                                        <rect key="frame" x="33" y="0.0" width="32.5" height="33"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="崖水左下" translatesAutoresizingMaskIntoConstraints="NO" id="UEE-ms-h0I">
+                                                        <rect key="frame" x="65.5" y="0.0" width="33" height="33"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="崖水下" translatesAutoresizingMaskIntoConstraints="NO" id="aMF-Hc-92H">
+                                                        <rect key="frame" x="98.5" y="0.0" width="32.5" height="33"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="崖水下" translatesAutoresizingMaskIntoConstraints="NO" id="gbb-IB-gOx">
+                                                        <rect key="frame" x="131" y="0.0" width="33" height="33"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="崖水下" translatesAutoresizingMaskIntoConstraints="NO" id="e7E-R5-WAx">
+                                                        <rect key="frame" x="164" y="0.0" width="32.5" height="33"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="崖水下" translatesAutoresizingMaskIntoConstraints="NO" id="T9Y-F2-3Xj">
+                                                        <rect key="frame" x="196.5" y="0.0" width="33" height="33"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="崖水下" translatesAutoresizingMaskIntoConstraints="NO" id="f5F-zZ-dU0">
+                                                        <rect key="frame" x="229.5" y="0.0" width="32.5" height="33"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="崖水左" translatesAutoresizingMaskIntoConstraints="NO" id="K6v-TD-Ton">
+                                                        <rect key="frame" x="262" y="0.0" width="33" height="33"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="崖水" translatesAutoresizingMaskIntoConstraints="NO" id="qzh-5c-PzC">
+                                                        <rect key="frame" x="295" y="0.0" width="32.5" height="33"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="吊り橋中" translatesAutoresizingMaskIntoConstraints="NO" id="IaT-E7-zPo">
+                                                        <rect key="frame" x="327.5" y="0.0" width="33" height="33"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="崖水" translatesAutoresizingMaskIntoConstraints="NO" id="XgL-6Q-19M">
+                                                        <rect key="frame" x="360.5" y="0.0" width="32.5" height="33"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="崖水右" translatesAutoresizingMaskIntoConstraints="NO" id="C7a-F8-LWH">
+                                                        <rect key="frame" x="393" y="0.0" width="33" height="33"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="崖水下" translatesAutoresizingMaskIntoConstraints="NO" id="6kD-9t-rvY">
+                                                        <rect key="frame" x="426" y="0.0" width="32.5" height="33"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="崖水下" translatesAutoresizingMaskIntoConstraints="NO" id="tqW-lG-4BC">
+                                                        <rect key="frame" x="458.5" y="0.0" width="33" height="33"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="崖水下" translatesAutoresizingMaskIntoConstraints="NO" id="DoB-VM-QE5">
+                                                        <rect key="frame" x="491.5" y="0.0" width="32.5" height="33"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="崖水下" translatesAutoresizingMaskIntoConstraints="NO" id="lZx-mE-laY">
+                                                        <rect key="frame" x="524" y="0.0" width="33" height="33"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="崖水下" translatesAutoresizingMaskIntoConstraints="NO" id="fgc-4Q-5PE">
+                                                        <rect key="frame" x="557" y="0.0" width="32.5" height="33"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="崖水右下" translatesAutoresizingMaskIntoConstraints="NO" id="lFJ-Bj-U1B">
+                                                        <rect key="frame" x="589.5" y="0.0" width="33" height="33"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="水" translatesAutoresizingMaskIntoConstraints="NO" id="toD-KZ-sLZ">
+                                                        <rect key="frame" x="622.5" y="0.0" width="32.5" height="33"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="水" translatesAutoresizingMaskIntoConstraints="NO" id="ZkJ-NG-8VL">
+                                                        <rect key="frame" x="655" y="0.0" width="33" height="33"/>
+                                                    </imageView>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="mhK-Jj-ZBa">
+                                                <rect key="frame" x="0.0" y="229.5" width="688" height="32.5"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="水" translatesAutoresizingMaskIntoConstraints="NO" id="RoM-ti-lDi">
+                                                        <rect key="frame" x="0.0" y="0.0" width="33" height="32.5"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="水" translatesAutoresizingMaskIntoConstraints="NO" id="7fU-15-uxz">
+                                                        <rect key="frame" x="33" y="0.0" width="32.5" height="32.5"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="水" translatesAutoresizingMaskIntoConstraints="NO" id="Ii9-Zk-57B">
+                                                        <rect key="frame" x="65.5" y="0.0" width="33" height="32.5"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="水" translatesAutoresizingMaskIntoConstraints="NO" id="8KI-nd-uUm">
+                                                        <rect key="frame" x="98.5" y="0.0" width="32.5" height="32.5"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="水" translatesAutoresizingMaskIntoConstraints="NO" id="nhB-zB-TyC">
+                                                        <rect key="frame" x="131" y="0.0" width="33" height="32.5"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="水" translatesAutoresizingMaskIntoConstraints="NO" id="5NE-HJ-WPv">
+                                                        <rect key="frame" x="164" y="0.0" width="32.5" height="32.5"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="水" translatesAutoresizingMaskIntoConstraints="NO" id="cLs-8c-cN2">
+                                                        <rect key="frame" x="196.5" y="0.0" width="33" height="32.5"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="水" translatesAutoresizingMaskIntoConstraints="NO" id="T5n-OM-q9F">
+                                                        <rect key="frame" x="229.5" y="0.0" width="32.5" height="32.5"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="崖水左下" translatesAutoresizingMaskIntoConstraints="NO" id="BZx-mo-8RC">
+                                                        <rect key="frame" x="262" y="0.0" width="33" height="32.5"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="崖水下" translatesAutoresizingMaskIntoConstraints="NO" id="SMA-Dg-Y6c">
+                                                        <rect key="frame" x="295" y="0.0" width="32.5" height="32.5"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="吊り橋中" translatesAutoresizingMaskIntoConstraints="NO" id="Oe5-XE-sVB">
+                                                        <rect key="frame" x="327.5" y="0.0" width="33" height="32.5"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="崖水下" translatesAutoresizingMaskIntoConstraints="NO" id="Ajo-Ys-Crf">
+                                                        <rect key="frame" x="360.5" y="0.0" width="32.5" height="32.5"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="崖水右下" translatesAutoresizingMaskIntoConstraints="NO" id="7T9-0B-vuZ">
+                                                        <rect key="frame" x="393" y="0.0" width="33" height="32.5"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="水" translatesAutoresizingMaskIntoConstraints="NO" id="w8x-VI-XdC">
+                                                        <rect key="frame" x="426" y="0.0" width="32.5" height="32.5"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="水" translatesAutoresizingMaskIntoConstraints="NO" id="jTO-0r-6fS">
+                                                        <rect key="frame" x="458.5" y="0.0" width="33" height="32.5"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="水" translatesAutoresizingMaskIntoConstraints="NO" id="IcY-bu-uTG">
+                                                        <rect key="frame" x="491.5" y="0.0" width="32.5" height="32.5"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="水" translatesAutoresizingMaskIntoConstraints="NO" id="IdV-ve-R2m">
+                                                        <rect key="frame" x="524" y="0.0" width="33" height="32.5"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="水" translatesAutoresizingMaskIntoConstraints="NO" id="Lpm-5d-9DK">
+                                                        <rect key="frame" x="557" y="0.0" width="32.5" height="32.5"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="水" translatesAutoresizingMaskIntoConstraints="NO" id="cSp-gZ-9xF">
+                                                        <rect key="frame" x="589.5" y="0.0" width="33" height="32.5"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="水" translatesAutoresizingMaskIntoConstraints="NO" id="cus-Uo-Bvo">
+                                                        <rect key="frame" x="622.5" y="0.0" width="32.5" height="32.5"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="水" translatesAutoresizingMaskIntoConstraints="NO" id="BO2-gD-ylO">
+                                                        <rect key="frame" x="655" y="0.0" width="33" height="32.5"/>
+                                                    </imageView>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="b6x-cX-HI2">
+                                                <rect key="frame" x="0.0" y="262" width="688" height="33"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="水" translatesAutoresizingMaskIntoConstraints="NO" id="jwf-C5-4Fp">
+                                                        <rect key="frame" x="0.0" y="0.0" width="33" height="33"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="水" translatesAutoresizingMaskIntoConstraints="NO" id="ygv-yS-pCf">
+                                                        <rect key="frame" x="33" y="0.0" width="32.5" height="33"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="水" translatesAutoresizingMaskIntoConstraints="NO" id="CcL-dD-dqx">
+                                                        <rect key="frame" x="65.5" y="0.0" width="33" height="33"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="水" translatesAutoresizingMaskIntoConstraints="NO" id="Gqq-ku-8xO">
+                                                        <rect key="frame" x="98.5" y="0.0" width="32.5" height="33"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="水" translatesAutoresizingMaskIntoConstraints="NO" id="3YP-tR-t6V">
+                                                        <rect key="frame" x="131" y="0.0" width="33" height="33"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="水" translatesAutoresizingMaskIntoConstraints="NO" id="L49-7b-hgT">
+                                                        <rect key="frame" x="164" y="0.0" width="32.5" height="33"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="水" translatesAutoresizingMaskIntoConstraints="NO" id="1N1-dn-7jL">
+                                                        <rect key="frame" x="196.5" y="0.0" width="33" height="33"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="水" translatesAutoresizingMaskIntoConstraints="NO" id="ZYH-mU-fMw">
+                                                        <rect key="frame" x="229.5" y="0.0" width="32.5" height="33"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="水" translatesAutoresizingMaskIntoConstraints="NO" id="JEW-29-17r">
+                                                        <rect key="frame" x="262" y="0.0" width="33" height="33"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="水" translatesAutoresizingMaskIntoConstraints="NO" id="iGc-MN-ICk">
+                                                        <rect key="frame" x="295" y="0.0" width="32.5" height="33"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="吊り橋中" translatesAutoresizingMaskIntoConstraints="NO" id="167-HA-Wgs">
+                                                        <rect key="frame" x="327.5" y="0.0" width="33" height="33"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="水" translatesAutoresizingMaskIntoConstraints="NO" id="TXj-dA-boS">
+                                                        <rect key="frame" x="360.5" y="0.0" width="32.5" height="33"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="水" translatesAutoresizingMaskIntoConstraints="NO" id="JOt-85-KDy">
+                                                        <rect key="frame" x="393" y="0.0" width="33" height="33"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="水" translatesAutoresizingMaskIntoConstraints="NO" id="7jf-3r-oCH">
+                                                        <rect key="frame" x="426" y="0.0" width="32.5" height="33"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="水" translatesAutoresizingMaskIntoConstraints="NO" id="gtE-Vg-0T1">
+                                                        <rect key="frame" x="458.5" y="0.0" width="33" height="33"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="水" translatesAutoresizingMaskIntoConstraints="NO" id="xaA-Ox-5rS">
+                                                        <rect key="frame" x="491.5" y="0.0" width="32.5" height="33"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="水" translatesAutoresizingMaskIntoConstraints="NO" id="2cM-TN-5qU">
+                                                        <rect key="frame" x="524" y="0.0" width="33" height="33"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="水" translatesAutoresizingMaskIntoConstraints="NO" id="Mic-Ys-V5r">
+                                                        <rect key="frame" x="557" y="0.0" width="32.5" height="33"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="水" translatesAutoresizingMaskIntoConstraints="NO" id="vJi-Qg-pAf">
+                                                        <rect key="frame" x="589.5" y="0.0" width="33" height="33"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="水" translatesAutoresizingMaskIntoConstraints="NO" id="u5u-Yb-C3S">
+                                                        <rect key="frame" x="622.5" y="0.0" width="32.5" height="33"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="水" translatesAutoresizingMaskIntoConstraints="NO" id="04A-wD-Tje">
+                                                        <rect key="frame" x="655" y="0.0" width="33" height="33"/>
+                                                    </imageView>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="NxF-ra-2LJ">
+                                                <rect key="frame" x="0.0" y="295" width="688" height="32.5"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="水" translatesAutoresizingMaskIntoConstraints="NO" id="Vm1-uT-tj8">
+                                                        <rect key="frame" x="0.0" y="0.0" width="33" height="32.5"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="水" translatesAutoresizingMaskIntoConstraints="NO" id="uwu-8P-Sr8">
+                                                        <rect key="frame" x="33" y="0.0" width="32.5" height="32.5"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="水" translatesAutoresizingMaskIntoConstraints="NO" id="k3c-UU-bzP">
+                                                        <rect key="frame" x="65.5" y="0.0" width="33" height="32.5"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="水" translatesAutoresizingMaskIntoConstraints="NO" id="Qmo-DQ-XFi">
+                                                        <rect key="frame" x="98.5" y="0.0" width="32.5" height="32.5"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="水" translatesAutoresizingMaskIntoConstraints="NO" id="3i1-hx-mgL">
+                                                        <rect key="frame" x="131" y="0.0" width="33" height="32.5"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="水" translatesAutoresizingMaskIntoConstraints="NO" id="Jui-jL-84D">
+                                                        <rect key="frame" x="164" y="0.0" width="32.5" height="32.5"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="水" translatesAutoresizingMaskIntoConstraints="NO" id="P1k-Aw-tzF">
+                                                        <rect key="frame" x="196.5" y="0.0" width="33" height="32.5"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="水" translatesAutoresizingMaskIntoConstraints="NO" id="IW2-ae-R6f">
+                                                        <rect key="frame" x="229.5" y="0.0" width="32.5" height="32.5"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="水" translatesAutoresizingMaskIntoConstraints="NO" id="oLI-tN-kCa">
+                                                        <rect key="frame" x="262" y="0.0" width="33" height="32.5"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="水" translatesAutoresizingMaskIntoConstraints="NO" id="1oy-EU-QXT">
+                                                        <rect key="frame" x="295" y="0.0" width="32.5" height="32.5"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="吊り橋中" translatesAutoresizingMaskIntoConstraints="NO" id="1cN-2B-wQB">
+                                                        <rect key="frame" x="327.5" y="0.0" width="33" height="32.5"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="水" translatesAutoresizingMaskIntoConstraints="NO" id="Rn7-gD-gZX">
+                                                        <rect key="frame" x="360.5" y="0.0" width="32.5" height="32.5"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="水" translatesAutoresizingMaskIntoConstraints="NO" id="miD-DE-K7N">
+                                                        <rect key="frame" x="393" y="0.0" width="33" height="32.5"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="水" translatesAutoresizingMaskIntoConstraints="NO" id="Tzs-Lu-v35">
+                                                        <rect key="frame" x="426" y="0.0" width="32.5" height="32.5"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="水" translatesAutoresizingMaskIntoConstraints="NO" id="FZQ-jT-01Q">
+                                                        <rect key="frame" x="458.5" y="0.0" width="33" height="32.5"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="水" translatesAutoresizingMaskIntoConstraints="NO" id="2Jo-ql-QDL">
+                                                        <rect key="frame" x="491.5" y="0.0" width="32.5" height="32.5"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="水" translatesAutoresizingMaskIntoConstraints="NO" id="3jf-ya-TDx">
+                                                        <rect key="frame" x="524" y="0.0" width="33" height="32.5"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="水" translatesAutoresizingMaskIntoConstraints="NO" id="cuX-ho-b9a">
+                                                        <rect key="frame" x="557" y="0.0" width="32.5" height="32.5"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="水" translatesAutoresizingMaskIntoConstraints="NO" id="WE1-yg-FuY">
+                                                        <rect key="frame" x="589.5" y="0.0" width="33" height="32.5"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="水" translatesAutoresizingMaskIntoConstraints="NO" id="IBm-Ol-toC">
+                                                        <rect key="frame" x="622.5" y="0.0" width="32.5" height="32.5"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="水" translatesAutoresizingMaskIntoConstraints="NO" id="O1s-kb-f3I">
+                                                        <rect key="frame" x="655" y="0.0" width="33" height="32.5"/>
+                                                    </imageView>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="T1X-z5-Jgj">
+                                                <rect key="frame" x="0.0" y="327.5" width="688" height="33"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="水" translatesAutoresizingMaskIntoConstraints="NO" id="vCS-DK-jZ1">
+                                                        <rect key="frame" x="0.0" y="0.0" width="33" height="33"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="水" translatesAutoresizingMaskIntoConstraints="NO" id="o1W-Bf-UOq">
+                                                        <rect key="frame" x="33" y="0.0" width="32.5" height="33"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="水" translatesAutoresizingMaskIntoConstraints="NO" id="ezt-tm-fVx">
+                                                        <rect key="frame" x="65.5" y="0.0" width="33" height="33"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="水" translatesAutoresizingMaskIntoConstraints="NO" id="IsG-1M-ZF9">
+                                                        <rect key="frame" x="98.5" y="0.0" width="32.5" height="33"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="水" translatesAutoresizingMaskIntoConstraints="NO" id="w4s-bq-Zj5">
+                                                        <rect key="frame" x="131" y="0.0" width="33" height="33"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="水" translatesAutoresizingMaskIntoConstraints="NO" id="Xye-NM-i4n">
+                                                        <rect key="frame" x="164" y="0.0" width="32.5" height="33"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="水" translatesAutoresizingMaskIntoConstraints="NO" id="6Gv-aS-Wql">
+                                                        <rect key="frame" x="196.5" y="0.0" width="33" height="33"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="水" translatesAutoresizingMaskIntoConstraints="NO" id="7RJ-KZ-QnH">
+                                                        <rect key="frame" x="229.5" y="0.0" width="32.5" height="33"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="水" translatesAutoresizingMaskIntoConstraints="NO" id="4E1-b3-O7y">
+                                                        <rect key="frame" x="262" y="0.0" width="33" height="33"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="水" translatesAutoresizingMaskIntoConstraints="NO" id="7kj-N0-eZy">
+                                                        <rect key="frame" x="295" y="0.0" width="32.5" height="33"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="吊り橋中" translatesAutoresizingMaskIntoConstraints="NO" id="7G6-cp-bgy">
+                                                        <rect key="frame" x="327.5" y="0.0" width="33" height="33"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="水" translatesAutoresizingMaskIntoConstraints="NO" id="efe-0F-0xr">
+                                                        <rect key="frame" x="360.5" y="0.0" width="32.5" height="33"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="水" translatesAutoresizingMaskIntoConstraints="NO" id="krS-Pg-z7J">
+                                                        <rect key="frame" x="393" y="0.0" width="33" height="33"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="水" translatesAutoresizingMaskIntoConstraints="NO" id="7sj-vy-X8y">
+                                                        <rect key="frame" x="426" y="0.0" width="32.5" height="33"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="水" translatesAutoresizingMaskIntoConstraints="NO" id="owY-mQ-srg">
+                                                        <rect key="frame" x="458.5" y="0.0" width="33" height="33"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="水" translatesAutoresizingMaskIntoConstraints="NO" id="doG-fL-0pG">
+                                                        <rect key="frame" x="491.5" y="0.0" width="32.5" height="33"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="水" translatesAutoresizingMaskIntoConstraints="NO" id="HPG-D3-06H">
+                                                        <rect key="frame" x="524" y="0.0" width="33" height="33"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="水" translatesAutoresizingMaskIntoConstraints="NO" id="naB-4T-aBW">
+                                                        <rect key="frame" x="557" y="0.0" width="32.5" height="33"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="水" translatesAutoresizingMaskIntoConstraints="NO" id="sCg-sU-PAj">
+                                                        <rect key="frame" x="589.5" y="0.0" width="33" height="33"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="水" translatesAutoresizingMaskIntoConstraints="NO" id="obs-Wf-qs4">
+                                                        <rect key="frame" x="622.5" y="0.0" width="32.5" height="33"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="水" translatesAutoresizingMaskIntoConstraints="NO" id="5Rj-LP-kCb">
+                                                        <rect key="frame" x="655" y="0.0" width="33" height="33"/>
+                                                    </imageView>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="4C4-x3-KA5">
+                                                <rect key="frame" x="0.0" y="360.5" width="688" height="32.5"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="水" translatesAutoresizingMaskIntoConstraints="NO" id="YIB-HS-CXc">
+                                                        <rect key="frame" x="0.0" y="0.0" width="33" height="32.5"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="水" translatesAutoresizingMaskIntoConstraints="NO" id="I69-QA-UQ5">
+                                                        <rect key="frame" x="33" y="0.0" width="32.5" height="32.5"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="水" translatesAutoresizingMaskIntoConstraints="NO" id="4WB-ze-qgb">
+                                                        <rect key="frame" x="65.5" y="0.0" width="33" height="32.5"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="水" translatesAutoresizingMaskIntoConstraints="NO" id="ayX-lz-rH5">
+                                                        <rect key="frame" x="98.5" y="0.0" width="32.5" height="32.5"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="水" translatesAutoresizingMaskIntoConstraints="NO" id="cmD-e4-cfV">
+                                                        <rect key="frame" x="131" y="0.0" width="33" height="32.5"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="水" translatesAutoresizingMaskIntoConstraints="NO" id="mIA-MR-YpZ">
+                                                        <rect key="frame" x="164" y="0.0" width="32.5" height="32.5"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="水" translatesAutoresizingMaskIntoConstraints="NO" id="9gT-WF-wVY">
+                                                        <rect key="frame" x="196.5" y="0.0" width="33" height="32.5"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="水" translatesAutoresizingMaskIntoConstraints="NO" id="ICL-ma-TB5">
+                                                        <rect key="frame" x="229.5" y="0.0" width="32.5" height="32.5"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="水付き土左上" translatesAutoresizingMaskIntoConstraints="NO" id="hwh-BN-c38">
+                                                        <rect key="frame" x="262" y="0.0" width="33" height="32.5"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="土付き上" translatesAutoresizingMaskIntoConstraints="NO" id="a5B-IS-1Lz">
+                                                        <rect key="frame" x="295" y="0.0" width="32.5" height="32.5"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="土付き上" translatesAutoresizingMaskIntoConstraints="NO" id="7pS-ww-vRo">
+                                                        <rect key="frame" x="327.5" y="0.0" width="33" height="32.5"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="土付き上" translatesAutoresizingMaskIntoConstraints="NO" id="A1s-xL-Axt">
+                                                        <rect key="frame" x="360.5" y="0.0" width="32.5" height="32.5"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="水付き土右上" translatesAutoresizingMaskIntoConstraints="NO" id="AOF-Ft-6H8">
+                                                        <rect key="frame" x="393" y="0.0" width="33" height="32.5"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="水" translatesAutoresizingMaskIntoConstraints="NO" id="wTf-E2-RTg">
+                                                        <rect key="frame" x="426" y="0.0" width="32.5" height="32.5"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="水" translatesAutoresizingMaskIntoConstraints="NO" id="63h-oO-rMV">
+                                                        <rect key="frame" x="458.5" y="0.0" width="33" height="32.5"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="水" translatesAutoresizingMaskIntoConstraints="NO" id="PKb-6Q-8L8">
+                                                        <rect key="frame" x="491.5" y="0.0" width="32.5" height="32.5"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="水" translatesAutoresizingMaskIntoConstraints="NO" id="4rM-ZN-QEO">
+                                                        <rect key="frame" x="524" y="0.0" width="33" height="32.5"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="水" translatesAutoresizingMaskIntoConstraints="NO" id="HdW-K8-CfR">
+                                                        <rect key="frame" x="557" y="0.0" width="32.5" height="32.5"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="水" translatesAutoresizingMaskIntoConstraints="NO" id="pMu-yh-NVL">
+                                                        <rect key="frame" x="589.5" y="0.0" width="33" height="32.5"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="水" translatesAutoresizingMaskIntoConstraints="NO" id="AMd-GA-dae">
+                                                        <rect key="frame" x="622.5" y="0.0" width="32.5" height="32.5"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="水" translatesAutoresizingMaskIntoConstraints="NO" id="ekI-b2-xNo">
+                                                        <rect key="frame" x="655" y="0.0" width="33" height="32.5"/>
+                                                    </imageView>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.32514856549999999" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="dnk-WX-AVq" secondAttribute="trailing" id="8zh-Ru-b2J"/>
+                                    <constraint firstAttribute="bottom" secondItem="dnk-WX-AVq" secondAttribute="bottom" id="CpU-rK-Fmu"/>
+                                    <constraint firstItem="dnk-WX-AVq" firstAttribute="leading" secondItem="b2o-Lq-k6p" secondAttribute="leading" id="Gsh-eW-HUO"/>
+                                    <constraint firstAttribute="width" secondItem="b2o-Lq-k6p" secondAttribute="height" multiplier="7:4" id="NBv-6u-deg"/>
+                                    <constraint firstItem="dnk-WX-AVq" firstAttribute="top" secondItem="b2o-Lq-k6p" secondAttribute="top" id="gy0-VD-uEK"/>
+                                </constraints>
+                            </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="吊り橋左下" translatesAutoresizingMaskIntoConstraints="NO" id="gIQ-OZ-3gc">
+                                <rect key="frame" x="399" y="360.5" width="32.5" height="32.5"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="吊り橋下" translatesAutoresizingMaskIntoConstraints="NO" id="9BB-ZY-Opg">
+                                <rect key="frame" x="431.5" y="360.5" width="33" height="32.5"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="吊り橋左" translatesAutoresizingMaskIntoConstraints="NO" id="otJ-9i-Vyj">
+                                <rect key="frame" x="399" y="327.5" width="32.5" height="33"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="吊り橋右" translatesAutoresizingMaskIntoConstraints="NO" id="hVg-Cw-SWw">
+                                <rect key="frame" x="464.5" y="327.5" width="32.5" height="33"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="吊り橋右下" translatesAutoresizingMaskIntoConstraints="NO" id="Xuy-Ni-HFS">
+                                <rect key="frame" x="464.5" y="360.5" width="32.5" height="32.5"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="吊り橋左上" translatesAutoresizingMaskIntoConstraints="NO" id="fhs-1N-0ev">
+                                <rect key="frame" x="399" y="164" width="32.5" height="32.5"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="吊り橋右上" translatesAutoresizingMaskIntoConstraints="NO" id="Sb1-ux-acw">
+                                <rect key="frame" x="464.5" y="164" width="32.5" height="32.5"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="吊り橋左上上" translatesAutoresizingMaskIntoConstraints="NO" id="clo-R9-J2f">
+                                <rect key="frame" x="399" y="131" width="32.5" height="33"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="吊り橋右上上" translatesAutoresizingMaskIntoConstraints="NO" id="UIj-C7-NZY">
+                                <rect key="frame" x="464.5" y="131" width="32.5" height="33"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="吊り橋上" translatesAutoresizingMaskIntoConstraints="NO" id="cgW-pl-wwR">
+                                <rect key="frame" x="431.5" y="164" width="33" height="32.5"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="吊り橋右" translatesAutoresizingMaskIntoConstraints="NO" id="qNa-eA-9CO">
+                                <rect key="frame" x="464.5" y="196.5" width="32.5" height="33"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="吊り橋左" translatesAutoresizingMaskIntoConstraints="NO" id="Mnx-oo-UM5">
+                                <rect key="frame" x="399" y="196.5" width="32.5" height="33"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="吊り橋右" translatesAutoresizingMaskIntoConstraints="NO" id="ATc-1x-Spv">
+                                <rect key="frame" x="464.5" y="229.5" width="32.5" height="32.5"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="吊り橋左" translatesAutoresizingMaskIntoConstraints="NO" id="cLe-HU-UUp">
+                                <rect key="frame" x="399" y="229.5" width="32.5" height="32.5"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="吊り橋右" translatesAutoresizingMaskIntoConstraints="NO" id="1WC-aj-G3c">
+                                <rect key="frame" x="464.5" y="262" width="32.5" height="33"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="吊り橋左" translatesAutoresizingMaskIntoConstraints="NO" id="Ro3-O1-cwG">
+                                <rect key="frame" x="399" y="262" width="32.5" height="33"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="吊り橋右" translatesAutoresizingMaskIntoConstraints="NO" id="8Le-N2-Dea">
+                                <rect key="frame" x="464.5" y="295" width="32.5" height="32.5"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="吊り橋左" translatesAutoresizingMaskIntoConstraints="NO" id="OBb-Ec-DMh">
+                                <rect key="frame" x="399" y="295" width="32.5" height="32.5"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ハーミットアイコン" translatesAutoresizingMaskIntoConstraints="NO" id="idZ-f8-A8B">
+                                <rect key="frame" x="431.5" y="33" width="33" height="32.5"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ヒーロー前" translatesAutoresizingMaskIntoConstraints="NO" id="ick-WI-Fda">
+                                <rect key="frame" x="537.5" y="26.5" width="32" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6AJ-jh-D80">
+                                <rect key="frame" x="294" y="295" width="308" height="88"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.65255779110000001" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="88" id="A77-m4-Ihw"/>
+                                    <constraint firstAttribute="width" constant="308" id="Rah-8M-sHK"/>
+                                </constraints>
+                                <string key="text">ハーミット「ホホホ......。
+　　こんなところまで 追ってくるとは......。</string>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Yp-CO-zd3">
+                                <rect key="frame" x="104" y="0.0" width="688" height="393"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xii-X3-RwL">
+                                        <rect key="frame" x="632" y="328" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="UcV-FT-1af"/>
+                                            <constraint firstAttribute="width" constant="40" id="d1y-lX-Fdz"/>
+                                        </constraints>
+                                        <state key="normal" image="icon_130261_64"/>
+                                        <connections>
+                                            <action selector="mainButton:" destination="QSc-2U-JHM" eventType="touchUpInside" id="FKB-dg-pAf"/>
+                                        </connections>
+                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="eRz-zf-WX6">
+                                        <rect key="frame" x="10" y="313" width="70" height="70"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="5Ws-UU-lyn">
+                                                <rect key="frame" x="0.0" y="0.0" width="70" height="23.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5iE-80-Fiq">
+                                                        <rect key="frame" x="0.0" y="0.0" width="23.5" height="23.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LvA-CM-WYG">
+                                                        <rect key="frame" x="23.5" y="0.0" width="23.5" height="23.5"/>
+                                                        <gestureRecognizers/>
+                                                        <state key="normal" title="button" image="jbutton"/>
+                                                        <connections>
+                                                            <outletCollection property="gestureRecognizers" destination="xDx-sZ-Jpg" appends="YES" id="EaP-xB-lCw"/>
+                                                        </connections>
+                                                    </button>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zr2-Oh-KOH">
+                                                        <rect key="frame" x="47" y="0.0" width="23" height="23.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="9Ww-9o-CLv">
+                                                <rect key="frame" x="0.0" y="23.5" width="70" height="23"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="860-vA-QfY">
+                                                        <rect key="frame" x="0.0" y="0.0" width="23.5" height="23"/>
+                                                        <gestureRecognizers/>
+                                                        <state key="normal" title="Button" image="lbutton"/>
+                                                        <connections>
+                                                            <outletCollection property="gestureRecognizers" destination="OeQ-Od-G1X" appends="YES" id="sUM-8N-GAf"/>
+                                                        </connections>
+                                                    </button>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2F6-Sk-0GR">
+                                                        <rect key="frame" x="23.5" y="0.0" width="23.5" height="23"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="luz-du-4es">
+                                                        <rect key="frame" x="47" y="0.0" width="23" height="23"/>
+                                                        <gestureRecognizers/>
+                                                        <state key="normal" title="Button" image="rbutton"/>
+                                                        <connections>
+                                                            <outletCollection property="gestureRecognizers" destination="xtm-YQ-LRc" appends="YES" id="Q0I-WI-YCd"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="6Op-Cx-hGZ">
+                                                <rect key="frame" x="0.0" y="46.5" width="70" height="23.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hou-4c-IE8">
+                                                        <rect key="frame" x="0.0" y="0.0" width="23.5" height="23.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FbU-6f-pEd">
+                                                        <rect key="frame" x="23.5" y="0.0" width="23.5" height="23.5"/>
+                                                        <gestureRecognizers/>
+                                                        <state key="normal" title="Button" image="dbutton"/>
+                                                        <connections>
+                                                            <outletCollection property="gestureRecognizers" destination="yFW-hB-A1v" appends="YES" id="KCH-Bt-InI"/>
+                                                        </connections>
+                                                    </button>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1dM-3K-ZRV">
+                                                        <rect key="frame" x="47" y="0.0" width="23" height="23.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="70" id="XOz-Uq-J0D"/>
+                                            <constraint firstAttribute="width" constant="70" id="ozu-nX-SaM"/>
+                                        </constraints>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zjf-t4-wH4">
+                                        <rect key="frame" x="607" y="360" width="23" height="23"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="23" id="2h8-xC-xgo"/>
+                                            <constraint firstAttribute="height" constant="23" id="Fuo-O7-MdE"/>
+                                        </constraints>
+                                        <state key="normal" image="1"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="zjf-t4-wH4" secondAttribute="bottom" constant="10" id="9xp-of-NfK"/>
+                                    <constraint firstAttribute="trailing" secondItem="Xii-X3-RwL" secondAttribute="trailing" constant="16" id="EXq-lA-LPY"/>
+                                    <constraint firstAttribute="bottom" secondItem="Xii-X3-RwL" secondAttribute="bottom" constant="25" id="Js1-vj-0r6"/>
+                                    <constraint firstAttribute="bottom" secondItem="eRz-zf-WX6" secondAttribute="bottom" constant="10" id="c80-GR-lgb"/>
+                                    <constraint firstItem="Xii-X3-RwL" firstAttribute="leading" secondItem="zjf-t4-wH4" secondAttribute="trailing" constant="2" id="hKV-EW-G3v"/>
+                                    <constraint firstItem="eRz-zf-WX6" firstAttribute="leading" secondItem="7Yp-CO-zd3" secondAttribute="leading" constant="10" id="n3c-mb-sMK"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="lxX-Pw-oFr"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="gIQ-OZ-3gc" firstAttribute="bottom" secondItem="a5B-IS-1Lz" secondAttribute="bottom" id="0bq-oX-lUd"/>
+                            <constraint firstItem="idZ-f8-A8B" firstAttribute="top" secondItem="bLT-lJ-alF" secondAttribute="top" id="1Pr-0w-bdq"/>
+                            <constraint firstItem="clo-R9-J2f" firstAttribute="bottom" secondItem="1H5-uJ-F2J" secondAttribute="bottom" id="1Uf-jx-fMM"/>
+                            <constraint firstItem="7Yp-CO-zd3" firstAttribute="trailing" secondItem="b2o-Lq-k6p" secondAttribute="trailing" id="1hn-nb-ztW"/>
+                            <constraint firstItem="b2o-Lq-k6p" firstAttribute="top" secondItem="lxX-Pw-oFr" secondAttribute="top" id="3dg-wY-DMj"/>
+                            <constraint firstItem="6AJ-jh-D80" firstAttribute="centerX" secondItem="3BR-PV-8fS" secondAttribute="centerX" id="3yT-vJ-xov"/>
+                            <constraint firstItem="8Le-N2-Dea" firstAttribute="top" secondItem="Rn7-gD-gZX" secondAttribute="top" id="5DH-m2-iuw"/>
+                            <constraint firstItem="cgW-pl-wwR" firstAttribute="bottom" secondItem="gZW-FZ-9rn" secondAttribute="bottom" id="5hg-m6-ihL"/>
+                            <constraint firstItem="clo-R9-J2f" firstAttribute="leading" secondItem="1H5-uJ-F2J" secondAttribute="leading" id="8A3-GX-2a9"/>
+                            <constraint firstItem="clo-R9-J2f" firstAttribute="trailing" secondItem="1H5-uJ-F2J" secondAttribute="trailing" id="8LU-CP-L60"/>
+                            <constraint firstItem="hVg-Cw-SWw" firstAttribute="top" secondItem="efe-0F-0xr" secondAttribute="top" id="AgV-FM-sO1"/>
+                            <constraint firstItem="fhs-1N-0ev" firstAttribute="top" secondItem="ddC-2o-vwm" secondAttribute="top" id="Bar-Zx-CqN"/>
+                            <constraint firstItem="Ro3-O1-cwG" firstAttribute="top" secondItem="iGc-MN-ICk" secondAttribute="top" id="Chc-dn-45N"/>
+                            <constraint firstItem="fhs-1N-0ev" firstAttribute="leading" secondItem="ddC-2o-vwm" secondAttribute="leading" id="DBB-Gh-YdS"/>
+                            <constraint firstItem="UIj-C7-NZY" firstAttribute="trailing" secondItem="pok-fH-3sP" secondAttribute="trailing" id="DIy-eD-W0c"/>
+                            <constraint firstItem="8Le-N2-Dea" firstAttribute="bottom" secondItem="Rn7-gD-gZX" secondAttribute="bottom" id="Dwn-ou-jT2"/>
+                            <constraint firstItem="Sb1-ux-acw" firstAttribute="bottom" secondItem="rnR-5f-OGe" secondAttribute="bottom" id="EgU-0K-LL6"/>
+                            <constraint firstItem="Mnx-oo-UM5" firstAttribute="trailing" secondItem="qzh-5c-PzC" secondAttribute="trailing" id="Ehv-kX-tOe"/>
+                            <constraint firstItem="9BB-ZY-Opg" firstAttribute="top" secondItem="7pS-ww-vRo" secondAttribute="top" id="F3v-Ni-6VZ"/>
+                            <constraint firstItem="otJ-9i-Vyj" firstAttribute="leading" secondItem="7kj-N0-eZy" secondAttribute="leading" id="FHQ-J7-Efl"/>
+                            <constraint firstItem="idZ-f8-A8B" firstAttribute="bottom" secondItem="bLT-lJ-alF" secondAttribute="bottom" id="FL1-dO-uZl"/>
+                            <constraint firstItem="9BB-ZY-Opg" firstAttribute="bottom" secondItem="7pS-ww-vRo" secondAttribute="bottom" id="GQ3-cK-uBk"/>
+                            <constraint firstItem="7Yp-CO-zd3" firstAttribute="leading" secondItem="b2o-Lq-k6p" secondAttribute="leading" id="H6G-9b-e23"/>
+                            <constraint firstItem="qNa-eA-9CO" firstAttribute="top" secondItem="XgL-6Q-19M" secondAttribute="top" id="H92-Ne-MoC"/>
+                            <constraint firstItem="ATc-1x-Spv" firstAttribute="bottom" secondItem="Ajo-Ys-Crf" secondAttribute="bottom" id="JvH-kO-QRe"/>
+                            <constraint firstItem="qNa-eA-9CO" firstAttribute="bottom" secondItem="XgL-6Q-19M" secondAttribute="bottom" id="KKu-2D-UBO"/>
+                            <constraint firstItem="gIQ-OZ-3gc" firstAttribute="leading" secondItem="a5B-IS-1Lz" secondAttribute="leading" id="KUp-eZ-Pt1"/>
+                            <constraint firstItem="otJ-9i-Vyj" firstAttribute="bottom" secondItem="7kj-N0-eZy" secondAttribute="bottom" id="LTN-45-Qan"/>
+                            <constraint firstItem="8Le-N2-Dea" firstAttribute="leading" secondItem="Rn7-gD-gZX" secondAttribute="leading" id="NS3-9c-GgU"/>
+                            <constraint firstItem="cLe-HU-UUp" firstAttribute="leading" secondItem="SMA-Dg-Y6c" secondAttribute="leading" id="Njl-s1-jHJ"/>
+                            <constraint firstItem="Mnx-oo-UM5" firstAttribute="bottom" secondItem="qzh-5c-PzC" secondAttribute="bottom" id="RTi-zB-xru"/>
+                            <constraint firstItem="1WC-aj-G3c" firstAttribute="top" secondItem="TXj-dA-boS" secondAttribute="top" id="SLt-r6-aXb"/>
+                            <constraint firstItem="gIQ-OZ-3gc" firstAttribute="trailing" secondItem="a5B-IS-1Lz" secondAttribute="trailing" id="SPR-ix-aIq"/>
+                            <constraint firstItem="lxX-Pw-oFr" firstAttribute="bottom" secondItem="b2o-Lq-k6p" secondAttribute="bottom" id="SZK-YL-NU0"/>
+                            <constraint firstItem="fhs-1N-0ev" firstAttribute="trailing" secondItem="ddC-2o-vwm" secondAttribute="trailing" id="TLv-kb-reJ"/>
+                            <constraint firstItem="cgW-pl-wwR" firstAttribute="top" secondItem="gZW-FZ-9rn" secondAttribute="top" id="VaL-g3-B4k"/>
+                            <constraint firstItem="8Le-N2-Dea" firstAttribute="trailing" secondItem="Rn7-gD-gZX" secondAttribute="trailing" id="Vmq-te-h0z"/>
+                            <constraint firstItem="7Yp-CO-zd3" firstAttribute="top" secondItem="b2o-Lq-k6p" secondAttribute="top" id="VpV-uQ-CIh"/>
+                            <constraint firstItem="ATc-1x-Spv" firstAttribute="trailing" secondItem="Ajo-Ys-Crf" secondAttribute="trailing" id="Vyz-nY-Un7"/>
+                            <constraint firstItem="Ro3-O1-cwG" firstAttribute="leading" secondItem="iGc-MN-ICk" secondAttribute="leading" id="W74-Qx-DTh"/>
+                            <constraint firstItem="gIQ-OZ-3gc" firstAttribute="top" secondItem="a5B-IS-1Lz" secondAttribute="top" id="XBn-Cx-wL2"/>
+                            <constraint firstItem="OBb-Ec-DMh" firstAttribute="top" secondItem="1oy-EU-QXT" secondAttribute="top" id="Y13-GS-lQy"/>
+                            <constraint firstItem="Xuy-Ni-HFS" firstAttribute="bottom" secondItem="A1s-xL-Axt" secondAttribute="bottom" id="YWz-AN-hJV"/>
+                            <constraint firstItem="7Yp-CO-zd3" firstAttribute="bottom" secondItem="b2o-Lq-k6p" secondAttribute="bottom" id="bRH-Td-25L"/>
+                            <constraint firstItem="Xuy-Ni-HFS" firstAttribute="leading" secondItem="A1s-xL-Axt" secondAttribute="leading" id="bes-gF-Q0L"/>
+                            <constraint firstItem="idZ-f8-A8B" firstAttribute="trailing" secondItem="bLT-lJ-alF" secondAttribute="trailing" id="bg5-PU-GoC"/>
+                            <constraint firstItem="9BB-ZY-Opg" firstAttribute="leading" secondItem="7pS-ww-vRo" secondAttribute="leading" id="cmA-Fl-RdB"/>
+                            <constraint firstItem="Ro3-O1-cwG" firstAttribute="trailing" secondItem="iGc-MN-ICk" secondAttribute="trailing" id="e8L-mJ-ukw"/>
+                            <constraint firstItem="idZ-f8-A8B" firstAttribute="leading" secondItem="bLT-lJ-alF" secondAttribute="leading" id="e9A-Se-uc5"/>
+                            <constraint firstItem="Mnx-oo-UM5" firstAttribute="leading" secondItem="qzh-5c-PzC" secondAttribute="leading" id="eJW-9j-suL"/>
+                            <constraint firstItem="ATc-1x-Spv" firstAttribute="leading" secondItem="Ajo-Ys-Crf" secondAttribute="leading" id="fRb-I3-saC"/>
+                            <constraint firstItem="UIj-C7-NZY" firstAttribute="bottom" secondItem="pok-fH-3sP" secondAttribute="bottom" id="fTp-ak-16A"/>
+                            <constraint firstItem="cLe-HU-UUp" firstAttribute="bottom" secondItem="SMA-Dg-Y6c" secondAttribute="bottom" id="fWp-Qs-YY4"/>
+                            <constraint firstItem="hVg-Cw-SWw" firstAttribute="trailing" secondItem="efe-0F-0xr" secondAttribute="trailing" id="ff8-WR-T0X"/>
+                            <constraint firstItem="cgW-pl-wwR" firstAttribute="leading" secondItem="gZW-FZ-9rn" secondAttribute="leading" id="fgm-rG-28r"/>
+                            <constraint firstItem="otJ-9i-Vyj" firstAttribute="trailing" secondItem="7kj-N0-eZy" secondAttribute="trailing" id="fvm-NB-GNi"/>
+                            <constraint firstItem="Sb1-ux-acw" firstAttribute="trailing" secondItem="rnR-5f-OGe" secondAttribute="trailing" id="gXt-vA-Pwv"/>
+                            <constraint firstItem="Sb1-ux-acw" firstAttribute="leading" secondItem="rnR-5f-OGe" secondAttribute="leading" id="gqi-L4-DJD"/>
+                            <constraint firstItem="cLe-HU-UUp" firstAttribute="trailing" secondItem="SMA-Dg-Y6c" secondAttribute="trailing" id="hqd-D4-dry"/>
+                            <constraint firstItem="b2o-Lq-k6p" firstAttribute="centerX" secondItem="3BR-PV-8fS" secondAttribute="centerX" id="iOz-tW-bTe"/>
+                            <constraint firstItem="Mnx-oo-UM5" firstAttribute="top" secondItem="qzh-5c-PzC" secondAttribute="top" id="ifL-Cw-agP"/>
+                            <constraint firstItem="Ro3-O1-cwG" firstAttribute="bottom" secondItem="iGc-MN-ICk" secondAttribute="bottom" id="iii-v9-xRq"/>
+                            <constraint firstItem="qNa-eA-9CO" firstAttribute="trailing" secondItem="XgL-6Q-19M" secondAttribute="trailing" id="isK-0A-0T3"/>
+                            <constraint firstItem="hVg-Cw-SWw" firstAttribute="leading" secondItem="efe-0F-0xr" secondAttribute="leading" id="kvM-U2-5C7"/>
+                            <constraint firstItem="6AJ-jh-D80" firstAttribute="bottom" secondItem="b2o-Lq-k6p" secondAttribute="bottom" constant="-10" id="lDC-jx-Yu9"/>
+                            <constraint firstItem="UIj-C7-NZY" firstAttribute="top" secondItem="pok-fH-3sP" secondAttribute="top" id="lJz-67-5WM"/>
+                            <constraint firstItem="cgW-pl-wwR" firstAttribute="trailing" secondItem="gZW-FZ-9rn" secondAttribute="trailing" id="lgF-Ko-VHf"/>
+                            <constraint firstItem="OBb-Ec-DMh" firstAttribute="bottom" secondItem="1oy-EU-QXT" secondAttribute="bottom" id="nNy-lm-s3D"/>
+                            <constraint firstItem="Sb1-ux-acw" firstAttribute="top" secondItem="rnR-5f-OGe" secondAttribute="top" id="o9C-0N-Ate"/>
+                            <constraint firstItem="OBb-Ec-DMh" firstAttribute="leading" secondItem="1oy-EU-QXT" secondAttribute="leading" id="osK-79-g8b"/>
+                            <constraint firstItem="UIj-C7-NZY" firstAttribute="leading" secondItem="pok-fH-3sP" secondAttribute="leading" id="pid-Sm-s68"/>
+                            <constraint firstItem="ATc-1x-Spv" firstAttribute="top" secondItem="Ajo-Ys-Crf" secondAttribute="top" id="quB-Pw-x2n"/>
+                            <constraint firstItem="Xuy-Ni-HFS" firstAttribute="top" secondItem="A1s-xL-Axt" secondAttribute="top" id="rDA-cq-vYZ"/>
+                            <constraint firstItem="9BB-ZY-Opg" firstAttribute="trailing" secondItem="7pS-ww-vRo" secondAttribute="trailing" id="rhi-bV-2jF"/>
+                            <constraint firstItem="qNa-eA-9CO" firstAttribute="leading" secondItem="XgL-6Q-19M" secondAttribute="leading" id="ri6-mJ-Xr0"/>
+                            <constraint firstItem="Xuy-Ni-HFS" firstAttribute="trailing" secondItem="A1s-xL-Axt" secondAttribute="trailing" id="ufr-ZX-Xrn"/>
+                            <constraint firstItem="hVg-Cw-SWw" firstAttribute="bottom" secondItem="efe-0F-0xr" secondAttribute="bottom" id="uxP-nU-KMn"/>
+                            <constraint firstItem="OBb-Ec-DMh" firstAttribute="trailing" secondItem="1oy-EU-QXT" secondAttribute="trailing" id="vD9-Xi-LmS"/>
+                            <constraint firstItem="1WC-aj-G3c" firstAttribute="trailing" secondItem="TXj-dA-boS" secondAttribute="trailing" id="vMd-AE-E4C"/>
+                            <constraint firstItem="fhs-1N-0ev" firstAttribute="bottom" secondItem="ddC-2o-vwm" secondAttribute="bottom" id="wCO-3A-vfA"/>
+                            <constraint firstItem="cLe-HU-UUp" firstAttribute="top" secondItem="SMA-Dg-Y6c" secondAttribute="top" id="xVk-74-nem"/>
+                            <constraint firstItem="1WC-aj-G3c" firstAttribute="leading" secondItem="TXj-dA-boS" secondAttribute="leading" id="yJt-l5-MTo"/>
+                            <constraint firstItem="1WC-aj-G3c" firstAttribute="bottom" secondItem="TXj-dA-boS" secondAttribute="bottom" id="yph-ue-w1x"/>
+                            <constraint firstItem="clo-R9-J2f" firstAttribute="top" secondItem="1H5-uJ-F2J" secondAttribute="top" id="zj1-8s-CO6"/>
+                            <constraint firstItem="otJ-9i-Vyj" firstAttribute="top" secondItem="7kj-N0-eZy" secondAttribute="top" id="zyT-Ch-yYm"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="downButton" destination="FbU-6f-pEd" id="ntJ-8M-AK9"/>
+                        <outlet property="gameView" destination="b2o-Lq-k6p" id="cG2-Te-hsN"/>
+                        <outlet property="hermitImage" destination="idZ-f8-A8B" id="k3y-w8-T0O"/>
+                        <outlet property="leftButton" destination="860-vA-QfY" id="qvO-Ut-aX5"/>
+                        <outlet property="playerImage" destination="ick-WI-Fda" id="Ieh-t5-Run"/>
+                        <outlet property="rightButton" destination="luz-du-4es" id="REz-XI-KTx"/>
+                        <outlet property="textView" destination="6AJ-jh-D80" id="6iv-zT-FzH"/>
+                        <outlet property="upButton" destination="LvA-CM-WYG" id="JLr-Ch-Ded"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qrp-lI-jW8" sceneMemberID="firstResponder"/>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="xDx-sZ-Jpg">
+                    <connections>
+                        <action selector="upButtonLongTap:" destination="QSc-2U-JHM" id="cb1-RO-Bf9"/>
+                    </connections>
+                </pongPressGestureRecognizer>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="OeQ-Od-G1X">
+                    <connections>
+                        <action selector="leftButtonLongTap:" destination="QSc-2U-JHM" id="DWc-ja-AXe"/>
+                    </connections>
+                </pongPressGestureRecognizer>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="xtm-YQ-LRc">
+                    <connections>
+                        <action selector="rightButtonLongTap:" destination="QSc-2U-JHM" id="LkE-S1-OHS"/>
+                    </connections>
+                </pongPressGestureRecognizer>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="yFW-hB-A1v">
+                    <connections>
+                        <action selector="downButtonLongTap:" destination="QSc-2U-JHM" id="JHa-Wf-akY"/>
+                    </connections>
+                </pongPressGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="-1233" y="-3454"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="1" width="512" height="512"/>
+        <image name="dbutton" width="185" height="186"/>
+        <image name="icon_130261_64" width="64" height="64"/>
+        <image name="jbutton" width="186" height="185"/>
+        <image name="lbutton" width="185" height="186"/>
+        <image name="rbutton" width="185" height="186"/>
+        <image name="トンネル中上" width="32" height="32"/>
+        <image name="トンネル中下" width="32" height="32"/>
+        <image name="トンネル右上" width="32" height="32"/>
+        <image name="トンネル右下" width="32" height="32"/>
+        <image name="トンネル左上" width="32" height="32"/>
+        <image name="トンネル左下" width="32" height="32"/>
+        <image name="ハーミットアイコン" width="32" height="32"/>
+        <image name="ヒーロー前" width="32" height="32"/>
+        <image name="上" width="32" height="32"/>
+        <image name="上右カーブ" width="32" height="32"/>
+        <image name="上左カーブ" width="32" height="32"/>
+        <image name="右下のすみっこ" width="32" height="32"/>
+        <image name="吊り橋上" width="32" height="32"/>
+        <image name="吊り橋下" width="32" height="32"/>
+        <image name="吊り橋中" width="32" height="32"/>
+        <image name="吊り橋右" width="32" height="32"/>
+        <image name="吊り橋右上" width="32" height="32"/>
+        <image name="吊り橋右上上" width="32" height="32"/>
+        <image name="吊り橋右下" width="32" height="32"/>
+        <image name="吊り橋左" width="32" height="32"/>
+        <image name="吊り橋左上" width="32" height="32"/>
+        <image name="吊り橋左上上" width="32" height="32"/>
+        <image name="吊り橋左下" width="32" height="32"/>
+        <image name="土付き上" width="32" height="32"/>
+        <image name="地面" width="32" height="32"/>
+        <image name="崖ノーマル" width="32" height="32"/>
+        <image name="崖ノーマル下" width="32" height="32"/>
+        <image name="崖右" width="32" height="32"/>
+        <image name="崖右下" width="32" height="32"/>
+        <image name="崖左" width="32" height="32"/>
+        <image name="崖左下" width="32" height="32"/>
+        <image name="崖水" width="32" height="32"/>
+        <image name="崖水下" width="32" height="32"/>
+        <image name="崖水右" width="32" height="32"/>
+        <image name="崖水右下" width="32" height="32"/>
+        <image name="崖水左" width="32" height="32"/>
+        <image name="崖水左下" width="32" height="32"/>
+        <image name="左下のすみっこ" width="32" height="32"/>
+        <image name="段差" width="32" height="32"/>
+        <image name="段差右" width="32" height="32"/>
+        <image name="段差右下のすみっこ" width="32" height="32"/>
+        <image name="段差左" width="32" height="32"/>
+        <image name="水" width="32" height="32"/>
+        <image name="水付き土右上" width="32" height="32"/>
+        <image name="水付き土左上" width="32" height="32"/>
+        <image name="黒" width="32" height="32"/>
+    </resources>
+</document>
