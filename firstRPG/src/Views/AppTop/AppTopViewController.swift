@@ -14,8 +14,8 @@ class titleViewController: UIViewController {
         super.viewDidLoad()
     }
     
-    @IBAction func mainButton(_ sender: Any) {
-        performSegue(withIdentifier: "toStory1", sender: nil)
-    }
+//    @IBAction func mainButton(_ sender: Any) {
+//        performSegue(withIdentifier: "toStory1", sender: nil)
+//    }
     
 }
