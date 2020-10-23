@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="R9I-h7-KcA">
-    <device id="retina6_5" orientation="landscape">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="R9I-h7-KcA">
+    <device id="retina6_5" orientation="landscape" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -70,7 +68,7 @@
                                 </constraints>
                             </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dmr-nX-g9m">
-                                <rect key="frame" x="220.99999999999994" y="149.66666666666666" width="113.66666666666666" height="113.66666666666666"/>
+                                <rect key="frame" x="220.99999999999997" y="149.66666666666666" width="113.66666666666666" height="113.66666666666666"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="2" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="l2H-yW-ndW">
                                 <rect key="frame" x="334.66666666666669" y="149.66666666666666" width="113.33333333333331" height="113.66666666666666"/>
@@ -257,6 +255,7 @@
                                 </constraints>
                             </view>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="vjI-bu-ve3"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="6gY-0v-WHv" firstAttribute="top" secondItem="YWh-UT-Os6" secondAttribute="top" constant="10" id="1ya-7n-dBa"/>
@@ -295,7 +294,6 @@
                             <constraint firstItem="eeK-El-n5h" firstAttribute="bottom" secondItem="YWh-UT-Os6" secondAttribute="bottom" id="sJG-t9-lAV"/>
                             <constraint firstItem="qFA-S2-ENy" firstAttribute="centerX" secondItem="l2H-yW-ndW" secondAttribute="centerX" id="vNY-6T-upb"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="vjI-bu-ve3"/>
                     </view>
                     <connections>
                         <outlet property="bigEffectImage1" destination="Wh3-Jw-lHR" id="Jki-ZX-eQT"/>
@@ -1166,7 +1164,7 @@
                                         </subviews>
                                     </stackView>
                                 </subviews>
-                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                <color key="backgroundColor" systemColor="viewFlipsideBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="Fi5-gA-O0P" secondAttribute="bottom" id="Jgl-bM-3KQ"/>
                                     <constraint firstItem="Fi5-gA-O0P" firstAttribute="top" secondItem="lvg-s5-IrG" secondAttribute="top" id="T9t-YS-yUA"/>
@@ -1180,16 +1178,16 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="紫結晶大下" translatesAutoresizingMaskIntoConstraints="NO" id="9jJ-BK-SzY">
-                                <rect key="frame" x="202.33333333333331" y="98.333333333333314" width="32.666666666666657" height="32.666666666666671"/>
+                                <rect key="frame" x="202.33333333333334" y="98.333333333333329" width="32.666666666666657" height="32.666666666666671"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="紫結晶中" translatesAutoresizingMaskIntoConstraints="NO" id="rQe-hk-Twv">
-                                <rect key="frame" x="235" y="98.333333333333314" width="33" height="32.666666666666671"/>
+                                <rect key="frame" x="235" y="98.333333333333329" width="33" height="32.666666666666671"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="紫結晶大上" translatesAutoresizingMaskIntoConstraints="NO" id="dhS-Wb-feA">
-                                <rect key="frame" x="202.33333333333331" y="65.666666666666671" width="32.666666666666657" height="32.666666666666671"/>
+                                <rect key="frame" x="202.33333333333334" y="65.666666666666671" width="32.666666666666657" height="32.666666666666671"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="紫結晶小" translatesAutoresizingMaskIntoConstraints="NO" id="J3u-kP-atM">
-                                <rect key="frame" x="202.33333333333331" y="131" width="32.666666666666657" height="32.666666666666657"/>
+                                <rect key="frame" x="202.33333333333334" y="131" width="32.666666666666657" height="32.666666666666657"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ヒーロー前" translatesAutoresizingMaskIntoConstraints="NO" id="Hf0-jO-Dqw">
                                 <rect key="frame" x="270.5" y="293.5" width="32" height="32"/>
@@ -1312,6 +1310,7 @@
                                 </constraints>
                             </view>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="9jJ-BK-SzY" firstAttribute="bottom" secondItem="6PH-k7-zxQ" secondAttribute="bottom" id="5kh-TV-Xth"/>
@@ -1342,7 +1341,6 @@
                             <constraint firstItem="J3u-kP-atM" firstAttribute="top" secondItem="XT3-vP-Poa" secondAttribute="top" id="wlm-OA-ccl"/>
                             <constraint firstItem="lvg-s5-IrG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zE0-PF-6Nw"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="downButton" destination="q4s-lN-cGu" id="KPB-US-5Kh"/>
@@ -1704,25 +1702,25 @@
                                         </constraints>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="▼" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tMR-ye-Bb7">
-                                        <rect key="frame" x="280" y="129.33333333333334" width="14.666666666666686" height="20.333333333333343"/>
+                                        <rect key="frame" x="281" y="129.33333333333334" width="12.666666666666686" height="20.333333333333343"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="1" green="0.63903173189999996" blue="0.34263449899999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="▼" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vBj-rN-oo5">
-                                        <rect key="frame" x="393.33333333333331" y="129.33333333333334" width="14.666666666666686" height="20.333333333333343"/>
+                                        <rect key="frame" x="394.33333333333331" y="129.33333333333334" width="12.666666666666686" height="20.333333333333343"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="1" green="0.63903173189999996" blue="0.34263449899999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="▼" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oe7-0b-2WZ">
-                                        <rect key="frame" x="507" y="129.33333333333334" width="14.666666666666686" height="20.333333333333343"/>
+                                        <rect key="frame" x="508.00000000000006" y="129.33333333333334" width="12.666666666666686" height="20.333333333333343"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="1" green="0.63903173189999996" blue="0.34263449899999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="▼" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cR3-X6-sAv">
-                                        <rect key="frame" x="166.33333333333331" y="129.33333333333334" width="14.666666666666657" height="20.333333333333343"/>
+                                        <rect key="frame" x="167.33333333333331" y="129.33333333333334" width="12.666666666666657" height="20.333333333333343"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="1" green="0.63903173189999996" blue="0.34263449899999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -1875,6 +1873,7 @@
                                 </constraints>
                             </view>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="lMV-zP-go0"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="fKv-Hx-R7B" firstAttribute="trailing" secondItem="VCZ-9Y-He6" secondAttribute="trailing" id="BPR-d5-gKP"/>
@@ -1885,7 +1884,6 @@
                             <constraint firstItem="fKv-Hx-R7B" firstAttribute="top" secondItem="VCZ-9Y-He6" secondAttribute="top" id="o1c-tT-Gws"/>
                             <constraint firstItem="fKv-Hx-R7B" firstAttribute="bottom" secondItem="VCZ-9Y-He6" secondAttribute="bottom" id="yel-2l-ffR"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="lMV-zP-go0"/>
                     </view>
                     <connections>
                         <outlet property="hpLabel" destination="bs9-4x-2Rg" id="d6e-J0-muc"/>
@@ -2769,22 +2767,22 @@
                                 </constraints>
                             </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="棚左上" translatesAutoresizingMaskIntoConstraints="NO" id="Tef-Io-RY9">
-                                <rect key="frame" x="202.33333333333331" y="32.666666666666657" width="32.666666666666657" height="32.999999999999993"/>
+                                <rect key="frame" x="202.33333333333334" y="32.666666666666664" width="32.666666666666657" height="32.999999999999993"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="棚右上" translatesAutoresizingMaskIntoConstraints="NO" id="duV-U3-8Ng">
-                                <rect key="frame" x="235" y="32.666666666666657" width="33" height="32.999999999999993"/>
+                                <rect key="frame" x="235" y="32.666666666666664" width="33" height="32.999999999999993"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="盾" translatesAutoresizingMaskIntoConstraints="NO" id="lz0-Sx-Ptt">
-                                <rect key="frame" x="366" y="32.666666666666657" width="33" height="32.999999999999993"/>
+                                <rect key="frame" x="366" y="32.666666666666664" width="33" height="32.999999999999993"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="斧左" translatesAutoresizingMaskIntoConstraints="NO" id="6Bw-g6-KeJ">
-                                <rect key="frame" x="399" y="32.666666666666657" width="32.666666666666686" height="32.999999999999993"/>
+                                <rect key="frame" x="399" y="32.666666666666664" width="32.666666666666686" height="32.999999999999993"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="斧右" translatesAutoresizingMaskIntoConstraints="NO" id="hTb-1T-939">
-                                <rect key="frame" x="431.66666666666669" y="32.666666666666657" width="32.666666666666686" height="32.999999999999993"/>
+                                <rect key="frame" x="431.66666666666669" y="32.666666666666664" width="32.666666666666686" height="32.999999999999993"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="棚中左" translatesAutoresizingMaskIntoConstraints="NO" id="bTi-L0-3VV">
-                                <rect key="frame" x="202.33333333333331" y="65.666666666666671" width="32.666666666666657" height="32.666666666666671"/>
+                                <rect key="frame" x="202.33333333333334" y="65.666666666666671" width="32.666666666666657" height="32.666666666666671"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="棚中右" translatesAutoresizingMaskIntoConstraints="NO" id="Loy-lV-XEV">
                                 <rect key="frame" x="235" y="65.666666666666671" width="33" height="32.666666666666671"/>
@@ -2805,40 +2803,40 @@
                                 <rect key="frame" x="628" y="65.666666666666671" width="33" height="32.666666666666671"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="槍下" translatesAutoresizingMaskIntoConstraints="NO" id="XcY-wv-6cP">
-                                <rect key="frame" x="300.66666666666669" y="98.333333333333314" width="32.666666666666686" height="32.666666666666671"/>
+                                <rect key="frame" x="300.66666666666669" y="98.333333333333329" width="32.666666666666686" height="32.666666666666671"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="鎧下" translatesAutoresizingMaskIntoConstraints="NO" id="MUe-iN-349">
-                                <rect key="frame" x="497" y="98.333333333333314" width="33" height="32.666666666666671"/>
+                                <rect key="frame" x="497" y="98.333333333333329" width="33" height="32.666666666666671"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="箱大左下" translatesAutoresizingMaskIntoConstraints="NO" id="E6j-Ri-5yo">
-                                <rect key="frame" x="595.33333333333337" y="98.333333333333314" width="32.666666666666629" height="32.666666666666671"/>
+                                <rect key="frame" x="595.33333333333337" y="98.333333333333329" width="32.666666666666629" height="32.666666666666671"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="箱大右下" translatesAutoresizingMaskIntoConstraints="NO" id="aHy-qZ-bJ9">
-                                <rect key="frame" x="628" y="98.333333333333314" width="33" height="32.666666666666671"/>
+                                <rect key="frame" x="628" y="98.333333333333329" width="33" height="32.666666666666671"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="槍下" translatesAutoresizingMaskIntoConstraints="NO" id="RNU-t1-xi2">
-                                <rect key="frame" x="268" y="98.333333333333314" width="32.666666666666686" height="32.666666666666671"/>
+                                <rect key="frame" x="268" y="98.333333333333329" width="32.666666666666686" height="32.666666666666671"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="棚左下" translatesAutoresizingMaskIntoConstraints="NO" id="uHE-MF-pOM">
-                                <rect key="frame" x="202.33333333333331" y="98.333333333333314" width="32.666666666666657" height="32.666666666666671"/>
+                                <rect key="frame" x="202.33333333333334" y="98.333333333333329" width="32.666666666666657" height="32.666666666666671"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="棚右下" translatesAutoresizingMaskIntoConstraints="NO" id="6l2-Wt-eGY">
-                                <rect key="frame" x="235" y="98.333333333333314" width="33" height="32.666666666666671"/>
+                                <rect key="frame" x="235" y="98.333333333333329" width="33" height="32.666666666666671"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="台階段左下" translatesAutoresizingMaskIntoConstraints="NO" id="IjS-aF-Kyu">
-                                <rect key="frame" x="399" y="229.33333333333337" width="32.666666666666686" height="32.666666666666657"/>
+                                <rect key="frame" x="399" y="229.33333333333334" width="32.666666666666686" height="32.666666666666657"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="台階段中下" translatesAutoresizingMaskIntoConstraints="NO" id="gFJ-81-P66">
-                                <rect key="frame" x="431.66666666666669" y="229.33333333333337" width="32.666666666666686" height="32.666666666666657"/>
+                                <rect key="frame" x="431.66666666666669" y="229.33333333333334" width="32.666666666666686" height="32.666666666666657"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="台階段右下" translatesAutoresizingMaskIntoConstraints="NO" id="12C-sY-db6">
-                                <rect key="frame" x="464.33333333333331" y="229.33333333333337" width="32.666666666666686" height="32.666666666666657"/>
+                                <rect key="frame" x="464.33333333333331" y="229.33333333333334" width="32.666666666666686" height="32.666666666666657"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ティグラアイコン" translatesAutoresizingMaskIntoConstraints="NO" id="3CA-a7-cJo">
                                 <rect key="frame" x="431.66666666666669" y="131" width="32.666666666666686" height="32.666666666666657"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="姫" translatesAutoresizingMaskIntoConstraints="NO" id="TEK-Qh-GJa">
-                                <rect key="frame" x="399" y="98.333333333333314" width="32.666666666666686" height="32.666666666666671"/>
+                                <rect key="frame" x="399" y="98.333333333333329" width="32.666666666666686" height="32.666666666666671"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ヒーロー前" translatesAutoresizingMaskIntoConstraints="NO" id="WXD-Ik-aCo">
                                 <rect key="frame" x="270.5" y="293.5" width="32" height="32"/>
@@ -2980,6 +2978,7 @@
                                 </constraints>
                             </view>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="evh-P6-kFM"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="cad-NJ-cIu" firstAttribute="top" secondItem="Yfa-ke-pM0" secondAttribute="top" id="093-kN-Qwq"/>
@@ -3088,7 +3087,6 @@
                             <constraint firstItem="WxA-vF-oI1" firstAttribute="trailing" secondItem="AXQ-wt-TeZ" secondAttribute="trailing" id="y23-hM-6PS"/>
                             <constraint firstItem="duV-U3-8Ng" firstAttribute="top" secondItem="z3v-lD-Ggj" secondAttribute="top" id="ycp-2l-7dy"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="evh-P6-kFM"/>
                     </view>
                     <connections>
                         <outlet property="downButton" destination="wdQ-Tl-wtO" id="beI-AV-orM"/>
@@ -3972,7 +3970,7 @@
                                 </constraints>
                             </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="回復ポイント3" translatesAutoresizingMaskIntoConstraints="NO" id="Fs1-cT-WvF">
-                                <rect key="frame" x="661" y="32.666666666666657" width="32.666666666666629" height="32.999999999999993"/>
+                                <rect key="frame" x="661" y="32.666666666666664" width="32.666666666666629" height="32.999999999999993"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ヒーロー前" translatesAutoresizingMaskIntoConstraints="NO" id="4VB-lH-U1o">
                                 <rect key="frame" x="457" y="293" width="32" height="32"/>
@@ -4109,6 +4107,7 @@
                                 </constraints>
                             </view>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="yoQ-gg-cDY"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="yoQ-gg-cDY" firstAttribute="bottom" secondItem="Dkk-9H-dIC" secondAttribute="bottom" constant="10" id="5ca-HR-MrX"/>
@@ -4125,7 +4124,6 @@
                             <constraint firstItem="Fs1-cT-WvF" firstAttribute="top" secondItem="enM-iJ-PRq" secondAttribute="top" id="yTb-1g-CET"/>
                             <constraint firstItem="Fs1-cT-WvF" firstAttribute="leading" secondItem="enM-iJ-PRq" secondAttribute="leading" id="zVX-il-mQX"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="yoQ-gg-cDY"/>
                     </view>
                     <connections>
                         <outlet property="downButton" destination="8s2-nJ-sJt" id="f8q-7E-dgd"/>
@@ -5007,7 +5005,7 @@
                                 </constraints>
                             </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="キノコ青" translatesAutoresizingMaskIntoConstraints="NO" id="21x-pt-jgT">
-                                <rect key="frame" x="333.33333333333337" y="32.666666666666657" width="32.666666666666686" height="32.999999999999993"/>
+                                <rect key="frame" x="333.33333333333331" y="32.666666666666664" width="32.666666666666686" height="32.999999999999993"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="キノコ黄色" translatesAutoresizingMaskIntoConstraints="NO" id="HXI-pF-ysv">
                                 <rect key="frame" x="300.66666666666669" y="65.666666666666671" width="32.666666666666686" height="32.666666666666671"/>
@@ -5151,6 +5149,7 @@
                                 </constraints>
                             </view>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="w2d-T2-u0R"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="8Cw-BR-T7K" firstAttribute="centerX" secondItem="eGj-mO-TMs" secondAttribute="centerX" id="0Fc-Az-vdn"/>
@@ -5175,7 +5174,6 @@
                             <constraint firstItem="Lam-Wr-Td5" firstAttribute="top" secondItem="pEX-DK-VIe" secondAttribute="top" id="yN4-na-eCp"/>
                             <constraint firstItem="HXI-pF-ysv" firstAttribute="bottom" secondItem="C0V-8T-tqp" secondAttribute="bottom" id="ygx-5Q-ppV"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="w2d-T2-u0R"/>
                     </view>
                     <connections>
                         <outlet property="downButton" destination="ick-5y-cfM" id="z1X-a8-qbx"/>
@@ -6057,37 +6055,37 @@
                                 </constraints>
                             </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="水色結晶中" translatesAutoresizingMaskIntoConstraints="NO" id="MPb-eS-NwJ">
-                                <rect key="frame" x="366" y="98.333333333333314" width="33" height="32.666666666666671"/>
+                                <rect key="frame" x="366" y="98.333333333333329" width="33" height="32.666666666666671"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="水色結晶大下" translatesAutoresizingMaskIntoConstraints="NO" id="wRt-jN-mVg">
-                                <rect key="frame" x="333.33333333333337" y="98.333333333333314" width="32.666666666666686" height="32.666666666666671"/>
+                                <rect key="frame" x="333.33333333333331" y="98.333333333333329" width="32.666666666666686" height="32.666666666666671"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="水色結晶大上" translatesAutoresizingMaskIntoConstraints="NO" id="Y7x-JE-QR2">
-                                <rect key="frame" x="333.33333333333337" y="65.666666666666671" width="32.666666666666686" height="32.666666666666671"/>
+                                <rect key="frame" x="333.33333333333331" y="65.666666666666671" width="32.666666666666686" height="32.666666666666671"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="水色結晶中" translatesAutoresizingMaskIntoConstraints="NO" id="uxT-kg-O5v">
-                                <rect key="frame" x="497" y="98.333333333333314" width="33" height="32.666666666666671"/>
+                                <rect key="frame" x="497" y="98.333333333333329" width="33" height="32.666666666666671"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="水色結晶大下" translatesAutoresizingMaskIntoConstraints="NO" id="4ko-lx-GYe">
-                                <rect key="frame" x="530" y="98.333333333333314" width="32.666666666666629" height="32.666666666666671"/>
+                                <rect key="frame" x="530" y="98.333333333333329" width="32.666666666666629" height="32.666666666666671"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="水色結晶大上" translatesAutoresizingMaskIntoConstraints="NO" id="ffm-qh-cn3">
                                 <rect key="frame" x="530" y="65.666666666666671" width="32.666666666666629" height="32.666666666666671"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="土中" translatesAutoresizingMaskIntoConstraints="NO" id="al8-nr-2wy">
-                                <rect key="frame" x="169.66666666666669" y="262" width="32.666666666666657" height="32.666666666666686"/>
+                                <rect key="frame" x="169.66666666666666" y="262" width="32.666666666666657" height="32.666666666666686"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="土小" translatesAutoresizingMaskIntoConstraints="NO" id="z6s-wO-vEK">
-                                <rect key="frame" x="202.33333333333331" y="262" width="32.666666666666657" height="32.666666666666686"/>
+                                <rect key="frame" x="202.33333333333334" y="262" width="32.666666666666657" height="32.666666666666686"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="土中" translatesAutoresizingMaskIntoConstraints="NO" id="ZPD-Cd-rdA">
-                                <rect key="frame" x="661" y="98.333333333333314" width="32.666666666666629" height="32.666666666666671"/>
+                                <rect key="frame" x="661" y="98.333333333333329" width="32.666666666666629" height="32.666666666666671"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="土小" translatesAutoresizingMaskIntoConstraints="NO" id="GLX-0w-TI8">
-                                <rect key="frame" x="628" y="98.333333333333314" width="33" height="32.666666666666671"/>
+                                <rect key="frame" x="628" y="98.333333333333329" width="33" height="32.666666666666671"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="回復ポイント3" translatesAutoresizingMaskIntoConstraints="NO" id="uPl-lx-N1d">
-                                <rect key="frame" x="169.66666666666669" y="131" width="32.666666666666657" height="32.666666666666657"/>
+                                <rect key="frame" x="169.66666666666666" y="131" width="32.666666666666657" height="32.666666666666657"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ヒーロー前" translatesAutoresizingMaskIntoConstraints="NO" id="IUe-60-3xe">
                                 <rect key="frame" x="84" y="293.5" width="32" height="32"/>
@@ -6226,6 +6224,7 @@
                                 </constraints>
                             </view>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="HAO-po-2NH"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="4QB-TD-Zsg" firstAttribute="leading" secondItem="XyB-kD-Sgp" secondAttribute="leading" id="0G1-yn-Gur"/>
@@ -6282,7 +6281,6 @@
                             <constraint firstItem="uxT-kg-O5v" firstAttribute="leading" secondItem="iaL-nj-Lzi" secondAttribute="leading" id="wCq-Fc-7kf"/>
                             <constraint firstItem="ZPD-Cd-rdA" firstAttribute="top" secondItem="ArO-Rm-3SW" secondAttribute="top" id="xhJ-nP-WdA"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="HAO-po-2NH"/>
                     </view>
                     <connections>
                         <outlet property="downButton" destination="UyX-WN-tla" id="ePu-sC-FdY"/>
@@ -7164,13 +7162,13 @@
                                 </constraints>
                             </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="白トンネル光左上" translatesAutoresizingMaskIntoConstraints="NO" id="vIV-Mz-mtE">
-                                <rect key="frame" x="399" y="98.333333333333314" width="32.666666666666686" height="32.666666666666671"/>
+                                <rect key="frame" x="399" y="98.333333333333329" width="32.666666666666686" height="32.666666666666671"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="白トンネル光中上" translatesAutoresizingMaskIntoConstraints="NO" id="1OI-AP-MxN">
-                                <rect key="frame" x="431.66666666666669" y="98.333333333333314" width="32.666666666666686" height="32.666666666666671"/>
+                                <rect key="frame" x="431.66666666666669" y="98.333333333333329" width="32.666666666666686" height="32.666666666666671"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="白トンネル光右上" translatesAutoresizingMaskIntoConstraints="NO" id="Szp-7e-2ST">
-                                <rect key="frame" x="464.33333333333331" y="98.333333333333314" width="32.666666666666686" height="32.666666666666671"/>
+                                <rect key="frame" x="464.33333333333331" y="98.333333333333329" width="32.666666666666686" height="32.666666666666671"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="白トンネル光左下" translatesAutoresizingMaskIntoConstraints="NO" id="4IW-j8-n3x">
                                 <rect key="frame" x="399" y="131" width="32.666666666666686" height="32.666666666666657"/>
@@ -7182,19 +7180,19 @@
                                 <rect key="frame" x="464.33333333333331" y="131" width="32.666666666666686" height="32.666666666666657"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="花青" translatesAutoresizingMaskIntoConstraints="NO" id="xnE-t6-J9f">
-                                <rect key="frame" x="268" y="229.33333333333337" width="32.666666666666686" height="32.666666666666657"/>
+                                <rect key="frame" x="268" y="229.33333333333334" width="32.666666666666686" height="32.666666666666657"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="草小" translatesAutoresizingMaskIntoConstraints="NO" id="j2p-lJ-Kt8">
-                                <rect key="frame" x="595.33333333333337" y="229.33333333333337" width="32.666666666666629" height="32.666666666666657"/>
+                                <rect key="frame" x="595.33333333333337" y="229.33333333333334" width="32.666666666666629" height="32.666666666666657"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="花赤" translatesAutoresizingMaskIntoConstraints="NO" id="wT2-v0-oEx">
-                                <rect key="frame" x="235" y="196.66666666666663" width="33" height="32.666666666666657"/>
+                                <rect key="frame" x="235" y="196.66666666666666" width="33" height="32.666666666666657"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="草オレンジ" translatesAutoresizingMaskIntoConstraints="NO" id="gq0-bB-zJz">
-                                <rect key="frame" x="628" y="196.66666666666663" width="33" height="32.666666666666657"/>
+                                <rect key="frame" x="628" y="196.66666666666666" width="33" height="32.666666666666657"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="回復ポイント3" translatesAutoresizingMaskIntoConstraints="NO" id="nou-sv-AAH">
-                                <rect key="frame" x="202.33333333333331" y="131" width="32.666666666666657" height="32.666666666666657"/>
+                                <rect key="frame" x="202.33333333333334" y="131" width="32.666666666666657" height="32.666666666666657"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ヒーロー前" translatesAutoresizingMaskIntoConstraints="NO" id="bDR-8N-zVZ">
                                 <rect key="frame" x="270.5" y="293.5" width="32" height="32"/>
@@ -7334,6 +7332,7 @@
                                 </constraints>
                             </view>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="WBB-RU-Z9b"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="1OI-AP-MxN" firstAttribute="bottom" secondItem="0Yn-uh-Bxo" secondAttribute="bottom" id="1Rf-wN-Chw"/>
@@ -7390,7 +7389,6 @@
                             <constraint firstItem="sTh-aF-skI" firstAttribute="centerX" secondItem="BS9-5Z-b4T" secondAttribute="centerX" id="ycL-xJ-46C"/>
                             <constraint firstItem="b45-X2-QXG" firstAttribute="top" secondItem="sTh-aF-skI" secondAttribute="top" id="zvy-Pk-8OQ"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="WBB-RU-Z9b"/>
                     </view>
                     <connections>
                         <outlet property="downButton" destination="RBr-2e-bPf" id="iRI-yK-Ghd"/>
@@ -8302,16 +8300,16 @@
                                 <rect key="frame" x="431.66666666666669" y="163.66666666666666" width="32.666666666666686" height="33"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="吊り橋右" translatesAutoresizingMaskIntoConstraints="NO" id="jjz-rb-zNX">
-                                <rect key="frame" x="464.33333333333331" y="196.66666666666663" width="32.666666666666686" height="32.666666666666657"/>
+                                <rect key="frame" x="464.33333333333331" y="196.66666666666666" width="32.666666666666686" height="32.666666666666657"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="吊り橋左" translatesAutoresizingMaskIntoConstraints="NO" id="q8x-Bx-ngD">
-                                <rect key="frame" x="399" y="196.66666666666663" width="32.666666666666686" height="32.666666666666657"/>
+                                <rect key="frame" x="399" y="196.66666666666666" width="32.666666666666686" height="32.666666666666657"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="吊り橋右" translatesAutoresizingMaskIntoConstraints="NO" id="3Pw-Qf-iNX">
-                                <rect key="frame" x="464.33333333333331" y="229.33333333333337" width="32.666666666666686" height="32.666666666666657"/>
+                                <rect key="frame" x="464.33333333333331" y="229.33333333333334" width="32.666666666666686" height="32.666666666666657"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="吊り橋左" translatesAutoresizingMaskIntoConstraints="NO" id="sFb-RI-TLp">
-                                <rect key="frame" x="399" y="229.33333333333337" width="32.666666666666686" height="32.666666666666657"/>
+                                <rect key="frame" x="399" y="229.33333333333334" width="32.666666666666686" height="32.666666666666657"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="吊り橋右" translatesAutoresizingMaskIntoConstraints="NO" id="pUY-3d-pJE">
                                 <rect key="frame" x="464.33333333333331" y="262" width="32.666666666666686" height="32.666666666666686"/>
@@ -8326,7 +8324,7 @@
                                 <rect key="frame" x="399" y="294.66666666666669" width="32.666666666666686" height="33"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ハーミットアイコン" translatesAutoresizingMaskIntoConstraints="NO" id="0bJ-ae-JM5">
-                                <rect key="frame" x="431.66666666666669" y="32.666666666666657" width="32.666666666666686" height="32.999999999999993"/>
+                                <rect key="frame" x="431.66666666666669" y="32.666666666666664" width="32.666666666666686" height="32.999999999999993"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ヒーロー前" translatesAutoresizingMaskIntoConstraints="NO" id="094-Df-rha">
                                 <rect key="frame" x="537.5" y="26.5" width="32" height="32"/>
@@ -8469,6 +8467,7 @@
                                 </constraints>
                             </view>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="y8f-0V-mlM"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="3Pw-Qf-iNX" firstAttribute="top" secondItem="qdm-2b-H1o" secondAttribute="top" id="2WR-6z-lLn"/>
@@ -8557,7 +8556,6 @@
                             <constraint firstItem="P2m-sb-UUS" firstAttribute="top" secondItem="Bpf-DW-URl" secondAttribute="top" id="xVS-R9-9LP"/>
                             <constraint firstItem="0bJ-ae-JM5" firstAttribute="bottom" secondItem="NHb-eF-dbd" secondAttribute="bottom" id="yU0-Nr-yTo"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="y8f-0V-mlM"/>
                     </view>
                     <connections>
                         <outlet property="downButton" destination="V3o-tv-Zqz" id="QWv-c4-caL"/>
@@ -9440,16 +9438,16 @@
                                 </constraints>
                             </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="花赤" translatesAutoresizingMaskIntoConstraints="NO" id="Pgy-zR-g1g">
-                                <rect key="frame" x="169.66666666666669" y="229.33333333333337" width="32.666666666666657" height="32.666666666666657"/>
+                                <rect key="frame" x="169.66666666666666" y="229.33333333333334" width="32.666666666666657" height="32.666666666666657"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="草中-1" translatesAutoresizingMaskIntoConstraints="NO" id="5W0-al-Uw2">
-                                <rect key="frame" x="202.33333333333331" y="229.33333333333337" width="32.666666666666657" height="32.666666666666657"/>
+                                <rect key="frame" x="202.33333333333334" y="229.33333333333334" width="32.666666666666657" height="32.666666666666657"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="草小" translatesAutoresizingMaskIntoConstraints="NO" id="Cv1-vA-2yg">
-                                <rect key="frame" x="202.33333333333331" y="262" width="32.666666666666657" height="32.666666666666686"/>
+                                <rect key="frame" x="202.33333333333334" y="262" width="32.666666666666657" height="32.666666666666686"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="草中-1" translatesAutoresizingMaskIntoConstraints="NO" id="zz3-mB-dBt">
-                                <rect key="frame" x="169.66666666666669" y="262" width="32.666666666666657" height="32.666666666666686"/>
+                                <rect key="frame" x="169.66666666666666" y="262" width="32.666666666666657" height="32.666666666666686"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="草大" translatesAutoresizingMaskIntoConstraints="NO" id="29z-tS-ime">
                                 <rect key="frame" x="399" y="131" width="32.666666666666686" height="32.666666666666657"/>
@@ -9458,7 +9456,7 @@
                                 <rect key="frame" x="431.66666666666669" y="163.66666666666666" width="32.666666666666686" height="33"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="回復ポイント3" translatesAutoresizingMaskIntoConstraints="NO" id="vFQ-fL-U1J">
-                                <rect key="frame" x="562.66666666666663" y="196.66666666666663" width="32.666666666666629" height="32.666666666666657"/>
+                                <rect key="frame" x="562.66666666666663" y="196.66666666666666" width="32.666666666666629" height="32.666666666666657"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ヒーロー前" translatesAutoresizingMaskIntoConstraints="NO" id="Drs-ab-8n1">
                                 <rect key="frame" x="84" y="293.5" width="32" height="32"/>
@@ -9600,6 +9598,7 @@
                                 </constraints>
                             </view>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="vfp-gX-xLe"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="zAd-3J-uOT" firstAttribute="centerX" secondItem="0gd-mw-MPA" secondAttribute="centerX" id="13r-8K-AjA"/>
@@ -9640,7 +9639,6 @@
                             <constraint firstItem="vfp-gX-xLe" firstAttribute="bottom" secondItem="zAd-3J-uOT" secondAttribute="bottom" id="x23-f2-yNv"/>
                             <constraint firstItem="vFQ-fL-U1J" firstAttribute="trailing" secondItem="oRA-Xa-mrI" secondAttribute="trailing" id="xHq-mC-e9w"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="vfp-gX-xLe"/>
                     </view>
                     <connections>
                         <outlet property="downButton" destination="bjD-Ti-DUz" id="2b9-qm-yv9"/>
@@ -10522,13 +10520,13 @@
                                 </constraints>
                             </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="白トンネル光左上" translatesAutoresizingMaskIntoConstraints="NO" id="aR9-bl-O5P">
-                                <rect key="frame" x="399" y="98.333333333333314" width="32.666666666666686" height="32.666666666666671"/>
+                                <rect key="frame" x="399" y="98.333333333333329" width="32.666666666666686" height="32.666666666666671"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="白トンネル光中上" translatesAutoresizingMaskIntoConstraints="NO" id="LEC-1P-sjb">
-                                <rect key="frame" x="431.66666666666669" y="98.333333333333314" width="32.666666666666686" height="32.666666666666671"/>
+                                <rect key="frame" x="431.66666666666669" y="98.333333333333329" width="32.666666666666686" height="32.666666666666671"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="白トンネル光右上" translatesAutoresizingMaskIntoConstraints="NO" id="8nV-bC-gcf">
-                                <rect key="frame" x="464.33333333333331" y="98.333333333333314" width="32.666666666666686" height="32.666666666666671"/>
+                                <rect key="frame" x="464.33333333333331" y="98.333333333333329" width="32.666666666666686" height="32.666666666666671"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="白トンネル光左下" translatesAutoresizingMaskIntoConstraints="NO" id="K5x-jf-ofr">
                                 <rect key="frame" x="399" y="131" width="32.666666666666686" height="32.666666666666657"/>
@@ -10540,13 +10538,13 @@
                                 <rect key="frame" x="464.33333333333331" y="131" width="32.666666666666686" height="32.666666666666657"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="回復ポイント3" translatesAutoresizingMaskIntoConstraints="NO" id="9pa-qA-SVZ">
-                                <rect key="frame" x="268" y="98.333333333333314" width="32.666666666666686" height="32.666666666666671"/>
+                                <rect key="frame" x="268" y="98.333333333333329" width="32.666666666666686" height="32.666666666666671"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="草赤" translatesAutoresizingMaskIntoConstraints="NO" id="4cY-5z-Nrd">
-                                <rect key="frame" x="366" y="98.333333333333314" width="33" height="32.666666666666671"/>
+                                <rect key="frame" x="366" y="98.333333333333329" width="33" height="32.666666666666671"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="草オレンジ" translatesAutoresizingMaskIntoConstraints="NO" id="260-2z-xEq">
-                                <rect key="frame" x="497" y="98.333333333333314" width="33" height="32.666666666666671"/>
+                                <rect key="frame" x="497" y="98.333333333333329" width="33" height="32.666666666666671"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="骨" translatesAutoresizingMaskIntoConstraints="NO" id="xBG-Br-MYT">
                                 <rect key="frame" x="661" y="131" width="32.666666666666629" height="32.666666666666657"/>
@@ -10691,6 +10689,7 @@
                                 </constraints>
                             </view>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="7cC-Kx-02Y"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="qGJ-UU-zCl" firstAttribute="leading" secondItem="hbC-6P-cHc" secondAttribute="leading" id="0LI-zC-fyG"/>
@@ -10743,7 +10742,6 @@
                             <constraint firstItem="260-2z-xEq" firstAttribute="trailing" secondItem="Urs-eW-wS0" secondAttribute="trailing" id="zRj-k0-LIN"/>
                             <constraint firstItem="pui-Em-6O9" firstAttribute="top" secondItem="Qpq-Ee-hnE" secondAttribute="top" id="zTu-yj-kOs"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="7cC-Kx-02Y"/>
                     </view>
                     <connections>
                         <outlet property="downButton" destination="TSn-5u-ZoJ" id="JnS-jT-XhG"/>
@@ -10808,7 +10806,7 @@
                                         </constraints>
                                     </imageView>
                                 </subviews>
-                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                <color key="backgroundColor" systemColor="viewFlipsideBackgroundColor"/>
                                 <constraints>
                                     <constraint firstItem="8lI-oR-86G" firstAttribute="centerY" secondItem="gSo-gi-FUA" secondAttribute="centerY" id="7aa-5g-0lr"/>
                                     <constraint firstItem="LLB-h4-TaU" firstAttribute="centerX" secondItem="gSo-gi-FUA" secondAttribute="centerX" id="T5C-jN-jr6"/>
@@ -10936,6 +10934,7 @@
                                 </constraints>
                             </view>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="Vjp-gj-4Ge"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="6d9-6E-Pr4" firstAttribute="top" secondItem="gSo-gi-FUA" secondAttribute="top" id="2Mc-Ri-rhY"/>
@@ -10948,7 +10947,6 @@
                             <constraint firstItem="gSo-gi-FUA" firstAttribute="top" secondItem="Vjp-gj-4Ge" secondAttribute="top" id="ybV-84-pE4"/>
                             <constraint firstItem="6d9-6E-Pr4" firstAttribute="trailing" secondItem="gSo-gi-FUA" secondAttribute="trailing" id="zov-7b-dzB"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="Vjp-gj-4Ge"/>
                     </view>
                     <connections>
                         <outlet property="hermitImage" destination="8lI-oR-86G" id="5vh-D8-YkJ"/>
@@ -10980,7 +10978,7 @@
                                         </constraints>
                                     </imageView>
                                 </subviews>
-                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                <color key="backgroundColor" systemColor="viewFlipsideBackgroundColor"/>
                                 <constraints>
                                     <constraint firstItem="Zd8-ih-TpJ" firstAttribute="centerX" secondItem="0xP-PC-gT7" secondAttribute="centerX" id="6ci-I8-2dX"/>
                                     <constraint firstAttribute="width" secondItem="0xP-PC-gT7" secondAttribute="height" multiplier="7:4" id="jfG-IR-EPf"/>
@@ -11169,6 +11167,7 @@
                                 </constraints>
                             </view>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="Ixe-0j-0ZJ"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="tWf-Co-TIr" firstAttribute="bottom" secondItem="0xP-PC-gT7" secondAttribute="bottom" constant="-10" id="4Zk-OV-JP2"/>
@@ -11183,7 +11182,6 @@
                             <constraint firstItem="0xP-PC-gT7" firstAttribute="top" secondItem="Ixe-0j-0ZJ" secondAttribute="top" id="d92-10-KBe"/>
                             <constraint firstItem="is9-Fe-ix0" firstAttribute="bottom" secondItem="0xP-PC-gT7" secondAttribute="bottom" id="dbs-8j-Ued"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="Ixe-0j-0ZJ"/>
                     </view>
                     <connections>
                         <outlet property="gameView" destination="0xP-PC-gT7" id="Uhl-LU-SIg"/>
@@ -11216,13 +11214,13 @@
                                         <rect key="frame" x="0.0" y="0.0" width="688" height="393"/>
                                     </imageView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="タイトル_02" translatesAutoresizingMaskIntoConstraints="NO" id="DMA-Lb-aYd">
-                                        <rect key="frame" x="0.0" y="14.666666666666657" width="688" height="343.6666666666668"/>
+                                        <rect key="frame" x="0.0" y="14.666666666666657" width="688" height="343.66666666666674"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="DMA-Lb-aYd" secondAttribute="height" multiplier="2:1" id="O3d-is-nKm"/>
                                         </constraints>
                                     </imageView>
                                 </subviews>
-                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                <color key="backgroundColor" systemColor="viewFlipsideBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="GoW-7l-8aF" secondAttribute="height" multiplier="7:4" id="5ik-de-S7F"/>
                                     <constraint firstItem="DMA-Lb-aYd" firstAttribute="centerY" secondItem="GoW-7l-8aF" secondAttribute="centerY" constant="-10" id="Br3-G7-vC3"/>
@@ -11342,6 +11340,7 @@
                                 </constraints>
                             </view>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="pfT-0n-h0s"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="qja-EZ-lEu" firstAttribute="bottom" secondItem="GoW-7l-8aF" secondAttribute="bottom" id="57I-NR-5R9"/>
@@ -11352,7 +11351,6 @@
                             <constraint firstItem="qja-EZ-lEu" firstAttribute="top" secondItem="GoW-7l-8aF" secondAttribute="top" id="wJi-4l-jKV"/>
                             <constraint firstItem="qja-EZ-lEu" firstAttribute="leading" secondItem="GoW-7l-8aF" secondAttribute="leading" id="x2z-f2-r7o"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="pfT-0n-h0s"/>
                     </view>
                     <connections>
                         <segue destination="4Z6-kI-icW" kind="show" identifier="toStory1" id="SUf-AR-CDO"/>
@@ -11381,13 +11379,13 @@
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.29775791952054792" colorSpace="custom" customColorSpace="sRGB"/>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="......という夢をみた。" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g9A-dE-aNj">
-                                        <rect key="frame" x="260.66666666666669" y="186.33333333333334" width="166.66666666666669" height="20.333333333333343"/>
+                                        <rect key="frame" x="261" y="186.33333333333334" width="166.33333333333337" height="20.333333333333343"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                <color key="backgroundColor" systemColor="viewFlipsideBackgroundColor"/>
                                 <constraints>
                                     <constraint firstItem="qyw-7t-mir" firstAttribute="leading" secondItem="KmO-TZ-rAA" secondAttribute="leading" id="0bF-Om-Rcl"/>
                                     <constraint firstItem="g9A-dE-aNj" firstAttribute="centerY" secondItem="ZdI-F0-GqZ" secondAttribute="centerY" id="BcW-gm-rTR"/>
@@ -11510,6 +11508,7 @@
                                 </constraints>
                             </view>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="FX3-hN-YgB"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="ZdI-F0-GqZ" firstAttribute="centerX" secondItem="h00-m4-XjQ" secondAttribute="centerX" id="50v-Zf-cbh"/>
@@ -11520,7 +11519,6 @@
                             <constraint firstItem="FX3-hN-YgB" firstAttribute="bottom" secondItem="ZdI-F0-GqZ" secondAttribute="bottom" id="fhV-iy-VD8"/>
                             <constraint firstItem="ZdI-F0-GqZ" firstAttribute="top" secondItem="FX3-hN-YgB" secondAttribute="top" id="vJ9-sm-dSS"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="FX3-hN-YgB"/>
                     </view>
                     <connections>
                         <outlet property="label" destination="g9A-dE-aNj" id="UZv-Ht-KEG"/>
@@ -11532,6 +11530,18 @@
             <point key="canvasLocation" x="-2352" y="-3999"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="nV6-8i-tlJ"/>
+        <segue reference="PIq-sP-KnF"/>
+        <segue reference="MQO-Ny-RYg"/>
+        <segue reference="Bpa-q2-f7B"/>
+        <segue reference="nXS-oX-Yd2"/>
+        <segue reference="wz1-nP-YBw"/>
+        <segue reference="82U-Ja-PaT"/>
+        <segue reference="c06-vC-yHc"/>
+        <segue reference="RTa-DA-z8X"/>
+        <segue reference="ilG-nT-t9J"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="1" width="512" height="512"/>
         <image name="dbutton" width="185" height="186"/>
@@ -11679,17 +11689,20 @@
         <image name="階段" width="32" height="32"/>
         <image name="骨" width="32" height="32"/>
         <image name="黒" width="32" height="32"/>
+        <systemColor name="viewFlipsideBackgroundColor">
+            <color red="0.1215686274509804" green="0.12941176470588239" blue="0.14117647058823529" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="viewFlipsideBackgroundColor">
+            <color red="0.1215686274509804" green="0.12941176470588239" blue="0.14117647058823529" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="viewFlipsideBackgroundColor">
+            <color red="0.1215686274509804" green="0.12941176470588239" blue="0.14117647058823529" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="viewFlipsideBackgroundColor">
+            <color red="0.1215686274509804" green="0.12941176470588239" blue="0.14117647058823529" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="viewFlipsideBackgroundColor">
+            <color red="0.1215686274509804" green="0.12941176470588239" blue="0.14117647058823529" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="nV6-8i-tlJ"/>
-        <segue reference="PIq-sP-KnF"/>
-        <segue reference="MQO-Ny-RYg"/>
-        <segue reference="Bpa-q2-f7B"/>
-        <segue reference="nXS-oX-Yd2"/>
-        <segue reference="wz1-nP-YBw"/>
-        <segue reference="82U-Ja-PaT"/>
-        <segue reference="c06-vC-yHc"/>
-        <segue reference="RTa-DA-z8X"/>
-        <segue reference="ilG-nT-t9J"/>
-    </inferredMetricsTieBreakers>
 </document>
