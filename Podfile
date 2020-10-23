@@ -14,4 +14,7 @@ target 'firstRPG' do
 
   pod 'R.swift'
 
+  pod 'RxSwift'
+  pod 'RxCocoa'
+
 end

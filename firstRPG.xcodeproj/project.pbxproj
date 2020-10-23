@@ -8,12 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		466ABDD5956C615BB1A9CD6A /* Pods_firstRPG.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F95033C4BFEFF3AE2175C0E5 /* Pods_firstRPG.framework */; };
-		BA1F24672317C0A8003BA769 /* titleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1F24662317C0A8003BA769 /* titleViewController.swift */; };
+		BA1F24672317C0A8003BA769 /* AppTopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1F24662317C0A8003BA769 /* AppTopViewController.swift */; };
 		BA2A9CAF230E65FE00E13DC8 /* cave9ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2A9CAE230E65FE00E13DC8 /* cave9ViewController.swift */; };
 		BA2A9CB1230E6E3B00E13DC8 /* cave2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2A9CB0230E6E3B00E13DC8 /* cave2ViewController.swift */; };
 		BA38499B2305548C006E7BA0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA38499A2305548C006E7BA0 /* AppDelegate.swift */; };
 		BA38499D2305548C006E7BA0 /* cave1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA38499C2305548C006E7BA0 /* cave1ViewController.swift */; };
-		BA3849A02305548C006E7BA0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA38499E2305548C006E7BA0 /* Main.storyboard */; };
 		BA3849A22305548D006E7BA0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA3849A12305548D006E7BA0 /* Assets.xcassets */; };
 		BA3849A52305548D006E7BA0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA3849A32305548D006E7BA0 /* LaunchScreen.storyboard */; };
 		BA3849FD230BC306006E7BA0 /* battleMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3849FC230BC306006E7BA0 /* battleMessageViewController.swift */; };
@@ -39,7 +38,11 @@
 		BAA9D3782542DDE300F0A736 /* Cave9ViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAA9D3772542DDE300F0A736 /* Cave9ViewController.storyboard */; };
 		BAA9D37C2542E18800F0A736 /* BattleMessageViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAA9D37B2542E18800F0A736 /* BattleMessageViewController.storyboard */; };
 		BAA9D37F2542E1A500F0A736 /* BattleCommandViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAA9D37E2542E1A500F0A736 /* BattleCommandViewController.storyboard */; };
-		BAC68A5923177FF400D78495 /* story1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC68A5823177FF400D78495 /* story1ViewController.swift */; };
+		BAA9D3882542EAF800F0A736 /* ButtonView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BAA9D3872542EAF800F0A736 /* ButtonView.xib */; };
+		BAA9D38B2542EB4F00F0A736 /* MessageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BAA9D38A2542EB4F00F0A736 /* MessageView.xib */; };
+		BAA9D38E2542EB7500F0A736 /* BattleCommandView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BAA9D38D2542EB7500F0A736 /* BattleCommandView.xib */; };
+		BAA9D3922542F0A100F0A736 /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA9D3912542F0A100F0A736 /* ButtonView.swift */; };
+		BAC68A5923177FF400D78495 /* Introduction1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC68A5823177FF400D78495 /* Introduction1ViewController.swift */; };
 		BAC68A5B2317814D00D78495 /* story2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC68A5A2317814D00D78495 /* story2ViewController.swift */; };
 		BAC68A5D2317816700D78495 /* story3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC68A5C2317816700D78495 /* story3ViewController.swift */; };
 		BACE9B202542AB5100620ADC /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACE9B1F2542AB5100620ADC /* R.generated.swift */; };
@@ -48,13 +51,12 @@
 /* Begin PBXFileReference section */
 		36FDC4AC2D894E98AB15D1FD /* Pods-firstRPG.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-firstRPG.release.xcconfig"; path = "Target Support Files/Pods-firstRPG/Pods-firstRPG.release.xcconfig"; sourceTree = "<group>"; };
 		701304302C460A768324CECD /* Pods-firstRPG.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-firstRPG.debug.xcconfig"; path = "Target Support Files/Pods-firstRPG/Pods-firstRPG.debug.xcconfig"; sourceTree = "<group>"; };
-		BA1F24662317C0A8003BA769 /* titleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = titleViewController.swift; sourceTree = "<group>"; };
+		BA1F24662317C0A8003BA769 /* AppTopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTopViewController.swift; sourceTree = "<group>"; };
 		BA2A9CAE230E65FE00E13DC8 /* cave9ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cave9ViewController.swift; sourceTree = "<group>"; };
 		BA2A9CB0230E6E3B00E13DC8 /* cave2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cave2ViewController.swift; sourceTree = "<group>"; };
 		BA3849972305548C006E7BA0 /* firstRPG.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = firstRPG.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA38499A2305548C006E7BA0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BA38499C2305548C006E7BA0 /* cave1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cave1ViewController.swift; sourceTree = "<group>"; };
-		BA38499F2305548C006E7BA0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BA3849A12305548D006E7BA0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BA3849A42305548D006E7BA0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BA3849A62305548D006E7BA0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -81,7 +83,11 @@
 		BAA9D3772542DDE300F0A736 /* Cave9ViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Cave9ViewController.storyboard; sourceTree = "<group>"; };
 		BAA9D37B2542E18800F0A736 /* BattleMessageViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BattleMessageViewController.storyboard; sourceTree = "<group>"; };
 		BAA9D37E2542E1A500F0A736 /* BattleCommandViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BattleCommandViewController.storyboard; sourceTree = "<group>"; };
-		BAC68A5823177FF400D78495 /* story1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = story1ViewController.swift; sourceTree = "<group>"; };
+		BAA9D3872542EAF800F0A736 /* ButtonView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ButtonView.xib; sourceTree = "<group>"; };
+		BAA9D38A2542EB4F00F0A736 /* MessageView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageView.xib; sourceTree = "<group>"; };
+		BAA9D38D2542EB7500F0A736 /* BattleCommandView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BattleCommandView.xib; sourceTree = "<group>"; };
+		BAA9D3912542F0A100F0A736 /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
+		BAC68A5823177FF400D78495 /* Introduction1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Introduction1ViewController.swift; sourceTree = "<group>"; };
 		BAC68A5A2317814D00D78495 /* story2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = story2ViewController.swift; sourceTree = "<group>"; };
 		BAC68A5C2317816700D78495 /* story3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = story3ViewController.swift; sourceTree = "<group>"; };
 		BACE9B1F2542AB5100620ADC /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
@@ -132,7 +138,6 @@
 				BACE9B262542D11600620ADC /* Resources */,
 				BACE9B282542D14700620ADC /* Supporting Files */,
 				BACE9B1A2542AA2800620ADC /* src */,
-				BA38499E2305548C006E7BA0 /* Main.storyboard */,
 				BA3849A12305548D006E7BA0 /* Assets.xcassets */,
 			);
 			path = firstRPG;
@@ -161,7 +166,7 @@
 			isa = PBXGroup;
 			children = (
 				BAA9D34B2542D9A300F0A736 /* AppTop.storyboard */,
-				BA1F24662317C0A8003BA769 /* titleViewController.swift */,
+				BA1F24662317C0A8003BA769 /* AppTopViewController.swift */,
 			);
 			path = AppTop;
 			sourceTree = "<group>";
@@ -170,7 +175,7 @@
 			isa = PBXGroup;
 			children = (
 				BAA9D34F2542DA8400F0A736 /* Introduction1ViewController.storyboard */,
-				BAC68A5823177FF400D78495 /* story1ViewController.swift */,
+				BAC68A5823177FF400D78495 /* Introduction1ViewController.swift */,
 				BAA9D3522542DAA500F0A736 /* Introduction2ViewController.storyboard */,
 				BAC68A5A2317814D00D78495 /* story2ViewController.swift */,
 			);
@@ -209,6 +214,17 @@
 				BA2A9CAE230E65FE00E13DC8 /* cave9ViewController.swift */,
 			);
 			path = CaveDungeon;
+			sourceTree = "<group>";
+		};
+		BAA9D3862542E84500F0A736 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				BAA9D38D2542EB7500F0A736 /* BattleCommandView.xib */,
+				BAA9D3872542EAF800F0A736 /* ButtonView.xib */,
+				BAA9D3912542F0A100F0A736 /* ButtonView.swift */,
+				BAA9D38A2542EB4F00F0A736 /* MessageView.xib */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 		BAC68A5723177FC300D78495 /* Story */ = {
@@ -268,6 +284,7 @@
 			children = (
 				BAA9D34A2542D98100F0A736 /* AppTop */,
 				BA3849FE230C1DFD006E7BA0 /* Battle */,
+				BAA9D3862542E84500F0A736 /* Common */,
 				BA3849FF230C1E17006E7BA0 /* Dungeon */,
 				BAC68A5723177FC300D78495 /* Story */,
 			);
@@ -355,20 +372,22 @@
 				BAA9D3632542DD9300F0A736 /* Cave2ViewController.storyboard in Resources */,
 				BAA9D3502542DA8400F0A736 /* Introduction1ViewController.storyboard in Resources */,
 				BAA9D3532542DAA500F0A736 /* Introduction2ViewController.storyboard in Resources */,
+				BAA9D38E2542EB7500F0A736 /* BattleCommandView.xib in Resources */,
 				BAA9D3752542DDD800F0A736 /* Cave8ViewController.storyboard in Resources */,
 				BAA9D34C2542D9A300F0A736 /* AppTop.storyboard in Resources */,
 				BAA9D36C2542DDB500F0A736 /* Cave5ViewController.storyboard in Resources */,
 				BAA9D37F2542E1A500F0A736 /* BattleCommandViewController.storyboard in Resources */,
 				BAA9D3662542DD9E00F0A736 /* Cave3ViewController.storyboard in Resources */,
+				BAA9D38B2542EB4F00F0A736 /* MessageView.xib in Resources */,
 				BAA9D3592542DBF400F0A736 /* EndingViewController.storyboard in Resources */,
 				BAA9D3692542DDA900F0A736 /* Cave4ViewController.storyboard in Resources */,
 				BAA9D35F2542DD4900F0A736 /* Cave1ViewController.storyboard in Resources */,
 				BA3849A52305548D006E7BA0 /* LaunchScreen.storyboard in Resources */,
 				BAA9D37C2542E18800F0A736 /* BattleMessageViewController.storyboard in Resources */,
+				BAA9D3882542EAF800F0A736 /* ButtonView.xib in Resources */,
 				BAA9D3782542DDE300F0A736 /* Cave9ViewController.storyboard in Resources */,
 				BA3849A22305548D006E7BA0 /* Assets.xcassets in Resources */,
 				BAA9D36F2542DDC000F0A736 /* Cave6ViewController.storyboard in Resources */,
-				BA3849A02305548C006E7BA0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -445,10 +464,11 @@
 				BAC68A5B2317814D00D78495 /* story2ViewController.swift in Sources */,
 				BA89C3032313DF7200EBBAC8 /* cave7ViewController.swift in Sources */,
 				BA89C3012313DF5D00EBBAC8 /* cave6ViewController.swift in Sources */,
-				BA1F24672317C0A8003BA769 /* titleViewController.swift in Sources */,
-				BAC68A5923177FF400D78495 /* story1ViewController.swift in Sources */,
+				BA1F24672317C0A8003BA769 /* AppTopViewController.swift in Sources */,
+				BAC68A5923177FF400D78495 /* Introduction1ViewController.swift in Sources */,
 				BA384A01230C1E5D006E7BA0 /* battleCommandViewController.swift in Sources */,
 				BA2A9CB1230E6E3B00E13DC8 /* cave2ViewController.swift in Sources */,
+				BAA9D3922542F0A100F0A736 /* ButtonView.swift in Sources */,
 				BAC68A5D2317816700D78495 /* story3ViewController.swift in Sources */,
 				BA38499D2305548C006E7BA0 /* cave1ViewController.swift in Sources */,
 				BACE9B202542AB5100620ADC /* R.generated.swift in Sources */,
@@ -464,14 +484,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		BA38499E2305548C006E7BA0 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				BA38499F2305548C006E7BA0 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		BA3849A32305548D006E7BA0 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

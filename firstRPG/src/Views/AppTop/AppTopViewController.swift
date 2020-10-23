@@ -1,5 +1,5 @@
 //
-//  titleViewController.swift
+//  AppTopViewController.swift
 //  firstRPG
 //
 //  Created by 吉澤優衣 on 2019/08/29.
@@ -8,14 +8,32 @@
 
 import UIKit
 
-class titleViewController: UIViewController {
+/**
+ * タイトル画面VC
+ */
+class AppTopViewController: UIViewController {
+
+    // MARK: - LifeCycles
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        addButtonView()
     }
-    
-//    @IBAction func mainButton(_ sender: Any) {
-//        performSegue(withIdentifier: "toStory1", sender: nil)
-//    }
-    
+
+    // MARK: - Functions
+
+    /// ボタンViewを追加する
+    private func addButtonView() {
+        guard let v = R.nib.buttonView.firstView(owner: nil) else { return }
+        v.frame = view.frame
+        view.addSubview(v)
+
+        v.subscribe()
+        v.mainButton.rx.tap.subscribe(onNext: { [unowned self] in
+            let vc = Introduction1ViewController.makeInstance()
+            present(vc, animated: true)
+        })
+    }
+
 }
