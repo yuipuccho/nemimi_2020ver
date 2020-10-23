@@ -16,7 +16,6 @@
 		BA3849A02305548C006E7BA0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA38499E2305548C006E7BA0 /* Main.storyboard */; };
 		BA3849A22305548D006E7BA0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA3849A12305548D006E7BA0 /* Assets.xcassets */; };
 		BA3849A52305548D006E7BA0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA3849A32305548D006E7BA0 /* LaunchScreen.storyboard */; };
-		BA3849FB2309219A006E7BA0 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3849FA2309219A006E7BA0 /* GameScene.swift */; };
 		BA3849FD230BC306006E7BA0 /* battleMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3849FC230BC306006E7BA0 /* battleMessageViewController.swift */; };
 		BA384A01230C1E5D006E7BA0 /* battleCommandViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA384A00230C1E5D006E7BA0 /* battleCommandViewController.swift */; };
 		BA4447F323103B37006E4E16 /* cave3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4447F223103B37006E4E16 /* cave3ViewController.swift */; };
@@ -44,7 +43,6 @@
 		BA3849A12305548D006E7BA0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BA3849A42305548D006E7BA0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BA3849A62305548D006E7BA0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BA3849FA2309219A006E7BA0 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		BA3849FC230BC306006E7BA0 /* battleMessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = battleMessageViewController.swift; sourceTree = "<group>"; };
 		BA384A00230C1E5D006E7BA0 /* battleCommandViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = battleCommandViewController.swift; sourceTree = "<group>"; };
 		BA4447F223103B37006E4E16 /* cave3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cave3ViewController.swift; sourceTree = "<group>"; };
@@ -101,16 +99,11 @@
 		BA3849992305548C006E7BA0 /* firstRPG */ = {
 			isa = PBXGroup;
 			children = (
+				BACE9B262542D11600620ADC /* Resources */,
+				BACE9B282542D14700620ADC /* Supporting Files */,
 				BACE9B1A2542AA2800620ADC /* src */,
-				BAC68A5723177FC300D78495 /* Story */,
-				BA3849FF230C1E17006E7BA0 /* caveDungeon */,
-				BA3849FE230C1DFD006E7BA0 /* battle */,
-				BA38499A2305548C006E7BA0 /* AppDelegate.swift */,
 				BA38499E2305548C006E7BA0 /* Main.storyboard */,
 				BA3849A12305548D006E7BA0 /* Assets.xcassets */,
-				BA3849A32305548D006E7BA0 /* LaunchScreen.storyboard */,
-				BA3849A62305548D006E7BA0 /* Info.plist */,
-				BA3849FA2309219A006E7BA0 /* GameScene.swift */,
 			);
 			path = firstRPG;
 			sourceTree = "<group>";
@@ -154,9 +147,61 @@
 		BACE9B1A2542AA2800620ADC /* src */ = {
 			isa = PBXGroup;
 			children = (
+				BACE9B2B2542D21400620ADC /* ViewModels */,
+				BACE9B2A2542D20900620ADC /* Views */,
+				BACE9B292542D1ED00620ADC /* Models */,
+				BA38499A2305548C006E7BA0 /* AppDelegate.swift */,
 				BACE9B1F2542AB5100620ADC /* R.generated.swift */,
 			);
 			path = src;
+			sourceTree = "<group>";
+		};
+		BACE9B262542D11600620ADC /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				BACE9B272542D13000620ADC /* Fonts */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		BACE9B272542D13000620ADC /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		BACE9B282542D14700620ADC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BA3849A62305548D006E7BA0 /* Info.plist */,
+				BA3849A32305548D006E7BA0 /* LaunchScreen.storyboard */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BACE9B292542D1ED00620ADC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		BACE9B2A2542D20900620ADC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BA3849FE230C1DFD006E7BA0 /* battle */,
+				BA3849FF230C1E17006E7BA0 /* caveDungeon */,
+				BAC68A5723177FC300D78495 /* Story */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		BACE9B2B2542D21400620ADC /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		E84250B5B979507CE8E77650 /* Pods */ = {
@@ -308,7 +353,6 @@
 				BAC68A5B2317814D00D78495 /* story2ViewController.swift in Sources */,
 				BA89C3032313DF7200EBBAC8 /* cave7ViewController.swift in Sources */,
 				BA89C3012313DF5D00EBBAC8 /* cave6ViewController.swift in Sources */,
-				BA3849FB2309219A006E7BA0 /* GameScene.swift in Sources */,
 				BA1F24672317C0A8003BA769 /* titleViewController.swift in Sources */,
 				BAC68A5923177FF400D78495 /* story1ViewController.swift in Sources */,
 				BA384A01230C1E5D006E7BA0 /* battleCommandViewController.swift in Sources */,
@@ -469,7 +513,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = firstRPG/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/firstRPG/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -487,7 +531,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = firstRPG/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/firstRPG/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
