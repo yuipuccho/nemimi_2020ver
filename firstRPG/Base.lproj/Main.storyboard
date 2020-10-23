@@ -3,7 +3,7 @@
     <device id="retina6_5" orientation="landscape" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -11531,16 +11531,16 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="nV6-8i-tlJ"/>
-        <segue reference="PIq-sP-KnF"/>
-        <segue reference="MQO-Ny-RYg"/>
-        <segue reference="Bpa-q2-f7B"/>
-        <segue reference="nXS-oX-Yd2"/>
-        <segue reference="wz1-nP-YBw"/>
-        <segue reference="82U-Ja-PaT"/>
-        <segue reference="c06-vC-yHc"/>
-        <segue reference="RTa-DA-z8X"/>
-        <segue reference="ilG-nT-t9J"/>
+        <segue reference="eIz-ka-7hn"/>
+        <segue reference="GEE-6o-grj"/>
+        <segue reference="L3j-XD-XUo"/>
+        <segue reference="uMu-kc-rdG"/>
+        <segue reference="fBp-28-chC"/>
+        <segue reference="4lg-59-Hir"/>
+        <segue reference="tx1-5A-7hu"/>
+        <segue reference="nUF-Bt-wMs"/>
+        <segue reference="0BB-4w-l0D"/>
+        <segue reference="vQB-Ca-9LJ"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="1" width="512" height="512"/>

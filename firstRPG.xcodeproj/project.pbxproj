@@ -24,6 +24,21 @@
 		BA89C3012313DF5D00EBBAC8 /* cave6ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA89C3002313DF5D00EBBAC8 /* cave6ViewController.swift */; };
 		BA89C3032313DF7200EBBAC8 /* cave7ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA89C3022313DF7200EBBAC8 /* cave7ViewController.swift */; };
 		BA89C3052313DF8100EBBAC8 /* cave8ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA89C3042313DF8100EBBAC8 /* cave8ViewController.swift */; };
+		BAA9D34C2542D9A300F0A736 /* AppTop.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAA9D34B2542D9A300F0A736 /* AppTop.storyboard */; };
+		BAA9D3502542DA8400F0A736 /* Introduction1ViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAA9D34F2542DA8400F0A736 /* Introduction1ViewController.storyboard */; };
+		BAA9D3532542DAA500F0A736 /* Introduction2ViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAA9D3522542DAA500F0A736 /* Introduction2ViewController.storyboard */; };
+		BAA9D3592542DBF400F0A736 /* EndingViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAA9D3582542DBF400F0A736 /* EndingViewController.storyboard */; };
+		BAA9D35F2542DD4900F0A736 /* Cave1ViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAA9D35E2542DD4900F0A736 /* Cave1ViewController.storyboard */; };
+		BAA9D3632542DD9300F0A736 /* Cave2ViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAA9D3622542DD9300F0A736 /* Cave2ViewController.storyboard */; };
+		BAA9D3662542DD9E00F0A736 /* Cave3ViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAA9D3652542DD9E00F0A736 /* Cave3ViewController.storyboard */; };
+		BAA9D3692542DDA900F0A736 /* Cave4ViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAA9D3682542DDA900F0A736 /* Cave4ViewController.storyboard */; };
+		BAA9D36C2542DDB500F0A736 /* Cave5ViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAA9D36B2542DDB500F0A736 /* Cave5ViewController.storyboard */; };
+		BAA9D36F2542DDC000F0A736 /* Cave6ViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAA9D36E2542DDC000F0A736 /* Cave6ViewController.storyboard */; };
+		BAA9D3722542DDCB00F0A736 /* Cave7ViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAA9D3712542DDCB00F0A736 /* Cave7ViewController.storyboard */; };
+		BAA9D3752542DDD800F0A736 /* Cave8ViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAA9D3742542DDD800F0A736 /* Cave8ViewController.storyboard */; };
+		BAA9D3782542DDE300F0A736 /* Cave9ViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAA9D3772542DDE300F0A736 /* Cave9ViewController.storyboard */; };
+		BAA9D37C2542E18800F0A736 /* BattleMessageViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAA9D37B2542E18800F0A736 /* BattleMessageViewController.storyboard */; };
+		BAA9D37F2542E1A500F0A736 /* BattleCommandViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAA9D37E2542E1A500F0A736 /* BattleCommandViewController.storyboard */; };
 		BAC68A5923177FF400D78495 /* story1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC68A5823177FF400D78495 /* story1ViewController.swift */; };
 		BAC68A5B2317814D00D78495 /* story2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC68A5A2317814D00D78495 /* story2ViewController.swift */; };
 		BAC68A5D2317816700D78495 /* story3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC68A5C2317816700D78495 /* story3ViewController.swift */; };
@@ -51,6 +66,21 @@
 		BA89C3002313DF5D00EBBAC8 /* cave6ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cave6ViewController.swift; sourceTree = "<group>"; };
 		BA89C3022313DF7200EBBAC8 /* cave7ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cave7ViewController.swift; sourceTree = "<group>"; };
 		BA89C3042313DF8100EBBAC8 /* cave8ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cave8ViewController.swift; sourceTree = "<group>"; };
+		BAA9D34B2542D9A300F0A736 /* AppTop.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AppTop.storyboard; sourceTree = "<group>"; };
+		BAA9D34F2542DA8400F0A736 /* Introduction1ViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Introduction1ViewController.storyboard; sourceTree = "<group>"; };
+		BAA9D3522542DAA500F0A736 /* Introduction2ViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Introduction2ViewController.storyboard; sourceTree = "<group>"; };
+		BAA9D3582542DBF400F0A736 /* EndingViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EndingViewController.storyboard; sourceTree = "<group>"; };
+		BAA9D35E2542DD4900F0A736 /* Cave1ViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Cave1ViewController.storyboard; sourceTree = "<group>"; };
+		BAA9D3622542DD9300F0A736 /* Cave2ViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Cave2ViewController.storyboard; sourceTree = "<group>"; };
+		BAA9D3652542DD9E00F0A736 /* Cave3ViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Cave3ViewController.storyboard; sourceTree = "<group>"; };
+		BAA9D3682542DDA900F0A736 /* Cave4ViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Cave4ViewController.storyboard; sourceTree = "<group>"; };
+		BAA9D36B2542DDB500F0A736 /* Cave5ViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Cave5ViewController.storyboard; sourceTree = "<group>"; };
+		BAA9D36E2542DDC000F0A736 /* Cave6ViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Cave6ViewController.storyboard; sourceTree = "<group>"; };
+		BAA9D3712542DDCB00F0A736 /* Cave7ViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Cave7ViewController.storyboard; sourceTree = "<group>"; };
+		BAA9D3742542DDD800F0A736 /* Cave8ViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Cave8ViewController.storyboard; sourceTree = "<group>"; };
+		BAA9D3772542DDE300F0A736 /* Cave9ViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Cave9ViewController.storyboard; sourceTree = "<group>"; };
+		BAA9D37B2542E18800F0A736 /* BattleMessageViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BattleMessageViewController.storyboard; sourceTree = "<group>"; };
+		BAA9D37E2542E1A500F0A736 /* BattleCommandViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BattleCommandViewController.storyboard; sourceTree = "<group>"; };
 		BAC68A5823177FF400D78495 /* story1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = story1ViewController.swift; sourceTree = "<group>"; };
 		BAC68A5A2317814D00D78495 /* story2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = story2ViewController.swift; sourceTree = "<group>"; };
 		BAC68A5C2317816700D78495 /* story3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = story3ViewController.swift; sourceTree = "<group>"; };
@@ -108,38 +138,84 @@
 			path = firstRPG;
 			sourceTree = "<group>";
 		};
-		BA3849FE230C1DFD006E7BA0 /* battle */ = {
+		BA3849FE230C1DFD006E7BA0 /* Battle */ = {
 			isa = PBXGroup;
 			children = (
-				BA3849FC230BC306006E7BA0 /* battleMessageViewController.swift */,
+				BAA9D37E2542E1A500F0A736 /* BattleCommandViewController.storyboard */,
 				BA384A00230C1E5D006E7BA0 /* battleCommandViewController.swift */,
+				BAA9D37B2542E18800F0A736 /* BattleMessageViewController.storyboard */,
+				BA3849FC230BC306006E7BA0 /* battleMessageViewController.swift */,
 			);
-			path = battle;
+			path = Battle;
 			sourceTree = "<group>";
 		};
-		BA3849FF230C1E17006E7BA0 /* caveDungeon */ = {
+		BA3849FF230C1E17006E7BA0 /* Dungeon */ = {
 			isa = PBXGroup;
 			children = (
+				BAA9D35D2542DCF300F0A736 /* CaveDungeon */,
+			);
+			path = Dungeon;
+			sourceTree = "<group>";
+		};
+		BAA9D34A2542D98100F0A736 /* AppTop */ = {
+			isa = PBXGroup;
+			children = (
+				BAA9D34B2542D9A300F0A736 /* AppTop.storyboard */,
+				BA1F24662317C0A8003BA769 /* titleViewController.swift */,
+			);
+			path = AppTop;
+			sourceTree = "<group>";
+		};
+		BAA9D34E2542DA4E00F0A736 /* Introduction */ = {
+			isa = PBXGroup;
+			children = (
+				BAA9D34F2542DA8400F0A736 /* Introduction1ViewController.storyboard */,
+				BAC68A5823177FF400D78495 /* story1ViewController.swift */,
+				BAA9D3522542DAA500F0A736 /* Introduction2ViewController.storyboard */,
+				BAC68A5A2317814D00D78495 /* story2ViewController.swift */,
+			);
+			path = Introduction;
+			sourceTree = "<group>";
+		};
+		BAA9D3562542DB7E00F0A736 /* Ending */ = {
+			isa = PBXGroup;
+			children = (
+				BAA9D3582542DBF400F0A736 /* EndingViewController.storyboard */,
+				BAC68A5C2317816700D78495 /* story3ViewController.swift */,
+			);
+			path = Ending;
+			sourceTree = "<group>";
+		};
+		BAA9D35D2542DCF300F0A736 /* CaveDungeon */ = {
+			isa = PBXGroup;
+			children = (
+				BAA9D35E2542DD4900F0A736 /* Cave1ViewController.storyboard */,
 				BA38499C2305548C006E7BA0 /* cave1ViewController.swift */,
+				BAA9D3622542DD9300F0A736 /* Cave2ViewController.storyboard */,
 				BA2A9CB0230E6E3B00E13DC8 /* cave2ViewController.swift */,
+				BAA9D3652542DD9E00F0A736 /* Cave3ViewController.storyboard */,
 				BA4447F223103B37006E4E16 /* cave3ViewController.swift */,
+				BAA9D3682542DDA900F0A736 /* Cave4ViewController.storyboard */,
 				BA89C2FC2313DF3F00EBBAC8 /* cave4ViewController.swift */,
+				BAA9D36B2542DDB500F0A736 /* Cave5ViewController.storyboard */,
 				BA89C2FE2313DF4F00EBBAC8 /* cave5ViewController.swift */,
+				BAA9D36E2542DDC000F0A736 /* Cave6ViewController.storyboard */,
 				BA89C3002313DF5D00EBBAC8 /* cave6ViewController.swift */,
+				BAA9D3712542DDCB00F0A736 /* Cave7ViewController.storyboard */,
 				BA89C3022313DF7200EBBAC8 /* cave7ViewController.swift */,
+				BAA9D3742542DDD800F0A736 /* Cave8ViewController.storyboard */,
 				BA89C3042313DF8100EBBAC8 /* cave8ViewController.swift */,
+				BAA9D3772542DDE300F0A736 /* Cave9ViewController.storyboard */,
 				BA2A9CAE230E65FE00E13DC8 /* cave9ViewController.swift */,
 			);
-			path = caveDungeon;
+			path = CaveDungeon;
 			sourceTree = "<group>";
 		};
 		BAC68A5723177FC300D78495 /* Story */ = {
 			isa = PBXGroup;
 			children = (
-				BA1F24662317C0A8003BA769 /* titleViewController.swift */,
-				BAC68A5823177FF400D78495 /* story1ViewController.swift */,
-				BAC68A5A2317814D00D78495 /* story2ViewController.swift */,
-				BAC68A5C2317816700D78495 /* story3ViewController.swift */,
+				BAA9D3562542DB7E00F0A736 /* Ending */,
+				BAA9D34E2542DA4E00F0A736 /* Introduction */,
 			);
 			path = Story;
 			sourceTree = "<group>";
@@ -190,8 +266,9 @@
 		BACE9B2A2542D20900620ADC /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				BA3849FE230C1DFD006E7BA0 /* battle */,
-				BA3849FF230C1E17006E7BA0 /* caveDungeon */,
+				BAA9D34A2542D98100F0A736 /* AppTop */,
+				BA3849FE230C1DFD006E7BA0 /* Battle */,
+				BA3849FF230C1E17006E7BA0 /* Dungeon */,
 				BAC68A5723177FC300D78495 /* Story */,
 			);
 			path = Views;
@@ -274,8 +351,23 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BAA9D3722542DDCB00F0A736 /* Cave7ViewController.storyboard in Resources */,
+				BAA9D3632542DD9300F0A736 /* Cave2ViewController.storyboard in Resources */,
+				BAA9D3502542DA8400F0A736 /* Introduction1ViewController.storyboard in Resources */,
+				BAA9D3532542DAA500F0A736 /* Introduction2ViewController.storyboard in Resources */,
+				BAA9D3752542DDD800F0A736 /* Cave8ViewController.storyboard in Resources */,
+				BAA9D34C2542D9A300F0A736 /* AppTop.storyboard in Resources */,
+				BAA9D36C2542DDB500F0A736 /* Cave5ViewController.storyboard in Resources */,
+				BAA9D37F2542E1A500F0A736 /* BattleCommandViewController.storyboard in Resources */,
+				BAA9D3662542DD9E00F0A736 /* Cave3ViewController.storyboard in Resources */,
+				BAA9D3592542DBF400F0A736 /* EndingViewController.storyboard in Resources */,
+				BAA9D3692542DDA900F0A736 /* Cave4ViewController.storyboard in Resources */,
+				BAA9D35F2542DD4900F0A736 /* Cave1ViewController.storyboard in Resources */,
 				BA3849A52305548D006E7BA0 /* LaunchScreen.storyboard in Resources */,
+				BAA9D37C2542E18800F0A736 /* BattleMessageViewController.storyboard in Resources */,
+				BAA9D3782542DDE300F0A736 /* Cave9ViewController.storyboard in Resources */,
 				BA3849A22305548D006E7BA0 /* Assets.xcassets in Resources */,
+				BAA9D36F2542DDC000F0A736 /* Cave6ViewController.storyboard in Resources */,
 				BA3849A02305548C006E7BA0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
