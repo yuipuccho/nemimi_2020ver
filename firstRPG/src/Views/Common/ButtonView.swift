@@ -23,6 +23,10 @@ class ButtonView: UIView {
 
     // MARK: - Properties
 
+    var mainButtonTappedSubject: PublishSubject<Void> = PublishSubject<Void>()
+
+    private let disposeBag = DisposeBag()
+
     // MARK: - LifeCycles
 
     override class func awakeFromNib() {
@@ -32,9 +36,10 @@ class ButtonView: UIView {
     // MARK: - Functions
 
     func subscribe() {
+        // メインボタンタップ
         mainButton.rx.tap.subscribe(onNext: { [unowned self] in
-            
-        })
+            self.mainButtonTappedSubject.onNext(())
+        }).disposed(by: disposeBag)
     }
 
 }

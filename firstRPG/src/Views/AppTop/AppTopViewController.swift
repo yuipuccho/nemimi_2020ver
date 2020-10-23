@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 /**
  * タイトル画面VC
@@ -21,6 +23,10 @@ class AppTopViewController: UIViewController {
         addButtonView()
     }
 
+    // MARK: - Properties
+
+    private let disposeBag = DisposeBag()
+
     // MARK: - Functions
 
     /// ボタンViewを追加する
@@ -30,10 +36,13 @@ class AppTopViewController: UIViewController {
         view.addSubview(v)
 
         v.subscribe()
-        v.mainButton.rx.tap.subscribe(onNext: { [unowned self] in
+
+        // メインボタンタップ
+        v.mainButtonTappedSubject.subscribe(onNext: { [unowned self] in
+            // 導入ストーリーへ遷移する
             let vc = Introduction1ViewController.makeInstance()
-            present(vc, animated: true)
-        })
+            self.present(vc, animated: true)
+        }).disposed(by: disposeBag)
     }
 
 }
