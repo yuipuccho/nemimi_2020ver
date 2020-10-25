@@ -15,6 +15,13 @@ import RxCocoa
  */
 class AppTopViewController: UIViewController {
 
+    // MARK: - Properties
+
+    private let disposeBag = DisposeBag()
+
+    /// ボタンView
+    private lazy var buttonView = R.nib.buttonView.firstView(owner: nil)!
+
     // MARK: - LifeCycles
     
     override func viewDidLoad() {
@@ -23,22 +30,17 @@ class AppTopViewController: UIViewController {
         addButtonView()
     }
 
-    // MARK: - Properties
-
-    private let disposeBag = DisposeBag()
-
     // MARK: - Functions
 
     /// ボタンViewを追加する
     private func addButtonView() {
-        guard let v = R.nib.buttonView.firstView(owner: nil) else { return }
-        v.frame = view.frame
-        view.addSubview(v)
+        buttonView.frame = view.frame
+        view.addSubview(buttonView)
 
-        v.subscribe()
+        buttonView.subscribe()
 
         // メインボタンタップ
-        v.mainButtonTappedSubject.subscribe(onNext: { [unowned self] in
+        buttonView.mainButtonTappedSubject.subscribe(onNext: { [unowned self] in
             // 導入ストーリーへ遷移する
             let vc = Introduction1ViewController.makeInstance()
             self.present(vc, animated: true)
