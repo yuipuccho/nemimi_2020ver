@@ -28,6 +28,7 @@ class AppTopViewController: UIViewController {
         super.viewDidLoad()
 
         addButtonView()
+        subscribe()
     }
 
     // MARK: - Functions
@@ -38,7 +39,9 @@ class AppTopViewController: UIViewController {
         view.addSubview(buttonView)
 
         buttonView.subscribe()
+    }
 
+    private func subscribe() {
         // メインボタンタップ
         buttonView.mainButtonTappedSubject.subscribe(onNext: { [unowned self] in
             // 導入ストーリーへ遷移する
