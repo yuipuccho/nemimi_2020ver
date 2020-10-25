@@ -17,6 +17,7 @@
 		BA3849A52305548D006E7BA0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA3849A32305548D006E7BA0 /* LaunchScreen.storyboard */; };
 		BA3849FD230BC306006E7BA0 /* battleMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3849FC230BC306006E7BA0 /* battleMessageViewController.swift */; };
 		BA384A01230C1E5D006E7BA0 /* battleCommandViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA384A00230C1E5D006E7BA0 /* battleCommandViewController.swift */; };
+		BA3887B725451CEF00C5380E /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3887B625451CEF00C5380E /* MessageView.swift */; };
 		BA4447F323103B37006E4E16 /* cave3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4447F223103B37006E4E16 /* cave3ViewController.swift */; };
 		BA89C2FD2313DF3F00EBBAC8 /* cave4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA89C2FC2313DF3F00EBBAC8 /* cave4ViewController.swift */; };
 		BA89C2FF2313DF4F00EBBAC8 /* cave5ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA89C2FE2313DF4F00EBBAC8 /* cave5ViewController.swift */; };
@@ -62,6 +63,7 @@
 		BA3849A62305548D006E7BA0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BA3849FC230BC306006E7BA0 /* battleMessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = battleMessageViewController.swift; sourceTree = "<group>"; };
 		BA384A00230C1E5D006E7BA0 /* battleCommandViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = battleCommandViewController.swift; sourceTree = "<group>"; };
+		BA3887B625451CEF00C5380E /* MessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
 		BA4447F223103B37006E4E16 /* cave3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cave3ViewController.swift; sourceTree = "<group>"; };
 		BA89C2FC2313DF3F00EBBAC8 /* cave4ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cave4ViewController.swift; sourceTree = "<group>"; };
 		BA89C2FE2313DF4F00EBBAC8 /* cave5ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cave5ViewController.swift; sourceTree = "<group>"; };
@@ -223,6 +225,7 @@
 				BAA9D3872542EAF800F0A736 /* ButtonView.xib */,
 				BAA9D3912542F0A100F0A736 /* ButtonView.swift */,
 				BAA9D38A2542EB4F00F0A736 /* MessageView.xib */,
+				BA3887B625451CEF00C5380E /* MessageView.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -471,6 +474,7 @@
 				BAA9D3922542F0A100F0A736 /* ButtonView.swift in Sources */,
 				BAC68A5D2317816700D78495 /* story3ViewController.swift in Sources */,
 				BA38499D2305548C006E7BA0 /* cave1ViewController.swift in Sources */,
+				BA3887B725451CEF00C5380E /* MessageView.swift in Sources */,
 				BACE9B202542AB5100620ADC /* R.generated.swift in Sources */,
 				BA2A9CAF230E65FE00E13DC8 /* cave9ViewController.swift in Sources */,
 				BA4447F323103B37006E4E16 /* cave3ViewController.swift in Sources */,

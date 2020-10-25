@@ -6,7 +6,6 @@
 //  Copyright © 2020 吉澤優衣. All rights reserved.
 //
 
-import Foundation
 import UIKit
 import RxSwift
 import RxCocoa
