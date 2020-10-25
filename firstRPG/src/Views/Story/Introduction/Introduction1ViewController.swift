@@ -108,7 +108,9 @@ extension Introduction1ViewController {
         case 3:
             messageView.messageTextView.text = Introduction1Model.messageEnum.third.message
         case 4:
-            // TODO: 遷移処理を追加する
+            // 次のストーリーへ遷移する
+            let vc = Introduction2ViewController.makeInstance()
+            self.present(vc, animated: true)
             return
         default:
             return

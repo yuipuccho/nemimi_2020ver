@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Story2 View Controller-->
+        <!--Introduction2 View Controller-->
         <scene sceneID="058-lO-NIR">
             <objects>
-                <viewController id="7OV-L7-YdD" customClass="story2ViewController" customModule="firstRPG" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Introduction2ViewController" modalTransitionStyle="crossDissolve" id="7OV-L7-YdD" customClass="Introduction2ViewController" customModule="firstRPG" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tWw-N9-jY2">
                         <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -112,9 +112,6 @@
                                             <constraint firstAttribute="height" constant="40" id="t8y-Ro-iH3"/>
                                         </constraints>
                                         <state key="normal" image="icon_130261_64"/>
-                                        <connections>
-                                            <action selector="mainButton:" destination="7OV-L7-YdD" eventType="touchUpInside" id="RKy-HW-xsl"/>
-                                        </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Her-EH-2cj">
                                         <rect key="frame" x="10" y="313" width="70" height="70"/>
@@ -132,9 +129,6 @@
                                                         <rect key="frame" x="23.5" y="0.0" width="23.5" height="23.5"/>
                                                         <gestureRecognizers/>
                                                         <state key="normal" title="button" image="jbutton"/>
-                                                        <connections>
-                                                            <action selector="upButton:" destination="7OV-L7-YdD" eventType="touchUpInside" id="tMT-AA-2kC"/>
-                                                        </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0t6-On-chJ">
                                                         <rect key="frame" x="47" y="0.0" width="23" height="23.5"/>
@@ -178,9 +172,6 @@
                                                         <rect key="frame" x="23.5" y="0.0" width="23.5" height="23.5"/>
                                                         <gestureRecognizers/>
                                                         <state key="normal" title="Button" image="dbutton"/>
-                                                        <connections>
-                                                            <action selector="downButton:" destination="7OV-L7-YdD" eventType="touchUpInside" id="Hdk-jv-ytf"/>
-                                                        </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JJa-7t-2c9">
                                                         <rect key="frame" x="47" y="0.0" width="23" height="23.5"/>
@@ -233,14 +224,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="gameView" destination="wqB-TY-x4y" id="JeV-Rk-Nqy"/>
-                        <outlet property="kingImage" destination="LBY-WI-15P" id="NRb-sI-JOq"/>
-                        <outlet property="noLabel" destination="Uzn-Qj-8F6" id="ZyS-4a-e4G"/>
-                        <outlet property="selectNo" destination="6tM-B9-euk" id="N4G-DV-1ma"/>
-                        <outlet property="selectView" destination="hpj-Mb-GKb" id="32Y-vQ-EcN"/>
-                        <outlet property="selectYes" destination="oQ2-3o-9gp" id="yPk-Vt-Qbl"/>
-                        <outlet property="textView" destination="Nar-zz-Bxf" id="aNC-zR-pEX"/>
-                        <outlet property="yesLabel" destination="W8s-1X-ni6" id="aMU-UF-zLM"/>
+                        <outlet property="kingImage" destination="LBY-WI-15P" id="lQB-wV-rye"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rw0-6A-Cfi" sceneMemberID="firstResponder"/>
