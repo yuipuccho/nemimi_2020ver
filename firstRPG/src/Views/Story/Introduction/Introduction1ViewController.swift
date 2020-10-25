@@ -38,9 +38,10 @@ class Introduction1ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // ボタンViewを上にもってくる処理を念の為書いたほうが良いかもしれない
         addMessageView()
         addButtonView()
+        // ボタンViewを最前面に配置する（念の為）
+        view.bringSubviewToFront(buttonView)
 
         initialSetting()
         subscribe()
