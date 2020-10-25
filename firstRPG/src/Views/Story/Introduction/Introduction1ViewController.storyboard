@@ -54,7 +54,6 @@
                     </view>
                     <connections>
                         <outlet property="hermitImageView" destination="OwN-Xm-IfD" id="F68-zi-B1J"/>
-                        <outlet property="princessImageView" destination="WLP-84-3th" id="wEh-Ou-Nji"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jm1-Ty-I2f" sceneMemberID="firstResponder"/>

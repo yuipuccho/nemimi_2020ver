@@ -20,22 +20,6 @@ class MessageView: UIView {
     /// メッセージTextView
     @IBOutlet weak var messageTextView: UITextView!
 
-    // MARK: - Properties
-
-    private let disposeBag = DisposeBag()
-
-    // MARK: - LifeCycles
-
-    override class func awakeFromNib() {
-        super.awakeFromNib()
-    }
-
-    // MARK: - Functions
-
-    func subscribe() {
-
-    }
-
 }
 
 // MARK: - MakeInstance

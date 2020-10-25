@@ -15,13 +15,10 @@ import RxCocoa
  * - Note: 姫がハーミットに連れ去られるシーン
  */
 class Introduction1ViewController: UIViewController {
-    
-    @IBOutlet private weak var princessImageView: UIImageView!
+
+    // MARK: - Outlets
+
     @IBOutlet private weak var hermitImageView: UIImageView!
-    //@IBOutlet weak var textView: UITextView!
-//
-    var mainButtonTappedCount = 0
-//    var button = false
 
     // MARK: - Properties
 
@@ -32,27 +29,8 @@ class Introduction1ViewController: UIViewController {
     /// メッセージView
     private lazy var messageView = R.nib.messageView.firstView(owner: nil)!
 
-    /// メッセージ内容の格納用Enum
-    // Enumにする必要はあるのか？
-    // これを他の場所で持たせたい
-    private enum messageEnum: String {
-        case zeroth, first, second, third
-
-        var message: String {
-            get {
-                switch self {
-                case .zeroth:
-                    return "＊「ホホホ......。」"
-                case .first:
-                    return "姫「きゃあ！\n  どなたですか！？」"
-                case .second:
-                    return "＊「さあ、わたしといっしょに\n  来てもらいますよ......。」"
-                case .third:
-                    return "姫「きゃー！！」"
-                }
-            }
-        }
-    }
+    /// メインボタンをタップした回数
+    private var mainButtonTappedCount = 0
 
     // MARK: - LifeCycles
 
@@ -62,6 +40,8 @@ class Introduction1ViewController: UIViewController {
         // ボタンViewを上にもってくる処理を念の為書いたほうが良いかもしれない
         addMessageView()
         addButtonView()
+
+        initialSetting()
     }
 
 }
@@ -79,7 +59,7 @@ extension Introduction1ViewController {
 
         // メインボタンタップ
         buttonView.mainButtonTappedSubject.subscribe(onNext: { [unowned self] in
-            main()
+            mainButtonTapped()
         }).disposed(by: disposeBag)
     }
 
@@ -89,23 +69,41 @@ extension Introduction1ViewController {
         view.addSubview(messageView)
     }
 
+    /// 初期設定
+    private func initialSetting() {
+        hermitImageView.isHidden = true
+        messageView.isHidden = true
+        buttonView.mainButton.isEnabled = false
+
+        // 1.0秒後にハーミットを出現させる
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) { [weak self] in
+            self?.hermitImageView.isHidden = false
+        }
+
+        // 1.5秒後にメッセージを表示し、メインボタンをタップ可にする
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) { [weak self] in
+            self?.messageView.isHidden = false    // メッセージ表示
+            self?.messageView.messageTextView.text = Introduction1Model.messageEnum.zeroth.message
+            self?.buttonView.mainButton.isEnabled = true
+        }
+    }
+
 }
 
 extension Introduction1ViewController {
 
-    /// メインボタンタップされたときの動作
-    // 関数名
-    private func main() {
+    /// メインボタンタップされたときの処理
+    private func mainButtonTapped() {
         mainButtonTappedCount += 1
         switch mainButtonTappedCount {
         case 1:
-            messageView.messageTextView.text = messageEnum.first.message
+            messageView.messageTextView.text = Introduction1Model.messageEnum.first.message
         case 2:
-            messageView.messageTextView.text = messageEnum.second.message
+            messageView.messageTextView.text = Introduction1Model.messageEnum.second.message
         case 3:
-            messageView.messageTextView.text = messageEnum.third.message
+            messageView.messageTextView.text = Introduction1Model.messageEnum.third.message
         case 4:
-            // 遷移処理
+            // TODO: 遷移処理を追加する
             return
         default:
             return

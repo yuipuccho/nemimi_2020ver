@@ -18,6 +18,7 @@
 		BA3849FD230BC306006E7BA0 /* battleMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3849FC230BC306006E7BA0 /* battleMessageViewController.swift */; };
 		BA384A01230C1E5D006E7BA0 /* battleCommandViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA384A00230C1E5D006E7BA0 /* battleCommandViewController.swift */; };
 		BA3887B725451CEF00C5380E /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3887B625451CEF00C5380E /* MessageView.swift */; };
+		BA3887BC25453AC000C5380E /* Introduction1Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3887BB25453AC000C5380E /* Introduction1Model.swift */; };
 		BA4447F323103B37006E4E16 /* cave3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4447F223103B37006E4E16 /* cave3ViewController.swift */; };
 		BA89C2FD2313DF3F00EBBAC8 /* cave4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA89C2FC2313DF3F00EBBAC8 /* cave4ViewController.swift */; };
 		BA89C2FF2313DF4F00EBBAC8 /* cave5ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA89C2FE2313DF4F00EBBAC8 /* cave5ViewController.swift */; };
@@ -64,6 +65,7 @@
 		BA3849FC230BC306006E7BA0 /* battleMessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = battleMessageViewController.swift; sourceTree = "<group>"; };
 		BA384A00230C1E5D006E7BA0 /* battleCommandViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = battleCommandViewController.swift; sourceTree = "<group>"; };
 		BA3887B625451CEF00C5380E /* MessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
+		BA3887BB25453AC000C5380E /* Introduction1Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Introduction1Model.swift; sourceTree = "<group>"; };
 		BA4447F223103B37006E4E16 /* cave3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cave3ViewController.swift; sourceTree = "<group>"; };
 		BA89C2FC2313DF3F00EBBAC8 /* cave4ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cave4ViewController.swift; sourceTree = "<group>"; };
 		BA89C2FE2313DF4F00EBBAC8 /* cave5ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cave5ViewController.swift; sourceTree = "<group>"; };
@@ -162,6 +164,22 @@
 				BAA9D35D2542DCF300F0A736 /* CaveDungeon */,
 			);
 			path = Dungeon;
+			sourceTree = "<group>";
+		};
+		BA3887B925453A9900C5380E /* Story */ = {
+			isa = PBXGroup;
+			children = (
+				BA3887BA25453AA100C5380E /* Introduction */,
+			);
+			path = Story;
+			sourceTree = "<group>";
+		};
+		BA3887BA25453AA100C5380E /* Introduction */ = {
+			isa = PBXGroup;
+			children = (
+				BA3887BB25453AC000C5380E /* Introduction1Model.swift */,
+			);
+			path = Introduction;
 			sourceTree = "<group>";
 		};
 		BAA9D34A2542D98100F0A736 /* AppTop */ = {
@@ -278,6 +296,7 @@
 		BACE9B292542D1ED00620ADC /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				BA3887B925453A9900C5380E /* Story */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -478,6 +497,7 @@
 				BACE9B202542AB5100620ADC /* R.generated.swift in Sources */,
 				BA2A9CAF230E65FE00E13DC8 /* cave9ViewController.swift in Sources */,
 				BA4447F323103B37006E4E16 /* cave3ViewController.swift in Sources */,
+				BA3887BC25453AC000C5380E /* Introduction1Model.swift in Sources */,
 				BA38499B2305548C006E7BA0 /* AppDelegate.swift in Sources */,
 				BA3849FD230BC306006E7BA0 /* battleMessageViewController.swift in Sources */,
 				BA89C2FF2313DF4F00EBBAC8 /* cave5ViewController.swift in Sources */,
