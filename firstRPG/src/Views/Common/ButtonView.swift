@@ -23,10 +23,10 @@ class ButtonView: UIView {
 
     // MARK: - Properties
 
+    private let disposeBag = DisposeBag()
+
     /// メインボタンタップ
     var mainButtonTappedSubject: PublishSubject<Void> = PublishSubject<Void>()
-
-    private let disposeBag = DisposeBag()
 
     // MARK: - LifeCycles
 
