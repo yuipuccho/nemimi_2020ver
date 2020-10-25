@@ -18,6 +18,7 @@ class Introduction1ViewController: UIViewController {
 
     // MARK: - Outlets
 
+    /// ハーミットImageView
     @IBOutlet private weak var hermitImageView: UIImageView!
 
     // MARK: - Properties
@@ -42,6 +43,7 @@ class Introduction1ViewController: UIViewController {
         addButtonView()
 
         initialSetting()
+        subscribe()
     }
 
 }
@@ -56,11 +58,6 @@ extension Introduction1ViewController {
         view.addSubview(buttonView)
 
         buttonView.subscribe()
-
-        // メインボタンタップ
-        buttonView.mainButtonTappedSubject.subscribe(onNext: { [unowned self] in
-            mainButtonTapped()
-        }).disposed(by: disposeBag)
     }
 
     /// メッセージViewを追加する
@@ -92,7 +89,14 @@ extension Introduction1ViewController {
 
 extension Introduction1ViewController {
 
-    /// メインボタンタップされたときの処理
+    private func subscribe() {
+        // メインボタンタップ
+        buttonView.mainButtonTappedSubject.subscribe(onNext: { [unowned self] in
+            mainButtonTapped()
+        }).disposed(by: disposeBag)
+    }
+
+    /// メインボタンがタップされたときの処理
     private func mainButtonTapped() {
         mainButtonTappedCount += 1
         switch mainButtonTappedCount {
