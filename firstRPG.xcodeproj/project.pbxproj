@@ -19,6 +19,8 @@
 		BA384A01230C1E5D006E7BA0 /* battleCommandViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA384A00230C1E5D006E7BA0 /* battleCommandViewController.swift */; };
 		BA3887B725451CEF00C5380E /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3887B625451CEF00C5380E /* MessageView.swift */; };
 		BA3887BC25453AC000C5380E /* Introduction1Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3887BB25453AC000C5380E /* Introduction1Model.swift */; };
+		BA3887C125454FA100C5380E /* Introduction2Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3887C025454FA100C5380E /* Introduction2Model.swift */; };
+		BA3887C6254599E100C5380E /* Introduction2ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3887C5254599E100C5380E /* Introduction2ViewModel.swift */; };
 		BA4447F323103B37006E4E16 /* cave3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4447F223103B37006E4E16 /* cave3ViewController.swift */; };
 		BA89C2FD2313DF3F00EBBAC8 /* cave4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA89C2FC2313DF3F00EBBAC8 /* cave4ViewController.swift */; };
 		BA89C2FF2313DF4F00EBBAC8 /* cave5ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA89C2FE2313DF4F00EBBAC8 /* cave5ViewController.swift */; };
@@ -66,6 +68,8 @@
 		BA384A00230C1E5D006E7BA0 /* battleCommandViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = battleCommandViewController.swift; sourceTree = "<group>"; };
 		BA3887B625451CEF00C5380E /* MessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
 		BA3887BB25453AC000C5380E /* Introduction1Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Introduction1Model.swift; sourceTree = "<group>"; };
+		BA3887C025454FA100C5380E /* Introduction2Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Introduction2Model.swift; sourceTree = "<group>"; };
+		BA3887C5254599E100C5380E /* Introduction2ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Introduction2ViewModel.swift; sourceTree = "<group>"; };
 		BA4447F223103B37006E4E16 /* cave3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cave3ViewController.swift; sourceTree = "<group>"; };
 		BA89C2FC2313DF3F00EBBAC8 /* cave4ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cave4ViewController.swift; sourceTree = "<group>"; };
 		BA89C2FE2313DF4F00EBBAC8 /* cave5ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cave5ViewController.swift; sourceTree = "<group>"; };
@@ -178,6 +182,23 @@
 			isa = PBXGroup;
 			children = (
 				BA3887BB25453AC000C5380E /* Introduction1Model.swift */,
+				BA3887C025454FA100C5380E /* Introduction2Model.swift */,
+			);
+			path = Introduction;
+			sourceTree = "<group>";
+		};
+		BA3887C3254599BD00C5380E /* Story */ = {
+			isa = PBXGroup;
+			children = (
+				BA3887C4254599C500C5380E /* Introduction */,
+			);
+			path = Story;
+			sourceTree = "<group>";
+		};
+		BA3887C4254599C500C5380E /* Introduction */ = {
+			isa = PBXGroup;
+			children = (
+				BA3887C5254599E100C5380E /* Introduction2ViewModel.swift */,
 			);
 			path = Introduction;
 			sourceTree = "<group>";
@@ -316,6 +337,7 @@
 		BACE9B2B2542D21400620ADC /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				BA3887C3254599BD00C5380E /* Story */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -482,6 +504,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA3887C125454FA100C5380E /* Introduction2Model.swift in Sources */,
 				BA89C2FD2313DF3F00EBBAC8 /* cave4ViewController.swift in Sources */,
 				BAC68A5B2317814D00D78495 /* Introduction2ViewController.swift in Sources */,
 				BA89C3032313DF7200EBBAC8 /* cave7ViewController.swift in Sources */,
@@ -492,6 +515,7 @@
 				BA2A9CB1230E6E3B00E13DC8 /* cave2ViewController.swift in Sources */,
 				BAA9D3922542F0A100F0A736 /* ButtonView.swift in Sources */,
 				BAC68A5D2317816700D78495 /* story3ViewController.swift in Sources */,
+				BA3887C6254599E100C5380E /* Introduction2ViewModel.swift in Sources */,
 				BA38499D2305548C006E7BA0 /* cave1ViewController.swift in Sources */,
 				BA3887B725451CEF00C5380E /* MessageView.swift in Sources */,
 				BACE9B202542AB5100620ADC /* R.generated.swift in Sources */,

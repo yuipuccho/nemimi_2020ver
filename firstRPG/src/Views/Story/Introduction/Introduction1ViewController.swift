@@ -111,7 +111,6 @@ extension Introduction1ViewController {
             // 次のストーリーへ遷移する
             let vc = Introduction2ViewController.makeInstance()
             self.present(vc, animated: true)
-            return
         default:
             return
         }
