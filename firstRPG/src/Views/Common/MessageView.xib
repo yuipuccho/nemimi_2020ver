@@ -14,9 +14,17 @@
             <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qqT-pN-uOJ">
+                    <rect key="frame" x="294" y="295" width="308" height="88"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.65000000000000002" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="CornerRadius">
+                            <integer key="value" value="5"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="HP・MPが かいふくした！" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1wI-0h-Bqd">
                     <rect key="frame" x="294" y="295" width="308" height="88"/>
-                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.65255779110000001" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="308" id="b8C-R8-915"/>
                         <constraint firstAttribute="height" constant="88" id="ihN-QB-kK4"/>
@@ -81,13 +89,22 @@
                         <constraint firstAttribute="height" constant="60" id="mBz-bh-gBZ"/>
                         <constraint firstItem="yEa-Vf-Im8" firstAttribute="top" secondItem="646-3u-h3F" secondAttribute="top" constant="8" id="vuy-CH-VsM"/>
                     </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="CornerRadius">
+                            <integer key="value" value="5"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
                 </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <constraints>
                 <constraint firstItem="646-3u-h3F" firstAttribute="trailing" secondItem="1wI-0h-Bqd" secondAttribute="trailing" id="LyX-c8-ZV8"/>
+                <constraint firstItem="qqT-pN-uOJ" firstAttribute="leading" secondItem="1wI-0h-Bqd" secondAttribute="leading" id="O4F-bQ-FYe"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="1wI-0h-Bqd" secondAttribute="bottom" constant="10" id="dkK-8c-yDO"/>
                 <constraint firstItem="1wI-0h-Bqd" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="eYe-Sk-m0Y"/>
+                <constraint firstItem="qqT-pN-uOJ" firstAttribute="top" secondItem="1wI-0h-Bqd" secondAttribute="top" id="fIQ-k9-ehC"/>
+                <constraint firstItem="qqT-pN-uOJ" firstAttribute="bottom" secondItem="1wI-0h-Bqd" secondAttribute="bottom" id="i05-PL-EZh"/>
+                <constraint firstItem="qqT-pN-uOJ" firstAttribute="trailing" secondItem="1wI-0h-Bqd" secondAttribute="trailing" id="uLW-jV-17r"/>
                 <constraint firstItem="1wI-0h-Bqd" firstAttribute="top" secondItem="646-3u-h3F" secondAttribute="bottom" constant="4" id="vJ9-Ru-be9"/>
             </constraints>
             <connections>
@@ -95,7 +112,7 @@
                 <outlet property="firstSelectionMarkLabel" destination="cLn-V0-pOp" id="h6u-Vv-GpC"/>
                 <outlet property="messageTextView" destination="1wI-0h-Bqd" id="Jd4-g8-Koq"/>
                 <outlet property="secondOptionLabel" destination="zEv-ec-eLm" id="hgZ-EH-gNa"/>
-                <outlet property="secondselectionMarkLabel" destination="wmU-FB-r3x" id="nA8-fc-QNu"/>
+                <outlet property="secondSelectionMarkLabel" destination="wmU-FB-r3x" id="TIj-c1-MOc"/>
                 <outlet property="selectMessageView" destination="646-3u-h3F" id="0Am-mc-odM"/>
             </connections>
             <point key="canvasLocation" x="139" y="100"/>

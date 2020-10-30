@@ -130,16 +130,13 @@ extension Introduction2ViewController {
 
     /// 上ボタンがタップされたときの処理
     private func upButtonTapped() {
-        //このへんmessageViewでできそう
-        messageView.firstSelectionMarkLabel.text = "▶"
-        messageView.secondselectionMarkLabel.text = nil
+        messageView.selectFirstOption()
         canProceed = true
     }
 
     /// 下ボタンがタップされたときの処理
     private func downButtonTapped() {
-        messageView.firstSelectionMarkLabel.text = nil
-        messageView.secondselectionMarkLabel.text = "▶"
+        messageView.selectSecondOption()
         canProceed = false
     }
 
@@ -157,7 +154,7 @@ extension Introduction2ViewController {
         // shouldShowSelectionがtrueなら選択項目を表示する
         if shouldShowSelection {
             messageView.selectMessageView.isHidden = false
-            messageView.setupSelectMessageView()
+            messageView.selectFirstOption()
         } else {
             messageView.selectMessageView.isHidden = true
         }

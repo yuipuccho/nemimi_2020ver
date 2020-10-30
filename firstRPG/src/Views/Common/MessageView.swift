@@ -30,13 +30,18 @@ class MessageView: UIView {
     /// 1つ目の選択項目を選択しているときに表示される"▶"
     @IBOutlet weak var firstSelectionMarkLabel: UILabel!
     /// 2つ目の選択項目を選択しているのときに表示される"▶"
-    @IBOutlet weak var secondselectionMarkLabel: UILabel!
+    @IBOutlet weak var secondSelectionMarkLabel: UILabel!
 
     // MARK: - Functions
 
-    func setupSelectMessageView() {
+    func selectFirstOption() {
         firstSelectionMarkLabel.text = "▶"
-        secondselectionMarkLabel.text = ""
+        secondSelectionMarkLabel.text = ""
+    }
+
+    func selectSecondOption() {
+        firstSelectionMarkLabel.text = ""
+        secondSelectionMarkLabel.text = "▶"
     }
 
 }
