@@ -37,6 +37,9 @@ class Introduction2ViewController: UIViewController {
     /// メインボタンをタップした回数
     private var mainButtonTappedCount = 0
 
+    /// 選択中の項目
+    private var selectedItem: MessageView.SelectionType = .first
+
     /// 次のメッセージへ進むことができるか
     private var canProceed: Bool = true
 
@@ -130,13 +133,15 @@ extension Introduction2ViewController {
 
     /// 上ボタンがタップされたときの処理
     private func upButtonTapped() {
-        messageView.selectFirstOption()
+        selectedItem = .first
+        messageView.showSelectionMark(selectedItem: selectedItem)
         canProceed = true
     }
 
     /// 下ボタンがタップされたときの処理
     private func downButtonTapped() {
-        messageView.selectSecondOption()
+        selectedItem = .second
+        messageView.showSelectionMark(selectedItem: selectedItem)
         canProceed = false
     }
 
@@ -154,7 +159,8 @@ extension Introduction2ViewController {
         // shouldShowSelectionがtrueなら選択項目を表示する
         if shouldShowSelection {
             messageView.selectMessageView.isHidden = false
-            messageView.selectFirstOption()
+            selectedItem = .first
+            messageView.showSelectionMark(selectedItem: selectedItem)
         } else {
             messageView.selectMessageView.isHidden = true
         }

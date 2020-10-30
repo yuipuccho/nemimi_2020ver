@@ -32,16 +32,24 @@ class MessageView: UIView {
     /// 2つ目の選択項目を選択しているのときに表示される"▶"
     @IBOutlet weak var secondSelectionMarkLabel: UILabel!
 
-    // MARK: - Functions
-
-    func selectFirstOption() {
-        firstSelectionMarkLabel.text = "▶"
-        secondSelectionMarkLabel.text = ""
+    /// 選択項目の管理用Enum
+    enum SelectionType {
+        case first
+        case second
     }
 
-    func selectSecondOption() {
-        firstSelectionMarkLabel.text = ""
-        secondSelectionMarkLabel.text = "▶"
+    // MARK: - Functions
+
+    /// 選択中の項目に"▶"を表示する
+    func showSelectionMark(selectedItem: SelectionType) {
+        switch selectedItem{
+        case .first:
+            firstSelectionMarkLabel.text = "▶"
+            secondSelectionMarkLabel.text = ""
+        case .second:
+            firstSelectionMarkLabel.text = ""
+            secondSelectionMarkLabel.text = "▶"
+        }
     }
 
 }
