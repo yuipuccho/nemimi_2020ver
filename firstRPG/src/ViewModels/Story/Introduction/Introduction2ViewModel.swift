@@ -8,15 +8,49 @@
 
 class Introduction2ViewModel {
 
-    private lazy var model = Introduction2Model()
+    // MARK: - Functions
 
-    /// 表示するメッセージの番号
-    private var messageNum = 0
+    /**
+     * メッセージ内容
+     * - Parameters:
+     *  - count: 表示させるメッセージnumber
+     *  - canProceed: 次に進むことができるか
+     */
+    func message(count: Int, canProceed: Bool) -> [String: Any]? {
+        /// メッセージ文
+        var message: String
+        /// 選択肢を表示するか
+        var shouldShowSelection: Bool = false
+        /// 最後のメッセージか
+        var isLastMessage: Bool = false
 
-    func mainButtonTapped() {
-        messageNum += 1
-        let message = model.message(count: messageNum, canProceed: true)
-        //print(message)
+        switch count {
+        case 0:
+            message = "ほげぇよ......。"
+        case 1:
+            message = "王「ほげぇよ。」"
+        case 2:
+            message = "王「ねていたところ すまんの。」"
+        case 3:
+            message = "王「じつは わしの姫が\n さらわれてしまったんじゃ。」"
+        case 4:
+            message = "王「たすけにいってくれるな？」"
+            shouldShowSelection = true
+        case 5:
+            if canProceed {
+                message = "王「そうか。いってくれるか。」"
+            } else {
+                message = "王「なんと。\n まあ そんなことはいわずに。」"
+            }
+        case 6:
+            message = "王「姫がさらわれた洞窟までは\n わしが 送りとどけよう。」"
+        case 7:
+            message = "王「あとは たのんだぞ！」"
+            isLastMessage = true
+        default:
+            return nil
+        }
+        return ["message": message, "shouldShowSelection": shouldShowSelection, "isLastMessage": isLastMessage]
     }
 
 }

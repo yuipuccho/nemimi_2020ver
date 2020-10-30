@@ -16,8 +16,9 @@ import RxCocoa
  */
 class Introduction2ViewController: UIViewController {
 
+    // MARK: - ViewModel
+
     private lazy var viewModel: Introduction2ViewModel = Introduction2ViewModel()
-    private lazy var model: Introduction2Model = Introduction2Model()
 
     // MARK: - Outlets
 
@@ -34,7 +35,6 @@ class Introduction2ViewController: UIViewController {
     private lazy var messageView = R.nib.messageView.firstView(owner: nil)!
 
     /// メインボタンをタップした回数
-    // いらんかも
     private var mainButtonTappedCount = 0
 
     /// コメント
@@ -84,8 +84,9 @@ extension Introduction2ViewController {
         buttonView.mainButton.isEnabled = false
 
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) { [weak self] in
-            self?.messageView.isHidden = false   // メッセージ表示
-            self?.messageView.messageTextView.text = Introduction2Model.messageEnum.zeroth.message
+            // メッセージを表示し、メインボタンを使用可能にする
+            self?.messageView.isHidden = false
+            self?.showMessage()
             self?.buttonView.mainButton.isEnabled = true
         }
     }
@@ -113,6 +114,11 @@ extension Introduction2ViewController {
 
     /// メインボタンがタップされたときの処理
     private func mainButtonTapped() {
+        // shouldPresentNextVCがtrueなら次の画面へ遷移する
+        if shouldPresentNextVC {
+            presentNextVC()
+        }
+
         mainButtonTappedCount += 1
 
         // 王様を表示
@@ -120,8 +126,6 @@ extension Introduction2ViewController {
 
         // メッセージを表示する
         showMessage()
-
-        // 次の画面へ遷移する
     }
 
     /// 上ボタンがタップされたときの処理
@@ -141,14 +145,16 @@ extension Introduction2ViewController {
 
     /// メッセージの表示処理
     private func showMessage() {
-        guard let msg = model.message(count: mainButtonTappedCount, canProceed: canProceed),
+        // メッセージ内容、選択項目表示するかどうか、最後のメッセージかどうかを取得する
+        guard let msg = viewModel.message(count: mainButtonTappedCount, canProceed: canProceed),
               let message: String = msg["message"] as? String,
-              let shouldShowSelection: Bool = msg["shouldShowSelection"] as? Bool else { return }
+              let shouldShowSelection: Bool = msg["shouldShowSelection"] as? Bool,
+              let isLastMessage: Bool = msg["isLastMessage"] as? Bool else { return }
 
-        // メッセージを表示
+        // メッセージを表示する
         messageView.messageTextView.text = message
 
-        // 選択項目を表示するか
+        // shouldShowSelectionがtrueなら選択項目を表示する
         if shouldShowSelection {
             messageView.selectMessageView.isHidden = false
             messageView.setupSelectMessageView()
@@ -156,13 +162,21 @@ extension Introduction2ViewController {
             messageView.selectMessageView.isHidden = true
         }
 
-        // 進めないならタップカウントを戻す
+        // 次のメッセージへ進めない場合はタップカウントを戻す
         if !canProceed {
             mainButtonTappedCount -= 2
             canProceed = true
         }
 
-        // メッセージの表示が全て終わったか
+        // メッセージの表示が全て終わったら、画面遷移フラグをtrueに変更する
+        if isLastMessage {
+            shouldPresentNextVC = true
+        }
+    }
+
+    /// 次の画面へ遷移する
+    private func presentNextVC() {
+        // TODO: 遷移処理を追加する
     }
 
 }

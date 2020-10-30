@@ -16,6 +16,10 @@ import RxCocoa
  */
 class Introduction1ViewController: UIViewController {
 
+    // MARK: - ViewModel
+
+    private lazy var viewModel: Introduction1ViewModel = Introduction1ViewModel()
+
     // MARK: - Outlets
 
     /// ハーミットImageView
@@ -24,6 +28,8 @@ class Introduction1ViewController: UIViewController {
     // MARK: - Properties
 
     private let disposeBag = DisposeBag()
+
+    private var shouldPresentNextVC: Bool = false
 
     /// ボタンView
     private lazy var buttonView = R.nib.buttonView.firstView(owner: nil)!
@@ -81,7 +87,7 @@ extension Introduction1ViewController {
         // 1.5秒後にメッセージを表示し、メインボタンをタップ可にする
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) { [weak self] in
             self?.messageView.isHidden = false    // メッセージ表示
-            self?.messageView.messageTextView.text = Introduction1Model.messageEnum.zeroth.message
+            self?.showMessage()
             self?.buttonView.mainButton.isEnabled = true
         }
     }
@@ -99,21 +105,33 @@ extension Introduction1ViewController {
 
     /// メインボタンがタップされたときの処理
     private func mainButtonTapped() {
-        mainButtonTappedCount += 1
-        switch mainButtonTappedCount {
-        case 1:
-            messageView.messageTextView.text = Introduction1Model.messageEnum.first.message
-        case 2:
-            messageView.messageTextView.text = Introduction1Model.messageEnum.second.message
-        case 3:
-            messageView.messageTextView.text = Introduction1Model.messageEnum.third.message
-        case 4:
-            // 次のストーリーへ遷移する
-            let vc = Introduction2ViewController.makeInstance()
-            self.present(vc, animated: true)
-        default:
-            return
+        // shouldPresentNextVCがtrueなら次の画面へ遷移する
+        if shouldPresentNextVC {
+            presentNextVC()
         }
+        mainButtonTappedCount += 1
+        showMessage()
+    }
+
+    private func showMessage() {
+        // メッセージ内容、最後のメッセージかどうかを取得する
+        guard let msg = viewModel.message(count: mainButtonTappedCount),
+              let message: String = msg["message"] as? String,
+              let isLastMessage: Bool = msg["isLastMessage"] as? Bool else { return }
+
+        // メッセージを表示する
+        messageView.messageTextView.text = message
+
+        // メッセージの表示が全て終わったら、画面遷移フラグをtrueに変更する
+        if isLastMessage {
+            shouldPresentNextVC = true
+        }
+    }
+
+    /// 次の画面へ遷移する
+    private func presentNextVC() {
+        let vc = Introduction2ViewController.makeInstance()
+        present(vc, animated: true)
     }
 
 }
