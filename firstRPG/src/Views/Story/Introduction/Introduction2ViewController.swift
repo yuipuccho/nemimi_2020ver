@@ -37,7 +37,7 @@ class Introduction2ViewController: UIViewController {
     /// メインボタンをタップした回数
     private var mainButtonTappedCount = 0
 
-    /// コメント
+    /// 次のメッセージへ進むことができるか
     private var canProceed: Bool = true
 
     /// 次の画面に遷移するか

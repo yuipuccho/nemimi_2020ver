@@ -13,10 +13,10 @@ class Introduction1ViewModel {
     /**
      * メッセージ内容
      * - Parameters:
-     *  - count: 表示させるメッセージnumber
+     *  - count: 表示するメッセージnumber
      */
     func message(count: Int) -> [String: Any]? {
-        /// メッセージ文
+        /// メッセージ内容
         var message: String
         /// 最後のメッセージか
         var isLastMessage: Bool = false

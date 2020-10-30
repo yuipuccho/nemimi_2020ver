@@ -13,11 +13,11 @@ class Introduction2ViewModel {
     /**
      * メッセージ内容
      * - Parameters:
-     *  - count: 表示させるメッセージnumber
-     *  - canProceed: 次に進むことができるか
+     *  - count: 表示するメッセージnumber
+     *  - canProceed: 次のメッセージに進むことができるか
      */
     func message(count: Int, canProceed: Bool) -> [String: Any]? {
-        /// メッセージ文
+        /// メッセージ内容
         var message: String
         /// 選択肢を表示するか
         var shouldShowSelection: Bool = false
