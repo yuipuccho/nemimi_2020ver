@@ -136,8 +136,6 @@ class cave1ViewController: UIViewController {
         }
     }
     
-    
-    
     // 上ボタンを押している時
     @objc func timerUp() {
         // 次のマップに遷移するかどうか
