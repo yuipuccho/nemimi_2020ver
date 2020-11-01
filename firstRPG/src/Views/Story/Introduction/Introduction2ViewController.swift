@@ -148,16 +148,12 @@ extension Introduction2ViewController {
     /// メッセージの表示処理
     private func showMessage() {
         // メッセージ内容、選択項目表示するかどうか、最後のメッセージかどうかを取得する
-        guard let msg = viewModel.message(count: mainButtonTappedCount, canProceed: canProceed),
-              let message: String = msg["message"] as? String,
-              let shouldShowSelection: Bool = msg["shouldShowSelection"] as? Bool,
-              let isLastMessage: Bool = msg["isLastMessage"] as? Bool else { return }
-
+        let msg = viewModel.message(count: mainButtonTappedCount, canProceed: canProceed)
         // メッセージを表示する
-        messageView.messageTextView.text = message
+        messageView.messageTextView.text = msg.message
 
         // shouldShowSelectionがtrueなら選択項目を表示する
-        if shouldShowSelection {
+        if msg.shouldShowSelection {
             messageView.selectMessageView.isHidden = false
             selectedItem = .first
             messageView.showSelectionMark(selectedItem: selectedItem)
@@ -172,7 +168,7 @@ extension Introduction2ViewController {
         }
 
         // メッセージの表示が全て終わったら、画面遷移フラグをtrueに変更する
-        if isLastMessage {
+        if msg.isLastMessage {
             shouldPresentNextVC = true
         }
     }

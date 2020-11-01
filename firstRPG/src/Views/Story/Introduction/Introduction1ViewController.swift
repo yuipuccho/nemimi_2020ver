@@ -114,16 +114,14 @@ extension Introduction1ViewController {
     }
 
     private func showMessage() {
-        // メッセージ内容、最後のメッセージかどうかを取得する
-        guard let msg = viewModel.message(count: mainButtonTappedCount),
-              let message: String = msg["message"] as? String,
-              let isLastMessage: Bool = msg["isLastMessage"] as? Bool else { return }
+        // メッセージ内容、選択項目表示するかどうか、最後のメッセージかどうかを取得する
+        let msg = viewModel.message(count: mainButtonTappedCount)
 
         // メッセージを表示する
-        messageView.messageTextView.text = message
+        messageView.messageTextView.text = msg.message
 
         // メッセージの表示が全て終わったら、画面遷移フラグをtrueに変更する
-        if isLastMessage {
+        if msg.isLastMessage {
             shouldPresentNextVC = true
         }
     }

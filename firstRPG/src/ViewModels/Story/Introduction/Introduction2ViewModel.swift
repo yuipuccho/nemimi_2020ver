@@ -16,9 +16,9 @@ class Introduction2ViewModel {
      *  - count: 表示するメッセージnumber
      *  - canProceed: 次のメッセージに進むことができるか
      */
-    func message(count: Int, canProceed: Bool) -> [String: Any]? {
+    func message(count: Int, canProceed: Bool) -> MessageEntity {
         /// メッセージ内容
-        var message: String
+        var message: String = ""
         /// 選択肢を表示するか
         var shouldShowSelection: Bool = false
         /// 最後のメッセージか
@@ -48,9 +48,10 @@ class Introduction2ViewModel {
             message = "王「あとは たのんだぞ！」"
             isLastMessage = true
         default:
-            return nil
+            break
         }
-        return ["message": message, "shouldShowSelection": shouldShowSelection, "isLastMessage": isLastMessage]
+        let messageModel = MessageEntity.init(message: message, shouldShowSelection: shouldShowSelection, isLastMessage: isLastMessage)
+        return messageModel
     }
 
 }
