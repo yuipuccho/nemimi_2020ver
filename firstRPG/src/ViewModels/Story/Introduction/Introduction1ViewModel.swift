@@ -15,9 +15,11 @@ class Introduction1ViewModel {
      * - Parameters:
      *  - count: 表示するメッセージnumber
      */
-    func message(count: Int) -> [String: Any]? {
+    func message(count: Int) -> MessageEntity {
         /// メッセージ内容
-        var message: String
+        var message: String = ""
+        /// 選択肢を表示するか
+        var shouldShowSelection: Bool = false
         /// 最後のメッセージか
         var isLastMessage: Bool = false
 
@@ -32,9 +34,10 @@ class Introduction1ViewModel {
             message = "姫「きゃー！！」"
             isLastMessage = true
         default:
-            return nil
+            break
         }
-        return ["message": message, "isLastMessage": isLastMessage]
+        let messageModel = MessageEntity.init(message: message, shouldShowSelection: shouldShowSelection, isLastMessage: isLastMessage)
+        return messageModel
     }
 
 }

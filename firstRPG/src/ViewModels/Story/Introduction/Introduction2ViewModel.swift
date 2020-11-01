@@ -16,7 +16,7 @@ class Introduction2ViewModel {
      *  - count: 表示するメッセージnumber
      *  - canProceed: 次のメッセージに進むことができるか
      */
-    func message(count: Int, canProceed: Bool) -> MessageModel {
+    func message(count: Int, canProceed: Bool) -> MessageEntity {
         /// メッセージ内容
         var message: String = ""
         /// 選択肢を表示するか
@@ -50,18 +50,8 @@ class Introduction2ViewModel {
         default:
             break
         }
-        let messageModel = MessageModel.init(message: message, shouldShowSelection: shouldShowSelection, isLastMessage: isLastMessage)
+        let messageModel = MessageEntity.init(message: message, shouldShowSelection: shouldShowSelection, isLastMessage: isLastMessage)
         return messageModel
     }
-
-}
-
-struct MessageModel {
-
-    let message: String
-
-    let shouldShowSelection: Bool
-
-    let isLastMessage: Bool
 
 }
