@@ -9,12 +9,13 @@
 /* Begin PBXBuildFile section */
 		466ABDD5956C615BB1A9CD6A /* Pods_firstRPG.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F95033C4BFEFF3AE2175C0E5 /* Pods_firstRPG.framework */; };
 		BA1F24672317C0A8003BA769 /* AppTopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1F24662317C0A8003BA769 /* AppTopViewController.swift */; };
-		BA23F5E72583BDF3008AB69B /* message.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BA23F5E62583BDF3008AB69B /* message.mp3 */; };
+		BA23F5ED2583C7E2008AB69B /* voice_male.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BA23F5EB2583C7E2008AB69B /* voice_male.mp3 */; };
+		BA23F5EE2583C7E2008AB69B /* voice_female.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BA23F5EC2583C7E2008AB69B /* voice_female.mp3 */; };
 		BA2A5DB4254EC8800085A3EF /* MessageEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2A5DB3254EC8800085A3EF /* MessageEntity.swift */; };
 		BA2A9CAF230E65FE00E13DC8 /* cave9ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2A9CAE230E65FE00E13DC8 /* cave9ViewController.swift */; };
 		BA2A9CB1230E6E3B00E13DC8 /* cave2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2A9CB0230E6E3B00E13DC8 /* cave2ViewController.swift */; };
 		BA38499B2305548C006E7BA0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA38499A2305548C006E7BA0 /* AppDelegate.swift */; };
-		BA38499D2305548C006E7BA0 /* Cave1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA38499C2305548C006E7BA0 /* Cave1ViewController.swift */; };
+		BA38499D2305548C006E7BA0 /* cave1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA38499C2305548C006E7BA0 /* cave1ViewController.swift */; };
 		BA3849A22305548D006E7BA0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA3849A12305548D006E7BA0 /* Assets.xcassets */; };
 		BA3849A52305548D006E7BA0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA3849A32305548D006E7BA0 /* LaunchScreen.storyboard */; };
 		BA3849FD230BC306006E7BA0 /* battleMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3849FC230BC306006E7BA0 /* battleMessageViewController.swift */; };
@@ -57,13 +58,14 @@
 		36FDC4AC2D894E98AB15D1FD /* Pods-firstRPG.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-firstRPG.release.xcconfig"; path = "Target Support Files/Pods-firstRPG/Pods-firstRPG.release.xcconfig"; sourceTree = "<group>"; };
 		701304302C460A768324CECD /* Pods-firstRPG.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-firstRPG.debug.xcconfig"; path = "Target Support Files/Pods-firstRPG/Pods-firstRPG.debug.xcconfig"; sourceTree = "<group>"; };
 		BA1F24662317C0A8003BA769 /* AppTopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTopViewController.swift; sourceTree = "<group>"; };
-		BA23F5E62583BDF3008AB69B /* message.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = message.mp3; path = ../../../../../../../Desktop/nemimi_bgm/message.mp3; sourceTree = "<group>"; };
+		BA23F5EB2583C7E2008AB69B /* voice_male.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = voice_male.mp3; path = ../../../../../../../Desktop/nemimi_bgm/voice_male.mp3; sourceTree = "<group>"; };
+		BA23F5EC2583C7E2008AB69B /* voice_female.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = voice_female.mp3; path = ../../../../../../../Desktop/nemimi_bgm/voice_female.mp3; sourceTree = "<group>"; };
 		BA2A5DB3254EC8800085A3EF /* MessageEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageEntity.swift; sourceTree = "<group>"; };
 		BA2A9CAE230E65FE00E13DC8 /* cave9ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cave9ViewController.swift; sourceTree = "<group>"; };
 		BA2A9CB0230E6E3B00E13DC8 /* cave2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cave2ViewController.swift; sourceTree = "<group>"; };
 		BA3849972305548C006E7BA0 /* firstRPG.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = firstRPG.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA38499A2305548C006E7BA0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BA38499C2305548C006E7BA0 /* Cave1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cave1ViewController.swift; sourceTree = "<group>"; };
+		BA38499C2305548C006E7BA0 /* cave1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cave1ViewController.swift; sourceTree = "<group>"; };
 		BA3849A12305548D006E7BA0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BA3849A42305548D006E7BA0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BA3849A62305548D006E7BA0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -135,7 +137,8 @@
 		BA23F5E325835702008AB69B /* SoundEffect */ = {
 			isa = PBXGroup;
 			children = (
-				BA23F5E62583BDF3008AB69B /* message.mp3 */,
+				BA23F5EC2583C7E2008AB69B /* voice_female.mp3 */,
+				BA23F5EB2583C7E2008AB69B /* voice_male.mp3 */,
 			);
 			path = SoundEffect;
 			sourceTree = "<group>";
@@ -246,7 +249,7 @@
 			isa = PBXGroup;
 			children = (
 				BAA9D35E2542DD4900F0A736 /* Cave1ViewController.storyboard */,
-				BA38499C2305548C006E7BA0 /* Cave1ViewController.swift */,
+				BA38499C2305548C006E7BA0 /* cave1ViewController.swift */,
 				BAA9D3622542DD9300F0A736 /* Cave2ViewController.storyboard */,
 				BA2A9CB0230E6E3B00E13DC8 /* cave2ViewController.swift */,
 				BAA9D3652542DD9E00F0A736 /* Cave3ViewController.storyboard */,
@@ -434,16 +437,17 @@
 				BAA9D37F2542E1A500F0A736 /* BattleCommandViewController.storyboard in Resources */,
 				BAA9D3662542DD9E00F0A736 /* Cave3ViewController.storyboard in Resources */,
 				BAA9D38B2542EB4F00F0A736 /* MessageView.xib in Resources */,
-				BA23F5E72583BDF3008AB69B /* message.mp3 in Resources */,
 				BAA9D3592542DBF400F0A736 /* EndingViewController.storyboard in Resources */,
 				BAA9D3692542DDA900F0A736 /* Cave4ViewController.storyboard in Resources */,
 				BAA9D35F2542DD4900F0A736 /* Cave1ViewController.storyboard in Resources */,
 				BA3849A52305548D006E7BA0 /* LaunchScreen.storyboard in Resources */,
+				BA23F5EE2583C7E2008AB69B /* voice_female.mp3 in Resources */,
 				BAA9D37C2542E18800F0A736 /* BattleMessageViewController.storyboard in Resources */,
 				BAA9D3882542EAF800F0A736 /* ButtonView.xib in Resources */,
 				BAA9D3782542DDE300F0A736 /* Cave9ViewController.storyboard in Resources */,
 				BA3849A22305548D006E7BA0 /* Assets.xcassets in Resources */,
 				BAA9D36F2542DDC000F0A736 /* Cave6ViewController.storyboard in Resources */,
+				BA23F5ED2583C7E2008AB69B /* voice_male.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -528,7 +532,7 @@
 				BAA9D3922542F0A100F0A736 /* ButtonView.swift in Sources */,
 				BAC68A5D2317816700D78495 /* story3ViewController.swift in Sources */,
 				BA3887C6254599E100C5380E /* Introduction2ViewModel.swift in Sources */,
-				BA38499D2305548C006E7BA0 /* Cave1ViewController.swift in Sources */,
+				BA38499D2305548C006E7BA0 /* cave1ViewController.swift in Sources */,
 				BA3887B725451CEF00C5380E /* MessageView.swift in Sources */,
 				BACE9B202542AB5100620ADC /* R.generated.swift in Sources */,
 				BA2A9CAF230E65FE00E13DC8 /* cave9ViewController.swift in Sources */,

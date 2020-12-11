@@ -1,5 +1,5 @@
 //
-//  Cave1ViewController.swift
+//  ViewController.swift
 //  firstRPG
 //
 //  Created by 吉澤優衣 on 2019/08/15.
@@ -9,7 +9,7 @@
 import UIKit
 
 
-class Cave1ViewController: UIViewController {
+class cave1ViewController: UIViewController {
     weak var timer: Timer!    // ⭐︎
     
     
