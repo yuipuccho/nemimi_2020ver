@@ -9,6 +9,7 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import AVFoundation
 
 /**
  * 導入ストーリーVC
@@ -39,6 +40,8 @@ class Introduction1ViewController: UIViewController {
     /// メインボタンをタップした回数
     private var mainButtonTappedCount = 0
 
+    private var audioPlayerInstance: AVAudioPlayer!
+
     // MARK: - LifeCycles
 
     override func viewDidLoad() {
@@ -51,6 +54,17 @@ class Introduction1ViewController: UIViewController {
 
         initialSetting()
         subscribe()
+
+        let soundFilePath = Bundle.main.path(forResource: "message", ofType: "mp3")!
+        let sound:URL = URL(fileURLWithPath: soundFilePath)
+        // AVAudioPlayerのインスタンスを作成,ファイルの読み込み
+        do {
+            audioPlayerInstance = try AVAudioPlayer(contentsOf: sound, fileTypeHint:nil)
+        } catch {
+            print("AVAudioPlayerインスタンス作成でエラー")
+        }
+        // 再生準備
+        audioPlayerInstance.prepareToPlay()
     }
 
 }
@@ -99,6 +113,9 @@ extension Introduction1ViewController {
     private func subscribe() {
         // メインボタンタップ
         buttonView.mainButtonTappedSubject.subscribe(onNext: { [unowned self] in
+            audioPlayerInstance.currentTime = 0         // 再生箇所を頭に移す
+            audioPlayerInstance.play()
+            
             mainButtonTapped()
         }).disposed(by: disposeBag)
     }
