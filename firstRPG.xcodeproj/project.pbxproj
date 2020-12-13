@@ -14,7 +14,7 @@
 		BA23F64F25861494008AB69B /* opening.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BA23F64E25861494008AB69B /* opening.mp3 */; };
 		BA23F6552586186F008AB69B /* night_event.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BA23F6542586186F008AB69B /* night_event.mp3 */; };
 		BA23F65A2586345E008AB69B /* quest.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BA23F6592586345E008AB69B /* quest.mp3 */; };
-		BA23F66025863C9A008AB69B /* DungeonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA23F65F25863C9A008AB69B /* DungeonViewController.swift */; };
+		BA23F66025863C9A008AB69B /* Dungeon.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA23F65F25863C9A008AB69B /* Dungeon.swift */; };
 		BA2A5DB4254EC8800085A3EF /* MessageEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2A5DB3254EC8800085A3EF /* MessageEntity.swift */; };
 		BA2A9CAF230E65FE00E13DC8 /* cave9ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2A9CAE230E65FE00E13DC8 /* cave9ViewController.swift */; };
 		BA2A9CB1230E6E3B00E13DC8 /* cave2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2A9CB0230E6E3B00E13DC8 /* cave2ViewController.swift */; };
@@ -67,7 +67,7 @@
 		BA23F64E25861494008AB69B /* opening.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = opening.mp3; sourceTree = "<group>"; };
 		BA23F6542586186F008AB69B /* night_event.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = night_event.mp3; sourceTree = "<group>"; };
 		BA23F6592586345E008AB69B /* quest.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = quest.mp3; sourceTree = "<group>"; };
-		BA23F65F25863C9A008AB69B /* DungeonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DungeonViewController.swift; sourceTree = "<group>"; };
+		BA23F65F25863C9A008AB69B /* Dungeon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dungeon.swift; sourceTree = "<group>"; };
 		BA2A5DB3254EC8800085A3EF /* MessageEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageEntity.swift; sourceTree = "<group>"; };
 		BA2A9CAE230E65FE00E13DC8 /* cave9ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cave9ViewController.swift; sourceTree = "<group>"; };
 		BA2A9CB0230E6E3B00E13DC8 /* cave2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cave2ViewController.swift; sourceTree = "<group>"; };
@@ -275,7 +275,7 @@
 		BAA9D35D2542DCF300F0A736 /* CaveDungeon */ = {
 			isa = PBXGroup;
 			children = (
-				BA23F65F25863C9A008AB69B /* DungeonViewController.swift */,
+				BA23F65F25863C9A008AB69B /* Dungeon.swift */,
 				BAA9D35E2542DD4900F0A736 /* Cave1ViewController.storyboard */,
 				BA38499C2305548C006E7BA0 /* Cave1ViewController.swift */,
 				BAA9D3622542DD9300F0A736 /* Cave2ViewController.storyboard */,
@@ -563,7 +563,7 @@
 				BAA9D3922542F0A100F0A736 /* ButtonView.swift in Sources */,
 				BAC68A5D2317816700D78495 /* story3ViewController.swift in Sources */,
 				BA3887C6254599E100C5380E /* Introduction2ViewModel.swift in Sources */,
-				BA23F66025863C9A008AB69B /* DungeonViewController.swift in Sources */,
+				BA23F66025863C9A008AB69B /* Dungeon.swift in Sources */,
 				BA38499D2305548C006E7BA0 /* Cave1ViewController.swift in Sources */,
 				BA3887B725451CEF00C5380E /* MessageView.swift in Sources */,
 				BACE9B202542AB5100620ADC /* R.generated.swift in Sources */,

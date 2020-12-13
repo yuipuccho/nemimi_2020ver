@@ -1,5 +1,5 @@
 //
-//  DungeonViewController.swift
+//  Dungeon.swift
 //  firstRPG
 //
 //  Created by 吉澤優衣 on 2020/12/13.
@@ -9,7 +9,10 @@
 import UIKit
 import Foundation
 
-class DungeonViewController: UIViewController {
+class Dungeon: UIViewController {
 
+    override func viewDidLoad() {
+        
+    }
 
 }

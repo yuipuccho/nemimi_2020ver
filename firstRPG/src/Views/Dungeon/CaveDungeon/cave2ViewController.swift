@@ -483,7 +483,7 @@ class cave2ViewController: UIViewController {
         } else if (segue.identifier == "toCave1") {
             let vc: Cave1ViewController = (segue.destination as? Cave1ViewController)!
             
-            vc.player = player
+//            vc.player = player
             
             let width = view.frame.size.width - gameView.frame.size.width
 

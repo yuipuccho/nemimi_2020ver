@@ -17,6 +17,7 @@ class ButtonView: UIView {
 
     // MARK: - Outlets
 
+    @IBOutlet weak var up: UILongPressGestureRecognizer!
     /// メインボタン
     @IBOutlet weak var mainButton: UIButton!
     /// 戻るボタン
@@ -34,18 +35,33 @@ class ButtonView: UIView {
 
     private let disposeBag = DisposeBag()
 
+    enum ButtonType {
+        case up
+        case left
+        case right
+        case down
+        case none
+    }
+
     /// メインボタンタップ
-    var mainButtonTappedSubject: PublishSubject<Void> = PublishSubject<Void>()
+    let mainButtonTappedSubject: PublishSubject<Void> = PublishSubject<Void>()
     /// 戻るボタンタップ
-    var backButtonTappedSubject: PublishSubject<Void> = PublishSubject<Void>()
+    let backButtonTappedSubject: PublishSubject<Void> = PublishSubject<Void>()
     /// 上ボタンタップ
-    var upButtonTappedSubject: PublishSubject<Void> = PublishSubject<Void>()
+    let upButtonTappedSubject: PublishSubject<Void> = PublishSubject<Void>()
     /// 左ボタンタップ
-    var leftButtonTappedSubject: PublishSubject<Void> = PublishSubject<Void>()
+    let leftButtonTappedSubject: PublishSubject<Void> = PublishSubject<Void>()
     /// 右ボタンタップ
-    var rightButtonTappedSubject: PublishSubject<Void> = PublishSubject<Void>()
+    let rightButtonTappedSubject: PublishSubject<Void> = PublishSubject<Void>()
     /// 下ボタンタップ
-    var downButtonTappedSubject: PublishSubject<Void> = PublishSubject<Void>()
+    let downButtonTappedSubject: PublishSubject<Void> = PublishSubject<Void>()
+
+    /// ロングタップ
+    let longTapRelay: BehaviorRelay<ButtonType> = BehaviorRelay(value: .none)
+
+    var longTapObservable: Observable<ButtonType> {
+        longTapRelay.asObservable()
+    }
 
     // MARK: - Functions
 
@@ -79,6 +95,48 @@ class ButtonView: UIView {
         downButton.rx.tap.subscribe(onNext: { [unowned self] in
             self.downButtonTappedSubject.onNext(())
         }).disposed(by: disposeBag)
+    }
+
+    // MARK: - IBActions
+
+    // 上ボタン長押し
+    @IBAction func upButtonLongTap(_ sender: UILongPressGestureRecognizer) {
+
+        if (sender.state == UIGestureRecognizer.State.began) {
+            longTapRelay.accept(.up)
+        } else if (sender.state == UIGestureRecognizer.State.ended) {
+            longTapRelay.accept(.none)
+        }
+    }
+
+    // 左ボタン長押し
+    @IBAction func leftButtonLongTap(_ sender: UILongPressGestureRecognizer) {
+
+        if (sender.state == UIGestureRecognizer.State.began) {
+            longTapRelay.accept(.left)
+        } else if (sender.state == UIGestureRecognizer.State.ended) {
+            longTapRelay.accept(.none)
+        }
+    }
+
+    // 右ボタン長押し
+    @IBAction func rightButtonLongTap(_ sender: UILongPressGestureRecognizer) {
+
+        if (sender.state == UIGestureRecognizer.State.began) {
+            longTapRelay.accept(.right)
+        } else if (sender.state == UIGestureRecognizer.State.ended) {
+            longTapRelay.accept(.none)
+        }
+    }
+
+    // 下ボタン長押し
+    @IBAction func downButtonLongTap(_ sender: UILongPressGestureRecognizer) {
+
+        if (sender.state == UIGestureRecognizer.State.began) {
+            longTapRelay.accept(.down)
+        } else if (sender.state == UIGestureRecognizer.State.ended) {
+            longTapRelay.accept(.none)
+        }
     }
 
 }

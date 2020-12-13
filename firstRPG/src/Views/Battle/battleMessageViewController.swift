@@ -1885,7 +1885,7 @@ class battleMessageViewController: UIViewController {
             player["nowMP"] = player["maxMP"]
 
             // プレイヤーの情報
-            vc.player = player
+//            vc.player = player
 
 //            vc.playerApperImage = "ヒーロー上1"
 
@@ -1906,7 +1906,7 @@ class battleMessageViewController: UIViewController {
 
             let vc: Cave1ViewController = (segue.destination as? Cave1ViewController)!
             // プレイヤーの情報
-            vc.player = player
+//            vc.player = player
             vc.playerLeftLocation = playerLeftLocation
             vc.playerOverLocation = playerOverLocation
             vc.currentNum = currentNum

@@ -870,122 +870,6 @@
                                 <rect key="frame" x="270.5" y="293.5" width="32" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H3J-re-WMh">
-                                <rect key="frame" x="104" y="0.0" width="688" height="393"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Vo-lF-5aM">
-                                        <rect key="frame" x="632" y="328" width="40" height="40"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="40" id="OcJ-gd-Wwb"/>
-                                            <constraint firstAttribute="height" constant="40" id="rLO-SP-bis"/>
-                                        </constraints>
-                                        <state key="normal" image="icon_130261_64"/>
-                                    </button>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="WAj-Ug-EiY">
-                                        <rect key="frame" x="10" y="313" width="70" height="70"/>
-                                        <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Z4R-tZ-p0h">
-                                                <rect key="frame" x="0.0" y="0.0" width="70" height="23.5"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ifG-VP-5oH">
-                                                        <rect key="frame" x="0.0" y="0.0" width="23.5" height="23.5"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DH2-zV-5Ci">
-                                                        <rect key="frame" x="23.5" y="0.0" width="23.5" height="23.5"/>
-                                                        <gestureRecognizers/>
-                                                        <state key="normal" title="button" image="jbutton"/>
-                                                        <connections>
-                                                            <outletCollection property="gestureRecognizers" destination="dYg-P1-zAz" appends="YES" id="APh-RO-vke"/>
-                                                        </connections>
-                                                    </button>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pnb-05-nNO">
-                                                        <rect key="frame" x="47" y="0.0" width="23" height="23.5"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                </subviews>
-                                            </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="6Il-8y-Jtx">
-                                                <rect key="frame" x="0.0" y="23.5" width="70" height="23"/>
-                                                <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oid-ZN-pN5">
-                                                        <rect key="frame" x="0.0" y="0.0" width="23.5" height="23"/>
-                                                        <gestureRecognizers/>
-                                                        <state key="normal" title="Button" image="lbutton"/>
-                                                        <connections>
-                                                            <outletCollection property="gestureRecognizers" destination="j1o-gK-qfi" appends="YES" id="9AB-fn-KPT"/>
-                                                        </connections>
-                                                    </button>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o2t-fm-epR">
-                                                        <rect key="frame" x="23.5" y="0.0" width="23.5" height="23"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="45F-87-tAL">
-                                                        <rect key="frame" x="47" y="0.0" width="23" height="23"/>
-                                                        <gestureRecognizers/>
-                                                        <state key="normal" title="Button" image="rbutton"/>
-                                                        <connections>
-                                                            <outletCollection property="gestureRecognizers" destination="gbt-wc-WW5" appends="YES" id="9j7-OX-M53"/>
-                                                        </connections>
-                                                    </button>
-                                                </subviews>
-                                            </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="DbW-hI-jGm">
-                                                <rect key="frame" x="0.0" y="46.5" width="70" height="23.5"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AWo-DC-rLo">
-                                                        <rect key="frame" x="0.0" y="0.0" width="23.5" height="23.5"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dd9-u7-zBJ">
-                                                        <rect key="frame" x="23.5" y="0.0" width="23.5" height="23.5"/>
-                                                        <gestureRecognizers/>
-                                                        <state key="normal" title="Button" image="dbutton"/>
-                                                        <connections>
-                                                            <outletCollection property="gestureRecognizers" destination="Dji-ca-BSm" appends="YES" id="oad-k0-eii"/>
-                                                        </connections>
-                                                    </button>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OXa-R8-H5W">
-                                                        <rect key="frame" x="47" y="0.0" width="23" height="23.5"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                </subviews>
-                                            </stackView>
-                                        </subviews>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="70" id="F8q-2x-0mZ"/>
-                                            <constraint firstAttribute="width" constant="70" id="ocb-kq-tbp"/>
-                                        </constraints>
-                                    </stackView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pxq-nt-cB0">
-                                        <rect key="frame" x="607" y="360" width="23" height="23"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="23" id="O9y-nr-dgv"/>
-                                            <constraint firstAttribute="height" constant="23" id="y6X-PP-cH7"/>
-                                        </constraints>
-                                        <state key="normal" image="1"/>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstItem="9Vo-lF-5aM" firstAttribute="leading" secondItem="pxq-nt-cB0" secondAttribute="trailing" constant="2" id="CCH-Xx-jYf"/>
-                                    <constraint firstAttribute="bottom" secondItem="pxq-nt-cB0" secondAttribute="bottom" constant="10" id="CNo-Co-MaF"/>
-                                    <constraint firstAttribute="bottom" secondItem="9Vo-lF-5aM" secondAttribute="bottom" constant="25" id="FLZ-4U-FOR"/>
-                                    <constraint firstAttribute="trailing" secondItem="9Vo-lF-5aM" secondAttribute="trailing" constant="16" id="Htc-zg-O72"/>
-                                    <constraint firstItem="WAj-Ug-EiY" firstAttribute="leading" secondItem="H3J-re-WMh" secondAttribute="leading" constant="10" id="lI9-tY-ejQ"/>
-                                    <constraint firstAttribute="bottom" secondItem="WAj-Ug-EiY" secondAttribute="bottom" constant="10" id="xfe-7U-Btp"/>
-                                </constraints>
-                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="gnO-aB-vM3"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -998,14 +882,11 @@
                             <constraint firstItem="KR0-ru-E6B" firstAttribute="bottom" secondItem="lNc-3X-0Ba" secondAttribute="bottom" id="7P1-fw-ypN"/>
                             <constraint firstItem="gnO-aB-vM3" firstAttribute="bottom" secondItem="GjR-NR-dW8" secondAttribute="bottom" id="AqP-wu-RA9"/>
                             <constraint firstItem="5in-P8-mGG" firstAttribute="leading" secondItem="5Wq-Xg-PB3" secondAttribute="leading" id="DQ5-dv-5cA"/>
-                            <constraint firstItem="H3J-re-WMh" firstAttribute="top" secondItem="GjR-NR-dW8" secondAttribute="top" id="Gjy-Ve-Cxh"/>
                             <constraint firstItem="5in-P8-mGG" firstAttribute="top" secondItem="5Wq-Xg-PB3" secondAttribute="top" id="Hw8-my-zLa"/>
                             <constraint firstItem="5in-P8-mGG" firstAttribute="bottom" secondItem="5Wq-Xg-PB3" secondAttribute="bottom" id="SdZ-sc-HPq"/>
                             <constraint firstItem="agI-Vn-f19" firstAttribute="trailing" secondItem="Ady-3M-4DN" secondAttribute="trailing" id="WYH-Rf-TxT"/>
                             <constraint firstItem="hkj-wq-0P8" firstAttribute="bottom" secondItem="GjR-NR-dW8" secondAttribute="bottom" id="bhF-6y-KPI"/>
                             <constraint firstItem="GjR-NR-dW8" firstAttribute="centerX" secondItem="TqB-jk-lit" secondAttribute="centerX" id="cGb-EV-76S"/>
-                            <constraint firstItem="H3J-re-WMh" firstAttribute="bottom" secondItem="GjR-NR-dW8" secondAttribute="bottom" id="cH9-SB-JCD"/>
-                            <constraint firstItem="H3J-re-WMh" firstAttribute="leading" secondItem="GjR-NR-dW8" secondAttribute="leading" id="eCe-HG-c08"/>
                             <constraint firstItem="kJ1-Sk-AYu" firstAttribute="leading" secondItem="gva-CD-kp4" secondAttribute="leading" id="eJW-nx-MRZ"/>
                             <constraint firstItem="hkj-wq-0P8" firstAttribute="leading" secondItem="GjR-NR-dW8" secondAttribute="leading" id="h3q-dn-JLY"/>
                             <constraint firstItem="hkj-wq-0P8" firstAttribute="trailing" secondItem="GjR-NR-dW8" secondAttribute="trailing" id="hn2-zh-pHY"/>
@@ -1014,52 +895,21 @@
                             <constraint firstItem="agI-Vn-f19" firstAttribute="bottom" secondItem="Ady-3M-4DN" secondAttribute="bottom" id="nrs-8P-Ssq"/>
                             <constraint firstItem="hkj-wq-0P8" firstAttribute="top" secondItem="GjR-NR-dW8" secondAttribute="top" id="op4-yf-8S1"/>
                             <constraint firstItem="GjR-NR-dW8" firstAttribute="top" secondItem="gnO-aB-vM3" secondAttribute="top" id="qoa-Xk-Y4l"/>
-                            <constraint firstItem="H3J-re-WMh" firstAttribute="trailing" secondItem="GjR-NR-dW8" secondAttribute="trailing" id="s4P-Lz-bMg"/>
                             <constraint firstItem="kJ1-Sk-AYu" firstAttribute="bottom" secondItem="gva-CD-kp4" secondAttribute="bottom" id="wIm-We-fqu"/>
                             <constraint firstItem="KR0-ru-E6B" firstAttribute="trailing" secondItem="lNc-3X-0Ba" secondAttribute="trailing" id="wvQ-7P-6aR"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="downButton" destination="dd9-u7-zBJ" id="bee-fc-eXj"/>
                         <outlet property="gameView" destination="GjR-NR-dW8" id="YiV-ua-LYD"/>
-                        <outlet property="leftButton" destination="Oid-ZN-pN5" id="gh4-6v-GK2"/>
                         <outlet property="playerImage" destination="6WL-M8-dS2" id="N4V-mv-Hlt"/>
-                        <outlet property="rightButton" destination="45F-87-tAL" id="7Fg-1R-5MN"/>
-                        <outlet property="upButton" destination="DH2-zV-5Ci" id="WR7-6Q-qT9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vaE-cr-YOt" sceneMemberID="firstResponder"/>
-                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="dYg-P1-zAz">
-                    <connections>
-                        <action selector="upButtonLongTap:" destination="zEq-Tw-Gyq" id="Wma-L0-rFK"/>
-                    </connections>
-                </pongPressGestureRecognizer>
-                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="j1o-gK-qfi">
-                    <connections>
-                        <action selector="leftButtonLongTap:" destination="zEq-Tw-Gyq" id="gvQ-74-1sf"/>
-                    </connections>
-                </pongPressGestureRecognizer>
-                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="gbt-wc-WW5">
-                    <connections>
-                        <action selector="rightButtonLongTap:" destination="zEq-Tw-Gyq" id="ab5-lg-CTc"/>
-                    </connections>
-                </pongPressGestureRecognizer>
-                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="Dji-ca-BSm">
-                    <connections>
-                        <action selector="downButtonLongTap:" destination="zEq-Tw-Gyq" id="fiK-TQ-l90"/>
-                    </connections>
-                </pongPressGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-573.5915492957746" y="31.875"/>
         </scene>
     </scenes>
     <resources>
-        <image name="1" width="512" height="512"/>
-        <image name="dbutton" width="185" height="186"/>
-        <image name="icon_130261_64" width="64" height="64"/>
-        <image name="jbutton" width="186" height="185"/>
-        <image name="lbutton" width="185" height="186"/>
-        <image name="rbutton" width="185" height="186"/>
         <image name="ヒーロー前" width="32" height="32"/>
         <image name="上" width="32" height="32"/>
         <image name="上左カーブ" width="32" height="32"/>

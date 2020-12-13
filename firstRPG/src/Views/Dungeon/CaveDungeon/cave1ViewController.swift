@@ -8,39 +8,41 @@
 
 import UIKit
 import Foundation
+import RxSwift
+import RxCocoa
 
-class Cave1ViewController: DungeonViewController {
-    weak var timer: Timer!    // ⭐︎
+class Cave1ViewController: Dungeon {
+
+    // MARK: - Outlets
 
     @IBOutlet weak var gameView: UIView!
-    @IBOutlet weak var playerImage: UIImageView!    // プレイヤー
+
+    @IBOutlet weak var playerImage: UIImageView!
+
+    // MARK: - Properties
+
+    private let disposeBag = DisposeBag()
+
+    /// ボタンView
+    private lazy var buttonView = R.nib.buttonView.firstView(owner: nil)!
+
+    /// タイマー
+    weak var timer: Timer!
+
+    /// プレイヤーの位置が配列の何番目か
+    var currentNum = 241
+
+    /// 歩数のカウント
+    var count = 0
     
-    @IBOutlet weak var upButton: UIButton!
-    @IBOutlet weak var leftButton: UIButton!
-    @IBOutlet weak var rightButton: UIButton!
-    @IBOutlet weak var downButton: UIButton!
-    
-    
-    /// 【プレイヤーのパラメータ】
-    var player: [String: Any] = [:]
-    
-    var currentNum = 241    // プレイヤーの位置が配列の何番めか
-    
-    var count = 0    // 歩数のカウント
-    
-//    var playerApperImage = ""
-    
-    
-    
-    // プレイヤースタート地点座標
+    // プレイヤー座標
     var playerLeftLocation: CGFloat = 0
-    
     var playerOverLocation: CGFloat = 0
-    
-    var monster:[Int] = []
-    
-    // 配列をくんでやるぜ！！！ (12 * 21 = 252 0スタートだから251まで)
-    // 0: 不可, 1: 可, 2: 前のマップへ遷移, 3: 次のマップへ遷移, 4: 回復ポイント
+
+    /**
+     * マップの配列
+     * - Note: 0: 不可, 1: 可, 2: 前のマップへ遷移, 3: 次のマップへ遷移, 4: 回復ポイント
+     */
     let line = [
         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 3, 3, 3, 0,
         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0,
@@ -56,8 +58,15 @@ class Cave1ViewController: DungeonViewController {
         0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0
     ]
 
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        addButtonView()
+        subscribe()
+    }
+
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
+
         let width = view.frame.size.width - gameView.frame.size.width
 
         let plusWidth = width / 2
@@ -68,29 +77,56 @@ class Cave1ViewController: DungeonViewController {
         playerImage.frame = playerFrame
         playerImage.image = R.image.hero_up_stop()
     }
-    
-//    // ステータスバー邪魔だから消す
-//    override var prefersStatusBarHidden: Bool {
-//        get {
-//            return true
-//        }
-//    }
+
+    // MARK: - Functions
+
+    private func subscribe() {
+        // ボタン長押し
+        buttonView.longTapObservable.subscribe(onNext: { [unowned self] buttonType in
+            switch buttonType {
+            case .up:
+                timer = Timer.scheduledTimer(timeInterval: 0.3, target: self, selector: #selector(Cave1ViewController.timerUp), userInfo: nil, repeats: true)
+            case .left:
+                timer = Timer.scheduledTimer(timeInterval: 0.3, target: self, selector: #selector(Cave1ViewController.timerLeft), userInfo: nil, repeats: true)
+            case .right:
+                timer = Timer.scheduledTimer(timeInterval: 0.3, target: self, selector: #selector(Cave1ViewController.timerRight), userInfo: nil, repeats: true)
+            case .down:
+                timer = Timer.scheduledTimer(timeInterval: 0.3, target: self, selector: #selector(Cave1ViewController.timerDown), userInfo: nil, repeats: true)
+            case .none:
+                if let timer = timer {
+                    timer.invalidate()
+                }
+            }
+        }).disposed(by: disposeBag)
+
+    }
+
+    /// ボタンViewを追加する
+    private func addButtonView() {
+        buttonView.frame = view.frame
+        view.addSubview(buttonView)
+
+        buttonView.subscribe()
+    }
+
+    private func button() {
+        
+    }
     
     // 上ボタンを押している時
     @objc func timerUp() {
         // 次のマップに遷移するかどうか
         if self.line[currentNum] == 3 {
             timer.invalidate()
-            print("おk")
             performSegue(withIdentifier: "toCave2", sender: nil)
-            print("2へせんい")
         }
+
         playerImage.image = R.image.hero_up_stop()
-        
+
         if currentNum - 21 >= 0 {  // 移動先の配列番号が存在するか確認
             self.currentNum -= 21    // 配列番号を移動先の番号に変える。(self つけないとボタンが反応してくれなくなる)
             print(currentNum)
-            
+
             if self.line[currentNum] >= 1 && self.line[currentNum] <= 4 {    // 1-4なら移動可能
                 // 【普通に移動できるとき】
                 // 1. プレイヤーを移動させる
@@ -100,7 +136,7 @@ class Cave1ViewController: DungeonViewController {
 
                     print(self.playerImage.center.y - self.gameView.frame.size.height / 12)
                     self.playerImage.center.y -= self.gameView.frame.size.height / 12
-                    
+
                     // ☆
                     self.playerImage.image = R.image.hero_up_left_foot()
                     DispatchQueue.main.asyncAfter(deadline: .now() + 0.15) {
@@ -110,11 +146,11 @@ class Cave1ViewController: DungeonViewController {
                 })
                 // 2. 歩数をカウントする
                 count += 1
-                
+
                 // 3. エンカウント処理
 //                encount()
-                
-                
+
+
             } else if self.line[currentNum] == 0 {
                 // 【障害物にあたったとき】
                 self.currentNum += 21    // 移動しないんだから配列番号も戻す
@@ -319,7 +355,7 @@ class Cave1ViewController: DungeonViewController {
             let vc: battleMessageViewController = (segue.destination as? battleMessageViewController)!
             
             // プレイヤーの情報
-            vc.player = player
+//            vc.player = player
             
 //            // エンカウントしたモンスター情報を渡す
 //            vc.monsterName1 = monsterName1
@@ -361,7 +397,7 @@ class Cave1ViewController: DungeonViewController {
         } else if (segue.identifier == "toCave2") {
             let vc: cave2ViewController = (segue.destination as? cave2ViewController)!
             
-            vc.player = player
+//            vc.player = player
             
             let width = view.frame.size.width - gameView.frame.size.width
             
@@ -381,51 +417,7 @@ class Cave1ViewController: DungeonViewController {
             
         }
     }
-    
-    
-    
-    
-    // 上ボタン長押し
-    @IBAction func upButtonLongTap(_ sender: UILongPressGestureRecognizer) {
-        
-        if(sender.state == UIGestureRecognizer.State.began) {
-            timer = Timer.scheduledTimer(timeInterval: 0.3, target: self, selector: #selector(Cave1ViewController.timerUp), userInfo: nil, repeats: true)
-            
-        } else if (sender.state == UIGestureRecognizer.State.ended) {
-            timer.invalidate()
-        }
-    }
-    
-    
-    // 左ボタン長押し
-    @IBAction func leftButtonLongTap(_ sender: UILongPressGestureRecognizer) {
-        if(sender.state == UIGestureRecognizer.State.began) {
-            timer = Timer.scheduledTimer(timeInterval: 0.3, target: self, selector: #selector(Cave1ViewController.timerLeft), userInfo: nil, repeats: true)
-            
-        } else if (sender.state == UIGestureRecognizer.State.ended) {
-            timer.invalidate()
-        }
-    }
-    
-    
-    @IBAction func rightButtonLongTap(_ sender: UILongPressGestureRecognizer) {
-        if(sender.state == UIGestureRecognizer.State.began) {
-            timer = Timer.scheduledTimer(timeInterval: 0.3, target: self, selector: #selector(Cave1ViewController.timerRight), userInfo: nil, repeats: true)
-            
-        } else if (sender.state == UIGestureRecognizer.State.ended) {
-            timer.invalidate()
-        }
-    }
-    
-    
-    @IBAction func downButtonLongTap(_ sender: UILongPressGestureRecognizer) {
-        if(sender.state == UIGestureRecognizer.State.began) {
-            timer = Timer.scheduledTimer(timeInterval: 0.3, target: self, selector: #selector(Cave1ViewController.timerDown), userInfo: nil, repeats: true)
-            
-        } else if (sender.state == UIGestureRecognizer.State.ended) {
-            timer.invalidate()
-        }
-    }
+
 }
 
 // MARK: - MakeInstance

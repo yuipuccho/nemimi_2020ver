@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_0" orientation="landscape" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -41,6 +41,9 @@
                                             <rect key="frame" x="23.5" y="0.0" width="23" height="23.5"/>
                                             <gestureRecognizers/>
                                             <state key="normal" title="button" image="jbutton"/>
+                                            <connections>
+                                                <outletCollection property="gestureRecognizers" destination="NHx-Mg-gae" appends="YES" id="g0O-Y3-nCU"/>
+                                            </connections>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rGo-Zs-dCX">
                                             <rect key="frame" x="46.5" y="0.0" width="23.5" height="23.5"/>
@@ -57,6 +60,9 @@
                                             <rect key="frame" x="0.0" y="0.0" width="23.5" height="23"/>
                                             <gestureRecognizers/>
                                             <state key="normal" title="Button" image="lbutton"/>
+                                            <connections>
+                                                <outletCollection property="gestureRecognizers" destination="Mqy-jD-hHF" appends="YES" id="FHN-TS-GEy"/>
+                                            </connections>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ehX-D4-MGT">
                                             <rect key="frame" x="23.5" y="0.0" width="23" height="23"/>
@@ -68,6 +74,9 @@
                                             <rect key="frame" x="46.5" y="0.0" width="23.5" height="23"/>
                                             <gestureRecognizers/>
                                             <state key="normal" title="Button" image="rbutton"/>
+                                            <connections>
+                                                <outletCollection property="gestureRecognizers" destination="I4n-K1-XgC" appends="YES" id="gJJ-Qa-qBl"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                 </stackView>
@@ -84,6 +93,9 @@
                                             <rect key="frame" x="23.5" y="0.0" width="23" height="23.5"/>
                                             <gestureRecognizers/>
                                             <state key="normal" title="Button" image="dbutton"/>
+                                            <connections>
+                                                <outletCollection property="gestureRecognizers" destination="JX4-UL-DeX" appends="YES" id="icV-Su-0cd"/>
+                                            </connections>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cQ2-zI-Jhk">
                                             <rect key="frame" x="46.5" y="0.0" width="23.5" height="23.5"/>
@@ -132,10 +144,31 @@
                 <outlet property="leftButton" destination="V0a-pX-8gG" id="bwF-wy-qCb"/>
                 <outlet property="mainButton" destination="aHF-ER-KwR" id="nBe-nN-RCf"/>
                 <outlet property="rightButton" destination="Jgh-3H-ux2" id="EeE-96-2Y5"/>
+                <outlet property="up" destination="NHx-Mg-gae" id="jRK-l5-vQ2"/>
                 <outlet property="upButton" destination="zEk-MJ-IlB" id="Pxv-go-5EK"/>
             </connections>
             <point key="canvasLocation" x="-2352" y="-1697"/>
         </view>
+        <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="NHx-Mg-gae">
+            <connections>
+                <action selector="upButtonLongTap:" destination="iN0-l3-epB" id="VMU-dd-CMu"/>
+            </connections>
+        </pongPressGestureRecognizer>
+        <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="I4n-K1-XgC">
+            <connections>
+                <action selector="rightButtonLongTap:" destination="iN0-l3-epB" id="FiG-Ta-jdN"/>
+            </connections>
+        </pongPressGestureRecognizer>
+        <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="JX4-UL-DeX">
+            <connections>
+                <action selector="downButtonLongTap:" destination="iN0-l3-epB" id="dyp-3u-7Qa"/>
+            </connections>
+        </pongPressGestureRecognizer>
+        <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="Mqy-jD-hHF">
+            <connections>
+                <action selector="leftButtonLongTap:" destination="iN0-l3-epB" id="uDx-9K-3oV"/>
+            </connections>
+        </pongPressGestureRecognizer>
     </objects>
     <resources>
         <image name="1" width="512" height="512"/>

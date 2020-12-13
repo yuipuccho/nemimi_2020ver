@@ -192,7 +192,6 @@ extension Introduction2ViewController {
 
     /// 次の画面へ遷移する
     private func presentNextVC() {
-        // TODO: 遷移処理を追加する
         let vc = Cave1ViewController.makeInstance()
         present(vc, animated: true)
     }
