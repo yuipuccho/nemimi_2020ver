@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		466ABDD5956C615BB1A9CD6A /* Pods_firstRPG.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F95033C4BFEFF3AE2175C0E5 /* Pods_firstRPG.framework */; };
 		BA1F24672317C0A8003BA769 /* AppTopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1F24662317C0A8003BA769 /* AppTopViewController.swift */; };
-		BA23F6002585E08D008AB69B /* Sound.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA23F5FF2585E08D008AB69B /* Sound.swift */; };
 		BA23F6052585EA90008AB69B /* voice_female.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BA23F6032585EA90008AB69B /* voice_female.mp3 */; };
 		BA23F6062585EA90008AB69B /* voice_male.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BA23F6042585EA90008AB69B /* voice_male.mp3 */; };
 		BA2A5DB4254EC8800085A3EF /* MessageEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2A5DB3254EC8800085A3EF /* MessageEntity.swift */; };
@@ -59,7 +58,6 @@
 		36FDC4AC2D894E98AB15D1FD /* Pods-firstRPG.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-firstRPG.release.xcconfig"; path = "Target Support Files/Pods-firstRPG/Pods-firstRPG.release.xcconfig"; sourceTree = "<group>"; };
 		701304302C460A768324CECD /* Pods-firstRPG.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-firstRPG.debug.xcconfig"; path = "Target Support Files/Pods-firstRPG/Pods-firstRPG.debug.xcconfig"; sourceTree = "<group>"; };
 		BA1F24662317C0A8003BA769 /* AppTopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTopViewController.swift; sourceTree = "<group>"; };
-		BA23F5FF2585E08D008AB69B /* Sound.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sound.swift; sourceTree = "<group>"; };
 		BA23F6032585EA90008AB69B /* voice_female.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = voice_female.mp3; path = ../../../../../../../Desktop/nemimi_bgm/voice_female.mp3; sourceTree = "<group>"; };
 		BA23F6042585EA90008AB69B /* voice_male.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = voice_male.mp3; path = ../../../../../../../Desktop/nemimi_bgm/voice_male.mp3; sourceTree = "<group>"; };
 		BA2A5DB3254EC8800085A3EF /* MessageEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageEntity.swift; sourceTree = "<group>"; };
@@ -132,7 +130,6 @@
 			isa = PBXGroup;
 			children = (
 				BA23F5E325835702008AB69B /* SoundEffect */,
-				BA23F5FF2585E08D008AB69B /* Sound.swift */,
 			);
 			path = BGM;
 			sourceTree = "<group>";
@@ -523,7 +520,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BA23F6002585E08D008AB69B /* Sound.swift in Sources */,
 				BA89C2FD2313DF3F00EBBAC8 /* cave4ViewController.swift in Sources */,
 				BAC68A5B2317814D00D78495 /* Introduction2ViewController.swift in Sources */,
 				BA89C3032313DF7200EBBAC8 /* cave7ViewController.swift in Sources */,
