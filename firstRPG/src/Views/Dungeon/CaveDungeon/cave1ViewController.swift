@@ -37,7 +37,6 @@ class Cave1ViewController: DungeonViewController {
     
     var playerOverLocation: CGFloat = 0
     
-    
     var monster:[Int] = []
     
     // 配列をくんでやるぜ！！！ (12 * 21 = 252 0スタートだから251まで)
@@ -56,69 +55,6 @@ class Cave1ViewController: DungeonViewController {
         0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0,
         0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0
     ]
-    
-    /// モンスター名前
-    var monsterName1 = ""
-    var monsterName2 = ""
-    var monsterName3 = ""
-    var monsterName4 = ""
-    
-    
-    /// モンスターステータス
-    var monster1: [String: Int] = [:]
-    var monster2: [String: Int] = [:]
-    var monster3: [String: Int] = [:]
-    var monster4: [String: Int] = [:]
-    
-    
-    // 【モンスター情報】
-    var monsterStatus: [[String: Int]] = [
-        ["hp": 7, "atk": 5, "def": 16, "agi": 1, "exp": 7, "gold": 1],    // 0. スライム
-        ["hp": 10, "atk": 6, "def": 18, "agi": 1, "exp": 8, "gold": 1],    // 1. バット
-        ["hp": 15, "atk": 10, "def": 22, "agi": 1, "exp": 15, "gold": 1],    // 2. マタンゴ
-        ["hp": 20, "atk": 13, "def": 26, "agi": 1, "exp": 20, "gold": 1],    // 3. ピヨネズミ
-        ["hp": 28, "atk": 18, "def": 34, "agi": 1, "exp": 45, "gold": 1],    // 4. レイン
-        ["hp": 40, "atk": 24, "def": 45, "agi": 1, "exp": 65, "gold": 1],    // 5. プランタ
-        ["hp": 50, "atk": 40, "def": 80, "agi": 1, "exp": 95, "gold": 1],    // 6. ボーン
-        ["hp": 80, "atk": 48, "def": 120, "agi": 1, "exp": 133, "gold": 1],    // 7. ラコステ
-        ["hp": 100, "atk": 86, "def": 240, "agi": 1, "exp": 238, "gold": 1],    // 8. ナルシカラス
-        ["hp": 160, "atk": 140, "def": 270, "agi": 1, "exp": 490, "gold": 1],    // 9. ゴーレム
-        ["hp": 190, "atk": 200, "def": 400, "agi": 1, "exp": 650, "gold": 1],    // 10. トロール
-        ["hp": 1000, "atk": 50, "def": 150, "agi": 1, "exp": 1000, "gold": 1],    // 11. ハーミット
-        ["hp": 2500, "atk": 220, "def": 550, "agi": 1, "exp": 4000, "gold": 1],    // 12. ティグレ
-        ["hp": 0, "atk": 0, "def": 0, "agi": 0, "exp": 0, "gold": 0]    // 13. なし
-    ]
-    
-    
-    //let a = monsterStatus[0]["hp"]
-    //print(a!)
-    
-    // モンスターの名前
-    let monsterName: [String] = [
-        "スライム",
-        "バット",
-        "マタンゴ",
-        "ピヨネズミ",
-        "レイン",
-        "プランタ",
-        "ボーン",
-        "ラコステ",
-        "ナルシカラス",
-        "ゴーレム",
-        "トロール",
-        "ハーミット",
-        "ティグレ",
-        ""
-    ]
-    
-    // ハーミット討伐済かどうか
-    var defeatHermit: Bool = false
-    
-    
-    override func viewWillAppear(_ animated: Bool) {
-
-
-    }
 
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
@@ -133,12 +69,12 @@ class Cave1ViewController: DungeonViewController {
         playerImage.image = R.image.hero_up_stop()
     }
     
-    // ステータスバー邪魔だから消す
-    override var prefersStatusBarHidden: Bool {
-        get {
-            return true
-        }
-    }
+//    // ステータスバー邪魔だから消す
+//    override var prefersStatusBarHidden: Bool {
+//        get {
+//            return true
+//        }
+//    }
     
     // 上ボタンを押している時
     @objc func timerUp() {
@@ -279,93 +215,93 @@ class Cave1ViewController: DungeonViewController {
     }
     
     
-    // 【敵とエンカウントする処理】を書きたい！
-    func encount() {
-//        print("えんかうんと")
-        // 1. エンカウントが発生した時にどのモンスターを何匹出現させるか決定
-        // 何匹か(2匹か4匹)
-        let howMany = Int.random(in: 0...1)    // 0なら2匹、1なら4匹出現
-        switch howMany {
-        case 0:    // 2匹の場合
-            let noMonster = 13
-            let monsterA = Int.random(in: 0...1)    // このマップでは0,1のモンスターが出現。
-            let monsterB = Int.random(in: 0...1)
-            monster = [noMonster, monsterA, monsterB, noMonster]    // バトルシーン遷移時にこの値を渡してモンスターを出現させる。
-            
-            
-            monster1 = monsterStatus[monster[0]]    // モンスターのステータスを入れる
-            monsterName1 = monsterName[monster[0]]    // 1匹目の名前を取得
-            
-            monster2 = monsterStatus[monster[1]]    // モンスターのステータスを入れる
-            monsterName2 = monsterName[monster[1]]    // 1匹目の名前を取得
-            
-            monster3 = monsterStatus[monster[2]]    // モンスターのステータスを入れる
-            monsterName3 = monsterName[monster[2]]    // 1匹目の名前を取得
-            
-            monster4 = monsterStatus[monster[3]]    // モンスターのステータスを入れる
-            monsterName4 = monsterName[monster[3]]    // 1匹目の名前を取得
-            
-            
-            
-        case 1:    // 4匹の場合
-            let monsterC = Int.random(in: 0...1)
-            let monsterD = Int.random(in: 0...1)
-            let monsterE = Int.random(in: 0...1)
-            let monsterF = Int.random(in: 0...1)
-            monster = [monsterC, monsterD, monsterE, monsterF]
-            
-            
-            monster1 = monsterStatus[monster[0]]    // モンスターのステータスを入れる
-            monsterName1 = monsterName[monster[0]]    // 1匹目の名前を取得
-            
-            monster2 = monsterStatus[monster[1]]    // モンスターのステータスを入れる
-            monsterName2 = monsterName[monster[1]]    // 1匹目の名前を取得
-            
-            monster3 = monsterStatus[monster[2]]    // モンスターのステータスを入れる
-            monsterName3 = monsterName[monster[2]]    // 1匹目の名前を取得
-            
-            monster4 = monsterStatus[monster[3]]    // モンスターのステータスを入れる
-            monsterName4 = monsterName[monster[3]]    // 1匹目の名前を取得
-            
-        default:
-            return
-        }
-        
-        
-        
-        
-        
-        // 2. どんな条件でエンカウントが発生するのか
-        // まず0-9の乱数を発生させる
-        let int = Int.random(in: 0..<10)
-        switch count {
-        case 2:    // 歩数が2歩の時
-            if int < 1 {    // 乱数が0だったら遷移して戦闘
-                timer.invalidate()
-                performSegue(withIdentifier: "toBattle", sender: nil)
-                print("せんい")
-            }
-        case 5:    // 歩数が5歩の時
-            if int < 6 {     // 乱数が0~5だったら遷移して戦闘
-                timer.invalidate()
-                performSegue(withIdentifier: "toBattle", sender: nil)
-                print("せんい")
-            }
-        case 8:    // 歩数が8歩の時
-            if int < 9 {    // 乱数が0~8だったら遷移して戦闘
-                timer.invalidate()
-                performSegue(withIdentifier: "toBattle", sender: nil)
-                print("せんい")
-            }
-        case 10:    // 歩数が10歩の時
-            timer.invalidate()
-            performSegue(withIdentifier: "toBattle", sender: nil)    // 強制で戦闘
-            print("せんい")
-            
-        default:
-            return
-        }
-    }
+//    // 【敵とエンカウントする処理】を書きたい！
+//    func encount() {
+////        print("えんかうんと")
+//        // 1. エンカウントが発生した時にどのモンスターを何匹出現させるか決定
+//        // 何匹か(2匹か4匹)
+//        let howMany = Int.random(in: 0...1)    // 0なら2匹、1なら4匹出現
+//        switch howMany {
+//        case 0:    // 2匹の場合
+//            let noMonster = 13
+//            let monsterA = Int.random(in: 0...1)    // このマップでは0,1のモンスターが出現。
+//            let monsterB = Int.random(in: 0...1)
+//            monster = [noMonster, monsterA, monsterB, noMonster]    // バトルシーン遷移時にこの値を渡してモンスターを出現させる。
+//
+//
+//            monster1 = monsterStatus[monster[0]]    // モンスターのステータスを入れる
+//            monsterName1 = monsterName[monster[0]]    // 1匹目の名前を取得
+//
+//            monster2 = monsterStatus[monster[1]]    // モンスターのステータスを入れる
+//            monsterName2 = monsterName[monster[1]]    // 1匹目の名前を取得
+//
+//            monster3 = monsterStatus[monster[2]]    // モンスターのステータスを入れる
+//            monsterName3 = monsterName[monster[2]]    // 1匹目の名前を取得
+//
+//            monster4 = monsterStatus[monster[3]]    // モンスターのステータスを入れる
+//            monsterName4 = monsterName[monster[3]]    // 1匹目の名前を取得
+//
+//
+//
+//        case 1:    // 4匹の場合
+//            let monsterC = Int.random(in: 0...1)
+//            let monsterD = Int.random(in: 0...1)
+//            let monsterE = Int.random(in: 0...1)
+//            let monsterF = Int.random(in: 0...1)
+//            monster = [monsterC, monsterD, monsterE, monsterF]
+//
+//
+//            monster1 = monsterStatus[monster[0]]    // モンスターのステータスを入れる
+//            monsterName1 = monsterName[monster[0]]    // 1匹目の名前を取得
+//
+//            monster2 = monsterStatus[monster[1]]    // モンスターのステータスを入れる
+//            monsterName2 = monsterName[monster[1]]    // 1匹目の名前を取得
+//
+//            monster3 = monsterStatus[monster[2]]    // モンスターのステータスを入れる
+//            monsterName3 = monsterName[monster[2]]    // 1匹目の名前を取得
+//
+//            monster4 = monsterStatus[monster[3]]    // モンスターのステータスを入れる
+//            monsterName4 = monsterName[monster[3]]    // 1匹目の名前を取得
+//
+//        default:
+//            return
+//        }
+//
+//
+//
+//
+//
+//        // 2. どんな条件でエンカウントが発生するのか
+//        // まず0-9の乱数を発生させる
+//        let int = Int.random(in: 0..<10)
+//        switch count {
+//        case 2:    // 歩数が2歩の時
+//            if int < 1 {    // 乱数が0だったら遷移して戦闘
+//                timer.invalidate()
+//                performSegue(withIdentifier: "toBattle", sender: nil)
+//                print("せんい")
+//            }
+//        case 5:    // 歩数が5歩の時
+//            if int < 6 {     // 乱数が0~5だったら遷移して戦闘
+//                timer.invalidate()
+//                performSegue(withIdentifier: "toBattle", sender: nil)
+//                print("せんい")
+//            }
+//        case 8:    // 歩数が8歩の時
+//            if int < 9 {    // 乱数が0~8だったら遷移して戦闘
+//                timer.invalidate()
+//                performSegue(withIdentifier: "toBattle", sender: nil)
+//                print("せんい")
+//            }
+//        case 10:    // 歩数が10歩の時
+//            timer.invalidate()
+//            performSegue(withIdentifier: "toBattle", sender: nil)    // 強制で戦闘
+//            print("せんい")
+//
+//        default:
+//            return
+//        }
+//    }
     
     
     // 3. 画面遷移で渡す値
@@ -385,18 +321,18 @@ class Cave1ViewController: DungeonViewController {
             // プレイヤーの情報
             vc.player = player
             
-            // エンカウントしたモンスター情報を渡す
-            vc.monsterName1 = monsterName1
-            vc.monster1 = monster1
-            
-            vc.monsterName2 = monsterName2
-            vc.monster2 = monster2
-            
-            vc.monsterName3 = monsterName3
-            vc.monster3 = monster3
-            
-            vc.monsterName4 = monsterName4
-            vc.monster4 = monster4
+//            // エンカウントしたモンスター情報を渡す
+//            vc.monsterName1 = monsterName1
+//            vc.monster1 = monster1
+//
+//            vc.monsterName2 = monsterName2
+//            vc.monster2 = monster2
+//
+//            vc.monsterName3 = monsterName3
+//            vc.monster3 = monster3
+//
+//            vc.monsterName4 = monsterName4
+//            vc.monster4 = monster4
             
             // モンスター出現処理を呼ぶ
             vc.toMonsterApper = true
@@ -418,7 +354,7 @@ class Cave1ViewController: DungeonViewController {
 //            print(playerOverLocation)
             
             // ハーミット討伐済かどうか
-            vc.defeatHermit = defeatHermit
+//            vc.defeatHermit = defeatHermit
             
             
             // cave2への遷移前処理
@@ -440,7 +376,7 @@ class Cave1ViewController: DungeonViewController {
             vc.playerApperImage = "ヒーロー上1"
             
             // ハーミット討伐済かどうか
-            vc.defeatHermit = defeatHermit
+//            vc.defeatHermit = defeatHermit
             
             
         }

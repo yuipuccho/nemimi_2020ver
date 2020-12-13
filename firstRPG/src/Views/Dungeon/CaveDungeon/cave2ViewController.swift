@@ -498,7 +498,7 @@ class cave2ViewController: UIViewController {
 //            vc.playerApperImage = "ヒーロー下1"
             
             // ハーミット討伐済かどうか
-            vc.defeatHermit = defeatHermit
+//            vc.defeatHermit = defeatHermit
             
             
             
