@@ -18,17 +18,17 @@
                     <rect key="frame" x="294" y="295" width="308" height="88"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yE7-uh-3sn" customClass="TypewriterLabel" customModule="GhostTypewriter">
-                            <rect key="frame" x="4" y="4" width="300" height="20.5"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <rect key="frame" x="8" y="8" width="292" height="18"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.65000000000000002" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstItem="yE7-uh-3sn" firstAttribute="leading" secondItem="qqT-pN-uOJ" secondAttribute="leading" constant="4" id="6ik-M7-qk0"/>
-                        <constraint firstItem="yE7-uh-3sn" firstAttribute="top" secondItem="qqT-pN-uOJ" secondAttribute="top" constant="4" id="H3U-Y3-3OG"/>
-                        <constraint firstAttribute="trailing" secondItem="yE7-uh-3sn" secondAttribute="trailing" constant="4" id="LxL-r1-vgg"/>
+                        <constraint firstItem="yE7-uh-3sn" firstAttribute="leading" secondItem="qqT-pN-uOJ" secondAttribute="leading" constant="8" id="6ik-M7-qk0"/>
+                        <constraint firstItem="yE7-uh-3sn" firstAttribute="top" secondItem="qqT-pN-uOJ" secondAttribute="top" constant="8" id="H3U-Y3-3OG"/>
+                        <constraint firstAttribute="trailing" secondItem="yE7-uh-3sn" secondAttribute="trailing" constant="8" id="LxL-r1-vgg"/>
                         <constraint firstItem="yE7-uh-3sn" firstAttribute="height" relation="lessThanOrEqual" secondItem="qqT-pN-uOJ" secondAttribute="height" multiplier="0.9" id="PXS-ie-2zO"/>
                     </constraints>
                     <userDefinedRuntimeAttributes>

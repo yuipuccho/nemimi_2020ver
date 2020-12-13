@@ -123,16 +123,15 @@ extension Introduction2ViewController {
         // shouldPresentNextVCがtrueなら次の画面へ遷移する
         if shouldPresentNextVC {
             presentNextVC()
+        } else {
+            mainButtonTappedCount += 1
+            // 王様を表示
+            kingImageView.isHidden = false
+
+            // メッセージを表示する
+            messageView.messageLabel.completeTypewritingAnimation()
+            showMessage()
         }
-
-        mainButtonTappedCount += 1
-
-        // 王様を表示
-        kingImageView.isHidden = false
-
-        // メッセージを表示する
-        messageView.messageLabel.completeTypewritingAnimation()
-        showMessage()
     }
 
     /// 上ボタンがタップされたときの処理
