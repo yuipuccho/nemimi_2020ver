@@ -41,7 +41,9 @@ class Introduction1ViewController: UIViewController {
     /// メインボタンをタップした回数
     private var mainButtonTappedCount = 0
 
-    private var audioPlayerInstance: AVAudioPlayer!
+    private var voice: AVAudioPlayer!
+
+    private var bgm: AVAudioPlayer!
 
     // MARK: - LifeCycles
 
@@ -86,6 +88,9 @@ extension Introduction1ViewController {
 
         // 1.0秒後にハーミットを出現させる
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) { [weak self] in
+            // 曲を再生
+            self?.bgmPrepare(numberOfLoops: -1)
+            self?.bgm.play()
             self?.hermitImageView.isHidden = false
         }
 
@@ -104,7 +109,6 @@ extension Introduction1ViewController {
     private func subscribe() {
         // メインボタンタップ
         buttonView.mainButtonTappedSubject.subscribe(onNext: { [unowned self] in
-            
             mainButtonTapped()
         }).disposed(by: disposeBag)
     }
@@ -113,6 +117,7 @@ extension Introduction1ViewController {
     private func mainButtonTapped() {
         // shouldPresentNextVCがtrueなら次の画面へ遷移する
         if shouldPresentNextVC {
+            bgm.stop()
             presentNextVC()
         } else {
             mainButtonTappedCount += 1
@@ -132,8 +137,8 @@ extension Introduction1ViewController {
 
         // メッセージ音を再生する
         let n = Int((Double(msg.message.count) * 0.02) * 10)
-        audioPrepare(isMale: msg.isMale, numberOfLoops: n)
-        audioPlayerInstance.play()
+        voicePrepare(isMale: msg.isMale, numberOfLoops: n)
+        voice.play()
 
         // メッセージの表示が全て終わったら、画面遷移フラグをtrueに変更する
         if msg.isLastMessage {
@@ -147,23 +152,43 @@ extension Introduction1ViewController {
         present(vc, animated: true)
     }
 
-    private func audioPrepare(isMale: Bool,  numberOfLoops: Int) {
-        var soundFilePath: String = ""
+}
+
+// MARK: - Sound
+
+extension Introduction1ViewController {
+
+    private func bgmPrepare(numberOfLoops: Int) {
+        let soundFilePath: String = Bundle.main.path(forResource: "night_event", ofType: "mp3")!
+        let sound: URL = URL(fileURLWithPath: soundFilePath)
+        // AVAudioPlayerのインスタンスを作成,ファイルの読み込み
+        do {
+            bgm = try AVAudioPlayer(contentsOf: sound, fileTypeHint:nil)
+        } catch {
+            fatalError("Failed to initialize a player.")
+        }
+        bgm.numberOfLoops = numberOfLoops
+        // 再生準備
+        bgm.prepareToPlay()
+    }
+
+    private func voicePrepare(isMale: Bool,  numberOfLoops: Int) {
+        var soundFilePath: String = Bundle.main.path(forResource: "voice_male", ofType: "mp3")!
         if isMale {
             soundFilePath = Bundle.main.path(forResource: "voice_male", ofType: "mp3")!
         } else {
             soundFilePath = Bundle.main.path(forResource: "voice_female", ofType: "mp3")!
         }
-        let sound:URL = URL(fileURLWithPath: soundFilePath)
+        let sound: URL = URL(fileURLWithPath: soundFilePath)
         // AVAudioPlayerのインスタンスを作成,ファイルの読み込み
         do {
-            audioPlayerInstance = try AVAudioPlayer(contentsOf: sound, fileTypeHint:nil)
+            voice = try AVAudioPlayer(contentsOf: sound, fileTypeHint:nil)
         } catch {
             fatalError("Failed to initialize a player.")
         }
-        audioPlayerInstance.numberOfLoops = numberOfLoops
+        voice.numberOfLoops = numberOfLoops
         // 再生準備
-        audioPlayerInstance.prepareToPlay()
+        voice.prepareToPlay()
     }
 
 }
