@@ -35,6 +35,7 @@ class AppTopViewController: UIViewController {
     }
 
     override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         // 曲を再生
         audioPrepare(numberOfLoops: -1)
         audioPlayerInstance.play()

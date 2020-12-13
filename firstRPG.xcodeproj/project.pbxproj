@@ -12,6 +12,7 @@
 		BA23F64A25861407008AB69B /* voice_female.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BA23F64825861407008AB69B /* voice_female.mp3 */; };
 		BA23F64B25861407008AB69B /* voice_male.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BA23F64925861407008AB69B /* voice_male.mp3 */; };
 		BA23F64F25861494008AB69B /* opening.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BA23F64E25861494008AB69B /* opening.mp3 */; };
+		BA23F6552586186F008AB69B /* night_event.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BA23F6542586186F008AB69B /* night_event.mp3 */; };
 		BA2A5DB4254EC8800085A3EF /* MessageEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2A5DB3254EC8800085A3EF /* MessageEntity.swift */; };
 		BA2A9CAF230E65FE00E13DC8 /* cave9ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2A9CAE230E65FE00E13DC8 /* cave9ViewController.swift */; };
 		BA2A9CB1230E6E3B00E13DC8 /* cave2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2A9CB0230E6E3B00E13DC8 /* cave2ViewController.swift */; };
@@ -62,6 +63,7 @@
 		BA23F64825861407008AB69B /* voice_female.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = voice_female.mp3; sourceTree = "<group>"; };
 		BA23F64925861407008AB69B /* voice_male.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = voice_male.mp3; sourceTree = "<group>"; };
 		BA23F64E25861494008AB69B /* opening.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = opening.mp3; sourceTree = "<group>"; };
+		BA23F6542586186F008AB69B /* night_event.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = night_event.mp3; sourceTree = "<group>"; };
 		BA2A5DB3254EC8800085A3EF /* MessageEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageEntity.swift; sourceTree = "<group>"; };
 		BA2A9CAE230E65FE00E13DC8 /* cave9ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cave9ViewController.swift; sourceTree = "<group>"; };
 		BA2A9CB0230E6E3B00E13DC8 /* cave2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cave2ViewController.swift; sourceTree = "<group>"; };
@@ -133,6 +135,7 @@
 			children = (
 				BA23F64D25861459008AB69B /* Opening */,
 				BA23F5E325835702008AB69B /* SoundEffect */,
+				BA23F65325861860008AB69B /* Story */,
 			);
 			path = BGM;
 			sourceTree = "<group>";
@@ -152,6 +155,14 @@
 				BA23F64E25861494008AB69B /* opening.mp3 */,
 			);
 			path = Opening;
+			sourceTree = "<group>";
+		};
+		BA23F65325861860008AB69B /* Story */ = {
+			isa = PBXGroup;
+			children = (
+				BA23F6542586186F008AB69B /* night_event.mp3 */,
+			);
+			path = Story;
 			sourceTree = "<group>";
 		};
 		BA2A5DB2254EC84A0085A3EF /* Entities */ = {
@@ -445,6 +456,7 @@
 				BAA9D38E2542EB7500F0A736 /* BattleCommandView.xib in Resources */,
 				BAA9D3752542DDD800F0A736 /* Cave8ViewController.storyboard in Resources */,
 				BAA9D34C2542D9A300F0A736 /* AppTop.storyboard in Resources */,
+				BA23F6552586186F008AB69B /* night_event.mp3 in Resources */,
 				BAA9D36C2542DDB500F0A736 /* Cave5ViewController.storyboard in Resources */,
 				BA23F64B25861407008AB69B /* voice_male.mp3 in Resources */,
 				BAA9D37F2542E1A500F0A736 /* BattleCommandViewController.storyboard in Resources */,
