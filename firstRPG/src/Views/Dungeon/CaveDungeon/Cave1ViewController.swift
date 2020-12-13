@@ -10,6 +10,7 @@ import UIKit
 import Foundation
 import RxSwift
 import RxCocoa
+import AVFoundation
 
 class Cave1ViewController: Dungeon {
 
@@ -22,6 +23,8 @@ class Cave1ViewController: Dungeon {
     // MARK: - Properties
 
     private let disposeBag = DisposeBag()
+
+    private var bgm: AVAudioPlayer!
 
     /// ボタンView
     private lazy var buttonView = R.nib.buttonView.firstView(owner: nil)!
@@ -76,6 +79,13 @@ class Cave1ViewController: Dungeon {
         let playerFrame = CGRect(x: playerLeftLocation, y: playerOverLocation, width: 27.0, height: 26.5)
         playerImage.frame = playerFrame
         playerImage.image = R.image.hero_up_stop()
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        // 曲を再生
+        bgmPrepare(numberOfLoops: -1)
+        bgm.play()
     }
 
     // MARK: - Functions
@@ -416,6 +426,26 @@ class Cave1ViewController: Dungeon {
             
             
         }
+    }
+
+}
+
+// MARK: - Sounds
+
+extension Cave1ViewController {
+
+    private func bgmPrepare(numberOfLoops: Int) {
+        let soundFilePath: String = Bundle.main.path(forResource: "cave_dungeon", ofType: "mp3")!
+        let sound: URL = URL(fileURLWithPath: soundFilePath)
+        // AVAudioPlayerのインスタンスを作成,ファイルの読み込み
+        do {
+            bgm = try AVAudioPlayer(contentsOf: sound, fileTypeHint:nil)
+        } catch {
+            fatalError("Failed to initialize a player.")
+        }
+        bgm.numberOfLoops = numberOfLoops
+        // 再生準備
+        bgm.prepareToPlay()
     }
 
 }

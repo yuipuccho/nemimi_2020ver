@@ -15,6 +15,7 @@
 		BA23F6552586186F008AB69B /* night_event.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BA23F6542586186F008AB69B /* night_event.mp3 */; };
 		BA23F65A2586345E008AB69B /* quest.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BA23F6592586345E008AB69B /* quest.mp3 */; };
 		BA23F66025863C9A008AB69B /* Dungeon.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA23F65F25863C9A008AB69B /* Dungeon.swift */; };
+		BA23F68125867124008AB69B /* cave_dungeon.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BA23F68025867123008AB69B /* cave_dungeon.mp3 */; };
 		BA2A5DB4254EC8800085A3EF /* MessageEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2A5DB3254EC8800085A3EF /* MessageEntity.swift */; };
 		BA2A9CAF230E65FE00E13DC8 /* cave9ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2A9CAE230E65FE00E13DC8 /* cave9ViewController.swift */; };
 		BA2A9CB1230E6E3B00E13DC8 /* cave2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2A9CB0230E6E3B00E13DC8 /* cave2ViewController.swift */; };
@@ -68,6 +69,7 @@
 		BA23F6542586186F008AB69B /* night_event.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = night_event.mp3; sourceTree = "<group>"; };
 		BA23F6592586345E008AB69B /* quest.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = quest.mp3; sourceTree = "<group>"; };
 		BA23F65F25863C9A008AB69B /* Dungeon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dungeon.swift; sourceTree = "<group>"; };
+		BA23F68025867123008AB69B /* cave_dungeon.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = cave_dungeon.mp3; sourceTree = "<group>"; };
 		BA2A5DB3254EC8800085A3EF /* MessageEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageEntity.swift; sourceTree = "<group>"; };
 		BA2A9CAE230E65FE00E13DC8 /* cave9ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cave9ViewController.swift; sourceTree = "<group>"; };
 		BA2A9CB0230E6E3B00E13DC8 /* cave2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cave2ViewController.swift; sourceTree = "<group>"; };
@@ -137,6 +139,7 @@
 		BA23F5E2258356F3008AB69B /* BGM */ = {
 			isa = PBXGroup;
 			children = (
+				BA23F67F258670E6008AB69B /* Field */,
 				BA23F64D25861459008AB69B /* Opening */,
 				BA23F5E325835702008AB69B /* SoundEffect */,
 				BA23F65325861860008AB69B /* Story */,
@@ -168,6 +171,14 @@
 				BA23F6592586345E008AB69B /* quest.mp3 */,
 			);
 			path = Story;
+			sourceTree = "<group>";
+		};
+		BA23F67F258670E6008AB69B /* Field */ = {
+			isa = PBXGroup;
+			children = (
+				BA23F68025867123008AB69B /* cave_dungeon.mp3 */,
+			);
+			path = Field;
 			sourceTree = "<group>";
 		};
 		BA2A5DB2254EC84A0085A3EF /* Entities */ = {
@@ -470,6 +481,7 @@
 				BAA9D3662542DD9E00F0A736 /* Cave3ViewController.storyboard in Resources */,
 				BAA9D38B2542EB4F00F0A736 /* MessageView.xib in Resources */,
 				BAA9D3592542DBF400F0A736 /* EndingViewController.storyboard in Resources */,
+				BA23F68125867124008AB69B /* cave_dungeon.mp3 in Resources */,
 				BAA9D3692542DDA900F0A736 /* Cave4ViewController.storyboard in Resources */,
 				BAA9D35F2542DD4900F0A736 /* Cave1ViewController.storyboard in Resources */,
 				BA3849A52305548D006E7BA0 /* LaunchScreen.storyboard in Resources */,
