@@ -439,7 +439,7 @@ extension Cave1ViewController {
         let sound: URL = URL(fileURLWithPath: soundFilePath)
         // AVAudioPlayerのインスタンスを作成,ファイルの読み込み
         do {
-            bgm = try AVAudioPlayer(contentsOf: sound, fileTypeHint:nil)
+            bgm = try AVAudioPlayer(contentsOf: sound, fileTypeHint: nil)
         } catch {
             fatalError("Failed to initialize a player.")
         }

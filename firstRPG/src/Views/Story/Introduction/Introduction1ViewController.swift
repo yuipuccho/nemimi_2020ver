@@ -163,7 +163,7 @@ extension Introduction1ViewController {
         let sound: URL = URL(fileURLWithPath: soundFilePath)
         // AVAudioPlayerのインスタンスを作成,ファイルの読み込み
         do {
-            bgm = try AVAudioPlayer(contentsOf: sound, fileTypeHint:nil)
+            bgm = try AVAudioPlayer(contentsOf: sound, fileTypeHint: nil)
         } catch {
             fatalError("Failed to initialize a player.")
         }
@@ -182,7 +182,7 @@ extension Introduction1ViewController {
         let sound: URL = URL(fileURLWithPath: soundFilePath)
         // AVAudioPlayerのインスタンスを作成,ファイルの読み込み
         do {
-            voice = try AVAudioPlayer(contentsOf: sound, fileTypeHint:nil)
+            voice = try AVAudioPlayer(contentsOf: sound, fileTypeHint: nil)
         } catch {
             fatalError("Failed to initialize a player.")
         }
