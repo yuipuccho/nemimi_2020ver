@@ -1878,7 +1878,7 @@ class battleMessageViewController: UIViewController {
             // 死んだ時の遷移前処理
         } else if (segue.identifier == "toRestart") {
 
-            let vc: cave1ViewController = (segue.destination as? cave1ViewController)!
+            let vc: Cave1ViewController = (segue.destination as? Cave1ViewController)!
 
             // プレイヤーのHP,MPを全快にする
             player["nowHP"] = player["maxHP"]
@@ -1887,7 +1887,7 @@ class battleMessageViewController: UIViewController {
             // プレイヤーの情報
             vc.player = player
 
-            vc.playerApperImage = "ヒーロー上1"
+//            vc.playerApperImage = "ヒーロー上1"
 
             let width = view.frame.size.width - gameView.frame.size.width
 
@@ -1904,13 +1904,13 @@ class battleMessageViewController: UIViewController {
 
         } else if (segue.identifier == "toCave1") {    // cave1への遷移前処理
 
-            let vc: cave1ViewController = (segue.destination as? cave1ViewController)!
+            let vc: Cave1ViewController = (segue.destination as? Cave1ViewController)!
             // プレイヤーの情報
             vc.player = player
             vc.playerLeftLocation = playerLeftLocation
             vc.playerOverLocation = playerOverLocation
             vc.currentNum = currentNum
-            vc.playerApperImage = playerApperImage
+//            vc.playerApperImage = playerApperImage
             // ハーミット討伐済かどうか
             vc.defeatHermit = defeatHermit
 

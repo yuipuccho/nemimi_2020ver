@@ -481,7 +481,7 @@ class cave2ViewController: UIViewController {
             
             // cave1への遷移前処理
         } else if (segue.identifier == "toCave1") {
-            let vc: cave1ViewController = (segue.destination as? cave1ViewController)!
+            let vc: Cave1ViewController = (segue.destination as? Cave1ViewController)!
             
             vc.player = player
             
@@ -495,7 +495,7 @@ class cave2ViewController: UIViewController {
             
             vc.currentNum = 17
             
-            vc.playerApperImage = "ヒーロー下1"
+//            vc.playerApperImage = "ヒーロー下1"
             
             // ハーミット討伐済かどうか
             vc.defeatHermit = defeatHermit
@@ -534,7 +534,7 @@ class cave2ViewController: UIViewController {
     @IBAction func upButtonLongTap(_ sender: UILongPressGestureRecognizer) {
         
         if(sender.state == UIGestureRecognizer.State.began) {
-            timer = Timer.scheduledTimer(timeInterval: 0.3, target: self, selector: #selector(cave1ViewController.timerUp), userInfo: nil, repeats: true)
+            timer = Timer.scheduledTimer(timeInterval: 0.3, target: self, selector: #selector(Cave1ViewController.timerUp), userInfo: nil, repeats: true)
             
         } else if (sender.state == UIGestureRecognizer.State.ended) {
             timer.invalidate()
@@ -545,7 +545,7 @@ class cave2ViewController: UIViewController {
     // 左ボタン長押し
     @IBAction func leftButtonLongTap(_ sender: UILongPressGestureRecognizer) {
         if(sender.state == UIGestureRecognizer.State.began) {
-            timer = Timer.scheduledTimer(timeInterval: 0.3, target: self, selector: #selector(cave1ViewController.timerLeft), userInfo: nil, repeats: true)
+            timer = Timer.scheduledTimer(timeInterval: 0.3, target: self, selector: #selector(Cave1ViewController.timerLeft), userInfo: nil, repeats: true)
             
         } else if (sender.state == UIGestureRecognizer.State.ended) {
             timer.invalidate()
@@ -555,7 +555,7 @@ class cave2ViewController: UIViewController {
     
     @IBAction func rightButtonLongTap(_ sender: UILongPressGestureRecognizer) {
         if(sender.state == UIGestureRecognizer.State.began) {
-            timer = Timer.scheduledTimer(timeInterval: 0.3, target: self, selector: #selector(cave1ViewController.timerRight), userInfo: nil, repeats: true)
+            timer = Timer.scheduledTimer(timeInterval: 0.3, target: self, selector: #selector(Cave1ViewController.timerRight), userInfo: nil, repeats: true)
             
         } else if (sender.state == UIGestureRecognizer.State.ended) {
             timer.invalidate()
@@ -565,7 +565,7 @@ class cave2ViewController: UIViewController {
     
     @IBAction func downButtonLongTap(_ sender: UILongPressGestureRecognizer) {
         if(sender.state == UIGestureRecognizer.State.began) {
-            timer = Timer.scheduledTimer(timeInterval: 0.3, target: self, selector: #selector(cave1ViewController.timerDown), userInfo: nil, repeats: true)
+            timer = Timer.scheduledTimer(timeInterval: 0.3, target: self, selector: #selector(Cave1ViewController.timerDown), userInfo: nil, repeats: true)
             
         } else if (sender.state == UIGestureRecognizer.State.ended) {
             timer.invalidate()

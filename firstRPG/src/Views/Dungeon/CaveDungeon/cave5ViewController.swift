@@ -541,7 +541,7 @@ class cave5ViewController: UIViewController {
     @IBAction func upButtonLongTap(_ sender: UILongPressGestureRecognizer) {
         
         if(sender.state == UIGestureRecognizer.State.began) {
-            timer = Timer.scheduledTimer(timeInterval: 0.3, target: self, selector: #selector(cave1ViewController.timerUp), userInfo: nil, repeats: true)
+            timer = Timer.scheduledTimer(timeInterval: 0.3, target: self, selector: #selector(Cave1ViewController.timerUp), userInfo: nil, repeats: true)
             
         } else if (sender.state == UIGestureRecognizer.State.ended) {
             timer.invalidate()
@@ -552,7 +552,7 @@ class cave5ViewController: UIViewController {
     // 左ボタン長押し
     @IBAction func leftButtonLongTap(_ sender: UILongPressGestureRecognizer) {
         if(sender.state == UIGestureRecognizer.State.began) {
-            timer = Timer.scheduledTimer(timeInterval: 0.3, target: self, selector: #selector(cave1ViewController.timerLeft), userInfo: nil, repeats: true)
+            timer = Timer.scheduledTimer(timeInterval: 0.3, target: self, selector: #selector(Cave1ViewController.timerLeft), userInfo: nil, repeats: true)
             
         } else if (sender.state == UIGestureRecognizer.State.ended) {
             timer.invalidate()
@@ -562,7 +562,7 @@ class cave5ViewController: UIViewController {
     
     @IBAction func rightButtonLongTap(_ sender: UILongPressGestureRecognizer) {
         if(sender.state == UIGestureRecognizer.State.began) {
-            timer = Timer.scheduledTimer(timeInterval: 0.3, target: self, selector: #selector(cave1ViewController.timerRight), userInfo: nil, repeats: true)
+            timer = Timer.scheduledTimer(timeInterval: 0.3, target: self, selector: #selector(Cave1ViewController.timerRight), userInfo: nil, repeats: true)
             
         } else if (sender.state == UIGestureRecognizer.State.ended) {
             timer.invalidate()
@@ -572,7 +572,7 @@ class cave5ViewController: UIViewController {
     
     @IBAction func downButtonLongTap(_ sender: UILongPressGestureRecognizer) {
         if(sender.state == UIGestureRecognizer.State.began) {
-            timer = Timer.scheduledTimer(timeInterval: 0.3, target: self, selector: #selector(cave1ViewController.timerDown), userInfo: nil, repeats: true)
+            timer = Timer.scheduledTimer(timeInterval: 0.3, target: self, selector: #selector(Cave1ViewController.timerDown), userInfo: nil, repeats: true)
             
         } else if (sender.state == UIGestureRecognizer.State.ended) {
             timer.invalidate()
