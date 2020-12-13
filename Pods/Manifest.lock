@@ -1,4 +1,5 @@
 PODS:
+  - GhostTypewriter (2.1.0)
   - R.swift (5.2.2):
     - R.swift.Library (~> 5.2.0)
   - R.swift.Library (5.2.0)
@@ -10,12 +11,14 @@ PODS:
   - RxSwift (5.1.1)
 
 DEPENDENCIES:
+  - GhostTypewriter
   - R.swift
   - RxCocoa
   - RxSwift
 
 SPEC REPOS:
   trunk:
+    - GhostTypewriter
     - R.swift
     - R.swift.Library
     - RxCocoa
@@ -23,12 +26,13 @@ SPEC REPOS:
     - RxSwift
 
 SPEC CHECKSUMS:
+  GhostTypewriter: 62540772d227fbfe633bfa728d08fe8af5b4d805
   R.swift: 7c52cdc57a66840ffe6cbd8a823d732059d42a32
   R.swift.Library: 5ba4f1631300caf9a4d890186930da85d540769d
   RxCocoa: 32065309a38d29b5b0db858819b5bf9ef038b601
   RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
   RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
 
-PODFILE CHECKSUM: af294a55dedc2371ba2db2f3a907fac5dc7404b8
+PODFILE CHECKSUM: 35f4fd011abff9a19b60c631e4439732179dca80
 
 COCOAPODS: 1.10.0

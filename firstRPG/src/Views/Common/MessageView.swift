@@ -9,6 +9,7 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import GhostTypewriter
 
 /**
  * 共通メッセージView
@@ -17,8 +18,8 @@ class MessageView: UIView {
 
     // MARK: - Outlets
 
-    /// メッセージTextView
-    @IBOutlet weak var messageTextView: UITextView!
+    /// メッセージLabel
+    @IBOutlet weak var messageLabel: TypewriterLabel!
     /// 選択項目表示View
     @IBOutlet weak var selectMessageView: UIView!
 

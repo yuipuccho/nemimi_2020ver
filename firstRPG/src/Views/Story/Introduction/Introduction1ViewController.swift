@@ -10,6 +10,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 import AVFoundation
+import GhostTypewriter
 
 /**
  * 導入ストーリーVC
@@ -127,6 +128,7 @@ extension Introduction1ViewController {
             presentNextVC()
         }
         mainButtonTappedCount += 1
+        messageView.messageLabel.completeTypewritingAnimation()
         showMessage()
     }
 
@@ -135,7 +137,10 @@ extension Introduction1ViewController {
         let msg = viewModel.message(count: mainButtonTappedCount)
 
         // メッセージを表示する
-        messageView.messageTextView.text = msg.message
+        messageView.messageLabel.text = msg.message
+
+        messageView.messageLabel.typingTimeInterval = 0.02
+        messageView.messageLabel.startTypewritingAnimation()
 
         // メッセージの表示が全て終わったら、画面遷移フラグをtrueに変更する
         if msg.isLastMessage {

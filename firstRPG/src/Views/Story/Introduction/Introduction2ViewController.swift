@@ -150,7 +150,7 @@ extension Introduction2ViewController {
         // メッセージ内容、選択項目表示するかどうか、最後のメッセージかどうかを取得する
         let msg = viewModel.message(count: mainButtonTappedCount, canProceed: canProceed)
         // メッセージを表示する
-        messageView.messageTextView.text = msg.message
+        messageView.messageLabel.text = msg.message
 
         // shouldShowSelectionがtrueなら選択項目を表示する
         if msg.shouldShowSelection {
