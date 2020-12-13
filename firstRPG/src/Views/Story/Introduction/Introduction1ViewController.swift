@@ -55,7 +55,7 @@ class Introduction1ViewController: UIViewController {
         initialSetting()
         subscribe()
 
-        let soundFilePath = Bundle.main.path(forResource: "voice_male", ofType: "mp3")!
+        let soundFilePath = Bundle.main.path(forResource: "voice_male_cut", ofType: "mp3")!
         let sound:URL = URL(fileURLWithPath: soundFilePath)
         // AVAudioPlayerのインスタンスを作成,ファイルの読み込み
         do {
