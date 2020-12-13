@@ -60,13 +60,6 @@ class Introduction1ViewController: UIViewController {
 
     }
 
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        // 曲を再生
-        bgmPrepare(numberOfLoops: -1)
-//        bgm.play()
-    }
-
 }
 
 // MARK: - Functions
@@ -95,6 +88,8 @@ extension Introduction1ViewController {
 
         // 1.0秒後にハーミットを出現させる
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) { [weak self] in
+            // 曲を再生
+            self?.bgmPrepare(numberOfLoops: -1)
             self?.bgm.play()
             self?.hermitImageView.isHidden = false
         }
@@ -114,7 +109,6 @@ extension Introduction1ViewController {
     private func subscribe() {
         // メインボタンタップ
         buttonView.mainButtonTappedSubject.subscribe(onNext: { [unowned self] in
-            
             mainButtonTapped()
         }).disposed(by: disposeBag)
     }
