@@ -154,7 +154,7 @@ extension Introduction1ViewController {
 
 }
 
-// MARK: - Sound
+// MARK: - Sounds
 
 extension Introduction1ViewController {
 
