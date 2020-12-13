@@ -130,7 +130,7 @@ extension Introduction1ViewController {
         messageView.messageLabel.typingTimeInterval = 0.02
         messageView.messageLabel.startTypewritingAnimation()
 
-        // 音
+        // メッセージ音を再生する
         let n = Int((Double(msg.message.count) * 0.02) * 10)
         audioPrepare(isMale: msg.isMale, numberOfLoops: n)
         audioPlayerInstance.play()
@@ -159,7 +159,7 @@ extension Introduction1ViewController {
         do {
             audioPlayerInstance = try AVAudioPlayer(contentsOf: sound, fileTypeHint:nil)
         } catch {
-            print("AVAudioPlayerインスタンス作成でエラー")
+            fatalError("Failed to initialize a player.")
         }
         audioPlayerInstance.numberOfLoops = numberOfLoops
         // 再生準備

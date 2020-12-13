@@ -9,6 +9,7 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import AVFoundation
 
 /**
  * 導入ストーリーVC
@@ -45,6 +46,8 @@ class Introduction2ViewController: UIViewController {
 
     /// 次の画面に遷移するか
     private var shouldPresentNextVC: Bool = false
+
+    private var audioPlayerInstance: AVAudioPlayer!
 
     // MARK: - LifeCycles
     
@@ -128,6 +131,7 @@ extension Introduction2ViewController {
         kingImageView.isHidden = false
 
         // メッセージを表示する
+        messageView.messageLabel.completeTypewritingAnimation()
         showMessage()
     }
 
@@ -149,8 +153,16 @@ extension Introduction2ViewController {
     private func showMessage() {
         // メッセージ内容、選択項目表示するかどうか、最後のメッセージかどうかを取得する
         let msg = viewModel.message(count: mainButtonTappedCount, canProceed: canProceed)
+
         // メッセージを表示する
         messageView.messageLabel.text = msg.message
+        messageView.messageLabel.typingTimeInterval = 0.02
+        messageView.messageLabel.startTypewritingAnimation()
+
+        // メッセージ音を再生する
+        let n = Int((Double(msg.message.count) * 0.02) * 10)
+        audioPrepare(isMale: msg.isMale, numberOfLoops: n)
+        audioPlayerInstance.play()
 
         // shouldShowSelectionがtrueなら選択項目を表示する
         if msg.shouldShowSelection {
@@ -176,6 +188,25 @@ extension Introduction2ViewController {
     /// 次の画面へ遷移する
     private func presentNextVC() {
         // TODO: 遷移処理を追加する
+    }
+
+    private func audioPrepare(isMale: Bool,  numberOfLoops: Int) {
+        var soundFilePath: String = ""
+        if isMale {
+            soundFilePath = Bundle.main.path(forResource: "voice_male", ofType: "mp3")!
+        } else {
+            soundFilePath = Bundle.main.path(forResource: "voice_female", ofType: "mp3")!
+        }
+        let sound:URL = URL(fileURLWithPath: soundFilePath)
+        // AVAudioPlayerのインスタンスを作成,ファイルの読み込み
+        do {
+            audioPlayerInstance = try AVAudioPlayer(contentsOf: sound, fileTypeHint:nil)
+        } catch {
+            fatalError("Failed to initialize a player.")
+        }
+        audioPlayerInstance.numberOfLoops = numberOfLoops
+        // 再生準備
+        audioPlayerInstance.prepareToPlay()
     }
 
 }
