@@ -47,7 +47,9 @@ class Introduction2ViewController: UIViewController {
     /// 次の画面に遷移するか
     private var shouldPresentNextVC: Bool = false
 
-    private var audioPlayerInstance: AVAudioPlayer!
+    private var voice: AVAudioPlayer!
+
+    private var bgm: AVAudioPlayer!
 
     // MARK: - LifeCycles
     
@@ -90,6 +92,9 @@ extension Introduction2ViewController {
         buttonView.mainButton.isEnabled = false
 
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) { [weak self] in
+            // 曲を再生
+            self?.bgmPrepare(numberOfLoops: -1)
+            self?.bgm.play()
             // メッセージを表示し、メインボタンを使用可能にする
             self?.messageView.isHidden = false
             self?.showMessage()
@@ -122,6 +127,7 @@ extension Introduction2ViewController {
     private func mainButtonTapped() {
         // shouldPresentNextVCがtrueなら次の画面へ遷移する
         if shouldPresentNextVC {
+            bgm.stop()
             presentNextVC()
         } else {
             mainButtonTappedCount += 1
@@ -160,8 +166,8 @@ extension Introduction2ViewController {
 
         // メッセージ音を再生する
         let n = Int((Double(msg.message.count) * 0.02) * 10)
-        audioPrepare(isMale: msg.isMale, numberOfLoops: n)
-        audioPlayerInstance.play()
+        voicePrepare(isMale: msg.isMale, numberOfLoops: n)
+        voice.play()
 
         // shouldShowSelectionがtrueなら選択項目を表示する
         if msg.shouldShowSelection {
@@ -189,7 +195,27 @@ extension Introduction2ViewController {
         // TODO: 遷移処理を追加する
     }
 
-    private func audioPrepare(isMale: Bool,  numberOfLoops: Int) {
+}
+
+// MARK: - Sounds
+
+extension Introduction2ViewController {
+
+    private func bgmPrepare(numberOfLoops: Int) {
+        let soundFilePath: String = Bundle.main.path(forResource: "quest", ofType: "mp3")!
+        let sound: URL = URL(fileURLWithPath: soundFilePath)
+        // AVAudioPlayerのインスタンスを作成,ファイルの読み込み
+        do {
+            bgm = try AVAudioPlayer(contentsOf: sound, fileTypeHint:nil)
+        } catch {
+            fatalError("Failed to initialize a player.")
+        }
+        bgm.numberOfLoops = numberOfLoops
+        // 再生準備
+        bgm.prepareToPlay()
+    }
+
+    private func voicePrepare(isMale: Bool,  numberOfLoops: Int) {
         var soundFilePath: String = ""
         if isMale {
             soundFilePath = Bundle.main.path(forResource: "voice_male", ofType: "mp3")!
@@ -199,13 +225,13 @@ extension Introduction2ViewController {
         let sound:URL = URL(fileURLWithPath: soundFilePath)
         // AVAudioPlayerのインスタンスを作成,ファイルの読み込み
         do {
-            audioPlayerInstance = try AVAudioPlayer(contentsOf: sound, fileTypeHint:nil)
+            voice = try AVAudioPlayer(contentsOf: sound, fileTypeHint:nil)
         } catch {
             fatalError("Failed to initialize a player.")
         }
-        audioPlayerInstance.numberOfLoops = numberOfLoops
+        voice.numberOfLoops = numberOfLoops
         // 再生準備
-        audioPlayerInstance.prepareToPlay()
+        voice.prepareToPlay()
     }
 
 }
