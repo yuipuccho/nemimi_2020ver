@@ -56,16 +56,6 @@ class Introduction1ViewController: UIViewController {
         initialSetting()
         subscribe()
 
-        let soundFilePath = Bundle.main.path(forResource: "voice_male_cut", ofType: "mp3")!
-        let sound:URL = URL(fileURLWithPath: soundFilePath)
-        // AVAudioPlayerのインスタンスを作成,ファイルの読み込み
-        do {
-            audioPlayerInstance = try AVAudioPlayer(contentsOf: sound, fileTypeHint:nil)
-        } catch {
-            print("AVAudioPlayerインスタンス作成でエラー")
-        }
-        // 再生準備
-        audioPlayerInstance.prepareToPlay()
     }
 
 }
@@ -114,8 +104,6 @@ extension Introduction1ViewController {
     private func subscribe() {
         // メインボタンタップ
         buttonView.mainButtonTappedSubject.subscribe(onNext: { [unowned self] in
-            audioPlayerInstance.currentTime = 0         // 再生箇所を頭に移す
-            audioPlayerInstance.play()
             
             mainButtonTapped()
         }).disposed(by: disposeBag)
@@ -126,10 +114,11 @@ extension Introduction1ViewController {
         // shouldPresentNextVCがtrueなら次の画面へ遷移する
         if shouldPresentNextVC {
             presentNextVC()
+        } else {
+            mainButtonTappedCount += 1
+            messageView.messageLabel.completeTypewritingAnimation()
+            showMessage()
         }
-        mainButtonTappedCount += 1
-        messageView.messageLabel.completeTypewritingAnimation()
-        showMessage()
     }
 
     private func showMessage() {
@@ -138,9 +127,13 @@ extension Introduction1ViewController {
 
         // メッセージを表示する
         messageView.messageLabel.text = msg.message
-
         messageView.messageLabel.typingTimeInterval = 0.02
         messageView.messageLabel.startTypewritingAnimation()
+
+        // 音
+        let n = Int((Double(msg.message.count) * 0.02) * 10)
+        audioPrepare(isMale: msg.isMale, numberOfLoops: n)
+        audioPlayerInstance.play()
 
         // メッセージの表示が全て終わったら、画面遷移フラグをtrueに変更する
         if msg.isLastMessage {
@@ -152,6 +145,25 @@ extension Introduction1ViewController {
     private func presentNextVC() {
         let vc = Introduction2ViewController.makeInstance()
         present(vc, animated: true)
+    }
+
+    private func audioPrepare(isMale: Bool,  numberOfLoops: Int) {
+        var soundFilePath: String = ""
+        if isMale {
+            soundFilePath = Bundle.main.path(forResource: "voice_male", ofType: "mp3")!
+        } else {
+            soundFilePath = Bundle.main.path(forResource: "voice_female", ofType: "mp3")!
+        }
+        let sound:URL = URL(fileURLWithPath: soundFilePath)
+        // AVAudioPlayerのインスタンスを作成,ファイルの読み込み
+        do {
+            audioPlayerInstance = try AVAudioPlayer(contentsOf: sound, fileTypeHint:nil)
+        } catch {
+            print("AVAudioPlayerインスタンス作成でエラー")
+        }
+        audioPlayerInstance.numberOfLoops = numberOfLoops
+        // 再生準備
+        audioPlayerInstance.prepareToPlay()
     }
 
 }

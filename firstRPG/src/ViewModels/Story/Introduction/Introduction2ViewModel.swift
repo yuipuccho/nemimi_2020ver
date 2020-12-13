@@ -19,6 +19,8 @@ class Introduction2ViewModel {
     func message(count: Int, canProceed: Bool) -> MessageEntity {
         /// メッセージ内容
         var message: String = ""
+        /// 男性からのメッセージか
+        let isMale: Bool = true
         /// 選択肢を表示するか
         var shouldShowSelection: Bool = false
         /// 最後のメッセージか
@@ -50,7 +52,7 @@ class Introduction2ViewModel {
         default:
             break
         }
-        let messageModel = MessageEntity.init(message: message, shouldShowSelection: shouldShowSelection, isLastMessage: isLastMessage)
+        let messageModel = MessageEntity.init(message: message, isMale: isMale, shouldShowSelection: shouldShowSelection, isLastMessage: isLastMessage)
         return messageModel
     }
 

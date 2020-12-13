@@ -13,6 +13,8 @@ public struct MessageEntity {
 
     /// メッセージ内容
     let message: String
+    /// 男性からのメッセージか
+    let isMale: Bool
     /// 選択項目を表示するかどうか
     let shouldShowSelection: Bool
     /// 最後のメッセージかどうか
