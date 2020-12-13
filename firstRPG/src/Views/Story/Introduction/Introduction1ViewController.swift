@@ -9,6 +9,8 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import AVFoundation
+import GhostTypewriter
 
 /**
  * 導入ストーリーVC
@@ -39,6 +41,8 @@ class Introduction1ViewController: UIViewController {
     /// メインボタンをタップした回数
     private var mainButtonTappedCount = 0
 
+    private var audioPlayerInstance: AVAudioPlayer!
+
     // MARK: - LifeCycles
 
     override func viewDidLoad() {
@@ -51,6 +55,7 @@ class Introduction1ViewController: UIViewController {
 
         initialSetting()
         subscribe()
+
     }
 
 }
@@ -99,6 +104,7 @@ extension Introduction1ViewController {
     private func subscribe() {
         // メインボタンタップ
         buttonView.mainButtonTappedSubject.subscribe(onNext: { [unowned self] in
+            
             mainButtonTapped()
         }).disposed(by: disposeBag)
     }
@@ -108,9 +114,11 @@ extension Introduction1ViewController {
         // shouldPresentNextVCがtrueなら次の画面へ遷移する
         if shouldPresentNextVC {
             presentNextVC()
+        } else {
+            mainButtonTappedCount += 1
+            messageView.messageLabel.completeTypewritingAnimation()
+            showMessage()
         }
-        mainButtonTappedCount += 1
-        showMessage()
     }
 
     private func showMessage() {
@@ -118,7 +126,14 @@ extension Introduction1ViewController {
         let msg = viewModel.message(count: mainButtonTappedCount)
 
         // メッセージを表示する
-        messageView.messageTextView.text = msg.message
+        messageView.messageLabel.text = msg.message
+        messageView.messageLabel.typingTimeInterval = 0.02
+        messageView.messageLabel.startTypewritingAnimation()
+
+        // メッセージ音を再生する
+        let n = Int((Double(msg.message.count) * 0.02) * 10)
+        audioPrepare(isMale: msg.isMale, numberOfLoops: n)
+        audioPlayerInstance.play()
 
         // メッセージの表示が全て終わったら、画面遷移フラグをtrueに変更する
         if msg.isLastMessage {
@@ -130,6 +145,25 @@ extension Introduction1ViewController {
     private func presentNextVC() {
         let vc = Introduction2ViewController.makeInstance()
         present(vc, animated: true)
+    }
+
+    private func audioPrepare(isMale: Bool,  numberOfLoops: Int) {
+        var soundFilePath: String = ""
+        if isMale {
+            soundFilePath = Bundle.main.path(forResource: "voice_male", ofType: "mp3")!
+        } else {
+            soundFilePath = Bundle.main.path(forResource: "voice_female", ofType: "mp3")!
+        }
+        let sound:URL = URL(fileURLWithPath: soundFilePath)
+        // AVAudioPlayerのインスタンスを作成,ファイルの読み込み
+        do {
+            audioPlayerInstance = try AVAudioPlayer(contentsOf: sound, fileTypeHint:nil)
+        } catch {
+            fatalError("Failed to initialize a player.")
+        }
+        audioPlayerInstance.numberOfLoops = numberOfLoops
+        // 再生準備
+        audioPlayerInstance.prepareToPlay()
     }
 
 }

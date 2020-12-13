@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		466ABDD5956C615BB1A9CD6A /* Pods_firstRPG.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F95033C4BFEFF3AE2175C0E5 /* Pods_firstRPG.framework */; };
 		BA1F24672317C0A8003BA769 /* AppTopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1F24662317C0A8003BA769 /* AppTopViewController.swift */; };
+		BA23F6052585EA90008AB69B /* voice_female.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BA23F6032585EA90008AB69B /* voice_female.mp3 */; };
+		BA23F6062585EA90008AB69B /* voice_male.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BA23F6042585EA90008AB69B /* voice_male.mp3 */; };
 		BA2A5DB4254EC8800085A3EF /* MessageEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2A5DB3254EC8800085A3EF /* MessageEntity.swift */; };
 		BA2A9CAF230E65FE00E13DC8 /* cave9ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2A9CAE230E65FE00E13DC8 /* cave9ViewController.swift */; };
 		BA2A9CB1230E6E3B00E13DC8 /* cave2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2A9CB0230E6E3B00E13DC8 /* cave2ViewController.swift */; };
@@ -56,6 +58,8 @@
 		36FDC4AC2D894E98AB15D1FD /* Pods-firstRPG.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-firstRPG.release.xcconfig"; path = "Target Support Files/Pods-firstRPG/Pods-firstRPG.release.xcconfig"; sourceTree = "<group>"; };
 		701304302C460A768324CECD /* Pods-firstRPG.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-firstRPG.debug.xcconfig"; path = "Target Support Files/Pods-firstRPG/Pods-firstRPG.debug.xcconfig"; sourceTree = "<group>"; };
 		BA1F24662317C0A8003BA769 /* AppTopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTopViewController.swift; sourceTree = "<group>"; };
+		BA23F6032585EA90008AB69B /* voice_female.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = voice_female.mp3; path = ../../../../../../../Desktop/nemimi_bgm/voice_female.mp3; sourceTree = "<group>"; };
+		BA23F6042585EA90008AB69B /* voice_male.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = voice_male.mp3; path = ../../../../../../../Desktop/nemimi_bgm/voice_male.mp3; sourceTree = "<group>"; };
 		BA2A5DB3254EC8800085A3EF /* MessageEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageEntity.swift; sourceTree = "<group>"; };
 		BA2A9CAE230E65FE00E13DC8 /* cave9ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cave9ViewController.swift; sourceTree = "<group>"; };
 		BA2A9CB0230E6E3B00E13DC8 /* cave2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cave2ViewController.swift; sourceTree = "<group>"; };
@@ -120,6 +124,23 @@
 				F95033C4BFEFF3AE2175C0E5 /* Pods_firstRPG.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BA23F5E2258356F3008AB69B /* BGM */ = {
+			isa = PBXGroup;
+			children = (
+				BA23F5E325835702008AB69B /* SoundEffect */,
+			);
+			path = BGM;
+			sourceTree = "<group>";
+		};
+		BA23F5E325835702008AB69B /* SoundEffect */ = {
+			isa = PBXGroup;
+			children = (
+				BA23F6032585EA90008AB69B /* voice_female.mp3 */,
+				BA23F6042585EA90008AB69B /* voice_male.mp3 */,
+			);
+			path = SoundEffect;
 			sourceTree = "<group>";
 		};
 		BA2A5DB2254EC84A0085A3EF /* Entities */ = {
@@ -273,6 +294,7 @@
 		BACE9B1A2542AA2800620ADC /* src */ = {
 			isa = PBXGroup;
 			children = (
+				BA23F5E2258356F3008AB69B /* BGM */,
 				BA2A5DB2254EC84A0085A3EF /* Entities */,
 				BACE9B2B2542D21400620ADC /* ViewModels */,
 				BACE9B2A2542D20900620ADC /* Views */,
@@ -412,6 +434,7 @@
 				BAA9D3752542DDD800F0A736 /* Cave8ViewController.storyboard in Resources */,
 				BAA9D34C2542D9A300F0A736 /* AppTop.storyboard in Resources */,
 				BAA9D36C2542DDB500F0A736 /* Cave5ViewController.storyboard in Resources */,
+				BA23F6062585EA90008AB69B /* voice_male.mp3 in Resources */,
 				BAA9D37F2542E1A500F0A736 /* BattleCommandViewController.storyboard in Resources */,
 				BAA9D3662542DD9E00F0A736 /* Cave3ViewController.storyboard in Resources */,
 				BAA9D38B2542EB4F00F0A736 /* MessageView.xib in Resources */,
@@ -420,6 +443,7 @@
 				BAA9D35F2542DD4900F0A736 /* Cave1ViewController.storyboard in Resources */,
 				BA3849A52305548D006E7BA0 /* LaunchScreen.storyboard in Resources */,
 				BAA9D37C2542E18800F0A736 /* BattleMessageViewController.storyboard in Resources */,
+				BA23F6052585EA90008AB69B /* voice_female.mp3 in Resources */,
 				BAA9D3882542EAF800F0A736 /* ButtonView.xib in Resources */,
 				BAA9D3782542DDE300F0A736 /* Cave9ViewController.storyboard in Resources */,
 				BA3849A22305548D006E7BA0 /* Assets.xcassets in Resources */,
@@ -657,6 +681,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 69H3H2U752;
 				INFOPLIST_FILE = "$(SRCROOT)/firstRPG/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -675,6 +700,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 69H3H2U752;
 				INFOPLIST_FILE = "$(SRCROOT)/firstRPG/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

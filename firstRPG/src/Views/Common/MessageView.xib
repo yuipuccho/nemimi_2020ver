@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="landscape" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -16,14 +16,28 @@
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qqT-pN-uOJ">
                     <rect key="frame" x="294" y="295" width="308" height="88"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yE7-uh-3sn" customClass="TypewriterLabel" customModule="GhostTypewriter">
+                            <rect key="frame" x="8" y="8" width="292" height="18"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.65000000000000002" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="yE7-uh-3sn" firstAttribute="leading" secondItem="qqT-pN-uOJ" secondAttribute="leading" constant="8" id="6ik-M7-qk0"/>
+                        <constraint firstItem="yE7-uh-3sn" firstAttribute="top" secondItem="qqT-pN-uOJ" secondAttribute="top" constant="8" id="H3U-Y3-3OG"/>
+                        <constraint firstAttribute="trailing" secondItem="yE7-uh-3sn" secondAttribute="trailing" constant="8" id="LxL-r1-vgg"/>
+                        <constraint firstItem="yE7-uh-3sn" firstAttribute="height" relation="lessThanOrEqual" secondItem="qqT-pN-uOJ" secondAttribute="height" multiplier="0.9" id="PXS-ie-2zO"/>
+                    </constraints>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="CornerRadius">
                             <integer key="value" value="5"/>
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                 </view>
-                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="HP・MPが かいふくした！" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1wI-0h-Bqd">
+                <textView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1wI-0h-Bqd">
                     <rect key="frame" x="294" y="295" width="308" height="88"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="308" id="b8C-R8-915"/>
@@ -110,7 +124,7 @@
             <connections>
                 <outlet property="firstOptionLabel" destination="yoc-Ki-7me" id="QJN-oS-Yxb"/>
                 <outlet property="firstSelectionMarkLabel" destination="cLn-V0-pOp" id="h6u-Vv-GpC"/>
-                <outlet property="messageTextView" destination="1wI-0h-Bqd" id="Jd4-g8-Koq"/>
+                <outlet property="messageLabel" destination="yE7-uh-3sn" id="G3I-nQ-mSR"/>
                 <outlet property="secondOptionLabel" destination="zEv-ec-eLm" id="hgZ-EH-gNa"/>
                 <outlet property="secondSelectionMarkLabel" destination="wmU-FB-r3x" id="TIj-c1-MOc"/>
                 <outlet property="selectMessageView" destination="646-3u-h3F" id="0Am-mc-odM"/>
