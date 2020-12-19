@@ -27,7 +27,7 @@ class Cave1ViewController: Dungeon {
     private var bgm: AVAudioPlayer!
 
     /// ボタンView
-    private lazy var buttonView = R.nib.buttonView.firstView(owner: nil)!
+//    private lazy var buttonView = R.nib.buttonView.firstView(owner: nil)!
 
     /// タイマー
     weak var timer: Timer!

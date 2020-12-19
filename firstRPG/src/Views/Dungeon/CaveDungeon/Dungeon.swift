@@ -11,8 +11,13 @@ import Foundation
 
 class Dungeon: UIViewController {
 
+    /// ボタンView
+    lazy var buttonView = R.nib.buttonView.firstView(owner: nil)!
+
     override func viewDidLoad() {
         
     }
+
+    
 
 }
