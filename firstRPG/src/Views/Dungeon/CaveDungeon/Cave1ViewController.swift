@@ -24,47 +24,14 @@ class Cave1ViewController: Dungeon {
 
     private let disposeBag = DisposeBag()
 
-    private var bgm: AVAudioPlayer!
-
-    /// ボタンView
-//    private lazy var buttonView = R.nib.buttonView.firstView(owner: nil)!
-
-    /// タイマー
-    weak var timer: Timer!
-
-    /// プレイヤーの位置が配列の何番目か
-    var currentNum = 241
-
-    /// 歩数のカウント
-    var count = 0
-    
-    // プレイヤー座標
-    var playerLeftLocation: CGFloat = 0
-    var playerOverLocation: CGFloat = 0
-
-    /**
-     * マップの配列
-     * - Note: 0: 不可, 1: 可, 2: 前のマップへ遷移, 3: 次のマップへ遷移, 4: 回復ポイント
-     */
-    let line = [
-        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 3, 3, 3, 0,
-        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0,
-        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0,
-        0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0,
-        0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0,
-        0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0
-    ]
+    // MARK: LifeCycles
 
     override func viewDidLoad() {
         super.viewDidLoad()
         addButtonView()
         subscribe()
+
+        setup()
     }
 
     override func viewDidLayoutSubviews() {
@@ -81,52 +48,31 @@ class Cave1ViewController: Dungeon {
         playerImage.image = R.image.hero_up_stop()
     }
 
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        // 曲を再生
-        bgmPrepare(numberOfLoops: -1)
-        bgm.play()
-    }
-
     // MARK: - Functions
 
-    private func subscribe() {
-        // ボタン長押し
-        buttonView.longTapObservable.subscribe(onNext: { [unowned self] buttonType in
-            switch buttonType {
-            case .up:
-                timer = Timer.scheduledTimer(timeInterval: 0.3, target: self, selector: #selector(Cave1ViewController.timerUp), userInfo: nil, repeats: true)
-            case .left:
-                timer = Timer.scheduledTimer(timeInterval: 0.3, target: self, selector: #selector(Cave1ViewController.timerLeft), userInfo: nil, repeats: true)
-            case .right:
-                timer = Timer.scheduledTimer(timeInterval: 0.3, target: self, selector: #selector(Cave1ViewController.timerRight), userInfo: nil, repeats: true)
-            case .down:
-                timer = Timer.scheduledTimer(timeInterval: 0.3, target: self, selector: #selector(Cave1ViewController.timerDown), userInfo: nil, repeats: true)
-            case .none:
-                if let timer = timer {
-                    timer.invalidate()
-                }
-            }
-        }).disposed(by: disposeBag)
+    private func setup() {
+        currentNum = 241
 
-    }
-
-    /// ボタンViewを追加する
-    private func addButtonView() {
-        buttonView.frame = view.frame
-        view.addSubview(buttonView)
-
-        buttonView.subscribe()
-    }
-
-    private func button() {
-        
+        mapInformationArray = [
+            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 3, 3, 3, 0,
+            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0,
+            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0,
+            0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0,
+            0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0,
+            0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0,
+            0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0,
+            0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0,
+            0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+            0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+            0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+            0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        ]
     }
     
     // 上ボタンを押している時
     @objc func timerUp() {
         // 次のマップに遷移するかどうか
-        if self.line[currentNum] == 3 {
+        if mapInformationArray[currentNum] == 3 {
             timer.invalidate()
             performSegue(withIdentifier: "toCave2", sender: nil)
         }
@@ -137,7 +83,7 @@ class Cave1ViewController: Dungeon {
             self.currentNum -= 21    // 配列番号を移動先の番号に変える。(self つけないとボタンが反応してくれなくなる)
             print(currentNum)
 
-            if self.line[currentNum] >= 1 && self.line[currentNum] <= 4 {    // 1-4なら移動可能
+            if mapInformationArray[currentNum] >= 1 && mapInformationArray[currentNum] <= 4 {    // 1-4なら移動可能
                 // 【普通に移動できるとき】
                 // 1. プレイヤーを移動させる
                 UIView.animate(withDuration: 0.6, animations: {
@@ -161,7 +107,7 @@ class Cave1ViewController: Dungeon {
 //                encount()
 
 
-            } else if self.line[currentNum] == 0 {
+            } else if mapInformationArray[currentNum] == 0 {
                 // 【障害物にあたったとき】
                 self.currentNum += 21    // 移動しないんだから配列番号も戻す
             }
@@ -174,7 +120,7 @@ class Cave1ViewController: Dungeon {
         if currentNum - 1 >= 0 {  // 移動先の配列番号が存在するか確認
             self.currentNum -= 1    // 配列番号を移動先の番号に変える。(self つけないとボタンが反応してくれなくなる)
             
-            if self.line[currentNum] >= 1 && self.line[currentNum] <= 4 {    // 1-4なら移動可能
+            if mapInformationArray[currentNum] >= 1 && mapInformationArray[currentNum] <= 4 {    // 1-4なら移動可能
                 UIView.animate(withDuration: 0.6, animations: {
                     self.playerImage.center.x -= self.gameView.frame.size.width / 21
                     
@@ -191,7 +137,7 @@ class Cave1ViewController: Dungeon {
                 // 3. エンカウント処理
 //                encount()
                 
-            } else if self.line[currentNum] == 0 {
+            } else if mapInformationArray[currentNum] == 0 {
                 // 【障害物にあたったとき】
                 self.currentNum += 1    // 移動しないんだから配列番号も戻す
             }
@@ -204,7 +150,7 @@ class Cave1ViewController: Dungeon {
         if currentNum + 1 <= 251 {  // 移動先の配列番号が存在するか確認
             self.currentNum += 1    // 配列番号を移動先の番号に変える。(self つけないとボタンが反応してくれなくなる)
             
-            if self.line[currentNum] >= 1 && self.line[currentNum] <= 4 {    // 1-4なら移動可能
+            if mapInformationArray[currentNum] >= 1 && mapInformationArray[currentNum] <= 4 {    // 1-4なら移動可能
                 UIView.animate(withDuration: 0.6, animations: {
                     self.playerImage.center.x += self.gameView.frame.size.width / 21
                     
@@ -221,7 +167,7 @@ class Cave1ViewController: Dungeon {
                 // 3. エンカウント処理
 //                encount()
                 
-            } else if self.line[currentNum] == 0 {
+            } else if mapInformationArray[currentNum] == 0 {
                 // 【障害物にあたったとき】
                 self.currentNum -= 1    // 移動しないんだから配列番号も戻す
             }
@@ -234,7 +180,7 @@ class Cave1ViewController: Dungeon {
         if currentNum + 21 <= 251 {  // 移動先の配列番号が存在するか確認
             self.currentNum += 21    // 配列番号を移動先の番号に変える。(self つけないとボタンが反応してくれなくなる)
             
-            if self.line[currentNum] >= 1 && self.line[currentNum] <= 4 {    // 1-4なら移動可能
+            if mapInformationArray[currentNum] >= 1 && mapInformationArray[currentNum] <= 4 {    // 1-4なら移動可能
                 // 【普通に移動できるとき】
                 UIView.animate(withDuration: 0.6, animations: {
                     self.playerImage.center.y += self.gameView.frame.size.height / 12
@@ -253,7 +199,7 @@ class Cave1ViewController: Dungeon {
 //                encount()
                 
                 
-            } else if self.line[currentNum] == 0 {
+            } else if mapInformationArray[currentNum] == 0 {
                 // 【障害物にあたったとき】
                 self.currentNum -= 21    // 移動しないんだから配列番号も戻す
             }
@@ -430,25 +376,25 @@ class Cave1ViewController: Dungeon {
 
 }
 
-// MARK: - Sounds
-
-extension Cave1ViewController {
-
-    private func bgmPrepare(numberOfLoops: Int) {
-        let soundFilePath: String = Bundle.main.path(forResource: "cave_dungeon", ofType: "mp3")!
-        let sound: URL = URL(fileURLWithPath: soundFilePath)
-        // AVAudioPlayerのインスタンスを作成,ファイルの読み込み
-        do {
-            bgm = try AVAudioPlayer(contentsOf: sound, fileTypeHint: nil)
-        } catch {
-            fatalError("Failed to initialize a player.")
-        }
-        bgm.numberOfLoops = numberOfLoops
-        // 再生準備
-        bgm.prepareToPlay()
-    }
-
-}
+//// MARK: - Sounds
+//
+//extension Cave1ViewController {
+//
+//    private func bgmPrepare(numberOfLoops: Int) {
+//        let soundFilePath: String = Bundle.main.path(forResource: "cave_dungeon", ofType: "mp3")!
+//        let sound: URL = URL(fileURLWithPath: soundFilePath)
+//        // AVAudioPlayerのインスタンスを作成,ファイルの読み込み
+//        do {
+//            bgm = try AVAudioPlayer(contentsOf: sound, fileTypeHint: nil)
+//        } catch {
+//            fatalError("Failed to initialize a player.")
+//        }
+//        bgm.numberOfLoops = numberOfLoops
+//        // 再生準備
+//        bgm.prepareToPlay()
+//    }
+//
+//}
 
 // MARK: - MakeInstance
 

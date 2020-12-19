@@ -901,7 +901,7 @@
                     </view>
                     <connections>
                         <outlet property="gameView" destination="GjR-NR-dW8" id="YiV-ua-LYD"/>
-                        <outlet property="playerImage" destination="6WL-M8-dS2" id="N4V-mv-Hlt"/>
+                        <outlet property="playerImage" destination="6WL-M8-dS2" id="HbG-rH-wav"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vaE-cr-YOt" sceneMemberID="firstResponder"/>
